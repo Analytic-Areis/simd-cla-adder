@@ -1,0 +1,55 @@
+* =====================================================================
+* cells.lib - static CMOS standard cells (all inverting, single stage)
+* s = drive-strength multiplier. Stacks are up-sized so every cell has
+* the pull-up / pull-down strength of a unit inverter x s
+* (logical-effort sizing): unit INV = UN / BETA*UN lambda.
+* Requires: common.inc, mos.lib
+* =====================================================================
+
+* ---- INV : y = a' ----------------------------------------------------
+.subckt INV a y s=1
+XN y a 0   NM w={s*UN}
+XP y a vdd PM w={s*BETA*UN}
+.ends INV
+
+* ---- NAND2 : y = (a.b)' ----------------------------------------------
+.subckt NAND2 a b y s=1
+XN1 y  a n1  NM w={2*s*UN}
+XN2 n1 b 0   NM w={2*s*UN}
+XP1 y  a vdd PM w={s*BETA*UN}
+XP2 y  b vdd PM w={s*BETA*UN}
+.ends NAND2
+
+* ---- NOR2 : y = (a+b)' -----------------------------------------------
+.subckt NOR2 a b y s=1
+XN1 y  a 0   NM w={s*UN}
+XN2 y  b 0   NM w={s*UN}
+XP1 n1 a vdd PM w={2*s*BETA*UN}
+XP2 y  b n1  PM w={2*s*BETA*UN}
+.ends NOR2
+
+* ---- AOI21 : y = (x.y + z)'   x = late/critical input (next to output)
+.subckt AOI21 x y z out s=1
+XN1 out x n1  NM w={2*s*UN}
+XN2 n1  y 0   NM w={2*s*UN}
+XN3 out z 0   NM w={s*UN}
+XP1 n2  x vdd PM w={2*s*BETA*UN}
+XP2 n2  y vdd PM w={2*s*BETA*UN}
+XP3 out z n2  PM w={2*s*BETA*UN}
+.ends AOI21
+
+* ---- OAI21 : y = ((x+y).z)'  -----------------------------------------
+.subckt OAI21 x y z out s=1
+XN1 out x n1  NM w={2*s*UN}
+XN2 out y n1  NM w={2*s*UN}
+XN3 n1  z 0   NM w={2*s*UN}
+XP1 n2  x vdd PM w={2*s*BETA*UN}
+XP2 out y n2  PM w={2*s*BETA*UN}
+XP3 out z vdd PM w={s*BETA*UN}
+.ends OAI21
+
+* ---- LOADINV : the project's output load  Wp/Wn = 20L/10L, L = 2L ----
+.subckt LOADINV a y
+XN y a 0   NM w=10
+XP y a vdd PM w=20
+.ends LOADINV

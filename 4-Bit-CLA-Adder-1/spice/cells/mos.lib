@@ -1,0 +1,15 @@
+* ---------------------------------------------------------------------
+* mos.lib - MOSFET wrappers. w = width in lambda.
+* Diffusion: 5 lambda extension -> AS = W*5L, PS = 2W + 10L
+* ---------------------------------------------------------------------
+.subckt NM d g s w=4
+M1 d g s 0 CMOSN W={w*LAMBDA} L={LEN}
++ AS={5*w*LAMBDA*LAMBDA} PS={(2*w+10)*LAMBDA}
++ AD={5*w*LAMBDA*LAMBDA} PD={(2*w+10)*LAMBDA}
+.ends NM
+
+.subckt PM d g s w=8
+M1 d g s vdd CMOSP W={w*LAMBDA} L={LEN}
++ AS={5*w*LAMBDA*LAMBDA} PS={(2*w+10)*LAMBDA}
++ AD={5*w*LAMBDA*LAMBDA} PD={(2*w+10)*LAMBDA}
+.ends PM
