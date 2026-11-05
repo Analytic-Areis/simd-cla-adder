@@ -1,0 +1,26 @@
+* NGSPICE file created from nand2_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt nand2_x1 i0 i1 y vdd gnd
+M1000 vdd i0 y vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1001 y i1 vdd vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1002 a_16_10# i0 y Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1003 gnd i1 a_16_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+C0 i0 gnd 0.00105f
+C1 i1 y 0.09025f
+C2 a_16_10# y 0
+C3 vdd i1 0.02314f
+C4 i1 gnd 0.00339f
+C5 vdd y 0.43695f
+C6 i0 i1 0.35306f
+C7 a_16_10# gnd 0
+C8 y gnd 0.04128f
+C9 i0 y 0.22545f
+C10 vdd i0 0.02222f
+.ends
+

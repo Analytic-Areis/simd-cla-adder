@@ -1,0 +1,127 @@
+* block timing pg3_post
+.include ../../../spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* NGSPICE file created from pg3_b.ext - technology: scmos
+
+
+
+.subckt pg3_b a3 b3 g3b p3 p3b t3b vdd gnd
+M1000 p3 t3b aoi3_xp1 vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1001 g3b b3 vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1002 oai3_xn1 b3 p3b Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1003 a_106_98# a3 vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1004 t3b b3 gnd Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.3402p ps=1.71u
+M1005 gnd g3b oai3_xn1 Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1006 a_70_10# a3 p3 Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1007 p3b b3 a_106_98# vdd CMOSP w=3.6u l=0.18u
++  ad=0.972p pd=4.23u as=1.134p ps=4.23u
+M1008 p3 t3b gnd Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1009 a_43_98# a3 vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1010 gnd b3 a_70_10# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1011 vdd g3b p3b vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.23u
+M1012 a_16_10# a3 g3b Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1013 vdd a3 aoi3_xp1 vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1014 t3b b3 a_43_98# vdd CMOSP w=4.5u l=0.18u
++  ad=2.025p pd=9.9u as=1.4175p ps=5.13u
+M1015 gnd b3 a_16_10# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1016 aoi3_xp1 b3 vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1017 vdd a3 g3b vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1018 p3b a3 oai3_xn1 Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1019 gnd a3 t3b Gnd CMOSN w=1.08u l=0.18u
++  ad=0.3402p pd=1.71u as=0.5832p ps=3.24u
+C0 p3 gnd 0.12393f
+C1 b3 gnd 0.00953f
+C2 t3b p3 0.60497f
+C3 g3b p3b 0.08364f
+C4 vdd p3b 0.34326f
+C5 oai3_xn1 gnd 0.24788f
+C6 a3 p3 0.03074f
+C7 b3 t3b 0.88368f
+C8 a_70_10# p3 0
+C9 a3 b3 1.92212f
+C10 vdd g3b 0.54048f
+C11 oai3_xn1 a3 0.02124f
+C12 a_16_10# g3b 0
+C13 aoi3_xp1 p3 0.67525f
+C14 aoi3_xp1 b3 0.01377f
+C15 a_43_98# vdd 0.00129f
+C16 p3b gnd 0.04131f
+C17 g3b gnd 0.04467f
+C18 a3 p3b 0.00741f
+C19 b3 p3 0.02787f
+C20 g3b t3b 0.24926f
+C21 a_16_10# gnd 0
+C22 vdd t3b 0.07339f
+C23 oai3_xn1 p3 0.24705f
+C24 a3 g3b 1.06123f
+C25 vdd a3 0.09138f
+C26 oai3_xn1 b3 0.21964f
+C27 a_43_98# t3b 0.00142f
+C28 aoi3_xp1 vdd 0.68583f
+C29 t3b gnd 0.29886f
+C30 a3 gnd 0.00484f
+C31 b3 p3b 0.02633f
+C32 g3b p3 0.1561f
+C33 oai3_xn1 p3b 0.82582f
+C34 a3 t3b 0.04827f
+C35 b3 g3b 0.28547f
+C36 a_70_10# gnd 0
+C37 vdd p3 0.34215f
+C38 vdd b3 0.08233f
+C39 a_106_98# p3b 0.00113f
+C40 oai3_xn1 g3b 0.16082f
+C41 aoi3_xp1 t3b 0.43054f
+C42 a_106_98# vdd 0
+C43 aoi3_xp1 a3 0.01377f
+.ends
+
+
+.subckt pg3x_post a3 b3 g3b p3 p3b t3b vdd gnd
+X0 a3 b3 g3b p3 p3b t3b vdd gnd pg3_b
+.ends
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+Va3 src_a3 gnd PWL(
++ 0.00000e+00 1.800 2.00000e-09 1.800 2.02000e-09 0.000 4.00000e-09 0.000 4.02000e-09 1.800 8.00000e-09 1.800
++ 8.02000e-09 0.000 1.40000e-08 0.000 1.40200e-08 1.800 1.80000e-08 1.800
++ )
+Xd_a3 src_a3 a3 vdd gnd tb_x1
+Vb3 src_b3 gnd PWL(
++ 0.00000e+00 1.800 6.00000e-09 1.800 6.02000e-09 0.000 1.00000e-08 0.000 1.00200e-08 1.800 1.20000e-08 1.800
++ 1.20200e-08 0.000 1.60000e-08 0.000 1.60200e-08 1.800 1.80000e-08 1.800
++ )
+Xd_b3 src_b3 b3 vdd gnd tb_x1
+Xl_g3b g3b lo_g3b vdd gnd tb_x1
+Xl_p3 p3 lo_p3 vdd gnd tb_x1
+Xl_p3b p3b lo_p3b vdd gnd tb_x1
+Xl_t3b t3b lo_t3b vdd gnd tb_x1
+X0 a3 b3 g3b p3 p3b t3b vdd gnd pg3x_post
+.tran 20p 1.80000e-08
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata pg3_post.txt v(a3) v(b3) v(g3b) v(p3) v(p3b) v(t3b)
+quit
+.endc
+.end

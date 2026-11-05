@@ -1,0 +1,29 @@
+iteration,round,soft_ps,worst_working_ps,total_width_lambda,transistors,changes,critical_arc,elapsed_s
+1,0,981.09,794.89,4582,164,nor3 size=0.8; nor0 size=1.25; nor1 size=1.25; invc0 size=0.8,"a2 rise to s3 fall, A=1011 B=0000 C0=1",179
+2,0,956.37,793.41,4667,164,nor0 size=1.56; nor1 size=1.56; invc4 size=1.25; xtg0 size=1.25,"a2 rise to s3 fall, A=1011 B=0000 C0=1",247
+3,0,934.34,776.1,4367,164,c4m size=0.8; c1 size=0.8; c3 size=0.8; xtg0 size=1.56,"a2 rise to s3 fall, A=1011 B=0000 C0=1",319
+4,0,917.79,764.08,4234,164,nor0 size=1.95; nor3 size=0.64; c4m size=0.64; aoi1 size=0.8,"a2 rise to s3 fall, A=1011 B=0000 C0=1",386
+5,0,903.21,747.43,4290,164,xtg3 size=0.8; aoi3 size=1.25; nor3 size=0.51; nor1 size=1.95,"a2 rise to s3 fall, A=1011 B=0000 C0=1",454
+6,0,897.2,739.49,4280,164,xtg3 size=0.64,"a2 rise to s3 fall, A=1011 B=0000 C0=1",525
+7,0,892.97,735.38,4270,164,nor3 size=0.41,"a2 rise to s3 fall, A=1011 B=0000 C0=1",614
+8,0,878.96,719.58,4185,164,nor3 size=0.33; aoi0 size=0.8; c4m size=0.51; aoi3 size=1.56,"a2 rise to s3 fall, A=1011 B=0000 C0=1",697
+9,0,871.22,716.81,4173,164,oai1 size=0.8; oai0 size=0.8; aoi3 size=1.95; nand0 size=0.8,"a2 rise to s3 fall, A=1011 B=0000 C0=1",772
+10,0,865.86,714.4,4205,164,aoi3 size=2.44; nand0 size=0.64; c1 size=0.64; nand1 size=0.8,"a2 rise to s3 fall, A=1011 B=0000 C0=1",849
+11,0,857.96,713.84,4117,164,aoi1 size=0.64; aoi0 size=0.64; nand0 size=0.51; oai1 size=0.64,"a2 rise to s3 fall, A=1011 B=0000 C0=1",926
+12,0,856.17,713.14,4123,164,invc0 size=1.0,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1003
+13,0,849.85,703.4,4071,164,c4m size=0.41; invc0 size=1.25; nand0 size=0.41; nor2 size=1.25,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1075
+14,0,841.88,693.02,4065,164,nor2 size=1.56; invc0 size=1.56; oai1 size=0.51; oai0 size=0.64,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1159
+15,0,836.59,692.62,4035,164,oai0 size=0.51; invc0 size=1.95; xtg2 size=0.8; xinv2 size=0.8,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1234
+16,0,831.82,680.92,4061,164,aoi2 size=0.8; aoi3 size=3.05; oai2 size=0.8; xtg2 size=0.64,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1303
+17,0,827.52,679.52,4029,164,xtg3 size=0.51; xinv2 size=0.64; invc4 size=1.0; nand1 size=0.64,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1371
+18,0,821.68,678.93,3963,164,aoi1 size=0.51; aoi0 size=0.51; nand1 size=0.51; nand0 size=0.33,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1439
+19,0,817.91,678.22,3953,164,nand0 size=0.3; oai1 size=0.41; xinv2 size=0.51; invc0 size=2.44,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1508
+20,0,814.26,675.58,3902,164,xtg2 size=0.51; oai0 size=0.41; xinv2 size=0.41; oai2 size=0.64,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1575
+21,0,810.2,671.61,3972,164,aoi1 size=0.41; aoi0 size=0.41; aoi3 size=3.81; oai2 size=0.51,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1645
+22,0,807.42,670.06,4138,164,invc0 size=3.05; nand1 size=0.41; aoi3 size=4.76; xtg2 size=0.41,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1716
+23,0,805.4,665.26,4333,164,aoi3 size=5.95; oai2 size=0.41; invc0 size=3.81; nand2 size=0.8,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1798
+24,0,803.98,664.45,4592,164,invc0 size=4.76; c1 size=0.51; aoi3 size=7.44,"a2 rise to s3 fall, A=1011 B=0000 C0=1",1885
+25,1,853.85,751.63,4297,164,aoi3 size=5.95; nor3 size=0.41; xtg3 size=0.64; c4m size=0.33,"b3 fall to s3 rise, A=0110 B=1100 C0=1",2251
+26,1,811.85,676.04,4079,164,aoi3 size=4.76; nor3 size=0.51; aoi1 size=0.33; aoi0 size=0.33,"a2 rise to s3 fall, A=1011 B=0000 C0=1",2345
+27,1,807.17,671.01,4073,164,invc4 size=0.8,"a2 rise to s3 fall, A=1011 B=0000 C0=1",2444
+28,1,804.17,672.4,3805,164,aoi3 size=3.81; c2 size=0.8; xtg0 size=1.25; oai1 size=0.33,"a2 rise to s3 fall, A=1011 B=0000 C0=1",2560

@@ -1,0 +1,41 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * e1 input capacitance of inverter
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+g                                            0
+o                                          1.8
+o2                                 7.11606e-09
+vg#branch                                    0
+vdd#branch                         -2.3873e-11
+
+
+No. of Data Rows : 3014
+
+  Measurements for Transient Analysis
+
+q                   =   -1.36473e-14 from=  1.00000e-09 to=  3.00000e-09
+
+
+Total analysis time (seconds) = 0.010228
+
+Total elapsed time (seconds) = 0.029 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available =  114.172 MB.
+Maximum ngspice program size =   10.344 MB.
+Current ngspice program size =   10.344 MB.
+
+
+--- STDERR ---

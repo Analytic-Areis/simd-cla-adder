@@ -1,0 +1,86 @@
+{
+ "Inverter": {
+  "cell": "inv_x1",
+  "transistors": 2,
+  "schematic": {
+   "tplh_ps": 38.59,
+   "tphl_ps": 35.7,
+   "errors": 0
+  },
+  "post-layout": {
+   "tplh_ps": 39.4,
+   "tphl_ps": 36.47,
+   "errors": 0
+  }
+ },
+ "NAND2": {
+  "cell": "nand2_x1",
+  "transistors": 4,
+  "schematic": {
+   "tplh_ps": 66.02,
+   "tphl_ps": 45.44,
+   "errors": 0
+  },
+  "post-layout": {
+   "tplh_ps": 66.14,
+   "tphl_ps": 45.9,
+   "errors": 0
+  }
+ },
+ "NOR2": {
+  "cell": "nor2_x1",
+  "transistors": 4,
+  "schematic": {
+   "tplh_ps": 64.35,
+   "tphl_ps": 70.61,
+   "errors": 0
+  },
+  "post-layout": {
+   "tplh_ps": 64.67,
+   "tphl_ps": 70.81,
+   "errors": 0
+  }
+ },
+ "AOI21": {
+  "cell": "aoi21_x1",
+  "transistors": 6,
+  "schematic": {
+   "tplh_ps": 91.52,
+   "tphl_ps": 74.76,
+   "errors": 0
+  },
+  "post-layout": {
+   "tplh_ps": 88.88,
+   "tphl_ps": 71.15,
+   "errors": 0
+  }
+ },
+ "OAI21": {
+  "cell": "oai21_x1",
+  "transistors": 6,
+  "schematic": {
+   "tplh_ps": 92.91,
+   "tphl_ps": 75.84,
+   "errors": 0
+  },
+  "post-layout": {
+   "tplh_ps": 84.86,
+   "tphl_ps": 69.97,
+   "errors": 0
+  }
+ },
+ "AOI22 XOR (sum)": {
+  "cell": "xor_aoi22_x1",
+  "transistors": 10,
+  "schematic": {
+   "tplh_ps": 134.99,
+   "tphl_ps": 122.89,
+   "errors": 0
+  },
+  "post-layout": {
+   "tplh_ps": 135.36,
+   "tphl_ps": 122.15,
+   "errors": 0
+  }
+ }
+}

@@ -1,0 +1,13 @@
+VCD info: dumpfile tb_registered.vcd opened for output.
+
+--- TEST 1: 2000 random vectors, enable always on ---
+  >> 1998 checks, 0 errors
+
+--- TEST 2: enable every third clock ---
+  >> 2598 checks, 0 errors
+
+--- TEST 3: hint vector through the registers ---
+  >> 2609 checks, 0 errors
+
+--- RESULT: 2609 checks, 0 errors: PASS ---
+/Users/bhargav_vemparala/Documents/Academics/Semester-3/VLSI_CP/part3/tb/tb_registered.v:111: $finish called at 26135000 (1ps)

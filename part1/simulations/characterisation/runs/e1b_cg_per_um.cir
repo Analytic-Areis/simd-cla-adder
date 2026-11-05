@@ -1,0 +1,12 @@
+* E1b Cg per um, single devices
+.include ../../../../TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vgn gn gnd PWL(0 0 1n 0 2n 1.8 3n 1.8)
+Vgp gp gnd PWL(0 1.8 1n 1.8 2n 0 3n 0)
+mn gnd gn gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+mp vdd gp vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+.tran 1p 3n
+.meas tran qn INTEG i(Vgn) FROM=1n TO=3n
+.meas tran qp INTEG i(Vgp) FROM=1n TO=3n
+.end

@@ -1,0 +1,33 @@
+{
+ "worst_pin_ps": 516.3,
+ "worst_pin_arc": "a1 rise to s3 rise, A=0101 B=0001 C0=0",
+ "worst_drv_ps": 590.21,
+ "per_output": {
+  "s0_tplh_ps": 349.7,
+  "s0_tphl_ps": 352.67,
+  "s1_tplh_ps": 429.89,
+  "s1_tphl_ps": 409.22,
+  "s2_tplh_ps": 499.66,
+  "s2_tphl_ps": 470.06,
+  "s3_tplh_ps": 516.3,
+  "s3_tphl_ps": 491.15,
+  "c4_tplh_ps": 414.24,
+  "c4_tphl_ps": 399.18
+ },
+ "hint": {
+  "rise:s0:fall": 90.37,
+  "rise:s1:fall": 357.45,
+  "rise:s2:fall": 327.46,
+  "rise:s3:fall": 320.53,
+  "rise:c4:rise": 222.94,
+  "fall:s0:rise": 109.86,
+  "fall:s1:rise": 377.45,
+  "fall:s2:rise": 326.68,
+  "fall:s3:rise": 325.81,
+  "fall:c4:fall": 218.34
+ },
+ "hint_worst_ps": 377.45,
+ "functional_errors": 0,
+ "transistors": 194,
+ "total_width_lambda": 4536
+}

@@ -1,0 +1,26 @@
+* NGSPICE file created from nor2_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt nor2_x1 i0 i1 y vdd gnd
+M1000 a_16_61# i0 vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1001 gnd i0 y Gnd nfet w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.486p ps=2.88u
+M1002 y i1 a_16_61# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1003 y i1 gnd Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.2835p ps=1.53u
+C0 y gnd 0.24784f
+C1 i0 y 0.22013f
+C2 vdd i0 0.02383f
+C3 i0 gnd 0.00258f
+C4 i1 y 0.09435f
+C5 vdd i1 0.0208f
+C6 a_16_61# y 0.00113f
+C7 a_16_61# vdd 0.00107f
+C8 i1 gnd 0.00258f
+C9 vdd y 0.0547f
+C10 i0 i1 0.35306f
+.ends
+

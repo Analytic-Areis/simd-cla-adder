@@ -1,0 +1,32 @@
+{
+ "nand": 1.0,
+ "inv": 2.0,
+ "cell": "carry_gate_n1_i2",
+ "transistors": 8,
+ "schematic_cin_to_s7_ps": 696.59,
+ "layout": {
+  "cell": "carry_gate_n1_i2",
+  "width_lambda": 93,
+  "height_lambda": 133,
+  "area_um2": 100.2,
+  "tracks": 4,
+  "drc": 0,
+  "lvs": true,
+  "lvs_message": "match: 8 merged devices, 8 nets",
+  "drc_first": ""
+ },
+ "alone": {
+  "sch": {
+   "errors": 0,
+   "worst_ps": 104.27,
+   "rise_ps": 89.12,
+   "fall_ps": 104.27
+  },
+  "post": {
+   "errors": 0,
+   "worst_ps": 110.46,
+   "rise_ps": 95.2,
+   "fall_ps": 110.46
+  }
+ }
+}

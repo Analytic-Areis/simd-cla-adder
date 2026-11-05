@@ -1,0 +1,59 @@
+* NGSPICE file created from xor_static12_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt xor_static12_x1 c p s vdd gnd
+M1000 a_25_98# p vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.053p ps=4.23u
+M1001 a_43_10# p s Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1002 gnd p a_8_20# Gnd nfet w=0.9u l=0.18u
++  ad=0.5265p pd=2.43u as=0.486p ps=2.88u
+M1003 s a_8_20# a_25_98# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1004 a_22_48# c vdd vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.23u
+M1005 gnd c a_43_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1006 a_25_98# a_22_48# s vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1007 vdd c a_25_98# vdd pfet w=3.6u l=0.18u
++  ad=0.972p pd=4.23u as=1.134p ps=4.23u
+M1008 a_25_10# a_22_48# gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.5265p ps=2.43u
+M1009 a_22_48# c gnd Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1010 vdd p a_8_20# vdd pfet w=1.8u l=0.18u
++  ad=1.053p pd=4.23u as=0.972p ps=4.68u
+M1011 s a_8_20# a_25_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+C0 c gnd 0.00493f
+C1 a_43_10# gnd 0
+C2 vdd s 0.05318f
+C3 p c 0.11971f
+C4 a_25_98# s 1.0047f
+C5 a_22_48# gnd 0.08604f
+C6 a_25_98# vdd 0.76812f
+C7 a_22_48# p 0.34672f
+C8 a_8_20# a_22_48# 0.31007f
+C9 s gnd 0.04131f
+C10 p s 0.01286f
+C11 vdd p 0.04494f
+C12 a_25_10# s 0
+C13 a_8_20# s 0.02626f
+C14 a_22_48# c 0.27561f
+C15 a_25_98# p 0.20358f
+C16 a_8_20# vdd 0.19695f
+C17 a_8_20# a_25_98# 0.01404f
+C18 p gnd 0.00258f
+C19 a_43_10# s 0
+C20 a_25_10# gnd 0
+C21 vdd c 0.04494f
+C22 a_8_20# gnd 0.08369f
+C23 a_25_98# c 0.00678f
+C24 a_22_48# s 0.01589f
+C25 a_8_20# p 0.30217f
+C26 a_22_48# vdd 0.19786f
+C27 a_22_48# a_25_98# 0.08335f
+.ends
+

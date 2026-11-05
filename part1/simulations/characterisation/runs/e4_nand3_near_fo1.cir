@@ -1,0 +1,38 @@
+* E4 nand3 near-rail input FO1
+.include ../../../../TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vin in0 gnd PULSE(0 1.8 1n 20p 20p 2n 4n)
+.subckt gnand3 i0 i1 i2 out vdd gnd
+mp0 out i0 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn0 out i0 x1 gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=7.2900e-13 PS=5.9400e-06 AD=1.4580e-12 PD=6.4800e-06
+mp1 out i1 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn1 x1 i1 x2 gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=7.2900e-13 PS=5.9400e-06 AD=7.2900e-13 PD=5.9400e-06
+mp2 out i2 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn2 x2 i2 gnd gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=7.2900e-13 PD=5.9400e-06
+.ends
+.subckt sh in out vdd gnd
+mp out in vdd vdd CMOSP W=5.4000e-07 L=1.8000e-07 AS=2.9160e-13 PS=2.1600e-06 AD=2.9160e-13 PD=2.1600e-06
+mn out in gnd gnd CMOSN W=2.7000e-07 L=1.8000e-07 AS=1.4580e-13 PS=1.6200e-06 AD=1.4580e-13 PD=1.6200e-06
+.ends
+.subckt dr in out vdd gnd
+mp out in vdd vdd CMOSP W=7.8162e-07 L=1.8000e-07 AS=4.2207e-13 PS=2.6432e-06 AD=4.2207e-13 PD=2.6432e-06
+mn out in gnd gnd CMOSN W=3.9081e-07 L=1.8000e-07 AS=2.1104e-13 PS=1.8616e-06 AD=2.1104e-13 PD=1.8616e-06
+.ends
+.subckt lo in out vdd gnd
+mp out in vdd vdd CMOSP W=3.1265e-06 L=1.8000e-07 AS=1.6883e-12 PS=7.3329e-06 AD=1.6883e-12 PD=7.3329e-06
+mn out in gnd gnd CMOSN W=1.5632e-06 L=1.8000e-07 AS=8.4415e-13 PS=4.2065e-06 AD=8.4415e-13 PD=4.2065e-06
+.ends
+.subckt ll in out vdd gnd
+mp out in vdd vdd CMOSP W=1.2506e-05 L=1.8000e-07 AS=6.7532e-12 PS=2.6092e-05 AD=6.7532e-12 PD=2.6092e-05
+mn out in gnd gnd CMOSN W=6.2529e-06 L=1.8000e-07 AS=3.3766e-12 PS=1.3586e-05 AD=3.3766e-12 PD=1.3586e-05
+.ends
+X0 in0 n1 vdd gnd sh
+X1 n1 ndut vdd gnd dr
+X2 ndut vdd vdd nout vdd gnd gnand3
+X3 nout n3 vdd gnd lo
+X4 n3 n4 vdd gnd ll
+.tran 0.5p 11n
+.meas tran tphl TRIG v(ndut) VAL=0.9 RISE=2 TARG v(nout) VAL=0.9 FALL=2
+.meas tran tplh TRIG v(ndut) VAL=0.9 FALL=2 TARG v(nout) VAL=0.9 RISE=2
+.end

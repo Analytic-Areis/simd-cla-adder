@@ -1,0 +1,46 @@
+* Truth table of xor_static12_x1: inputs through unit inverters, outputs load 20L/10L inverter
+.include ../../../../spice/models/TSMC_180nm.txt
+.options reltol=1e-3
+VDD vdd gnd 1.8
+* xor_static12_x1: static XOR, AOI22 with two inverters
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt xor_static12_x1 p c s vdd gnd
+Ms0p1 pb p vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms0n1 pb p gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms1p1 cb c vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms1n1 cb c gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms2p1 s2xp1 p vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms2p2 s2xp1 c vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms2p3 s pb s2xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms2p4 s cb s2xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms2n1 s p s2xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms2n2 s2xn1 c gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+Ms2n3 s pb s2xn2 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms2n4 s2xn2 cb gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+.ends xor_static12_x1
+.subckt tb_inv a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+Vp src_p gnd PWL(
++ 0.00000e+00 1.800 2.00000e-09 1.800 2.05000e-09 0.000 5.00000e-09 0.000 5.05000e-09 1.800 6.00000e-09 1.800
++ 6.05000e-09 0.000 7.00000e-09 0.000 7.05000e-09 1.800 8.00000e-09 1.800
++ )
+Xd_p src_p p vdd gnd tb_inv
+Vc src_c gnd PWL(
++ 0.00000e+00 1.800 1.00000e-09 1.800 1.05000e-09 0.000 2.00000e-09 0.000 2.05000e-09 1.800 3.00000e-09 1.800
++ 3.05000e-09 0.000 5.00000e-09 0.000 5.05000e-09 1.800 7.00000e-09 1.800 7.05000e-09 0.000 8.00000e-09 0.000
++ )
+Xd_c src_c c vdd gnd tb_inv
+Xl_s s lo_s vdd gnd tb_inv
+X0 p c s vdd gnd xor_static12_x1
+.tran 200p 8.00000e-09
+.control
+set wr_singlescale
+set wr_vecnames
+run
+set curplottitle=Bhargav-2025102061-1.3-xor_static12_x1-function
+wrdata wave.txt v(p) v(c) v(s) i(VDD)
+quit
+.endc
+.end

@@ -1,0 +1,45 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * e2 fo4 inverter beta=1.0
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+in0                                          0
+n1                                         1.8
+ndut                               9.39047e-09
+nout                                       1.8
+n3                                 3.48143e-09
+n4                                         1.8
+vin#branch                                   0
+vdd#branch                        -1.71408e-10
+
+
+No. of Data Rows : 22038
+
+  Measurements for Transient Analysis
+
+tphl                =  7.22424e-11 targ=  5.17538e-09 trig=  5.10314e-09
+tplh                =  1.00120e-10 targ=  7.21360e-09 trig=  7.11348e-09
+
+
+Total analysis time (seconds) = 0.223536
+
+Total elapsed time (seconds) = 0.227 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available =  114.172 MB.
+Maximum ngspice program size =   10.766 MB.
+Current ngspice program size =   10.766 MB.
+
+
+--- STDERR ---

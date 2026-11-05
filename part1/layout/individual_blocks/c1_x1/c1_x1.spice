@@ -1,0 +1,40 @@
+* NGSPICE file created from c1_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt c1_x1 c0b c1 g0b t0b vdd gnd
+M1000 vdd g0b c1 vdd pfet w=1.8u l=0.18u
++  ad=1.053p pd=4.23u as=0.972p ps=4.68u
+M1001 a_16_10# g0b c1 Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1002 a_25_89# t0b vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.053p ps=4.23u
+M1003 gnd t0b a_16_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1004 c1 c0b a_25_89# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1005 a_16_10# c0b gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+C0 a_25_89# vdd 0.00107f
+C1 g0b gnd 0.00105f
+C2 c0b g0b 0.00926f
+C3 t0b c1 0.20443f
+C4 vdd c0b 0.02061f
+C5 a_25_89# c1 0.00113f
+C6 a_16_10# g0b 0.39854f
+C7 c1 gnd 0.04128f
+C8 c0b c1 0.10454f
+C9 t0b gnd 0.00339f
+C10 t0b c0b 0.41134f
+C11 vdd g0b 0.02123f
+C12 a_16_10# c1 0.53344f
+C13 a_16_10# t0b 0.01184f
+C14 c0b gnd 0.00339f
+C15 g0b c1 0.01676f
+C16 a_16_10# gnd 0.41315f
+C17 vdd c1 0.23197f
+C18 t0b g0b 0.21538f
+C19 vdd t0b 0.0237f
+C20 a_16_10# c0b 0.01185f
+.ends
+

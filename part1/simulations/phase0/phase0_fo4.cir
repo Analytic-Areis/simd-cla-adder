@@ -1,0 +1,49 @@
+* Phase 0 check 1: generated FO4 inverter against E3
+* Uses generator-produced subcircuits only.
+.include ../../spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vin in0 gnd PULSE(0 1.8 1n 20p 20p 2n 4n)
+* ish: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt ish a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=5.4000e-07 L=1.8000e-07 AS=2.9160e-13 PS=2.1600e-06 AD=2.9160e-13 PD=2.1600e-06
+Mn1 y a gnd gnd CMOSN W=2.7000e-07 L=1.8000e-07 AS=1.4580e-13 PS=1.6200e-06 AD=1.4580e-13 PD=1.6200e-06
+.ends ish
+* idut: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt idut a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y a gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends idut
+* ilo: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt ilo a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=3.8880e-12 PS=1.5480e-05 AD=3.8880e-12 PD=1.5480e-05
+Mn1 y a gnd gnd CMOSN W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+.ends ilo
+* ill: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt ill a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=2.8800e-05 L=1.8000e-07 AS=1.5552e-11 PS=5.8680e-05 AD=1.5552e-11 PD=5.8680e-05
+Mn1 y a gnd gnd CMOSN W=1.4400e-05 L=1.8000e-07 AS=7.7760e-12 PS=2.9880e-05 AD=7.7760e-12 PD=2.9880e-05
+.ends ill
+X0 in0 n1 vdd gnd ish
+X1 n1 ndut vdd gnd ish
+X2 ndut nout vdd gnd idut
+X3 nout n3 vdd gnd ilo
+X4 n3 n4 vdd gnd ill
+.tran 0.5p 11n
+.meas tran tphl TRIG v(ndut) VAL=0.9 RISE=2 TARG v(nout) VAL=0.9 FALL=2
+.meas tran tplh TRIG v(ndut) VAL=0.9 FALL=2 TARG v(nout) VAL=0.9 RISE=2
+.control
+set hcopypscolor=1
+set color0=white
+set color1=black
+run
+set curplottitle=Bhargav-2025102061-phase0-generated-inverter-FO4
+hardcopy phase0_fo4.ps v(ndut) v(nout) xlimit 4.8n 5.4n
+wrdata phase0_fo4_wave v(ndut) v(nout)
+quit
+.endc
+.end

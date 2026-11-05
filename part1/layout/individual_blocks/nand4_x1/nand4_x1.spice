@@ -1,0 +1,47 @@
+* NGSPICE file created from nand4_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt nand4_x1 i0 i1 i2 i3 y vdd gnd
+M1000 y i1 vdd vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1001 y i3 vdd vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1002 gnd i3 a_34_10# Gnd nfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1003 vdd i0 y vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1004 vdd i2 y vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1005 a_16_10# i0 y Gnd nfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1006 a_25_10# i1 a_16_10# Gnd nfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1007 a_34_10# i2 a_25_10# Gnd nfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+C0 i3 gnd 0.00501f
+C1 i1 y 0.03207f
+C2 i2 i3 0.59691f
+C3 i0 gnd 0.00105f
+C4 i0 i2 0.00874f
+C5 vdd i3 0.0235f
+C6 a_25_10# gnd 0
+C7 vdd i0 0.02222f
+C8 y gnd 0.04128f
+C9 i1 gnd 0.00105f
+C10 i2 y 0.0235f
+C11 vdd y 0.8205f
+C12 i0 i3 0.00894f
+C13 i1 i2 0.59671f
+C14 a_34_10# gnd 0.00129f
+C15 a_16_10# y 0
+C16 vdd i1 0.02202f
+C17 i2 gnd 0.00105f
+C18 i3 y 0.09028f
+C19 i1 i3 0.00894f
+C20 i0 y 0.42251f
+C21 a_16_10# gnd 0
+C22 i0 i1 0.59671f
+C23 vdd i2 0.02202f
+.ends
+

@@ -1,0 +1,50 @@
+{
+ "design": "mine_sch",
+ "sweep": "walk",
+ "segments": 39,
+ "stride": 1,
+ "arcs": 8224,
+ "transitions": 4608,
+ "wrong_samples": 0,
+ "failed_runs": 0,
+ "tpd_max_from_q_ps": 536.71,
+ "worst": {
+  "pin": "a1",
+  "pin_edge": "rise",
+  "state": 81,
+  "next_state": 83,
+  "output": "s3",
+  "out_edge": "rise",
+  "inputs_changed": 1,
+  "tpd_q_ps": 536.708051848157,
+  "tcq_ps": 122.16395206925634,
+  "clk_to_out_ps": 658.8720039174133
+ },
+ "worst_clk_to_out_ps": 690.77,
+ "worst_tcq_ps": 183.5,
+ "per_output": {
+  "s0_rise": 340.36,
+  "s0_fall": 359.96,
+  "s1_rise": 448.78,
+  "s1_fall": 412.66,
+  "s2_rise": 514.05,
+  "s2_fall": 477.23,
+  "s3_rise": 536.71,
+  "s3_fall": 498.11,
+  "c4_rise": 429.06,
+  "c4_fall": 408.45
+ },
+ "hint": {
+  "rise:s0:fall": 97.68,
+  "rise:s1:fall": 363.43,
+  "rise:s2:fall": 338.78,
+  "rise:s3:fall": 330.24,
+  "rise:c4:rise": 239.02,
+  "fall:s0:rise": 117.81,
+  "fall:s1:rise": 387.43,
+  "fall:s2:rise": 338.74,
+  "fall:s3:rise": 345.89,
+  "fall:c4:fall": 227.16
+ },
+ "hint_worst_ps": 387.43
+}

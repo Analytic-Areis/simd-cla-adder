@@ -1,0 +1,50 @@
+magic
+tech scmos
+timestamp 1793886798
+<< nwell >>
+rect 0 78 93 133
+<< metal1 >>
+rect -22 124 93 130
+rect -10 0 93 6
+<< m2contact >>
+rect -28 124 -22 130
+rect -16 0 -10 6
+<< metal2 >>
+rect -28 130 -22 139
+rect -28 -6 -22 124
+rect -16 6 -10 139
+rect -16 -6 -10 0
+<< metal3 >>
+rect 8 161 25 164
+rect 8 159 16 161
+rect 39 161 52 164
+rect 44 159 52 161
+rect 71 65 76 71
+rect 30 62 76 65
+rect 80 44 85 53
+rect 53 38 58 44
+rect 39 35 58 38
+<< m4contact >>
+rect 25 160 30 165
+rect 34 160 39 165
+rect 25 61 30 66
+rect 34 34 39 39
+<< metal4 >>
+rect 26 66 29 160
+rect 35 39 38 160
+use gtile  gtile_0
+timestamp 1793886792
+transform 1 0 0 0 1 0
+box 0 0 93 133
+<< labels >>
+rlabel metal3 55 39 56 44 0 cin_hi
+port 1 nsew
+rlabel metal3 73 66 74 71 0 cout_lo
+port 2 nsew
+rlabel metal3 82 48 83 53 0 mode
+port 3 nsew
+rlabel metal2 -28 133 -22 139 0 vdd
+port 4 nsew
+rlabel metal2 -16 133 -10 139 0 gnd
+port 5 nsew
+<< end >>

@@ -1,0 +1,92 @@
+{
+ "label": "aware_C4_tg_round2",
+ "config": "C4_tg",
+ "sizes": {
+  "nand0": 1.0,
+  "nand1": 0.8,
+  "nand2": 1.0,
+  "nand3": 1.0,
+  "nor0": 1.56,
+  "nor1": 1.95,
+  "nor2": 1.0,
+  "nor3": 1.0,
+  "aoi0": 0.41,
+  "aoi1": 0.41,
+  "aoi2": 0.8,
+  "aoi3": 1.0,
+  "oai0": 0.41,
+  "oai1": 0.41,
+  "oai2": 0.8,
+  "oai3": 1.0,
+  "xor0": 1.0,
+  "xor1": 1.0,
+  "xor2": 0.8,
+  "xor3": 0.8,
+  "xinv0": 1.0,
+  "xinv1": 1.0,
+  "xinv2": 0.8,
+  "xinv3": 0.8,
+  "xtg0": 1.0,
+  "xtg1": 0.8,
+  "xtg2": 0.8,
+  "xtg3": 0.51,
+  "invc0": 1.0,
+  "g10": 1.0,
+  "t10": 1.0,
+  "g32": 0.64,
+  "t32": 0.33,
+  "ig2": 1.0,
+  "it2": 1.0,
+  "g30": 0.41,
+  "t30": 0.51,
+  "g20": 0.8,
+  "t20": 0.8,
+  "ig10": 0.64,
+  "it10": 1.0,
+  "c1": 0.51,
+  "c2": 0.8,
+  "c3": 1.0,
+  "c4g": 0.64
+ },
+ "flips": {
+  "g10": [
+   false,
+   false
+  ],
+  "g32": [
+   false,
+   false
+  ],
+  "g30": [
+   true,
+   true
+  ],
+  "g20": [
+   true,
+   true
+  ],
+  "c1": [
+   true,
+   false
+  ],
+  "c2": [
+   true,
+   true
+  ],
+  "c3": [
+   true,
+   true
+  ],
+  "c4g": [
+   true,
+   true
+  ]
+ },
+ "transistors": 186,
+ "total_width_lambda": 3431,
+ "functional_errors": 0,
+ "worst_drv_ps": 622.1964054128254,
+ "worst_pin_ps": 549.1134984797366,
+ "critical": "{'pin': 'a1', 'pin_edge': 'rise', 'state': 120, 'next_state': 122, 'inputs_changed': 1, 'output': 's3', 'out_edge': 'fall', 'tpd_pin_ps': np.float64(546.1636099749937), 'tpd_drv_ps': np.float64(622.1964054128254), 'extra_crossings': 0}",
+ "elapsed_s": 721
+}

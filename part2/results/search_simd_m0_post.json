@@ -1,0 +1,32 @@
+{
+ "design": "simd",
+ "mode": 0,
+ "view": "post",
+ "transitions": 13312,
+ "arcs": 33600,
+ "errors": 0,
+ "tpd_max_ps": 1109.77,
+ "worst": {
+  "pin": "a3",
+  "pin_edge": "fall",
+  "output": "s5",
+  "out_edge": "rise",
+  "state": "A=FF B=07 C0=1 M=0",
+  "next_state": "A=F7 B=07 C0=1 M=0",
+  "tpd_pin_ps": 1109.7683101574125,
+  "tpd_drv_ps": 1183.8689924313044
+ },
+ "tpd_max_drv_ps": 1183.87,
+ "per_output": {
+  "s0": 389.73,
+  "s1": 524.92,
+  "s2": 551.67,
+  "s3": 570.22,
+  "s4": 764.92,
+  "s5": 1109.77,
+  "s6": 1052.16,
+  "s7": 1059.35,
+  "c8": 947.09,
+  "c4lo": 497.95
+ }
+}

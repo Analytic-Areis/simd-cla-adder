@@ -1,0 +1,65 @@
+* nor2_x1_post-layout
+.include ../../part1/spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* NGSPICE file created from nor2_x1.ext - technology: scmos
+
+
+
+.subckt nor2_x1 i0 i1 y vdd gnd
+M1000 a_16_61# i0 vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1001 gnd i0 y Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.486p ps=2.88u
+M1002 y i1 a_16_61# vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1003 y i1 gnd Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.2835p ps=1.53u
+C0 y gnd 0.24784f
+C1 i0 y 0.22013f
+C2 vdd i0 0.02383f
+C3 i0 gnd 0.00258f
+C4 i1 y 0.09435f
+C5 vdd i1 0.0208f
+C6 a_16_61# y 0.00113f
+C7 a_16_61# vdd 0.00107f
+C8 i1 gnd 0.00258f
+C9 vdd y 0.0547f
+C10 i0 i1 0.35306f
+.ends
+
+
+.subckt nor2_x1x_post i0 i1 y vdd gnd
+X0 i0 i1 y vdd gnd nor2_x1
+.ends
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Vi0 src_i0 gnd PWL(
++ 0.00000e+00 0.000 1.00000e-09 0.000 1.02000e-09 1.800 2.00000e-09 1.800 2.02000e-09 0.000 4.00000e-09 0.000
++ 4.02000e-09 1.800 7.00000e-09 1.800 7.02000e-09 0.000 9.00000e-09 0.000
++ )
+Xs_i0 src_i0 drv_i0 vdd gnd tb_x1
+Xd_i0 drv_i0 i0 vdd gnd tb_x2
+Vi1 src_i1 gnd PWL(
++ 0.00000e+00 0.000 3.00000e-09 0.000 3.02000e-09 1.800 5.00000e-09 1.800 5.02000e-09 0.000 6.00000e-09 0.000
++ 6.02000e-09 1.800 8.00000e-09 1.800 8.02000e-09 0.000 9.00000e-09 0.000
++ )
+Xs_i1 src_i1 drv_i1 vdd gnd tb_x1
+Xd_i1 drv_i1 i1 vdd gnd tb_x2
+Xl_y y lo_y vdd gnd tb_x1
+X0 i0 i1 y vdd gnd nor2_x1x_post
+.tran 5p 9.00000e-09
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata nor2_x1_post-layout.txt v(i0) v(i1) v(y)
+quit
+.endc
+.end

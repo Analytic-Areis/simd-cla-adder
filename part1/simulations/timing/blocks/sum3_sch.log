@@ -1,0 +1,38 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * block timing sum3_sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+src_c3                                     1.8
+c3                                 7.11606e-09
+src_p3                                     1.8
+p3                                 7.11606e-09
+src_p3b                                      0
+p3b                                        1.8
+lo_s3                                      1.8
+s3                                 2.84642e-08
+x0.xx3.cb                                  1.8
+x0.xx3.s1xp1                               1.8
+x0.xx3.s1xn1                       1.41232e-08
+x0.xx3.s1xn2                       1.42321e-08
+vp3b#branch                                  0
+vp3#branch                                   0
+vc3#branch                                   0
+vdd#branch                        -8.23246e-11
+
+
+No. of Data Rows : 1043
+ngspice-46 done
+
+--- STDERR ---

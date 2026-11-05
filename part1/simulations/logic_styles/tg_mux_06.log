@@ -1,0 +1,85 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * transmission-gate mux {'k': 1, 'm': 2}
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd_core                                   1.8
+vdd                                        1.8
+vtb                                        1.8
+g                                            0
+t                                          1.8
+gb                                         1.8
+tb                                           0
+p                                          1.8
+pb                                           0
+a                                          1.8
+ab                                           0
+s                                            0
+sb                                         1.8
+s1                                         1.8
+c0                                 1.54411e-08
+sb1                                7.11605e-09
+c0b                                        1.8
+ld0_0                              7.11605e-09
+c1                                         1.8
+ld1_0                                      1.8
+c2                                 1.54411e-08
+ld2_0                              7.11605e-09
+c3                                         1.8
+ld3_0                                      1.8
+c4                                 6.49778e-09
+ld3_1                                      1.8
+ld3_2                                      1.8
+ld3_3                                      1.8
+x0                                 3.13095e-08
+x1                                         1.8
+x2                                 3.13095e-08
+x3                                         1.8
+vsb#branch                                   0
+vs#branch                                    0
+vab#branch                          4.4146e-11
+va#branch                         -4.41461e-11
+vpb#branch                                   0
+vp#branch                                    0
+vtbar#branch                                 0
+vgb#branch                                   0
+vt#branch                                    0
+vg#branch                                    0
+vtb#branch                          -1.549e-10
+vsense#branch                       1.5183e-10
+vdd#branch                         -1.5183e-10
+
+
+No. of Data Rows : 4533
+
+  Measurements for Transient Analysis
+
+tpr                 =  4.31838e-10 targ=  1.52455e-09 trig=  1.09271e-09
+pavg                =  8.80458e-05 from=  5.00000e-10 to=  8.50000e-09
+tpf                 =  4.33092e-10 targ=  3.52739e-09 trig=  3.09430e-09
+vlo                 =  6.49779e-09
+vhi                 =  1.80000e+00
+vlo2                =  6.54044e-09
+
+
+Total analysis time (seconds) = 0.229128
+
+Total elapsed time (seconds) = 0.234 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available = 2456.875 MB.
+Maximum ngspice program size =   10.641 MB.
+Current ngspice program size =   10.641 MB.
+
+
+--- STDERR ---

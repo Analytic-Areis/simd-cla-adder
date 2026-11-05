@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4-bit CLA Build Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=STIX+Two+Text:ital@0;1&display=swap">
+<style>
+/* Layout: sticky numbered contents on the left, one reading column on the right. Colours follow MAGIC layers:
+   metal blue = PMOS / pull-up and links, diffusion green = NMOS / pull-down, poly red = problems and the clock. */
+:root {
+  --bg: #f5f7f8; --panel: #ffffff; --soft: #e9eef0; --fg: #1a2428; --muted: #566870; --rule: #c9d4d8;
+  --metal: #1f5fa8; --metal-soft: #e1eaf6; --poly: #b8362f; --poly-soft: #f7e3e1; --diff: #2f7d4f; --diff-soft: #e0f0e6; --tan: #a0702a;
+  --display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12191c; --panel: #182125; --soft: #1f2a2f; --fg: #e4ebed; --muted: #9db0b7; --rule: #33444a;
+  --metal: #79aee6; --metal-soft: #1b2a3d; --poly: #ee8a80; --poly-soft: #3a2220; --diff: #72c493; --diff-soft: #17301f; --tan: #d7ab6a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12191c; --panel: #182125; --soft: #1f2a2f; --fg: #e4ebed; --muted: #9db0b7; --rule: #33444a;
+  --metal: #79aee6; --metal-soft: #1b2a3d; --poly: #ee8a80; --poly-soft: #3a2220; --diff: #72c493; --diff-soft: #17301f; --tan: #d7ab6a; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 400 17px/1.6 var(--body);
+  padding-block: 40px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.page { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 56px; align-items: start; }
+main { display: grid; gap: 64px; min-width: 0; max-width: 880px; }
+main > * { min-width: 0; }
+section { display: grid; gap: 14px; scroll-margin-top: 16px; }
+section > * { min-width: 0; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.2; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; }
+h2 { font-size: 1.7rem; font-weight: 700; display: flex; gap: 12px; align-items: baseline; }
+h2 .num { font: 500 1rem var(--mono); color: var(--muted); }
+h3 { font-size: 1.15rem; font-weight: 700; margin-top: 12px; }
+p, ul, ol { margin: 0; max-width: 68ch; }
+ul, ol { padding-left: 1.2em; display: grid; gap: 5px; }
+a { color: var(--metal); }
+a:focus-visible { outline: 2px solid var(--poly); outline-offset: 2px; }
+code { font-family: var(--mono); font-size: .86em; background: var(--soft); padding: 1px 5px; }
+.lede { font-size: 1.15rem; color: var(--muted); }
+.meta { font: 500 .8rem var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+
+/* contents */
+.side { position: sticky; top: calc(24px + env(safe-area-inset-top, 0px)); max-height: calc(100vh - 48px); overflow-y: auto; }
+.side h2 { font-size: 1.05rem; padding: 0 10px 10px; }
+.side table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+.side th { text-align: left; font: 500 .72rem var(--mono); color: var(--muted); padding: 0 8px 6px 10px; border-bottom: 1px solid var(--rule); }
+.side td { padding: 0; }
+.side tbody a { display: block; padding: 5px 8px 5px 10px; color: var(--fg); text-decoration: none; line-height: 1.3; }
+.side td:first-child { width: 38px; font: 500 .8rem var(--mono); }
+.side td:first-child a { color: var(--muted); }
+.side tr.group td { padding: 12px 10px 4px; font: 500 .7rem var(--mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.side tbody tr:not(.group):hover td { background: var(--soft); }
+.side tr.on td { background: var(--soft); box-shadow: inset 3px 0 0 var(--metal); }
+.side tr.on a { font-weight: 600; color: var(--metal); }
+html { scroll-behavior: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+@media (min-width: 981px) { .back { display: none; } }
+@media (max-width: 980px) {
+  .page { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .side { position: static; max-height: none; overflow: visible; background: var(--panel); border: 1px solid var(--rule); padding: 14px 6px; }
+}
+
+/* maths */
+.math { font-family: "STIX Two Text", "Cambria Math", Georgia, serif; font-style: italic; font-size: 1.1em; white-space: nowrap; }
+.math sub { font-size: .72em; }
+.no { text-decoration: overline; }
+.eqs { display: grid; background: var(--panel); border: 1px solid var(--rule); padding: 4px 16px; }
+.eqs > div { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 4px 20px; padding: 10px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.eqs > div:last-child { border-bottom: 0; }
+.eqs > div > .math { font-size: 1.2em; overflow-x: auto; display: block; }
+.eqs .say { font-size: .95rem; color: var(--muted); }
+.key { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: .95rem; }
+@media (max-width: 640px) { .eqs > div { grid-template-columns: minmax(0, 1fr); } }
+
+/* blocks */
+.concept { background: var(--panel); border: 1px solid var(--rule); padding: 16px 18px; display: grid; gap: 8px; }
+.concept > b.tag { font: 500 .74rem var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--diff); }
+.why { border-left: 3px solid var(--metal); padding: 2px 0 2px 14px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; }
+.stats div { display: grid; gap: 2px; align-content: start; }
+.stats b { font: 700 1.5rem var(--display); }
+.stats span { font-size: .88rem; color: var(--muted); line-height: 1.35; }
+.scroll { overflow-x: auto; }
+table.t { border-collapse: collapse; width: 100%; font-size: .94rem; font-variant-numeric: tabular-nums; }
+.t th { text-align: left; font: 500 .76rem var(--mono); color: var(--muted); border-bottom: 2px solid var(--fg); padding: 6px 12px 6px 0; vertical-align: bottom; }
+.t td { border-bottom: 1px solid var(--rule); padding: 8px 12px 8px 0; vertical-align: top; }
+.t td.n, .t th.n { text-align: right; white-space: nowrap; }
+.t tr.pick td { font-weight: 600; }
+figure { margin: 0; display: grid; gap: 10px; background: var(--panel); border: 1px solid var(--rule); padding: 16px; }
+figure img { display: block; width: 100%; height: auto; background: #fff; }
+figcaption { font-size: .88rem; color: var(--muted); max-width: 72ch; }
+svg { width: 100%; height: auto; display: block; min-width: 560px; }
+svg text { font-family: var(--mono); font-size: 12px; fill: var(--fg); }
+svg text.s { fill: var(--muted); font-size: 11px; }
+svg text.h { font-family: var(--display); font-size: 14px; font-weight: 700; }
+svg .box { fill: var(--soft); stroke: var(--fg); stroke-width: 1.2; }
+svg .pm { fill: var(--metal-soft); stroke: var(--metal); stroke-width: 1.5; }
+svg .nm { fill: var(--diff-soft); stroke: var(--diff); stroke-width: 1.5; }
+svg .rail { stroke: var(--fg); stroke-width: 2.5; }
+svg .w { fill: none; stroke: var(--fg); stroke-width: 1.3; }
+svg .main { fill: none; stroke: var(--metal); stroke-width: 2; }
+svg .wire { fill: none; stroke: var(--muted); stroke-width: 1.3; }
+svg .clk { fill: none; stroke: var(--poly); stroke-width: 1.8; }
+svg .sig { fill: none; stroke: var(--fg); stroke-width: 1.6; }
+svg .zone { fill: var(--poly); opacity: .18; }
+svg .guide { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+svg .dot { fill: var(--fg); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .84rem; color: var(--muted); }
+.legend i { display: inline-block; width: 11px; height: 11px; margin-right: 5px; vertical-align: -1px; border: 1px solid; }
+.flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font: 400 .82rem var(--mono); }
+.flow span { background: var(--panel); border: 1px solid var(--rule); padding: 5px 9px; }
+.flow em { font-style: normal; color: var(--muted); }
+.bars { display: grid; gap: 12px; font-size: .86rem; }
+.bar { display: flex; height: 24px; }
+.bar i { display: block; height: 100%; margin-right: 2px; }
+.c-tcq { background: var(--tan); } .c-tpd { background: var(--metal); } .c-tsu { background: var(--diff); } .c-th { background: var(--poly); } .c-gap { background: var(--rule); }
+
+/* problems */
+.prob { display: grid; gap: 0; border: 1px solid var(--rule); background: var(--panel); }
+.prob > h3 { margin: 0; padding: 12px 16px; font-size: 1.05rem; border-bottom: 1px solid var(--rule); display: flex; gap: 10px; align-items: baseline; }
+.prob > h3 .num { font: 500 .8rem var(--mono); color: var(--muted); }
+.prob .pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.prob .pair > div { padding: 12px 16px; display: grid; gap: 4px; align-content: start; }
+.prob .was { background: var(--poly-soft); }
+.prob .now { background: var(--diff-soft); }
+.prob .was b, .prob .now b { font: 500 .72rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+.prob .was b { color: var(--poly); } .prob .now b { color: var(--diff); }
+.prob .pair p { font-size: .95rem; }
+.prob .lesson { padding: 10px 16px; font-size: .92rem; color: var(--muted); border-top: 1px solid var(--rule); }
+.prob.open .now { background: var(--soft); }
+.prob.open .now b { color: var(--muted); }
+@media (max-width: 640px) { .prob .pair { grid-template-columns: minmax(0, 1fr); } }
+.probgroup { display: grid; gap: 12px; }
+.steps { counter-reset: st; list-style: none; padding: 0; display: grid; gap: 10px; }
+.steps > li { counter-increment: st; position: relative; padding: 12px 14px 12px 56px; background: var(--panel); border: 1px solid var(--rule); }
+.steps > li::before { content: counter(st); position: absolute; left: 14px; top: 12px; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--metal-soft); color: var(--metal); font: 600 .9rem/28px var(--mono); text-align: center; }
+.qa { display: grid; gap: 14px; margin: 0; }
+.qa dt { font-family: var(--display); font-weight: 700; }
+.qa dd { margin: 4px 0 0; max-width: 68ch; }
+.gl { display: grid; grid-template-columns: minmax(110px, max-content) minmax(0, 1fr); gap: 8px 20px; margin: 0; }
+.gl dt { font-weight: 600; }
+.gl dd { margin: 0; }
+.back { font-size: .85rem; }
+</style>
+
+<div class="page">
+<nav class="side" id="contents" aria-label="Contents">
+  <h2>Contents</h2>
+  <table>
+    <thead><tr><th>No.</th><th>Section</th></tr></thead>
+    <tbody>
+      <tr class="group"><td colspan="2">Ideas</td></tr>
+      <tr><td><a href="#s1" tabindex="-1" aria-hidden="true">01</a></td><td><a href="#s1">The problem in plain words</a></td></tr>
+      <tr><td><a href="#s2" tabindex="-1" aria-hidden="true">02</a></td><td><a href="#s2">How the work was done</a></td></tr>
+      <tr><td><a href="#s3" tabindex="-1" aria-hidden="true">03</a></td><td><a href="#s3">Adding, and why carries are slow</a></td></tr>
+      <tr><td><a href="#s4" tabindex="-1" aria-hidden="true">04</a></td><td><a href="#s4">Transistors and gates</a></td></tr>
+      <tr class="group"><td colspan="2">The circuit</td></tr>
+      <tr><td><a href="#s5" tabindex="-1" aria-hidden="true">05</a></td><td><a href="#s5">Six candidate designs</a></td></tr>
+      <tr><td><a href="#s6" tabindex="-1" aria-hidden="true">06</a></td><td><a href="#s6">The final adder, block by block</a></td></tr>
+      <tr><td><a href="#s7" tabindex="-1" aria-hidden="true">07</a></td><td><a href="#s7">The flip-flop</a></td></tr>
+      <tr><td><a href="#s8" tabindex="-1" aria-hidden="true">08</a></td><td><a href="#s8">The registered circuit and its clock</a></td></tr>
+      <tr class="group"><td colspan="2">Making it fast and real</td></tr>
+      <tr><td><a href="#s9" tabindex="-1" aria-hidden="true">09</a></td><td><a href="#s9">Finding the true worst case</a></td></tr>
+      <tr><td><a href="#s10" tabindex="-1" aria-hidden="true">10</a></td><td><a href="#s10">Sizing the transistors</a></td></tr>
+      <tr><td><a href="#s11" tabindex="-1" aria-hidden="true">11</a></td><td><a href="#s11">From circuit to layout</a></td></tr>
+      <tr><td><a href="#s12" tabindex="-1" aria-hidden="true">12</a></td><td><a href="#s12">Problems faced and fixes</a></td></tr>
+      <tr class="group"><td colspan="2">Results</td></tr>
+      <tr><td><a href="#s13" tabindex="-1" aria-hidden="true">13</a></td><td><a href="#s13">Results</a></td></tr>
+      <tr><td><a href="#s14" tabindex="-1" aria-hidden="true">14</a></td><td><a href="#s14">Cross-check with part1_agy</a></td></tr>
+      <tr><td><a href="#s15" tabindex="-1" aria-hidden="true">15</a></td><td><a href="#s15">Open items</a></td></tr>
+      <tr class="group"><td colspan="2">Revision</td></tr>
+      <tr><td><a href="#s16" tabindex="-1" aria-hidden="true">16</a></td><td><a href="#s16">Viva questions</a></td></tr>
+      <tr><td><a href="#s17" tabindex="-1" aria-hidden="true">17</a></td><td><a href="#s17">Glossary</a></td></tr>
+    </tbody>
+  </table>
+</nav>
+
+<main>
+<header style="display:grid;gap:14px">
+  <div class="meta">VLSI Design · IIIT Hyderabad · Monsoon 2026 · Part I · Bhargav, 2025102061</div>
+  <h1>How the 4-bit carry look-ahead adder was built</h1>
+  <p class="lede">From the idea of a carry to a laid-out, verified chip in TSMC 180 nm at 1.8 V. Every circuit is explained, every problem met along the way is listed with its fix, and every number comes from the project's own simulations.</p>
+  <div class="stats">
+    <div><b>579.88 ps</b><span>worst single-input delay, post-layout</span></div>
+    <div><b>589.85 ps</b><span>tpd,max with several inputs changing (sampled)</span></div>
+    <div><b>1.147 GHz</b><span>fastest clock that passed, post-layout</span></div>
+    <div><b>7,005.5 µm²</b><span>full registered circuit, 348 transistors</span></div>
+  </div>
+</header>
+
+<!-- 01 -->
+<section id="s1">
+  <h2><span class="num">01</span>The problem in plain words</h2>
+  <p>The task is to build a circuit that adds two 4-bit numbers, A and B, plus a carry-in C<sub>0</sub>. It gives a 4-bit sum S and a carry-out C<sub>4</sub>. The inputs are captured by flip-flops on a clock edge, and the outputs are captured by flip-flops on the next edge.</p>
+  <p>The main goal is the smallest <b>post-layout worst-case delay</b>: the slowest the adder can ever be, measured on the real drawn layout with its wires. Area and power come second, as trade-offs.</p>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 720 190" role="img" aria-label="Registered adder: nine input flip-flops feed the adder, five output flip-flops capture the result and drive load inverters, one clock reaches all flip-flops">
+      <text x="4" y="82">d_a, d_b</text><text x="4" y="98">d_c0</text>
+      <path class="wire" d="M66 90H100"/>
+      <rect class="box" x="100" y="40" width="130" height="90"/>
+      <text x="165" y="80" text-anchor="middle">9 input</text><text x="165" y="96" text-anchor="middle">flip-flops</text>
+      <path class="main" d="M230 85H290"/><text x="238" y="76" class="s">a, b, C0</text>
+      <rect class="box" x="290" y="40" width="150" height="90"/>
+      <text x="365" y="72" text-anchor="middle">4-bit CLA</text><text x="365" y="90" text-anchor="middle" class="s">P/G → carries → sums</text><text x="365" y="106" text-anchor="middle" class="s">194 transistors</text>
+      <path class="main" d="M440 85H500"/><text x="447" y="76" class="s">S, C4</text>
+      <rect class="box" x="500" y="40" width="120" height="90"/>
+      <text x="560" y="80" text-anchor="middle">5 output</text><text x="560" y="96" text-anchor="middle">flip-flops</text>
+      <path class="wire" d="M620 85H660"/><path class="wire" d="M660 70V100L686 85Z"/><circle class="wire" cx="690" cy="85" r="4"/>
+      <text x="640" y="60" class="s">load inverter</text>
+      <path class="clk" d="M60 165H560M165 165V130M560 165V130"/><text x="4" y="169">clk</text>
+    </svg></div>
+    <figcaption>The whole circuit. The blue path, from input flip-flops through the adder, is the delay that matters most. The red line is the one shared clock.</figcaption>
+  </figure>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 02 -->
+<section id="s2">
+  <h2><span class="num">02</span>How the work was done</h2>
+  <p>The work ran in phases. Each phase ended only when its check passed.</p>
+  <div class="scroll"><table class="t" style="min-width:620px">
+    <thead><tr><th>Phase</th><th>What was made</th><th>Check that closed it</th><th>Explained in</th></tr></thead>
+    <tbody>
+      <tr><td>Planning</td><td>Papers read, transistors measured, delays estimated</td><td>Candidate list and roadmap</td><td><a href="#s4">04</a></td></tr>
+      <tr><td>0</td><td>A Python generator for netlists, drawings and layouts</td><td>Generated inverter matched measurements</td><td><a href="#s11">11</a></td></tr>
+      <tr><td>1</td><td>Gates and blocks</td><td>Transistor-level truth tables</td><td><a href="#s4">04</a></td></tr>
+      <tr><td>2</td><td>Six candidate adders</td><td>All 512 input combinations correct</td><td><a href="#s5">05</a></td></tr>
+      <tr><td>3</td><td>Architecture comparison</td><td>Every candidate searched over 4608 transitions</td><td><a href="#s5">05</a>, <a href="#s9">09</a></td></tr>
+      <tr><td>4</td><td>Transistor sizing</td><td>Stable worst delay, trade-off data</td><td><a href="#s10">10</a></td></tr>
+      <tr><td>5</td><td>Flip-flop</td><td>TSPC chosen and characterised</td><td><a href="#s7">07</a></td></tr>
+      <tr><td>6</td><td>Registered circuit</td><td>Clock limit found on 264 vectors</td><td><a href="#s8">08</a></td></tr>
+      <tr><td>7</td><td>Block layouts</td><td>Every block DRC clean, LVS match</td><td><a href="#s11">11</a></td></tr>
+      <tr><td>8</td><td>Full layout</td><td>DRC 0 and LVS match on the whole circuit</td><td><a href="#s11">11</a></td></tr>
+      <tr><td>9</td><td>Post-layout measurements</td><td>Schematic against post-layout table</td><td><a href="#s13">13</a></td></tr>
+      <tr><td>10</td><td>Report</td><td>27-page PDF built from the stored results</td><td><a href="#s13">13</a></td></tr>
+    </tbody>
+  </table></div>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 03 -->
+<section id="s3">
+  <h2><span class="num">03</span>Adding, and why carries are slow</h2>
+  <p>Adding binary numbers works like adding on paper. Each column adds two bits and the carry from the column to its right, then passes its own carry left.</p>
+  <p><b>How to read the equations on this page:</b></p>
+  <div class="key">
+    <span><span class="math">·</span> means AND</span>
+    <span><span class="math">+</span> means OR</span>
+    <span><span class="math">⊕</span> means XOR</span>
+    <span>a bar on top, <span class="math"><span class="no">x</span></span>, means NOT</span>
+    <span>the small number is the bit position, so <span class="math">a<sub>2</sub></span> is bit 2 of A</span>
+  </div>
+  <p>Each bit position can do one of two useful things to a carry:</p>
+  <div class="eqs">
+    <div><span class="math">g<sub>i</sub> = a<sub>i</sub> · b<sub>i</sub></span><span class="say"><b>Generate:</b> both bits are 1, so this column makes a carry by itself.</span></div>
+    <div><span class="math">t<sub>i</sub> = a<sub>i</sub> + b<sub>i</sub></span><span class="say"><b>Transmit</b>, also called propagate: at least one bit is 1, so an incoming carry passes through.</span></div>
+    <div><span class="math">C<sub>i+1</sub> = g<sub>i</sub> + t<sub>i</sub> · C<sub>i</sub></span><span class="say">The next carry is 1 if this column generates, or transmits a carry that came in.</span></div>
+    <div><span class="math">S<sub>i</sub> = a<sub>i</sub> ⊕ b<sub>i</sub> ⊕ C<sub>i</sub></span><span class="say">The sum bit is 1 when an odd number of the three inputs are 1.</span></div>
+  </div>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 720 270" role="img" aria-label="Ripple carry passes the carry through each bit in turn; look-ahead computes all carries together from the bit signals">
+      <text x="20" y="22" class="h">Ripple carry: the carry waits at every bit</text>
+      <rect class="box" x="110" y="40" width="100" height="40"/><text x="160" y="65" text-anchor="middle">bit 3</text>
+      <rect class="box" x="260" y="40" width="100" height="40"/><text x="310" y="65" text-anchor="middle">bit 2</text>
+      <rect class="box" x="410" y="40" width="100" height="40"/><text x="460" y="65" text-anchor="middle">bit 1</text>
+      <rect class="box" x="560" y="40" width="100" height="40"/><text x="610" y="65" text-anchor="middle">bit 0</text>
+      <path class="clk" d="M700 60H660M560 60H510M410 60H360M260 60H210M110 60H60"/>
+      <text x="680" y="52" class="s">C0</text><text x="528" y="52" class="s">C1</text><text x="378" y="52" class="s">C2</text><text x="228" y="52" class="s">C3</text><text x="62" y="52" class="s">C4</text>
+      <text x="20" y="128" class="h">Look-ahead: every carry worked out at once</text>
+      <rect class="box" x="110" y="146" width="100" height="36"/><text x="160" y="169" text-anchor="middle">bit 3: g, t</text>
+      <rect class="box" x="260" y="146" width="100" height="36"/><text x="310" y="169" text-anchor="middle">bit 2: g, t</text>
+      <rect class="box" x="410" y="146" width="100" height="36"/><text x="460" y="169" text-anchor="middle">bit 1: g, t</text>
+      <rect class="box" x="560" y="146" width="100" height="36"/><text x="610" y="169" text-anchor="middle">bit 0: g, t</text>
+      <path class="main" d="M160 182V206M310 182V206M460 182V206M610 182V206M700 220H660"/>
+      <rect class="box" x="110" y="206" width="550" height="34"/><text x="385" y="228" text-anchor="middle">carry unit: C1, C2, C3, C4 in parallel</text>
+      <text x="680" y="212" class="s">C0</text>
+      <text x="385" y="262" text-anchor="middle" class="s">No carry has to wait for the bit below it to finish.</text>
+    </svg></div>
+    <figcaption>In a ripple adder, the top carry waits for every bit below it, so delay grows with the number of bits. A look-ahead adder computes each carry from g and t signals directly.</figcaption>
+  </figure>
+  <p>Putting the carry rule into itself removes the chain. <span class="math">C<sub>4</sub></span> then has one term for each way a carry can reach the top:</p>
+  <div class="eqs">
+    <div><span class="math">g<sub>3</sub></span><span class="say">Bit 3 generates.</span></div>
+    <div><span class="math">+ t<sub>3</sub> · g<sub>2</sub></span><span class="say">Or bit 2 generates, and bit 3 passes it on.</span></div>
+    <div><span class="math">+ t<sub>3</sub> · t<sub>2</sub> · g<sub>1</sub></span><span class="say">Or bit 1 generates, and bits 3 and 2 pass it on.</span></div>
+    <div><span class="math">+ t<sub>3</sub> · t<sub>2</sub> · t<sub>1</sub> · g<sub>0</sub></span><span class="say">Or bit 0 generates, and bits 3, 2 and 1 pass it on.</span></div>
+    <div><span class="math">+ t<sub>3</sub> · t<sub>2</sub> · t<sub>1</sub> · t<sub>0</sub> · C<sub>0</sub></span><span class="say">Or the carry-in is 1, and all four bits pass it on.</span></div>
+  </div>
+  <p class="why">The last term ANDs five signals. Built as one gate, it needs five transistors in series, which is slow. The rest of the design is about arranging this equation so the slowest real path is as short as possible.</p>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 04 -->
+<section id="s4">
+  <h2><span class="num">04</span>Transistors and gates</h2>
+  <p>A static CMOS gate has two networks. PMOS transistors (blue) connect the output to VDD, and NMOS transistors (green) connect it to ground. For every input pattern exactly one network conducts, so the output is always driven and no current flows once it settles.</p>
+  <ul>
+    <li>Transistors in <b>series</b> must all be on to conduct. In <b>parallel</b>, any one is enough.</li>
+    <li>The two networks are opposites: series in one becomes parallel in the other.</li>
+    <li>Every single CMOS gate inverts, which is why many signals on this page carry a bar.</li>
+  </ul>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 720 270" role="img" aria-label="Transistor networks of an inverter, a NAND2 and an AOI21 gate">
+      <text x="80" y="16" text-anchor="middle" class="h">Inverter</text>
+      <path class="rail" d="M40 30H120M40 238H120"/><text x="124" y="34" class="s">VDD</text><text x="124" y="242" class="s">GND</text>
+      <path class="w" d="M80 30V60M80 86V134M80 160V238M80 110H130"/>
+      <rect class="pm" x="52" y="60" width="56" height="26"/><text x="80" y="78" text-anchor="middle">P a</text>
+      <rect class="nm" x="52" y="134" width="56" height="26"/><text x="80" y="152" text-anchor="middle">N a</text>
+      <circle class="dot" cx="80" cy="110" r="3"/><text x="134" y="114">y</text>
+
+      <text x="340" y="16" text-anchor="middle" class="h">NAND2</text>
+      <path class="rail" d="M260 30H420M290 238H390"/><text x="424" y="34" class="s">VDD</text><text x="394" y="242" class="s">GND</text>
+      <path class="w" d="M298 30V50M382 30V50M298 76V96M382 76V96M298 96H382M340 96V124M340 150V164M340 190V238M340 110H400"/>
+      <rect class="pm" x="270" y="50" width="56" height="26"/><text x="298" y="68" text-anchor="middle">P a</text>
+      <rect class="pm" x="354" y="50" width="56" height="26"/><text x="382" y="68" text-anchor="middle">P b</text>
+      <rect class="nm" x="312" y="124" width="56" height="26"/><text x="340" y="142" text-anchor="middle">N a</text>
+      <rect class="nm" x="312" y="164" width="56" height="26"/><text x="340" y="182" text-anchor="middle">N b</text>
+      <circle class="dot" cx="340" cy="110" r="3"/><text x="404" y="114">y</text>
+      <text x="340" y="262" text-anchor="middle" class="s">PMOS parallel, NMOS series: 2-high stack</text>
+
+      <text x="590" y="16" text-anchor="middle" class="h">AOI21</text>
+      <path class="rail" d="M500 30H680M500 238H680"/><text x="684" y="34" class="s">VDD</text><text x="684" y="242" class="s">GND</text>
+      <path class="w" d="M538 30V40M622 30V40M538 66V80M622 66V80M538 80H622M580 80V92M580 118V134M540 134H630M540 134V146M540 172V184M540 210V238M630 134V146M630 172V238M580 134H600"/>
+      <rect class="pm" x="510" y="40" width="56" height="26"/><text x="538" y="58" text-anchor="middle">P a</text>
+      <rect class="pm" x="594" y="40" width="56" height="26"/><text x="622" y="58" text-anchor="middle">P b</text>
+      <rect class="pm" x="552" y="92" width="56" height="26"/><text x="580" y="110" text-anchor="middle">P c</text>
+      <rect class="nm" x="512" y="146" width="56" height="26"/><text x="540" y="164" text-anchor="middle">N a</text>
+      <rect class="nm" x="512" y="184" width="56" height="26"/><text x="540" y="202" text-anchor="middle">N b</text>
+      <rect class="nm" x="602" y="146" width="56" height="26"/><text x="630" y="164" text-anchor="middle">N c</text>
+      <circle class="dot" cx="580" cy="134" r="3"/><text x="590" y="128">y</text>
+      <text x="590" y="262" text-anchor="middle" class="s">y = NOT(a·b + c)</text>
+    </svg></div>
+    <div class="legend"><span><i style="background:var(--metal-soft);border-color:var(--metal)"></i>PMOS, pull-up</span><span><i style="background:var(--diff-soft);border-color:var(--diff)"></i>NMOS, pull-down</span></div>
+    <figcaption>Each box is one transistor, named by its type and the input on its gate. AOI21 means AND-OR-INVERT: it does <span class="math"><span class="no">a · b + c</span></span> in a single gate, which is the carry rule with an inverted output.</figcaption>
+  </figure>
+  <div class="concept"><b class="tag">Why tall stacks are slow</b>
+    <p>Series transistors share one current path, so each extra one adds resistance. A 5-high PMOS stack measured 4.6 FO4 in its worst input position. The input's position in the stack also matters: up to 33% difference in NAND5 and 39% in NOR5. So the latest-arriving signal is placed nearest the output.</p>
+  </div>
+  <div class="concept"><b class="tag">Measuring speed: FO4 and logical effort</b>
+    <p><b>FO4</b> is the delay of an inverter driving four copies of itself, a standard unit of gate speed. Measured on this model: <b>85.5 ps</b>, with τ = 11.9 ps.</p>
+    <p><b>Logical effort</b> estimates a gate's delay before simulating it:</p>
+    <div class="eqs">
+      <div><span class="math">d = g · h + p</span><span class="say">Here <span class="math">·</span> is ordinary multiplication, and this <span class="math">g</span> is unrelated to generate.</span></div>
+      <div><span class="math">g</span><span class="say">Logical effort: how much worse the gate drives than an inverter.</span></div>
+      <div><span class="math">h</span><span class="say">Fan-out: output load divided by input capacitance.</span></div>
+      <div><span class="math">p</span><span class="say">Parasitic delay: the gate's own internal delay.</span></div>
+    </div>
+    <p>These estimates only ranked the designs. Every decision was then made by simulation.</p>
+  </div>
+  <div class="concept"><b class="tag">Why static CMOS and not domino logic</b>
+    <p>Domino logic can be faster for wide adders, but its inputs may only rise while it evaluates. With inputs launched on the clock edge, that forces the logic to be split across clock phases, and the course timing formula assumes plain combinational delay. Domino was rejected on this argument. A domino prototype was never simulated.</p>
+  </div>
+  <h3>Every logic style considered</h3>
+  <p>The adder's gates are all static CMOS. Transmission gates and one dynamic circuit were built and measured where they competed. The other main styles were first set aside on known drawbacks, then checked pre-layout afterwards in a small test, below.</p>
+  <div class="scroll"><table class="t" style="min-width:620px">
+    <thead><tr><th>Logic style</th><th>Used?</th><th>Where, or why not</th></tr></thead>
+    <tbody>
+      <tr class="pick"><td>Static CMOS</td><td>Yes</td><td>Every gate of the final adder, including compound AOI and OAI gates and the dual-rail AOI22 sum</td></tr>
+      <tr><td>Dynamic, TSPC</td><td>Yes</td><td>The flip-flop. It stores its state as charge on internal nodes (see <a href="#s7">07</a>)</td></tr>
+      <tr><td>Transmission gates</td><td>Measured, not kept</td><td>TG sum gate: smaller but slower. Manchester chain, candidate E: slowest at unit size. TG master-slave flip-flop: lost to TSPC. Also in the test below</td></tr>
+      <tr><td>Domino</td><td>Tested below, not used</td><td>Inputs must only rise during evaluation, and it needs a precharge phase every cycle</td></tr>
+      <tr><td>Pseudo-NMOS</td><td>Tested below, not used</td><td>Draws steady current whenever the output is low, and its low level depends on transistor ratios</td></tr>
+      <tr><td>CPL, a pass-transistor style</td><td>Tested below, not used</td><td>NMOS passes a weak high level, so it needs restoring inverters</td></tr>
+      <tr><td>DCVSL, also called CVSL</td><td>Tested below, not used</td><td>Dual-rail with cross-coupled PMOS. The AOI22 sum also uses both polarities, but it is ordinary static CMOS</td></tr>
+      <tr><td>GDI</td><td>Not tested</td><td>Needs separately biased transistor bodies, which a standard CMOS process does not give</td></tr>
+      <tr><td>Dual-mode logic, MT-CMOS</td><td>Not tested</td><td>Need low-threshold transistors, which the provided model does not have</td></tr>
+      <tr><td>Adiabatic logic</td><td>Not tested</td><td>Designed to save power, not to be fast, and needs a ramped power clock</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Pre-layout check: one carry chain in each style</h3>
+  <p>To test whether another style would beat static CMOS, the same small circuit was built in each style and simulated in ngspice with the TSMC 180 nm model. This was a schematic-only test, with no layout.</p>
+  <ol class="steps">
+    <li><b>The circuit.</b> Four carry stages in a row, <span class="math">C<sub>0</sub></span> → <span class="math">C<sub>4</sub></span>, each computing <span class="math">g + t · C</span>. Every bit is set to propagate, so a change on <span class="math">C<sub>0</sub></span> ripples through all four stages. This is the hint-vector path.</li>
+    <li><b>Same conditions.</b> The same <span class="math">C<sub>0</sub></span> driver for every style. Each carry drives one unit inverter, or one per rail for dual-rail styles, standing in for a sum gate, and <span class="math">C<sub>4</sub></span> drives four.</li>
+    <li><b>Best version of each style.</b> Transistor sizes and each style's own settings were swept: the pull-up ratio for pseudo-NMOS, buffers and pull-up size for DCVSL, restorers for CPL, and foot and keeper choices for domino. The fastest correct version is reported. In total 409 versions were simulated.</li>
+    <li><b>Correct means full swing.</b> <span class="math">C<sub>4</sub></span> must settle within 10% of each rail, so its low level must be at most 0.18 V. Power is the circuit's own supply, with <span class="math">C<sub>0</sub></span> toggling every 2 ns. The domino clock buffer is counted.</li>
+  </ol>
+  <div class="scroll"><table class="t" style="min-width:640px">
+    <thead><tr><th>Style, best version</th><th class="n">C0 → C4 delay (ps)</th><th class="n">vs static</th><th class="n">Power (µW)</th><th class="n">Transistors</th><th>Catch</th></tr></thead>
+    <tbody>
+      <tr><td>Pseudo-NMOS</td><td class="n">235.8</td><td class="n">33% faster</td><td class="n">6056</td><td class="n">16</td><td>16 times the power. Low level 0.175 V, right at the limit</td></tr>
+      <tr><td>Domino, footless</td><td class="n">328.6</td><td class="n">6% faster</td><td class="n">1417</td><td class="n">30</td><td>Rising edge only, plus 275 ps of precharge each cycle</td></tr>
+      <tr class="pick"><td>Static CMOS, mirror carry</td><td class="n">349.7</td><td class="n">—</td><td class="n">371</td><td class="n">24</td><td>Full swing, no steady current</td></tr>
+      <tr><td>Domino, footed</td><td class="n">377.2</td><td class="n">8% slower</td><td class="n">865</td><td class="n">34</td><td>Rising edge only</td></tr>
+      <tr><td>Transmission-gate mux</td><td class="n">422.5</td><td class="n">21% slower</td><td class="n">271</td><td class="n">24</td><td>Needs an inverter each stage</td></tr>
+      <tr><td>DCVSL</td><td class="n">578.8</td><td class="n">66% slower</td><td class="n">1785</td><td class="n">48</td><td>Cross-coupled pull-ups fight each switch</td></tr>
+      <tr><td>CPL</td><td class="n">603.7</td><td class="n">73% slower</td><td class="n">226</td><td class="n">40</td><td>Weak NMOS high level needs restoring</td></tr>
+    </tbody>
+  </table></div>
+  <p>Transistor counts are for the four stages. Delay is the slower of the rising and falling transition, except for domino, which only switches on the rising edge while it evaluates.</p>
+  <div class="concept"><b class="tag">What this shows</b>
+    <p><b>Pseudo-NMOS is the only clearly faster style.</b> Its pull-up is one small PMOS that is always on, so each input drives only NMOS gates and loads the previous stage much less. The cost is current flowing from VDD to ground whenever an output is low: 6056 µW against 371 µW here.</p>
+    <p><b>Its speed depends on how low "low" must be.</b> Its best result has a 0.175 V low level, at the edge of the limit. With a stricter limit it loses its lead:</p>
+    <div class="scroll"><table class="t" style="min-width:380px">
+      <thead><tr><th>Low level allowed</th><th class="n">Best pseudo-NMOS delay (ps)</th><th class="n">Power (µW)</th></tr></thead>
+      <tbody>
+        <tr><td>0.18 V</td><td class="n">235.8</td><td class="n">6056</td></tr>
+        <tr><td>0.12 V</td><td class="n">290.6</td><td class="n">3588</td></tr>
+        <tr><td>0.09 V</td><td class="n">401.8</td><td class="n">4464</td></tr>
+      </tbody>
+    </table></div>
+    <p><b>Footless domino</b> is only 6% faster, counts only the rising edge, and needs a precharge phase and monotonic inputs. In a registered adder, that phase costs part of every clock cycle. Footless domino is also only safe because no pull-down path is on during precharge, which holds in this test but not for every input pattern.</p>
+    <p><b>DCVSL, CPL and transmission gates</b> were all slower than static CMOS.</p>
+  </div>
+  <p class="why"><b>Limits of this test.</b> It covers one ripple carry chain, pre-layout. The real adder is a prefix tree whose worst path starts at an <span class="math">a</span> input, so the size of any gain there would need its own design and layout. Static CMOS stays the choice because it has full swing, no steady current and no clock inside the adder, and the prefix design keeps every stack at 2 or less.</p>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 05 -->
+<section id="s5">
+  <h2><span class="num">05</span>Six candidate designs</h2>
+  <p>A <b>candidate</b> is one complete trial design of the whole adder. Instead of guessing the best circuit, six were built, checked and measured under the same conditions, and one was kept.</p>
+  <p class="why"><b>Names are only labels.</b> C1 to C4 are design numbers from the planning table, R is the design planning first recommended, and E is a Manchester chain. Candidate C4 is a whole adder. The carry <span class="math">C<sub>4</sub></span> is a single signal. They only share a name.</p>
+  <div class="scroll"><table class="t" style="min-width:640px">
+    <thead><tr><th>Candidate</th><th>How its carries are built</th><th class="n">Tallest stack</th><th class="n">Transistors</th></tr></thead>
+    <tbody>
+      <tr><td>C1</td><td>Textbook: XOR propagate, every carry from NAND gates feeding a NAND gate</td><td class="n">5</td><td class="n">208</td></tr>
+      <tr><td>C2</td><td>One large complex gate for each of the four carries</td><td class="n">5</td><td class="n">170</td></tr>
+      <tr><td>R</td><td>One complex gate each for <span class="math">C<sub>1</sub></span> to <span class="math">C<sub>3</sub></span>. <span class="math">C<sub>4</sub></span> from a mirror gate fed by <span class="math">C<sub>2</sub></span></td><td class="n">4</td><td class="n">172</td></tr>
+      <tr><td>C3</td><td>Gates for <span class="math">C<sub>1</sub></span> and <span class="math">C<sub>2</sub></span>. <span class="math">C<sub>3</sub></span> and <span class="math">C<sub>4</sub></span> from mirror gates fed by <span class="math">C<sub>2</sub></span></td><td class="n">3</td><td class="n">170</td></tr>
+      <tr class="pick"><td>C4, used</td><td>Prefix tree of small 2-input steps, with <span class="math">C<sub>0</sub></span> added last</td><td class="n">2</td><td class="n">194</td></tr>
+      <tr><td>E</td><td>Manchester chain: the carry passes through transmission gates bit by bit</td><td class="n">4 TGs</td><td class="n">144</td></tr>
+    </tbody>
+  </table></div>
+  <p>A <b>mirror gate</b> is a compact gate that computes a carry straight from raw <span class="math">a</span> and <span class="math">b</span> and a lower carry.</p>
+  <h3>One carry, written four ways</h3>
+  <p>All four forms below compute <span class="math">C<sub>3</sub></span>, the carry into bit 3, and always give the same answer. What changes is the circuit.</p>
+  <div class="eqs">
+    <div><span class="math">g<sub>2</sub> + t<sub>2</sub> · g<sub>1</sub> + t<sub>2</sub> · t<sub>1</sub> · g<sub>0</sub> + t<sub>2</sub> · t<sub>1</sub> · t<sub>0</sub> · C<sub>0</sub></span><span class="say"><b>Flat (C1).</b> Every case listed. Wide gates, and each input drives many of them.</span></div>
+    <div><span class="math">g<sub>2</sub> + t<sub>2</sub> · ( g<sub>1</sub> + t<sub>1</sub> · ( g<sub>0</sub> + t<sub>0</sub> · C<sub>0</sub> ) )</span><span class="say"><b>Nested (R, C2).</b> Factored like algebra. Fits one complex gate, with a tall stack.</span></div>
+    <div><span class="math">g<sub>2</sub> + t<sub>2</sub> · C<sub>2</sub></span><span class="say"><b>Grouped (C3).</b> Reuses a lower carry. Shorter stacks, one more gate on the path.</span></div>
+    <div><span class="math">G<sub>2:0</sub> + T<sub>2:0</sub> · C<sub>0</sub></span><span class="say"><b>Prefix (C4).</b> Bits 2 to 0 combined into one group first, carry-in added last. Stack of 2.</span></div>
+  </div>
+  <h3>How they were compared</h3>
+  <ol class="steps">
+    <li><b>Same conditions.</b> Every gate at unit size, with the same model, supply, input drivers and output load.</li>
+    <li><b>Correct logic first.</b> Each design passed all 512 input combinations at transistor level.</li>
+    <li><b>Same search.</b> Each ran all 4608 single-input transitions (see <a href="#s9">09</a>). The slowest is its worst delay.</li>
+    <li><b>Leaders sized and laid out.</b> Unit size is only a first ranking, so the best went on to sizing and layout, where wires count.</li>
+  </ol>
+  <div class="scroll"><table class="t" style="min-width:560px">
+    <thead><tr><th>Unit size, schematic</th><th class="n">Worst delay (ps)</th><th class="n">Worst from C0 (ps)</th><th class="n">Hint vector (ps)</th><th class="n">Transistors</th></tr></thead>
+    <tbody>
+      <tr class="pick"><td>C4</td><td class="n">658.9</td><td class="n">388.3</td><td class="n">360.0</td><td class="n">194</td></tr>
+      <tr><td>R</td><td class="n">727.0</td><td class="n">618.0</td><td class="n">574.2</td><td class="n">172</td></tr>
+      <tr><td>C2</td><td class="n">764.0</td><td class="n">643.8</td><td class="n">577.2</td><td class="n">170</td></tr>
+      <tr><td>C1</td><td class="n">771.3</td><td class="n">488.0</td><td class="n">421.4</td><td class="n">208</td></tr>
+      <tr><td>C3</td><td class="n">796.4</td><td class="n">689.6</td><td class="n">623.5</td><td class="n">170</td></tr>
+      <tr><td>E</td><td class="n">799.8</td><td class="n">629.3</td><td class="n">629.1</td><td class="n">144</td></tr>
+    </tbody>
+  </table></div>
+  <div class="scroll"><table class="t" style="min-width:520px">
+    <thead><tr><th>After sizing and layout</th><th class="n">Post-layout (ps)</th><th class="n">Adder area (µm²)</th><th>Outcome</th></tr></thead>
+    <tbody>
+      <tr class="pick"><td>C4 with AOI22 sums</td><td class="n">579.88</td><td class="n">2936.9</td><td>Used</td></tr>
+      <tr><td>C4 with TG sums</td><td class="n">596.66</td><td class="n">2498.5</td><td>Smaller, slower</td></tr>
+      <tr><td>R with TG sums</td><td class="n">645.59</td><td class="n">3425.8</td><td>Slower and larger</td></tr>
+      <tr><td>R with AOI22 sums</td><td class="n">none</td><td class="n">none</td><td>586.1 ps schematic, layout failed LVS</td></tr>
+      <tr><td>C2 with TG sums</td><td class="n">none</td><td class="n">none</td><td>Stopped at schematic, 663.5 ps</td></tr>
+    </tbody>
+  </table></div>
+  <div class="concept"><b class="tag">Is candidate C4 the best possible?</b>
+    <p>It is the fastest of the designs built and measured here, which is not a proof that nothing better exists. R and C2 did not get the same layout refinement, and domino was never simulated. The likely reason it wins is structural: with stacks of 2, no gate is very slow, and <span class="math">C<sub>0</sub></span> reaches every carry through one gate. That explanation is reasoning. The delays are measured.</p>
+  </div>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 06 -->
+<section id="s6">
+  <h2><span class="num">06</span>The final adder, block by block</h2>
+  <p>The final adder has three blocks: a front end for each bit, a prefix carry tree, and a sum gate for each bit. Signals flow in that order.</p>
+
+  <h3>Block 1: the bit front end</h3>
+  <p>Each bit uses four gates on <span class="math">a<sub>i</sub></span> and <span class="math">b<sub>i</sub></span>. The trick is reuse: the NAND and NOR outputs feed the two XOR gates, so the XOR costs only two compound gates.</p>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 720 210" role="img" aria-label="Bit front end: NAND2 gives g-bar, NOR2 gives t-bar, AOI21 gives P, OAI21 gives P-bar">
+      <rect class="box" x="200" y="20" width="100" height="40"/><text x="250" y="45" text-anchor="middle">NAND2</text>
+      <rect class="box" x="200" y="90" width="100" height="40"/><text x="250" y="115" text-anchor="middle">NOR2</text>
+      <rect class="box" x="470" y="40" width="100" height="40"/><text x="520" y="65" text-anchor="middle">AOI21</text>
+      <rect class="box" x="470" y="140" width="100" height="40"/><text x="520" y="165" text-anchor="middle">OAI21</text>
+      <text x="194" y="44" text-anchor="end">aᵢ, bᵢ →</text><text x="194" y="114" text-anchor="end">aᵢ, bᵢ →</text>
+      <text x="464" y="56" text-anchor="end" class="s">aᵢ, bᵢ</text><text x="464" y="156" text-anchor="end" class="s">aᵢ, bᵢ</text>
+      <path class="w" d="M300 40H440V170H470M300 110H420V72H470"/>
+      <path class="main" d="M440 40H700M420 110H700"/>
+      <path class="w" d="M570 60H620M570 160H620"/>
+      <text x="330" y="34">ḡᵢ</text><text x="330" y="104">t̄ᵢ</text>
+      <text x="700" y="32" text-anchor="end" class="s">ḡᵢ to carry tree</text><text x="700" y="102" text-anchor="end" class="s">t̄ᵢ to carry tree</text>
+      <text x="626" y="64">Pᵢ</text><text x="626" y="164">P̄ᵢ</text>
+      <text x="360" y="200" text-anchor="middle" class="s">P = a ⊕ b and P̄ = its inverse, both for the sum gate</text>
+    </svg></div>
+    <figcaption>Why the reuse works: AOI21 gives <span class="math"><span class="no">a · b + <span class="no">t</span></span></span>, which equals <span class="math">t</span> except when both bits are 1. That is exactly <span class="math">a ⊕ b</span>. OAI21 with <span class="math"><span class="no">g</span></span> gives its inverse.</figcaption>
+  </figure>
+  <div class="concept"><b class="tag">Why OR, not XOR, for the carries</b>
+    <p>OR and XOR give different answers only when both bits are 1. Then <span class="math">g = 1</span> and the carry is already set, so the difference never matters. The carry tree can use the light NOR2 output for <span class="math">t</span>. XOR is kept for the sum only.</p>
+  </div>
+
+  <h3>Block 2: the prefix carry tree</h3>
+  <p>Bits are combined two at a time into <b>group</b> signals. Capital G and T mean the same as g and t, but for a range of bits:</p>
+  <div class="eqs">
+    <div><span class="math">G<sub>1:0</sub> = g<sub>1</sub> + t<sub>1</sub> · g<sub>0</sub></span><span class="say">Bits 1 and 0 together generate a carry.</span></div>
+    <div><span class="math">T<sub>1:0</sub> = t<sub>1</sub> · t<sub>0</sub></span><span class="say">Bits 1 and 0 together pass a carry along.</span></div>
+    <div><span class="math">G<sub>3:0</sub> = G<sub>3:2</sub> + T<sub>3:2</sub> · G<sub>1:0</sub></span><span class="say">Bigger groups are made from two smaller ones, by the same rule.</span></div>
+    <div><span class="math">C<sub>k</sub> = G<sub>k−1:0</sub> + T<sub>k−1:0</sub> · C<sub>0</sub></span><span class="say">Each carry is its group signal, plus <span class="math">C<sub>0</sub></span> if the whole group passes it.</span></div>
+  </div>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 860 300" role="img" aria-label="Prefix carry tree: bit signals merge in pairs, then into groups reaching bit 0, and C0 joins last to form C1 to C4">
+      <rect class="box" x="30" y="10" width="120" height="36"/><text x="90" y="33" text-anchor="middle">bit 3: ḡ, t̄</text>
+      <rect class="box" x="190" y="10" width="120" height="36"/><text x="250" y="33" text-anchor="middle">bit 2: ḡ, t̄</text>
+      <rect class="box" x="350" y="10" width="120" height="36"/><text x="410" y="33" text-anchor="middle">bit 1: ḡ, t̄</text>
+      <rect class="box" x="510" y="10" width="120" height="36"/><text x="570" y="33" text-anchor="middle">bit 0: ḡ, t̄</text>
+      <path class="wire" d="M90 46V66H250V46M170 66V84M410 46V66H570V46M490 66V84"/>
+      <rect class="box" x="110" y="84" width="120" height="36"/><text x="170" y="107" text-anchor="middle">G,T 3:2</text>
+      <rect class="box" x="430" y="84" width="120" height="36"/><text x="490" y="107" text-anchor="middle">G,T 1:0</text>
+      <path class="wire" d="M170 120V158M490 120V236M490 140H170V158M330 140V158M250 66H290V158M610 46V236"/>
+      <circle class="dot" cx="490" cy="140" r="3"/><circle class="dot" cx="330" cy="140" r="3"/><circle class="dot" cx="170" cy="140" r="3"/>
+      <rect class="box" x="110" y="158" width="120" height="36"/><text x="170" y="181" text-anchor="middle">G,T 3:0</text>
+      <rect class="box" x="270" y="158" width="120" height="36"/><text x="330" y="181" text-anchor="middle">G,T 2:0</text>
+      <path class="wire" d="M170 194V236M330 194V236"/>
+      <path class="main" d="M10 216H650M200 216V236M360 216V236M520 216V236M650 216V236"/><text x="10" y="208">C0</text>
+      <rect class="box" x="115" y="236" width="110" height="36"/><text x="170" y="259" text-anchor="middle">C4</text>
+      <rect class="box" x="275" y="236" width="110" height="36"/><text x="330" y="259" text-anchor="middle">C3</text>
+      <rect class="box" x="435" y="236" width="110" height="36"/><text x="490" y="259" text-anchor="middle">C2</text>
+      <rect class="box" x="585" y="236" width="110" height="36"/><text x="640" y="259" text-anchor="middle">C1</text>
+      <path class="guide" d="M710 10V280"/>
+      <text x="720" y="24" class="s">Step 1: NAND2, NOR2</text>
+      <text x="720" y="100" class="s">Step 2: OAI21, NOR2</text>
+      <text x="720" y="174" class="s">Step 3: AOI21, NAND2</text>
+      <text x="720" y="252" class="s">Step 4: OAI21 with C0</text>
+    </svg></div>
+    <figcaption>Each step uses a gate with at most 2 transistors in series. C0 enters only at step 4, so its path is short. Inputs a and b go through all four steps, so the slowest path starts at an <span class="math">a</span> or <span class="math">b</span> input.</figcaption>
+  </figure>
+  <div class="scroll"><table class="t" style="min-width:560px">
+    <thead><tr><th>Carry</th><th>Equation</th><th>Gates on its way, from the inputs</th></tr></thead>
+    <tbody>
+      <tr><td><span class="math">C<sub>1</sub></span></td><td><span class="math">g<sub>0</sub> + t<sub>0</sub> · C<sub>0</sub></span></td><td>NAND2 or NOR2 → OAI21</td></tr>
+      <tr><td><span class="math">C<sub>2</sub></span></td><td><span class="math">G<sub>1:0</sub> + T<sub>1:0</sub> · C<sub>0</sub></span></td><td>NAND2 or NOR2 → OAI21 or NOR2 → inverter → OAI21</td></tr>
+      <tr><td><span class="math">C<sub>3</sub></span></td><td><span class="math">G<sub>2:0</sub> + T<sub>2:0</sub> · C<sub>0</sub></span></td><td>NAND2 or NOR2 → OAI21 or NOR2 → AOI21 or NAND2 → OAI21</td></tr>
+      <tr><td><span class="math">C<sub>4</sub></span></td><td><span class="math">G<sub>3:0</sub> + T<sub>3:0</sub> · C<sub>0</sub></span></td><td>NAND2 or NOR2 → OAI21 or NOR2 → AOI21 or NAND2 → OAI21</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Block 3: the sum gate</h3>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 720 180" role="img" aria-label="Sum gate: AOI22 takes P, C, P-bar and C-bar and outputs the sum">
+      <rect class="box" x="300" y="40" width="120" height="90"/><text x="360" y="82" text-anchor="middle">AOI22</text><text x="360" y="100" text-anchor="middle" class="s">10 transistors</text>
+      <path class="w" d="M120 55H300M120 95H300M40 75H300"/>
+      <path class="w" d="M150 75V150H170M200 150H250V115H300"/>
+      <path class="w" d="M170 138V162L196 150Z"/><circle class="w" cx="199" cy="150" r="3"/>
+      <text x="90" y="59">Pᵢ</text><text x="90" y="99">P̄ᵢ</text><text x="10" y="79">Cᵢ</text><text x="258" y="110" class="s">C̄ᵢ</text>
+      <path class="main" d="M420 85H490"/><text x="496" y="89">Sᵢ</text>
+      <text x="530" y="70" class="s">S = NOT(P·C + P̄·C̄)</text><text x="530" y="90" class="s">  = P ⊕ C</text>
+    </svg></div>
+    <figcaption>The sum bit is <span class="math">P<sub>i</sub> ⊕ C<sub>i</sub></span>. A dual-rail AOI22 computes it in one gate, using each signal and its inverse. A transmission-gate version is smaller but measured slower: 596.66 ps against 579.88 ps after layout.</figcaption>
+  </figure>
+
+  <h3>Worked example: 7 + 1</h3>
+  <p>A = 0111, B = 0001, <span class="math">C<sub>0</sub></span> = 0. The answer should be 8, which is S = 1000 with <span class="math">C<sub>4</sub></span> = 0.</p>
+  <div class="scroll"><table class="t" style="min-width:520px">
+    <thead><tr><th>Signal</th><th class="n">Bit 3</th><th class="n">Bit 2</th><th class="n">Bit 1</th><th class="n">Bit 0</th></tr></thead>
+    <tbody>
+      <tr><td>a, b</td><td class="n">0, 0</td><td class="n">1, 0</td><td class="n">1, 0</td><td class="n">1, 1</td></tr>
+      <tr><td>g (both 1)</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">1</td></tr>
+      <tr><td>t (either 1)</td><td class="n">0</td><td class="n">1</td><td class="n">1</td><td class="n">1</td></tr>
+      <tr><td>P = a ⊕ b</td><td class="n">0</td><td class="n">1</td><td class="n">1</td><td class="n">0</td></tr>
+      <tr><td>Carry into the bit</td><td class="n">C3 = 1</td><td class="n">C2 = 1</td><td class="n">C1 = 1</td><td class="n">C0 = 0</td></tr>
+      <tr class="pick"><td>Sum S = P ⊕ C</td><td class="n">1</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+    </tbody>
+  </table></div>
+  <p>Bit 0 generates, and bits 1 and 2 transmit, so <span class="math">G<sub>1:0</sub></span> and <span class="math">G<sub>2:0</sub></span> are 1 and carries 1 to 3 are 1. Bit 3 transmits nothing, so <span class="math">C<sub>4</sub></span> = 0. S = 1000 = 8.</p>
+
+  <div class="scroll"><table class="t" style="min-width:420px">
+    <thead><tr><th>Part of the adder</th><th class="n">Transistors</th></tr></thead>
+    <tbody>
+      <tr><td>Bit front end: NAND2, NOR2, AOI21, OAI21 on each of 4 bits</td><td class="n">80</td></tr>
+      <tr><td>Inverter for <span class="math">C<sub>0</sub></span></td><td class="n">2</td></tr>
+      <tr><td>Carry tree steps 2 and 3, with inverters</td><td class="n">48</td></tr>
+      <tr><td>Final carry gates: 4 OAI21</td><td class="n">24</td></tr>
+      <tr><td>Sum gates: 4 AOI22</td><td class="n">40</td></tr>
+      <tr class="pick"><td>Total</td><td class="n">194</td></tr>
+    </tbody>
+  </table></div>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 07 -->
+<section id="s7">
+  <h2><span class="num">07</span>The flip-flop</h2>
+  <p>A flip-flop copies D to Q at the rising clock edge and holds it until the next one. Three times describe it:</p>
+  <ul>
+    <li><b>Clk-Q (t<sub>cq</sub>):</b> from the clock edge until Q changes.</li>
+    <li><b>Setup (t<sub>su</sub>):</b> how long before the edge D must be stable. Here, the point where Clk-Q has grown by 10%.</li>
+    <li><b>Hold (t<sub>hold</sub>):</b> how long after the edge D must stay stable.</li>
+  </ul>
+  <h3>TSPC: true single-phase clock flip-flop</h3>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 720 270" role="img" aria-label="TSPC flip-flop, 11 transistors in three clocked stages and an output inverter">
+      <path class="rail" d="M20 26H700M20 236H700"/><text x="20" y="18" class="s">VDD</text><text x="20" y="254" class="s">GND</text>
+      <text x="95" y="48" text-anchor="middle" class="h">Stage 1</text>
+      <path class="w" d="M95 26V56M95 82V96M95 122V180M95 206V236M95 140H140"/>
+      <rect class="pm" x="67" y="56" width="56" height="26"/><text x="95" y="74" text-anchor="middle">P clk</text>
+      <rect class="pm" x="67" y="96" width="56" height="26"/><text x="95" y="114" text-anchor="middle">P D</text>
+      <rect class="nm" x="67" y="180" width="56" height="26"/><text x="95" y="198" text-anchor="middle">N D</text>
+      <circle class="dot" cx="95" cy="140" r="3"/><text x="144" y="144">a</text>
+      <text x="275" y="48" text-anchor="middle" class="h">Stage 2</text>
+      <path class="w" d="M275 26V56M275 82V110M275 136V150M275 176V236M275 96H320"/>
+      <rect class="pm" x="247" y="56" width="56" height="26"/><text x="275" y="74" text-anchor="middle">P clk</text>
+      <rect class="nm" x="247" y="110" width="56" height="26"/><text x="275" y="128" text-anchor="middle">N a</text>
+      <rect class="nm" x="247" y="150" width="56" height="26"/><text x="275" y="168" text-anchor="middle">N clk</text>
+      <circle class="dot" cx="275" cy="96" r="3"/><text x="324" y="100">b</text>
+      <text x="455" y="48" text-anchor="middle" class="h">Stage 3</text>
+      <path class="w" d="M455 26V56M455 82V110M455 136V150M455 176V236M455 96H500"/>
+      <rect class="pm" x="427" y="56" width="56" height="26"/><text x="455" y="74" text-anchor="middle">P b</text>
+      <rect class="nm" x="427" y="110" width="56" height="26"/><text x="455" y="128" text-anchor="middle">N clk</text>
+      <rect class="nm" x="427" y="150" width="56" height="26"/><text x="455" y="168" text-anchor="middle">N b</text>
+      <circle class="dot" cx="455" cy="96" r="3"/><text x="504" y="100">q̄</text>
+      <text x="625" y="48" text-anchor="middle" class="h">Output</text>
+      <path class="w" d="M625 26V70M625 96V150M625 176V236M625 123H680"/>
+      <rect class="pm" x="597" y="70" width="56" height="26"/><text x="625" y="88" text-anchor="middle">P q̄</text>
+      <rect class="nm" x="597" y="150" width="56" height="26"/><text x="625" y="168" text-anchor="middle">N q̄</text>
+      <circle class="dot" cx="625" cy="123" r="3"/><text x="684" y="127">Q</text>
+    </svg></div>
+    <figcaption>Eleven transistors, one clock. Clock low: stage 1 follows D, giving <span class="math">a = <span class="no">D</span></span>, while stage 2 pre-charges <span class="math">b</span> high and stage 3 holds. Clock rises: stage 2 evaluates <span class="math">b = <span class="no">a</span> = D</span>, and stage 3 and the inverter pass it to Q. Nodes a and b hold their value as charge, so it is a dynamic flip-flop.</figcaption>
+  </figure>
+  <div class="concept"><b class="tag">TSPC against the transmission-gate flip-flop</b>
+    <p>The usual static master-slave flip-flop has 22 transistors and needs the clock and its inverse. TSPC needs half the transistors and one clock. At a 15 fF load, Clk-Q plus setup was 212.9 ps for TSPC and 316.8 ps for the master-slave design, so TSPC was chosen. It was then sized at its real load, the largest adder input.</p>
+  </div>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 720 150" role="img" aria-label="Timing around a clock edge: D is stable from 38 ps before to 45.7 ps after the edge, and Q changes 204.2 ps after the edge">
+      <rect class="zone" x="194.4" y="56" width="54.8" height="36"/>
+      <path class="clk" d="M60 42H225L239 14H690"/><text x="10" y="32">clk</text>
+      <path class="sig" d="M60 62H150L160 86H190M60 86H150L160 62H190M190 62H300M190 86H300"/><text x="10" y="78">D</text>
+      <path class="sig" d="M60 136H475L488 112H690"/><text x="10" y="128">Q</text>
+      <path class="guide" d="M239 10V140M484 100V140"/>
+      <text x="172" y="106" class="s">tsu 38.0</text><text x="252" y="106" class="s">thold 45.7</text>
+      <text x="300" y="128" class="s">tcq 204.2 ps</text>
+    </svg></div>
+    <figcaption>Post-layout timing at its 47.76 fF load, drawn to scale. D must not change inside the shaded window.</figcaption>
+  </figure>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 08 -->
+<section id="s8">
+  <h2><span class="num">08</span>The registered circuit and its clock</h2>
+  <p>Nine input flip-flops (a, b and C<sub>0</sub>) and five output flip-flops were put around the adder. The clock was then made faster until results went wrong, using 264 test vectors: the hint vector, the 30 slowest transitions and 200 random vectors.</p>
+  <div class="eqs">
+    <div><span class="math">T ≥ t<sub>cq</sub> + t<sub>pd</sub> + t<sub>su</sub></span><span class="say"><b>Physical limit.</b> Leave the flip-flop, cross the adder, set up at the next flip-flop.</span></div>
+    <div><span class="math">T = t<sub>pd</sub> + t<sub>su</sub> + t<sub>hold</sub></span><span class="say"><b>Course formula.</b> Leaves out Clk-Q and adds hold, so it claims a faster clock than the circuit reaches.</span></div>
+  </div>
+  <figure>
+    <div class="bars">
+      <div><div>Course formula: 673.6 ps (1.485 GHz), 264 errors when simulated</div>
+        <div class="bar"><i class="c-tpd" style="width:67.6%"></i><i class="c-tsu" style="width:4.4%"></i><i class="c-th" style="width:5.2%"></i></div></div>
+      <div><div>tcq + tpd + tsu: 832.0 ps</div>
+        <div class="bar"><i class="c-tcq" style="width:23.4%"></i><i class="c-tpd" style="width:67.6%"></i><i class="c-tsu" style="width:4.4%"></i></div></div>
+      <div><div>Measured limit: 872.1 ps (1.147 GHz), 0 errors</div>
+        <div class="bar"><i class="c-tcq" style="width:23.4%"></i><i class="c-tpd" style="width:67.6%"></i><i class="c-tsu" style="width:4.4%"></i><i class="c-gap" style="width:4.6%"></i></div></div>
+    </div>
+    <div class="legend"><span><i class="c-tcq"></i>tcq 204.2</span><span><i class="c-tpd"></i>tpd,max 589.85</span><span><i class="c-tsu"></i>tsu 38.0</span><span><i class="c-th"></i>thold 45.7</span><span><i class="c-gap"></i>not explained, 40.1</span></div>
+    <figcaption>One scale for all bars, post-layout picoseconds. The course formula is reported because the course asks for it, but simulation shows it fails.</figcaption>
+  </figure>
+  <p class="why"><b>Why register C<sub>0</sub>?</b> Figure 1(i) of the assignment shows flip-flops for a and b only. A ninth flip-flop puts every input on the same clock and lets the hint vector, which toggles C<sub>0</sub>, run inside the full circuit. This should be confirmed on Moodle.</p>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 09 -->
+<section id="s9">
+  <h2><span class="num">09</span>Finding the true worst case</h2>
+  <p>The course hint vector, A = 1111, B = 0000 with C<sub>0</sub> toggling, looks like the longest path, because a carry ripples across all bits. In this design it is not the worst. After layout it takes 455.23 ps, while the slowest transition found takes 579.88 ps.</p>
+  <ol class="steps">
+    <li><b>Count every transition.</b> 9 inputs give 512 states. From each state, any of the 9 inputs can flip, so there are 9 × 512 = 4608 single-input transitions.</li>
+    <li><b>Run them all in one walk.</b> An Eulerian walk through the 9-dimensional cube visits each transition exactly once, so a single long simulation covers all of them.</li>
+    <li><b>Time each one at the last crossing.</b> A sum can pass 50% early and come back, which is a false sum. Delay is taken at the final 50% crossing, when the output has settled.</li>
+    <li><b>Then sample multi-input changes.</b> There are 261,632 transitions where several inputs change. A 25% sample was run, and the slowest were re-run on the extracted layout. This gave t<sub>pd,max</sub> = 589.85 ps.</li>
+  </ol>
+  <figure>
+    <img src="img/worst_arc_postlayout.png" alt="Waveforms of the worst single-input transition after layout: a1 rises, S1 and S2 fall, and S3 rises last" loading="lazy">
+    <figcaption>The worst single-input transition after layout: a1 rises with A = 0001, B = 0101, C<sub>0</sub> = 0. S3 is the last output to settle. This plot is from a separate re-run started from a settled state, so it shows 583.8 ps against 579.88 ps in the search.</figcaption>
+  </figure>
+  <p class="why"><b>Realistic inputs.</b> Every input is driven through a real inverter, not an ideal source. An ideal source never slows down, which would make large input transistors look free.</p>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 10 -->
+<section id="s10">
+  <h2><span class="num">10</span>Sizing the transistors</h2>
+  <p>Wider transistors drive harder, but they load the gate before them and cost area and power. An optimiser changed sizes one move at a time and kept a move only if the worst delay improved.</p>
+  <div class="concept"><b class="tag">Optimise the maximum, not one path</b>
+    <p>Gates are shared between paths, so speeding up one path can slow another. Every move was checked against all transition classes, not just the current slowest one.</p>
+  </div>
+  <div class="concept"><b class="tag">Layout-aware sizing</b>
+    <p>Wire capacitance from the extracted layout was fed back into the optimiser, so it sized for the loads the real circuit has. The final sizes come from this loop.</p>
+  </div>
+  <div class="scroll"><table class="t" style="min-width:480px">
+    <thead><tr><th>All sizes scaled by</th><th class="n">Post-layout delay (ps)</th><th class="n">Adder area (µm²)</th><th class="n">Power (mW)</th></tr></thead>
+    <tbody>
+      <tr><td>× 0.7</td><td class="n">602.38</td><td class="n">2574.0</td><td class="n">0.983</td></tr>
+      <tr><td>× 0.85</td><td class="n">601.39</td><td class="n">2743.7</td><td class="n">1.116</td></tr>
+      <tr class="pick"><td>× 1.0, chosen</td><td class="n">579.88</td><td class="n">2936.9</td><td class="n">1.270</td></tr>
+      <tr><td>× 1.2</td><td class="n">590.99</td><td class="n">3293.8</td><td class="n">1.482</td></tr>
+    </tbody>
+  </table></div>
+  <p class="why">Bigger is not always faster. At × 1.2 the extra gate and wire load outweighs the extra drive, so the delay gets worse. The × 1.3 and × 1.4 layouts failed LVS and have no valid result.</p>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 11 -->
+<section id="s11">
+  <h2><span class="num">11</span>From circuit to layout</h2>
+  <p>Layout is the drawing of each transistor and wire on the chip's layers. It is drawn in λ, where 1 λ = 0.09 µm in this technology. No schematic tool was installed, so every cell is described once in Python. That one description produces the SPICE netlist, the schematic drawing and the MAGIC layout, so all three always match.</p>
+  <div class="flow"><span>Generate layout</span><em>→</em><span>DRC</span><em>→</em><span>Extract</span><em>→</em><span>LVS</span><em>→</em><span>Simulate extracted</span><em>→</em><span>Feed wire C back to sizing</span></div>
+  <div class="eqs">
+    <div><span class="math" style="font-style:normal">DRC</span><span class="say">Design rule check: can the shapes be manufactured? Checks widths, spacings and overlaps.</span></div>
+    <div><span class="math" style="font-style:normal">Extraction</span><span class="say">Reads the drawing back into a netlist, with the capacitance of every wire and junction.</span></div>
+    <div><span class="math" style="font-style:normal">LVS</span><span class="say">Layout versus schematic: is the extracted circuit the same circuit as the design?</span></div>
+  </div>
+  <h3>Floor plan</h3>
+  <figure>
+    <img src="img/floorplan.png" alt="Floor plan in five rows: input flip-flops at the bottom, then P/G blocks, the carry block, sum blocks and output flip-flops at the top" loading="lazy">
+    <figcaption>Five rows, with data flowing upward. Input flip-flops are at the bottom, then the P/G front ends, the carry tree, the sum gates, and the output flip-flops at the top. The circuit is close to square, 925 × 935 λ, which keeps wires short.</figcaption>
+  </figure>
+  <h3>Routing</h3>
+  <p>Inside each row, nearby connections use horizontal metal1 and vertical metal2 tracks in channels. Longer connections run over the cells in metal3 and metal4, on a 9 λ grid. When a wire cannot fit, the router removes some routes and tries again in a new order. This is called rip-up and retry.</p>
+  <figure>
+    <img src="img/layout_registered.png" alt="Full MAGIC layout of the registered adder, drawn from the layout data, with layers coloured" loading="lazy">
+    <figcaption>The full registered adder, drawn from the MAGIC layout files. MAGIC's own batch plotter gave blank images, so this picture is rendered from the layout data. DRC finds 0 errors, and LVS matches 348 merged devices and 207 nets.</figcaption>
+  </figure>
+  <div class="concept"><b class="tag">LVS without netgen</b>
+    <p>The usual LVS tool, netgen, was not installed, so the project has its own script. It flattens both netlists and merges parallel transistors. Then it labels each net and transistor by what it connects to, and repeats until the labels stop changing. If the label patterns match, the circuits match. It was tested by planting faults on purpose to check it catches them.</p>
+  </div>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 12 -->
+<section id="s12">
+  <h2><span class="num">12</span>Problems faced and how they were fixed</h2>
+  <p>Each card shows what went wrong and what fixed it. Most fixes went into the generator or the test benches, so they stayed fixed for every later run.</p>
+
+  <h3>Simulation and measurement</h3>
+  <div class="probgroup">
+    <div class="prob"><h3><span class="num">P1</span>Simulator stopped with "timestep too small"</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>The input-shaping inverter was sized below the minimum transistor width, which ngspice could not solve.</p></div>
+      <div class="now"><b>Fix</b><p>Widths are clipped to the minimum, so every test bench has a legal driver.</p></div></div></div>
+    <div class="prob"><h3><span class="num">P2</span>Long runs aborted, and the gaps looked like logic errors</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>ngspice's smallest step is tied to its largest step. Long runs with a small maximum step aborted, and the missing data was scored as wrong outputs.</p></div>
+      <div class="now"><b>Fix</b><p>Long runs use a larger maximum step, and short runs are split into segments. An abort is now reported as a failed run, never as a logic result.</p></div></div>
+      <p class="lesson">Lesson: a missing result must never be counted as a measured one.</p></div>
+    <div class="prob"><h3><span class="num">P3</span>False short-circuit failures</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>The check for steady supply current read the transient waveform, and normal ringing looked like a short.</p></div>
+      <div class="now"><b>Fix</b><p>Each input pattern gets a DC operating-point check instead. It still catches a real short, tested with a deliberate one.</p></div></div></div>
+    <div class="prob"><h3><span class="num">P4</span>Simulations were very slow</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>Parallel ngspice runs each started several threads, so the CPU was oversubscribed.</p></div>
+      <div class="now"><b>Fix</b><p>Each ngspice run is limited to one thread, and parallelism comes from running several at once.</p></div></div></div>
+    <div class="prob"><h3><span class="num">P5</span>Power included the test bench</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>The first power figures counted the input drivers and clock buffers, which are not part of the design.</p></div>
+      <div class="now"><b>Fix</b><p>The bench got its own supply, and power was re-measured from the design's supply only.</p></div></div></div>
+    <div class="prob"><h3><span class="num">P6</span>Multi-input delay was slower than the reported worst</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>t<sub>pd,max</sub> was first taken from single-input changes. The multi-input check then found a slower case.</p></div>
+      <div class="now"><b>Fix</b><p>t<sub>pd,max</sub> was corrected to the multi-input figure, 589.85 ps, and all timing uses it.</p></div></div></div>
+  </div>
+
+  <h3>Optimisation</h3>
+  <div class="probgroup">
+    <div class="prob"><h3><span class="num">P7</span>The optimiser fooled itself</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>It tracked only 26 transitions. It sped those up while other paths got slower, reporting 672 ps when the true worst was 1010 ps.</p></div>
+      <div class="now"><b>Fix</b><p>It now tracks all 114 transition classes, confirms each move with a full check, and rebuilds its working set from that check.</p></div></div>
+      <p class="lesson">Lesson: optimising a sample makes the sample look good. Always re-check the full set.</p></div>
+  </div>
+
+  <h3>Flip-flop</h3>
+  <div class="probgroup">
+    <div class="prob"><h3><span class="num">P8</span>Hold time measured wrong</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>The hold check read Q before it had settled, so it judged some cases incorrectly.</p></div>
+      <div class="now"><b>Fix</b><p>Q is read later, 600 ps after the event, and its crossings are counted to catch glitches.</p></div></div></div>
+  </div>
+
+  <h3>Layout</h3>
+  <div class="probgroup">
+    <div class="prob"><h3><span class="num">P9</span>Design rule errors</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>Many rules only showed up as DRC errors: via sizes, gate pitch, track pitch, contact placement, stacked vias too close to neighbours, and small metal3 notches.</p></div>
+      <div class="now"><b>Fix</b><p>Each rule was fixed in the layout generator, so every cell built after that was clean.</p></div></div></div>
+    <div class="prob"><h3><span class="num">P10</span>Metal fill shorted nets together</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>Metal3 fill joined separate nets. DRC passed, because a short can be perfectly legal geometry.</p></div>
+      <div class="now"><b>Fix</b><p>LVS caught it. Fill now keeps clear of other nets.</p></div></div>
+      <p class="lesson">Lesson: DRC says a layout can be made, and only LVS says it is the right circuit.</p></div>
+    <div class="prob"><h3><span class="num">P11</span>Wires could not all be routed</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>With many nets competing for tracks, some could not be routed.</p></div>
+      <div class="now"><b>Fix</b><p>Rip-up and retry: remove some routes and route again in a new order, and after 25 attempts relax the track reservations.</p></div></div></div>
+    <div class="prob open"><h3><span class="num">P12</span>LVS failures in crowded layouts</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>With relaxed routing, three layouts failed LVS: candidate R with AOI22 sums, and the × 1.3 and × 1.4 sizes.</p></div>
+      <div class="now"><b>Still open</b><p>The cause was not found. These designs are left out of the results rather than reported with a bad layout.</p></div></div></div>
+  </div>
+
+  <h3>Tools</h3>
+  <div class="probgroup">
+    <div class="prob"><h3><span class="num">P13</span>No schematic tool</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>Schematics had to match what was simulated, and no drawing tool was installed.</p></div>
+      <div class="now"><b>Fix</b><p>The Python generator draws schematics from the same description that makes the netlist.</p></div></div></div>
+    <div class="prob"><h3><span class="num">P14</span>No netgen for LVS</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>netgen was not installed and had no Homebrew package.</p></div>
+      <div class="now"><b>Fix</b><p>The project's own LVS script, tested against planted faults.</p></div></div></div>
+    <div class="prob"><h3><span class="num">P15</span>Blank layout pictures</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>MAGIC's plot command gave blank images in batch mode.</p></div>
+      <div class="now"><b>Fix</b><p>A script draws the layout directly from the <code>.mag</code> files.</p></div></div></div>
+    <div class="prob open"><h3><span class="num">P16</span>Wire resistance could not be extracted</h3>
+      <div class="pair"><div class="was"><b>Problem</b><p>MAGIC's resistance extraction crashed.</p></div>
+      <div class="now"><b>Partly handled</b><p>An upper-bound estimate was made instead: at most +3.61% delay, poly only. It was not simulated.</p></div></div></div>
+  </div>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 13 -->
+<section id="s13">
+  <h2><span class="num">13</span>Results</h2>
+  <div class="scroll"><table class="t" style="min-width:480px">
+    <thead><tr><th>Measure</th><th class="n">Schematic</th><th class="n">Post-layout</th></tr></thead>
+    <tbody>
+      <tr><td>Worst single-input delay, from the pin</td><td class="n">516.30 ps</td><td class="n">579.88 ps</td></tr>
+      <tr><td>Same, from the driver input</td><td class="n">590.21 ps</td><td class="n">657.44 ps</td></tr>
+      <tr><td>tpd,max, several inputs changing</td><td class="n">not measured</td><td class="n">589.85 ps</td></tr>
+      <tr><td>Hint vector worst</td><td class="n">377.45 ps</td><td class="n">455.23 ps</td></tr>
+      <tr><td>Flip-flop tcq / tsu / thold</td><td class="n">208.5 / 34.0 / 55.1 ps</td><td class="n">204.2 / 38.0 / 45.7 ps</td></tr>
+      <tr><td>Fastest working clock</td><td class="n">1.351 GHz</td><td class="n">1.147 GHz</td></tr>
+      <tr><td>Power at 872.1 ps, random inputs</td><td class="n">3.09 mW</td><td class="n">3.39 mW</td></tr>
+      <tr><td>Area: adder / full circuit</td><td class="n">—</td><td class="n">2937 / 7005.5 µm²</td></tr>
+      <tr><td>Wire capacitance: adder / full circuit</td><td class="n">—</td><td class="n">376.9 / 624.5 fF</td></tr>
+    </tbody>
+  </table></div>
+  <div class="eqs">
+    <div><span class="math">PDP = P × t<sub>pd,max</sub></span><span class="say">Energy per operation: 3.39 mW × 589.85 ps = 2000 fJ.</span></div>
+    <div><span class="math">ADP = A × t<sub>pd,max</sub></span><span class="say">Area against speed: 2937 µm² × 0.58985 ns = 1732 µm²·ns, using adder area.</span></div>
+  </div>
+  <p>Power with other inputs at 872.1 ps, post-layout: 2.50 mW with the hint vector toggling, and 0.887 mW with inputs held constant, where only the clock switches.</p>
+  <p class="why"><b>Why it is slower after layout.</b> The extracted circuit adds the capacitance of every wire and junction that the schematic did not have. The adder alone has 376.9 fF of wire.</p>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 14 -->
+<section id="s14">
+  <h2><span class="num">14</span>Cross-check with <code>part1_agy</code></h2>
+  <p>A separate design was checked independently and found valid. Its logic had 0 errors, DRC 0 and a full LVS match, and rerunning its own flow reproduced its stored results. Both designs then ran on one test bench with the same load.</p>
+  <div class="scroll"><table class="t" style="min-width:440px">
+    <thead><tr><th>Same bench</th><th class="n"><code>part1_agy</code></th><th class="n">This design</th></tr></thead>
+    <tbody>
+      <tr><td>Schematic, flip-flop Q to output</td><td class="n">491.70 ps</td><td class="n">536.71 ps</td></tr>
+      <tr><td>Post-layout, flip-flop Q to output</td><td class="n">664.51 ps</td><td class="n">615.68 ps</td></tr>
+      <tr><td>Post-layout hint vector</td><td class="n">371.93 ps</td><td class="n">472.73 ps</td></tr>
+      <tr><td>Drawn area</td><td class="n">13,437 µm²</td><td class="n">6,960 µm²</td></tr>
+    </tbody>
+  </table></div>
+  <p>Its flat NAND-NAND adder is faster in schematic, but its layout is a single long row with much more wire. These figures include load inverters added to match, so they differ from section 13. Its clock limit and power were not compared on this bench.</p>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 15 -->
+<section id="s15">
+  <h2><span class="num">15</span>Open items and limits</h2>
+  <ul>
+    <li><b>To confirm on Moodle:</b> whether C<sub>0</sub> has a flip-flop, and where the output load goes, including on C<sub>4</sub>.</li>
+    <li><b>Multi-input delay is sampled,</b> 25% of transitions, and assumes inputs switch together.</li>
+    <li><b>Resistance</b> is an upper-bound estimate, not simulated.</li>
+    <li><b>Clock gap:</b> 40 ps between the calculated and measured clock limits is not fully explained.</li>
+    <li><b>LVS failures</b> in crowded layouts have no known cause.</li>
+    <li><b>Not done:</b> domino prototype, full multi-input sweep, netgen, and layout refinement of R and C2.</li>
+  </ul>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 16 -->
+<section id="s16">
+  <h2><span class="num">16</span>Viva questions, short answers</h2>
+  <dl class="qa">
+    <dt>Why a prefix carry tree?</dt><dd>It measured fastest of six designs at unit size and stayed fastest after layout. Every gate has at most 2 transistors in series, and C<sub>0</sub> reaches each carry through one gate.</dd>
+    <dt>Is the hint vector the worst case?</dt><dd>No. It gives 455.23 ps after layout, while the slowest transition, a1 rising to S3, gives 579.88 ps. That is why all 4608 transitions were searched.</dd>
+    <dt>Why does the course formula give a clock that fails?</dt><dd>It leaves out Clk-Q, which is 204.2 ps here. Simulated at that period, the circuit gives 264 errors.</dd>
+    <dt>Why OR instead of XOR for the carries?</dt><dd>They differ only when both bits are 1, and then generate already sets the carry. OR is one light gate, and XOR is kept for the sum.</dd>
+    <dt>Why TSPC?</dt><dd>Half the transistors of a master-slave flip-flop, one clock, and lower Clk-Q plus setup: 212.9 ps against 316.8 ps at 15 fF.</dd>
+    <dt>Why measure at the last 50% crossing?</dt><dd>A sum can cross early and come back. Only the last crossing is the settled value.</dd>
+    <dt>Why is the circuit slower after layout?</dt><dd>Wires and junctions add capacitance that the schematic does not have.</dd>
+    <dt>Why is × 1.2 slower than × 1.0?</dt><dd>Bigger transistors drive harder, but they load the previous gate and add wire. Past a point, the load wins.</dd>
+    <dt>How do you know the layout is the right circuit?</dt><dd>LVS. The project's own script compares the extracted netlist with the design, and it was tested with planted faults.</dd>
+    <dt>Is this design proven optimal?</dt><dd>No. It is the fastest of those built and measured here. Domino was not simulated, and two candidates were not laid out as carefully.</dd>
+  </dl>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+
+<!-- 17 -->
+<section id="s17">
+  <h2><span class="num">17</span>Glossary</h2>
+  <dl class="gl">
+    <dt>CLA</dt><dd>Carry look-ahead adder: computes carries from the inputs directly instead of waiting bit by bit.</dd>
+    <dt>Generate, g</dt><dd>Both bits are 1, so the column makes a carry.</dd>
+    <dt>Transmit, t</dt><dd>At least one bit is 1, so an incoming carry passes. Also called propagate.</dd>
+    <dt>G, T</dt><dd>Generate and transmit for a group of bits, such as bits 2 to 0.</dd>
+    <dt>Prefix tree</dt><dd>Builds group signals two at a time, then each carry from its group.</dd>
+    <dt>Candidate</dt><dd>One complete trial design of the adder.</dd>
+    <dt>Stack</dt><dd>Transistors in series inside one gate. Taller is slower.</dd>
+    <dt>AOI, OAI</dt><dd>AND-OR-INVERT and OR-AND-INVERT: compound gates that do several operations in one stage.</dd>
+    <dt>TG</dt><dd>Transmission gate: a PMOS and NMOS pair used as a switch.</dd>
+    <dt>FO4</dt><dd>Delay of an inverter driving four copies of itself. 85.5 ps here.</dd>
+    <dt>TSPC</dt><dd>True single-phase clock flip-flop. 11 transistors, one clock.</dd>
+    <dt>tcq, tsu, thold</dt><dd>Clk-Q delay, setup time and hold time of a flip-flop.</dd>
+    <dt>tpd,max</dt><dd>The slowest adder delay over all input changes.</dd>
+    <dt>Hint vector</dt><dd>The course's test case: A = 1111, B = 0000, C<sub>0</sub> toggling.</dd>
+    <dt>λ</dt><dd>The layout unit. 1 λ = 0.09 µm here.</dd>
+    <dt>DRC, LVS</dt><dd>Design rule check and layout versus schematic.</dd>
+    <dt>Extraction</dt><dd>Turning the layout back into a netlist with wire capacitance.</dd>
+    <dt>PDP, ADP</dt><dd>Power-delay and area-delay products.</dd>
+  </dl>
+  <p class="back"><a href="#contents">Back to contents</a></p>
+</section>
+</main>
+</div>
+<script>
+(function () {
+  if (!("IntersectionObserver" in window)) return;
+  var rows = {};
+  document.querySelectorAll(".side tbody tr:not(.group)").forEach(function (tr) {
+    rows[tr.querySelector("a").getAttribute("href").slice(1)] = tr;
+  });
+  var seen = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      Object.keys(rows).forEach(function (id) { rows[id].classList.toggle("on", id === e.target.id); });
+    });
+  }, { rootMargin: "-20% 0px -70% 0px" });
+  Object.keys(rows).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) seen.observe(el);
+  });
+})();
+</script>
+
+</html>

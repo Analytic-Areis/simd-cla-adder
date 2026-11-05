@@ -1,0 +1,25 @@
+iteration,round,soft_ps,worst_working_ps,total_width_lambda,transistors,changes,critical_arc,elapsed_s
+1,0,1037.88,787.31,4680,162,nor0 size=1.25; nor1 size=1.25; nor3 size=0.8; c4 size=0.8,"a0 rise to s3 fall, A=0100 B=1010 C0=1",290
+2,0,988.41,736.96,4612,162,nor0 size=1.56; nor1 size=1.56; c4 size=0.64; aoi3 size=1.25,"a0 rise to s3 fall, A=0100 B=1010 C0=1",462
+3,0,966.48,729.34,4596,162,c2 size=0.8; aoi3 size=1.56; c1 size=0.8; nor1 size=1.95,"a2 rise to s3 fall, A=1011 B=0000 C0=1",640
+4,0,952.61,713.74,4446,162,nor0 size=1.95; c4 size=0.51; nor3 size=0.64; aoi2 size=0.8,"a2 rise to s3 fall, A=1011 B=0000 C0=1",825
+5,0,935.95,701.89,4301,162,c4 size=0.41; xtg3 size=0.8; xor3 size=0.8; xtg2 size=0.8,"a3 rise to c4 rise, A=0111 B=0000 C0=1",1012
+6,0,922.21,701.41,4132,162,c3 size=0.8; nor2 size=1.25; c2 size=0.64; invc0 size=1.25,"a3 rise to c4 rise, A=0111 B=0000 C0=1",1199
+7,0,909.88,700.84,4106,162,nor2 size=1.56; aoi1 size=0.8; invc0 size=1.56; aoi0 size=0.8,"a3 rise to c4 rise, A=0111 B=0000 C0=1",1383
+8,0,904.16,684.4,3970,162,aoi1 size=0.64; oai1 size=0.8; aoi0 size=0.64; aoi3 size=1.25,"a3 rise to c4 rise, A=0111 B=0000 C0=1",1558
+9,0,895.1,684.37,3856,162,aoi1 size=0.51; aoi0 size=0.51; oai0 size=0.8; oai2 size=0.8,"a3 rise to c4 rise, A=0111 B=0000 C0=1",1739
+10,0,887.57,683.99,3874,162,aoi1 size=0.41; aoi0 size=0.41; nor2 size=1.95; invc0 size=1.95,"a3 rise to c4 rise, A=0111 B=0000 C0=1",1921
+11,0,882.57,683.71,3794,162,nand0 size=0.8; oai1 size=0.64; nand1 size=0.8; oai2 size=0.64,"a3 rise to c4 rise, A=0111 B=0000 C0=1",2104
+12,0,878.98,683.3,3720,162,nand0 size=0.64; oai1 size=0.51; nand1 size=0.64; aoi2 size=0.64,"a3 rise to c4 rise, A=0111 B=0000 C0=1",2281
+13,0,874.06,677.32,3688,162,nor3 size=0.8; nand0 size=0.51; nand1 size=0.51; oai2 size=0.51,"a3 rise to c4 rise, A=0111 B=0000 C0=1",2464
+14,0,869.22,667.63,3668,162,nor3 size=1.0; nand0 size=0.41; oai0 size=0.64; nand1 size=0.41,"a3 rise to c4 rise, A=0111 B=0000 C0=1",2642
+15,0,866.29,665.24,3654,162,nand0 size=0.33; oai0 size=0.51; xinv0 size=1.25; xor0 size=1.25,"a3 rise to c4 rise, A=0111 B=0000 C0=1",2807
+16,0,862.9,664.79,3633,162,nand0 size=0.3; xinv3 size=0.8; aoi2 size=0.51; invc0 size=2.44,"a3 rise to c4 rise, A=0111 B=0000 C0=1",2945
+17,0,855.51,664.86,3548,162,xtg3 size=0.64; xtg2 size=0.64; oai1 size=0.41; c2 size=0.51,"a3 rise to c4 rise, A=0111 B=0000 C0=1",3081
+18,0,854.42,646.4,3492,162,xor2 size=0.8; oai3 size=0.8; nor3 size=1.25; aoi3 size=1.0,"a3 rise to c4 rise, A=0111 B=0000 C0=1",3224
+19,0,851.0,637.51,3477,162,nor3 size=1.56; xinv2 size=0.8; c1 size=0.64; aoi2 size=0.41,"a3 rise to c4 rise, A=0111 B=0000 C0=1",3352
+20,0,844.81,637.55,3429,162,xtg3 size=0.51; xtg2 size=0.51; oai2 size=0.41; oai0 size=0.41,"a3 rise to c4 rise, A=0111 B=0000 C0=1",3503
+21,0,844.36,637.5,3413,162,nand2 size=0.8,"a3 rise to c4 rise, A=0111 B=0000 C0=1",3643
+22,1,881.96,654.35,3188,162,nand0 size=0.38; c3 size=0.64; c4 size=0.33; c2 size=0.41,"a3 rise to c4 rise, A=0111 B=0000 C0=1",4088
+23,1,863.78,655.16,3047,162,c3 size=0.51; aoi1 size=0.33; nand0 size=0.47; nor0 size=1.56,"a3 rise to c4 rise, A=0111 B=0000 C0=1",4205
+24,1,836.57,652.69,2998,162,nand0 size=0.59; xinv2 size=0.64; c1 size=0.51; nor0 size=1.25,"a3 rise to c4 rise, A=0111 B=0000 C0=1",4304

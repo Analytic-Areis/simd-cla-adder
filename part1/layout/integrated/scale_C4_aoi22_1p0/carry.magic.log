@@ -1,0 +1,3811 @@
+
+Magic 8.3 revision 668 - Compiled on Tue Jun 30 13:36:03 IST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+Using NULL graphics device.
+Input style lambda=0.09(p): scaleFactor=9, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p m4p m5p m6p comment bb 
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Loading "carry.tcl" from command line.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  47.250 x 7.290   ( 0.000,  12.780), ( 47.250,  20.070)  344.453   
+lambda:      525 x 81      (     0,  142  ), (   525,  223  )  42525     
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 0.900   ( 0.720,  2.250), ( 1.890,  3.150)  1.053     
+lambda:       13 x 10      (     8,  25   ), (    21,  35   )  130       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 0.900   ( 2.340,  2.250), ( 3.420,  3.150)  0.972     
+lambda:       12 x 10      (    26,  25   ), (    38,  35   )  120       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 0.900   ( 3.330,  2.250), ( 4.230,  3.150)  0.810     
+lambda:       10 x 10      (    37,  25   ), (    47,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 0.900   ( 4.140,  2.250), ( 5.130,  3.150)  0.891     
+lambda:       11 x 10      (    46,  25   ), (    57,  35   )  110       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 2.250   ( 5.580,  0.900), ( 6.660,  3.150)  2.430     
+lambda:       12 x 25      (    62,  10   ), (    74,  35   )  300       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 2.250   ( 6.570,  0.900), ( 7.470,  3.150)  2.025     
+lambda:       10 x 25      (    73,  10   ), (    83,  35   )  250       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.250   ( 7.380,  0.900), ( 8.370,  3.150)  2.228     
+lambda:       11 x 25      (    82,  10   ), (    93,  35   )  275       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 1.440   ( 8.820,  1.710), ( 9.900,  3.150)  1.555     
+lambda:       12 x 16      (    98,  19   ), (   110,  35   )  192       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 1.440   ( 9.810,  1.710), ( 10.800,  3.150)  1.426     
+lambda:       11 x 16      (   109,  19   ), (   120,  35   )  176       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 0.900   ( 11.250,  2.250), ( 12.420,  3.150)  1.053     
+lambda:       13 x 10      (   125,  25   ), (   138,  35   )  130       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 1.440   ( 12.870,  1.710), ( 14.040,  3.150)  1.685     
+lambda:       13 x 16      (   143,  19   ), (   156,  35   )  208       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 2.250   ( 14.490,  0.900), ( 15.570,  3.150)  2.430     
+lambda:       12 x 25      (   161,  10   ), (   173,  35   )  300       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 2.250   ( 15.480,  0.900), ( 16.380,  3.150)  2.025     
+lambda:       10 x 25      (   172,  10   ), (   182,  35   )  250       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.250   ( 16.290,  0.900), ( 17.280,  3.150)  2.228     
+lambda:       11 x 25      (   181,  10   ), (   192,  35   )  275       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 1.080   ( 17.730,  2.070), ( 18.900,  3.150)  1.264     
+lambda:       13 x 12      (   197,  23   ), (   210,  35   )  156       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 1.800   ( 19.350,  1.350), ( 20.520,  3.150)  2.106     
+lambda:       13 x 20      (   215,  15   ), (   228,  35   )  260       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 0.900   ( 20.970,  2.250), ( 22.050,  3.150)  0.972     
+lambda:       12 x 10      (   233,  25   ), (   245,  35   )  120       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 1.800   ( 21.960,  1.350), ( 22.860,  3.150)  1.620     
+lambda:       10 x 20      (   244,  15   ), (   254,  35   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 1.800   ( 22.770,  1.350), ( 23.760,  3.150)  1.782     
+lambda:       11 x 20      (   253,  15   ), (   264,  35   )  220       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 2.250   ( 24.210,  0.900), ( 25.290,  3.150)  2.430     
+lambda:       12 x 25      (   269,  10   ), (   281,  35   )  300       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.250   ( 25.200,  0.900), ( 26.190,  3.150)  2.228     
+lambda:       11 x 25      (   280,  10   ), (   291,  35   )  275       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 2.250   ( 26.640,  0.900), ( 27.720,  3.150)  2.430     
+lambda:       12 x 25      (   296,  10   ), (   308,  35   )  300       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 2.250   ( 27.630,  0.900), ( 28.530,  3.150)  2.025     
+lambda:       10 x 25      (   307,  10   ), (   317,  35   )  250       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.250   ( 28.440,  0.900), ( 29.430,  3.150)  2.228     
+lambda:       11 x 25      (   316,  10   ), (   327,  35   )  275       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 1.440   ( 29.880,  1.710), ( 30.960,  3.150)  1.555     
+lambda:       12 x 16      (   332,  19   ), (   344,  35   )  192       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 1.440   ( 30.870,  1.710), ( 31.770,  3.150)  1.296     
+lambda:       10 x 16      (   343,  19   ), (   353,  35   )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 1.440   ( 31.680,  1.710), ( 32.670,  3.150)  1.426     
+lambda:       11 x 16      (   352,  19   ), (   363,  35   )  176       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 0.720   ( 33.120,  2.430), ( 34.200,  3.150)  0.778     
+lambda:       12 x 8       (   368,  27   ), (   380,  35   )  96        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 0.720   ( 34.110,  2.430), ( 35.100,  3.150)  0.713     
+lambda:       11 x 8       (   379,  27   ), (   390,  35   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 0.360   ( 35.550,  2.790), ( 36.630,  3.150)  0.389     
+lambda:       12 x 4       (   395,  31   ), (   407,  35   )  48        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 0.720   ( 36.540,  2.430), ( 37.440,  3.150)  0.648     
+lambda:       10 x 8       (   406,  27   ), (   416,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 0.720   ( 37.350,  2.430), ( 38.340,  3.150)  0.713     
+lambda:       11 x 8       (   415,  27   ), (   426,  35   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 0.720   ( 38.790,  2.430), ( 39.870,  3.150)  0.778     
+lambda:       12 x 8       (   431,  27   ), (   443,  35   )  96        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 0.720   ( 39.780,  2.430), ( 40.770,  3.150)  0.713     
+lambda:       11 x 8       (   442,  27   ), (   453,  35   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 1.440   ( 41.220,  1.710), ( 42.300,  3.150)  1.555     
+lambda:       12 x 16      (   458,  19   ), (   470,  35   )  192       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 1.440   ( 42.210,  1.710), ( 43.110,  3.150)  1.296     
+lambda:       10 x 16      (   469,  19   ), (   479,  35   )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 1.440   ( 43.020,  1.710), ( 44.010,  3.150)  1.426     
+lambda:       11 x 16      (   478,  19   ), (   489,  35   )  176       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 1.800   ( 0.720,  13.320), ( 1.890,  15.120)  2.106     
+lambda:       13 x 20      (     8,  148  ), (    21,  168  )  260       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 1.800   ( 2.340,  13.320), ( 3.420,  15.120)  1.944     
+lambda:       12 x 20      (    26,  148  ), (    38,  168  )  240       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 1.800   ( 3.330,  13.320), ( 4.230,  15.120)  1.620     
+lambda:       10 x 20      (    37,  148  ), (    47,  168  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 0.900   ( 4.140,  13.320), ( 5.130,  14.220)  0.891     
+lambda:       11 x 10      (    46,  148  ), (    57,  158  )  110       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 4.500   ( 5.580,  13.320), ( 6.660,  17.820)  4.860     
+lambda:       12 x 50      (    62,  148  ), (    74,  198  )  600       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 4.500   ( 6.570,  13.320), ( 7.470,  17.820)  4.050     
+lambda:       10 x 50      (    73,  148  ), (    83,  198  )  500       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.250   ( 7.380,  13.320), ( 8.370,  15.570)  2.228     
+lambda:       11 x 25      (    82,  148  ), (    93,  173  )  275       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 5.580   ( 8.820,  13.320), ( 9.900,  18.900)  6.026     
+lambda:       12 x 62      (    98,  148  ), (   110,  210  )  744       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 5.580   ( 9.810,  13.320), ( 10.800,  18.900)  5.524     
+lambda:       11 x 62      (   109,  148  ), (   120,  210  )  682       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 1.800   ( 11.250,  13.320), ( 12.420,  15.120)  2.106     
+lambda:       13 x 20      (   125,  148  ), (   138,  168  )  260       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 2.790   ( 12.870,  13.320), ( 14.040,  16.110)  3.264     
+lambda:       13 x 31      (   143,  148  ), (   156,  179  )  403       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 4.500   ( 14.490,  13.320), ( 15.570,  17.820)  4.860     
+lambda:       12 x 50      (   161,  148  ), (   173,  198  )  600       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 4.500   ( 15.480,  13.320), ( 16.380,  17.820)  4.050     
+lambda:       10 x 50      (   172,  148  ), (   182,  198  )  500       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.250   ( 16.290,  13.320), ( 17.280,  15.570)  2.228     
+lambda:       11 x 25      (   181,  148  ), (   192,  173  )  275       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 2.250   ( 17.730,  13.320), ( 18.900,  15.570)  2.633     
+lambda:       13 x 25      (   197,  148  ), (   210,  173  )  325       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.170 x 3.510   ( 19.350,  13.320), ( 20.520,  16.830)  4.107     
+lambda:       13 x 39      (   215,  148  ), (   228,  187  )  507       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 3.600   ( 20.970,  13.320), ( 22.050,  16.920)  3.888     
+lambda:       12 x 40      (   233,  148  ), (   245,  188  )  480       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 3.600   ( 21.960,  13.320), ( 22.860,  16.920)  3.240     
+lambda:       10 x 40      (   244,  148  ), (   254,  188  )  400       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 3.600   ( 22.770,  13.320), ( 23.760,  16.920)  3.564     
+lambda:       11 x 40      (   253,  148  ), (   264,  188  )  440       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 2.250   ( 24.210,  13.320), ( 25.290,  15.570)  2.430     
+lambda:       12 x 25      (   269,  148  ), (   281,  173  )  300       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.250   ( 25.200,  13.320), ( 26.190,  15.570)  2.228     
+lambda:       11 x 25      (   280,  148  ), (   291,  173  )  275       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 4.500   ( 26.640,  13.320), ( 27.720,  17.820)  4.860     
+lambda:       12 x 50      (   296,  148  ), (   308,  198  )  600       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 4.500   ( 27.630,  13.320), ( 28.530,  17.820)  4.050     
+lambda:       10 x 50      (   307,  148  ), (   317,  198  )  500       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.250   ( 28.440,  13.320), ( 29.430,  15.570)  2.228     
+lambda:       11 x 25      (   316,  148  ), (   327,  173  )  275       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 2.880   ( 29.880,  13.320), ( 30.960,  16.200)  3.110     
+lambda:       12 x 32      (   332,  148  ), (   344,  180  )  384       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 2.880   ( 30.870,  13.320), ( 31.770,  16.200)  2.592     
+lambda:       10 x 32      (   343,  148  ), (   353,  180  )  320       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 1.440   ( 31.680,  13.320), ( 32.670,  14.760)  1.426     
+lambda:       11 x 16      (   352,  148  ), (   363,  164  )  176       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 2.880   ( 33.120,  13.320), ( 34.200,  16.200)  3.110     
+lambda:       12 x 32      (   368,  148  ), (   380,  180  )  384       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 2.880   ( 34.110,  13.320), ( 35.100,  16.200)  2.851     
+lambda:       11 x 32      (   379,  148  ), (   390,  180  )  352       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 1.440   ( 35.550,  13.320), ( 36.630,  14.760)  1.555     
+lambda:       12 x 16      (   395,  148  ), (   407,  164  )  192       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 1.440   ( 36.540,  13.320), ( 37.440,  14.760)  1.296     
+lambda:       10 x 16      (   406,  148  ), (   416,  164  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 1.440   ( 37.350,  13.320), ( 38.340,  14.760)  1.426     
+lambda:       11 x 16      (   415,  148  ), (   426,  164  )  176       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 0.720   ( 38.790,  13.320), ( 39.870,  14.040)  0.778     
+lambda:       12 x 8       (   431,  148  ), (   443,  156  )  96        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 0.720   ( 39.780,  13.320), ( 40.770,  14.040)  0.713     
+lambda:       11 x 8       (   442,  148  ), (   453,  156  )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.080 x 2.880   ( 41.220,  13.320), ( 42.300,  16.200)  3.110     
+lambda:       12 x 32      (   458,  148  ), (   470,  180  )  384       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.900 x 2.880   ( 42.210,  13.320), ( 43.110,  16.200)  2.592     
+lambda:       10 x 32      (   469,  148  ), (   479,  180  )  320       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.990 x 1.440   ( 43.020,  13.320), ( 44.010,  14.760)  1.426     
+lambda:       11 x 16      (   478,  148  ), (   489,  164  )  176       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 13.410  ( 1.260,  1.980), ( 1.440,  15.390)  2.414     
+lambda:        2 x 149     (    14,  22   ), (    16,  171  )  298       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 13.410  ( 2.880,  1.980), ( 3.060,  15.390)  2.414     
+lambda:        2 x 149     (    32,  22   ), (    34,  171  )  298       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 13.410  ( 3.690,  1.980), ( 3.870,  15.390)  2.414     
+lambda:        2 x 149     (    41,  22   ), (    43,  171  )  298       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 12.510  ( 4.500,  1.980), ( 4.680,  14.490)  2.252     
+lambda:        2 x 139     (    50,  22   ), (    52,  161  )  278       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 17.460  ( 6.120,  0.630), ( 6.300,  18.090)  3.143     
+lambda:        2 x 194     (    68,  7    ), (    70,  201  )  388       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 17.460  ( 6.930,  0.630), ( 7.110,  18.090)  3.143     
+lambda:        2 x 194     (    77,  7    ), (    79,  201  )  388       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.210  ( 7.740,  0.630), ( 7.920,  15.840)  2.738     
+lambda:        2 x 169     (    86,  7    ), (    88,  176  )  338       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 17.730  ( 9.360,  1.440), ( 9.540,  19.170)  3.191     
+lambda:        2 x 197     (   104,  16   ), (   106,  213  )  394       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 17.730  ( 10.170,  1.440), ( 10.350,  19.170)  3.191     
+lambda:        2 x 197     (   113,  16   ), (   115,  213  )  394       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 13.410  ( 11.790,  1.980), ( 11.970,  15.390)  2.414     
+lambda:        2 x 149     (   131,  22   ), (   133,  171  )  298       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 14.940  ( 13.410,  1.440), ( 13.590,  16.380)  2.689     
+lambda:        2 x 166     (   149,  16   ), (   151,  182  )  332       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 17.460  ( 15.030,  0.630), ( 15.210,  18.090)  3.143     
+lambda:        2 x 194     (   167,  7    ), (   169,  201  )  388       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 17.460  ( 15.840,  0.630), ( 16.020,  18.090)  3.143     
+lambda:        2 x 194     (   176,  7    ), (   178,  201  )  388       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.210  ( 16.650,  0.630), ( 16.830,  15.840)  2.738     
+lambda:        2 x 169     (   185,  7    ), (   187,  176  )  338       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 14.040  ( 18.270,  1.800), ( 18.450,  15.840)  2.527     
+lambda:        2 x 156     (   203,  20   ), (   205,  176  )  312       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 16.020  ( 19.890,  1.080), ( 20.070,  17.100)  2.884     
+lambda:        2 x 178     (   221,  12   ), (   223,  190  )  356       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.210  ( 21.510,  1.980), ( 21.690,  17.190)  2.738     
+lambda:        2 x 169     (   239,  22   ), (   241,  191  )  338       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 16.110  ( 22.320,  1.080), ( 22.500,  17.190)  2.900     
+lambda:        2 x 179     (   248,  12   ), (   250,  191  )  358       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 16.110  ( 23.130,  1.080), ( 23.310,  17.190)  2.900     
+lambda:        2 x 179     (   257,  12   ), (   259,  191  )  358       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.210  ( 24.750,  0.630), ( 24.930,  15.840)  2.738     
+lambda:        2 x 169     (   275,  7    ), (   277,  176  )  338       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.210  ( 25.560,  0.630), ( 25.740,  15.840)  2.738     
+lambda:        2 x 169     (   284,  7    ), (   286,  176  )  338       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 17.460  ( 27.180,  0.630), ( 27.360,  18.090)  3.143     
+lambda:        2 x 194     (   302,  7    ), (   304,  201  )  388       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 17.460  ( 27.990,  0.630), ( 28.170,  18.090)  3.143     
+lambda:        2 x 194     (   311,  7    ), (   313,  201  )  388       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.210  ( 28.800,  0.630), ( 28.980,  15.840)  2.738     
+lambda:        2 x 169     (   320,  7    ), (   322,  176  )  338       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.030  ( 30.420,  1.440), ( 30.600,  16.470)  2.705     
+lambda:        2 x 167     (   338,  16   ), (   340,  183  )  334       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.030  ( 31.230,  1.440), ( 31.410,  16.470)  2.705     
+lambda:        2 x 167     (   347,  16   ), (   349,  183  )  334       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 13.590  ( 32.040,  1.440), ( 32.220,  15.030)  2.446     
+lambda:        2 x 151     (   356,  16   ), (   358,  167  )  302       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 14.310  ( 33.660,  2.160), ( 33.840,  16.470)  2.576     
+lambda:        2 x 159     (   374,  24   ), (   376,  183  )  318       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 14.310  ( 34.470,  2.160), ( 34.650,  16.470)  2.576     
+lambda:        2 x 159     (   383,  24   ), (   385,  183  )  318       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 12.510  ( 36.090,  2.520), ( 36.270,  15.030)  2.252     
+lambda:        2 x 139     (   401,  28   ), (   403,  167  )  278       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 12.870  ( 36.900,  2.160), ( 37.080,  15.030)  2.317     
+lambda:        2 x 143     (   410,  24   ), (   412,  167  )  286       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 12.870  ( 37.710,  2.160), ( 37.890,  15.030)  2.317     
+lambda:        2 x 143     (   419,  24   ), (   421,  167  )  286       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 12.150  ( 39.330,  2.160), ( 39.510,  14.310)  2.187     
+lambda:        2 x 135     (   437,  24   ), (   439,  159  )  270       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 12.150  ( 40.140,  2.160), ( 40.320,  14.310)  2.187     
+lambda:        2 x 135     (   446,  24   ), (   448,  159  )  270       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.030  ( 41.760,  1.440), ( 41.940,  16.470)  2.705     
+lambda:        2 x 167     (   464,  16   ), (   466,  183  )  334       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 15.030  ( 42.570,  1.440), ( 42.750,  16.470)  2.705     
+lambda:        2 x 167     (   473,  16   ), (   475,  183  )  334       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 13.590  ( 43.380,  1.440), ( 43.560,  15.030)  2.446     
+lambda:        2 x 151     (   482,  16   ), (   484,  167  )  302       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 0.720,  2.250), ( 1.080,  3.150)  0.324     
+lambda:        4 x 10      (     8,  25   ), (    12,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 1.530,  2.250), ( 1.890,  3.150)  0.324     
+lambda:        4 x 10      (    17,  25   ), (    21,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 2.340,  2.250), ( 2.700,  3.150)  0.324     
+lambda:        4 x 10      (    26,  25   ), (    30,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 3.150,  2.250), ( 3.510,  3.150)  0.324     
+lambda:        4 x 10      (    35,  25   ), (    39,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 3.960,  2.250), ( 4.320,  3.150)  0.324     
+lambda:        4 x 10      (    44,  25   ), (    48,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 4.770,  2.250), ( 5.130,  3.150)  0.324     
+lambda:        4 x 10      (    53,  25   ), (    57,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 5.580,  0.900), ( 5.940,  3.150)  0.810     
+lambda:        4 x 25      (    62,  10   ), (    66,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 6.390,  0.900), ( 6.750,  3.150)  0.810     
+lambda:        4 x 25      (    71,  10   ), (    75,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 7.200,  0.900), ( 7.560,  3.150)  0.810     
+lambda:        4 x 25      (    80,  10   ), (    84,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 8.010,  0.900), ( 8.370,  3.150)  0.810     
+lambda:        4 x 25      (    89,  10   ), (    93,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 8.820,  1.710), ( 9.180,  3.150)  0.518     
+lambda:        4 x 16      (    98,  19   ), (   102,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 9.630,  1.710), ( 9.990,  3.150)  0.518     
+lambda:        4 x 16      (   107,  19   ), (   111,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 10.440,  1.710), ( 10.800,  3.150)  0.518     
+lambda:        4 x 16      (   116,  19   ), (   120,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 11.250,  2.250), ( 11.610,  3.150)  0.324     
+lambda:        4 x 10      (   125,  25   ), (   129,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 12.060,  2.250), ( 12.420,  3.150)  0.324     
+lambda:        4 x 10      (   134,  25   ), (   138,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 12.870,  1.710), ( 13.230,  3.150)  0.518     
+lambda:        4 x 16      (   143,  19   ), (   147,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 13.680,  1.710), ( 14.040,  3.150)  0.518     
+lambda:        4 x 16      (   152,  19   ), (   156,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 14.490,  0.900), ( 14.850,  3.150)  0.810     
+lambda:        4 x 25      (   161,  10   ), (   165,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 15.300,  0.900), ( 15.660,  3.150)  0.810     
+lambda:        4 x 25      (   170,  10   ), (   174,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 16.110,  0.900), ( 16.470,  3.150)  0.810     
+lambda:        4 x 25      (   179,  10   ), (   183,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 16.920,  0.900), ( 17.280,  3.150)  0.810     
+lambda:        4 x 25      (   188,  10   ), (   192,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.080   ( 17.730,  2.070), ( 18.090,  3.150)  0.389     
+lambda:        4 x 12      (   197,  23   ), (   201,  35   )  48        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.080   ( 18.540,  2.070), ( 18.900,  3.150)  0.389     
+lambda:        4 x 12      (   206,  23   ), (   210,  35   )  48        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 19.350,  1.350), ( 19.710,  3.150)  0.648     
+lambda:        4 x 20      (   215,  15   ), (   219,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 20.160,  1.350), ( 20.520,  3.150)  0.648     
+lambda:        4 x 20      (   224,  15   ), (   228,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 20.970,  2.250), ( 21.330,  3.150)  0.324     
+lambda:        4 x 10      (   233,  25   ), (   237,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 21.780,  1.350), ( 22.140,  3.150)  0.648     
+lambda:        4 x 20      (   242,  15   ), (   246,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 23.400,  1.350), ( 23.760,  3.150)  0.648     
+lambda:        4 x 20      (   260,  15   ), (   264,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 24.210,  0.900), ( 24.570,  3.150)  0.810     
+lambda:        4 x 25      (   269,  10   ), (   273,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 25.830,  0.900), ( 26.190,  3.150)  0.810     
+lambda:        4 x 25      (   287,  10   ), (   291,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 26.640,  0.900), ( 27.000,  3.150)  0.810     
+lambda:        4 x 25      (   296,  10   ), (   300,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 27.450,  0.900), ( 27.810,  3.150)  0.810     
+lambda:        4 x 25      (   305,  10   ), (   309,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 28.260,  0.900), ( 28.620,  3.150)  0.810     
+lambda:        4 x 25      (   314,  10   ), (   318,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 29.070,  0.900), ( 29.430,  3.150)  0.810     
+lambda:        4 x 25      (   323,  10   ), (   327,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 29.880,  1.710), ( 30.240,  3.150)  0.518     
+lambda:        4 x 16      (   332,  19   ), (   336,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 30.690,  1.710), ( 31.050,  3.150)  0.518     
+lambda:        4 x 16      (   341,  19   ), (   345,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 31.500,  1.710), ( 31.860,  3.150)  0.518     
+lambda:        4 x 16      (   350,  19   ), (   354,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 32.310,  1.710), ( 32.670,  3.150)  0.518     
+lambda:        4 x 16      (   359,  19   ), (   363,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 33.120,  2.430), ( 33.480,  3.150)  0.259     
+lambda:        4 x 8       (   368,  27   ), (   372,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 33.930,  2.430), ( 34.290,  3.150)  0.259     
+lambda:        4 x 8       (   377,  27   ), (   381,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 34.740,  2.430), ( 35.100,  3.150)  0.259     
+lambda:        4 x 8       (   386,  27   ), (   390,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 35.550,  2.790), ( 35.910,  3.150)  0.130     
+lambda:        4 x 4       (   395,  31   ), (   399,  35   )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 36.360,  2.430), ( 36.720,  3.150)  0.259     
+lambda:        4 x 8       (   404,  27   ), (   408,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 37.980,  2.430), ( 38.340,  3.150)  0.259     
+lambda:        4 x 8       (   422,  27   ), (   426,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 38.790,  2.430), ( 39.150,  3.150)  0.259     
+lambda:        4 x 8       (   431,  27   ), (   435,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 40.410,  2.430), ( 40.770,  3.150)  0.259     
+lambda:        4 x 8       (   449,  27   ), (   453,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 41.220,  1.710), ( 41.580,  3.150)  0.518     
+lambda:        4 x 16      (   458,  19   ), (   462,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 42.030,  1.710), ( 42.390,  3.150)  0.518     
+lambda:        4 x 16      (   467,  19   ), (   471,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 42.840,  1.710), ( 43.200,  3.150)  0.518     
+lambda:        4 x 16      (   476,  19   ), (   480,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 43.650,  1.710), ( 44.010,  3.150)  0.518     
+lambda:        4 x 16      (   485,  19   ), (   489,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 0.720,  13.320), ( 1.080,  15.120)  0.648     
+lambda:        4 x 20      (     8,  148  ), (    12,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 1.530,  13.320), ( 1.890,  15.120)  0.648     
+lambda:        4 x 20      (    17,  148  ), (    21,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 2.340,  13.320), ( 2.700,  15.120)  0.648     
+lambda:        4 x 20      (    26,  148  ), (    30,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 3.960,  13.320), ( 4.320,  15.120)  0.648     
+lambda:        4 x 20      (    44,  148  ), (    48,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 4.770,  13.320), ( 5.130,  14.220)  0.324     
+lambda:        4 x 10      (    53,  148  ), (    57,  158  )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 5.580,  13.320), ( 5.940,  17.820)  1.620     
+lambda:        4 x 50      (    62,  148  ), (    66,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 7.200,  13.320), ( 7.560,  17.820)  1.620     
+lambda:        4 x 50      (    80,  148  ), (    84,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 8.010,  13.320), ( 8.370,  15.570)  0.810     
+lambda:        4 x 25      (    89,  148  ), (    93,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 5.580   ( 8.820,  13.320), ( 9.180,  18.900)  2.009     
+lambda:        4 x 62      (    98,  148  ), (   102,  210  )  248       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 5.580   ( 10.440,  13.320), ( 10.800,  18.900)  2.009     
+lambda:        4 x 62      (   116,  148  ), (   120,  210  )  248       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 11.250,  13.320), ( 11.610,  15.120)  0.648     
+lambda:        4 x 20      (   125,  148  ), (   129,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 12.060,  13.320), ( 12.420,  15.120)  0.648     
+lambda:        4 x 20      (   134,  148  ), (   138,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 12.870,  13.320), ( 13.230,  16.110)  1.004     
+lambda:        4 x 31      (   143,  148  ), (   147,  179  )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 13.680,  13.320), ( 14.040,  16.110)  1.004     
+lambda:        4 x 31      (   152,  148  ), (   156,  179  )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 14.490,  13.320), ( 14.850,  17.820)  1.620     
+lambda:        4 x 50      (   161,  148  ), (   165,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 16.110,  13.320), ( 16.470,  17.820)  1.620     
+lambda:        4 x 50      (   179,  148  ), (   183,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 16.920,  13.320), ( 17.280,  15.570)  0.810     
+lambda:        4 x 25      (   188,  148  ), (   192,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 17.730,  13.320), ( 18.090,  15.570)  0.810     
+lambda:        4 x 25      (   197,  148  ), (   201,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 18.540,  13.320), ( 18.900,  15.570)  0.810     
+lambda:        4 x 25      (   206,  148  ), (   210,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.510   ( 19.350,  13.320), ( 19.710,  16.830)  1.264     
+lambda:        4 x 39      (   215,  148  ), (   219,  187  )  156       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.510   ( 20.160,  13.320), ( 20.520,  16.830)  1.264     
+lambda:        4 x 39      (   224,  148  ), (   228,  187  )  156       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.600   ( 20.970,  13.320), ( 21.330,  16.920)  1.296     
+lambda:        4 x 40      (   233,  148  ), (   237,  188  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.600   ( 21.780,  13.320), ( 22.140,  16.920)  1.296     
+lambda:        4 x 40      (   242,  148  ), (   246,  188  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.600   ( 22.590,  13.320), ( 22.950,  16.920)  1.296     
+lambda:        4 x 40      (   251,  148  ), (   255,  188  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.600   ( 23.400,  13.320), ( 23.760,  16.920)  1.296     
+lambda:        4 x 40      (   260,  148  ), (   264,  188  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 24.210,  13.320), ( 24.570,  15.570)  0.810     
+lambda:        4 x 25      (   269,  148  ), (   273,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 25.020,  13.320), ( 25.380,  15.570)  0.810     
+lambda:        4 x 25      (   278,  148  ), (   282,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 25.830,  13.320), ( 26.190,  15.570)  0.810     
+lambda:        4 x 25      (   287,  148  ), (   291,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 26.640,  13.320), ( 27.000,  17.820)  1.620     
+lambda:        4 x 50      (   296,  148  ), (   300,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 28.260,  13.320), ( 28.620,  17.820)  1.620     
+lambda:        4 x 50      (   314,  148  ), (   318,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 29.070,  13.320), ( 29.430,  15.570)  0.810     
+lambda:        4 x 25      (   323,  148  ), (   327,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 29.880,  13.320), ( 30.240,  16.200)  1.037     
+lambda:        4 x 32      (   332,  148  ), (   336,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 31.500,  13.320), ( 31.860,  16.200)  1.037     
+lambda:        4 x 32      (   350,  148  ), (   354,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 32.310,  13.320), ( 32.670,  14.760)  0.518     
+lambda:        4 x 16      (   359,  148  ), (   363,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 33.120,  13.320), ( 33.480,  16.200)  1.037     
+lambda:        4 x 32      (   368,  148  ), (   372,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 34.740,  13.320), ( 35.100,  16.200)  1.037     
+lambda:        4 x 32      (   386,  148  ), (   390,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 35.550,  13.320), ( 35.910,  14.760)  0.518     
+lambda:        4 x 16      (   395,  148  ), (   399,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 36.360,  13.320), ( 36.720,  14.760)  0.518     
+lambda:        4 x 16      (   404,  148  ), (   408,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 37.170,  13.320), ( 37.530,  14.760)  0.518     
+lambda:        4 x 16      (   413,  148  ), (   417,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 37.980,  13.320), ( 38.340,  14.760)  0.518     
+lambda:        4 x 16      (   422,  148  ), (   426,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 38.790,  13.320), ( 39.150,  14.040)  0.259     
+lambda:        4 x 8       (   431,  148  ), (   435,  156  )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 39.600,  13.320), ( 39.960,  14.040)  0.259     
+lambda:        4 x 8       (   440,  148  ), (   444,  156  )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 40.410,  13.320), ( 40.770,  14.040)  0.259     
+lambda:        4 x 8       (   449,  148  ), (   453,  156  )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 41.220,  13.320), ( 41.580,  16.200)  1.037     
+lambda:        4 x 32      (   458,  148  ), (   462,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 42.840,  13.320), ( 43.200,  16.200)  1.037     
+lambda:        4 x 32      (   476,  148  ), (   480,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 43.650,  13.320), ( 44.010,  14.760)  0.518     
+lambda:        4 x 16      (   485,  148  ), (   489,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 1.170,  4.770), ( 1.530,  5.220)  0.162     
+lambda:        4 x 5       (    13,  53   ), (    17,  58   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 2.790,  6.390), ( 3.150,  6.840)  0.162     
+lambda:        4 x 5       (    31,  71   ), (    35,  76   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 3.600,  3.960), ( 3.960,  4.410)  0.162     
+lambda:        4 x 5       (    40,  44   ), (    44,  49   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 4.410,  8.010), ( 4.770,  8.460)  0.162     
+lambda:        4 x 5       (    49,  89   ), (    53,  94   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 6.030,  7.200), ( 6.390,  7.650)  0.162     
+lambda:        4 x 5       (    67,  80   ), (    71,  85   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 6.840,  8.010), ( 7.200,  8.460)  0.162     
+lambda:        4 x 5       (    76,  89   ), (    80,  94   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 7.650,  9.630), ( 8.010,  10.080)  0.162     
+lambda:        4 x 5       (    85,  107  ), (    89,  112  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 9.270,  7.200), ( 9.630,  7.650)  0.162     
+lambda:        4 x 5       (   103,  80   ), (   107,  85   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 10.080,  6.390), ( 10.440,  6.840)  0.162     
+lambda:        4 x 5       (   112,  71   ), (   116,  76   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 11.700,  8.820), ( 12.060,  9.270)  0.162     
+lambda:        4 x 5       (   130,  98   ), (   134,  103  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 13.320,  5.580), ( 13.680,  6.030)  0.162     
+lambda:        4 x 5       (   148,  62   ), (   152,  67   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 14.940,  7.200), ( 15.300,  7.650)  0.162     
+lambda:        4 x 5       (   166,  80   ), (   170,  85   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 15.750,  3.960), ( 16.110,  4.410)  0.162     
+lambda:        4 x 5       (   175,  44   ), (   179,  49   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 16.560,  6.390), ( 16.920,  6.840)  0.162     
+lambda:        4 x 5       (   184,  71   ), (   188,  76   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 18.180,  7.200), ( 18.540,  7.650)  0.162     
+lambda:        4 x 5       (   202,  80   ), (   206,  85   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 19.800,  10.440), ( 20.160,  10.890)  0.162     
+lambda:        4 x 5       (   220,  116  ), (   224,  121  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 21.420,  6.390), ( 21.780,  6.840)  0.162     
+lambda:        4 x 5       (   238,  71   ), (   242,  76   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 22.230,  8.010), ( 22.590,  8.460)  0.162     
+lambda:        4 x 5       (   247,  89   ), (   251,  94   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 23.040,  8.820), ( 23.400,  9.270)  0.162     
+lambda:        4 x 5       (   256,  98   ), (   260,  103  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 24.660,  8.010), ( 25.020,  8.460)  0.162     
+lambda:        4 x 5       (   274,  89   ), (   278,  94   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 25.470,  5.580), ( 25.830,  6.030)  0.162     
+lambda:        4 x 5       (   283,  62   ), (   287,  67   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 27.090,  6.390), ( 27.450,  6.840)  0.162     
+lambda:        4 x 5       (   301,  71   ), (   305,  76   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 27.900,  3.960), ( 28.260,  4.410)  0.162     
+lambda:        4 x 5       (   310,  44   ), (   314,  49   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 28.710,  11.250), ( 29.070,  11.700)  0.162     
+lambda:        4 x 5       (   319,  125  ), (   323,  130  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 30.330,  8.010), ( 30.690,  8.460)  0.162     
+lambda:        4 x 5       (   337,  89   ), (   341,  94   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 31.140,  7.200), ( 31.500,  7.650)  0.162     
+lambda:        4 x 5       (   346,  80   ), (   350,  85   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 31.950,  12.060), ( 32.310,  12.510)  0.162     
+lambda:        4 x 5       (   355,  134  ), (   359,  139  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 33.570,  8.010), ( 33.930,  8.460)  0.162     
+lambda:        4 x 5       (   373,  89   ), (   377,  94   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 34.380,  10.440), ( 34.740,  10.890)  0.162     
+lambda:        4 x 5       (   382,  116  ), (   386,  121  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 36.000,  11.250), ( 36.360,  11.700)  0.162     
+lambda:        4 x 5       (   400,  125  ), (   404,  130  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 36.810,  6.390), ( 37.170,  6.840)  0.162     
+lambda:        4 x 5       (   409,  71   ), (   413,  76   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 37.620,  8.820), ( 37.980,  9.270)  0.162     
+lambda:        4 x 5       (   418,  98   ), (   422,  103  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 39.240,  6.390), ( 39.600,  6.840)  0.162     
+lambda:        4 x 5       (   436,  71   ), (   440,  76   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 40.050,  5.580), ( 40.410,  6.030)  0.162     
+lambda:        4 x 5       (   445,  62   ), (   449,  67   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 41.670,  3.960), ( 42.030,  4.410)  0.162     
+lambda:        4 x 5       (   463,  44   ), (   467,  49   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 42.480,  8.820), ( 42.840,  9.270)  0.162     
+lambda:        4 x 5       (   472,  98   ), (   476,  103  )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.450   ( 43.290,  7.200), ( 43.650,  7.650)  0.162     
+lambda:        4 x 5       (   481,  80   ), (   485,  85   )  20        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 0.360,  0.090), ( 0.720,  0.450)  0.130     
+lambda:        4 x 4       (     4,  1    ), (     8,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 2.520,  0.090), ( 2.880,  0.450)  0.130     
+lambda:        4 x 4       (    28,  1    ), (    32,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 4.680,  0.090), ( 5.040,  0.450)  0.130     
+lambda:        4 x 4       (    52,  1    ), (    56,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 6.840,  0.090), ( 7.200,  0.450)  0.130     
+lambda:        4 x 4       (    76,  1    ), (    80,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 9.000,  0.090), ( 9.360,  0.450)  0.130     
+lambda:        4 x 4       (   100,  1    ), (   104,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 11.160,  0.090), ( 11.520,  0.450)  0.130     
+lambda:        4 x 4       (   124,  1    ), (   128,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 13.320,  0.090), ( 13.680,  0.450)  0.130     
+lambda:        4 x 4       (   148,  1    ), (   152,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 15.480,  0.090), ( 15.840,  0.450)  0.130     
+lambda:        4 x 4       (   172,  1    ), (   176,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 17.640,  0.090), ( 18.000,  0.450)  0.130     
+lambda:        4 x 4       (   196,  1    ), (   200,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 19.800,  0.090), ( 20.160,  0.450)  0.130     
+lambda:        4 x 4       (   220,  1    ), (   224,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 21.960,  0.090), ( 22.320,  0.450)  0.130     
+lambda:        4 x 4       (   244,  1    ), (   248,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 24.120,  0.090), ( 24.480,  0.450)  0.130     
+lambda:        4 x 4       (   268,  1    ), (   272,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 26.280,  0.090), ( 26.640,  0.450)  0.130     
+lambda:        4 x 4       (   292,  1    ), (   296,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 28.440,  0.090), ( 28.800,  0.450)  0.130     
+lambda:        4 x 4       (   316,  1    ), (   320,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 30.600,  0.090), ( 30.960,  0.450)  0.130     
+lambda:        4 x 4       (   340,  1    ), (   344,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 32.760,  0.090), ( 33.120,  0.450)  0.130     
+lambda:        4 x 4       (   364,  1    ), (   368,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 34.920,  0.090), ( 35.280,  0.450)  0.130     
+lambda:        4 x 4       (   388,  1    ), (   392,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 37.080,  0.090), ( 37.440,  0.450)  0.130     
+lambda:        4 x 4       (   412,  1    ), (   416,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 39.240,  0.090), ( 39.600,  0.450)  0.130     
+lambda:        4 x 4       (   436,  1    ), (   440,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 41.400,  0.090), ( 41.760,  0.450)  0.130     
+lambda:        4 x 4       (   460,  1    ), (   464,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 43.560,  0.090), ( 43.920,  0.450)  0.130     
+lambda:        4 x 4       (   484,  1    ), (   488,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 45.720,  0.090), ( 46.080,  0.450)  0.130     
+lambda:        4 x 4       (   508,  1    ), (   512,  5    )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 0.360,  19.350), ( 0.720,  19.710)  0.130     
+lambda:        4 x 4       (     4,  215  ), (     8,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 2.520,  19.350), ( 2.880,  19.710)  0.130     
+lambda:        4 x 4       (    28,  215  ), (    32,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 4.680,  19.350), ( 5.040,  19.710)  0.130     
+lambda:        4 x 4       (    52,  215  ), (    56,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 6.840,  19.350), ( 7.200,  19.710)  0.130     
+lambda:        4 x 4       (    76,  215  ), (    80,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 9.000,  19.350), ( 9.360,  19.710)  0.130     
+lambda:        4 x 4       (   100,  215  ), (   104,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 11.160,  19.350), ( 11.520,  19.710)  0.130     
+lambda:        4 x 4       (   124,  215  ), (   128,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 13.320,  19.350), ( 13.680,  19.710)  0.130     
+lambda:        4 x 4       (   148,  215  ), (   152,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 15.480,  19.350), ( 15.840,  19.710)  0.130     
+lambda:        4 x 4       (   172,  215  ), (   176,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 17.640,  19.350), ( 18.000,  19.710)  0.130     
+lambda:        4 x 4       (   196,  215  ), (   200,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 19.800,  19.350), ( 20.160,  19.710)  0.130     
+lambda:        4 x 4       (   220,  215  ), (   224,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 21.960,  19.350), ( 22.320,  19.710)  0.130     
+lambda:        4 x 4       (   244,  215  ), (   248,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 24.120,  19.350), ( 24.480,  19.710)  0.130     
+lambda:        4 x 4       (   268,  215  ), (   272,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 26.280,  19.350), ( 26.640,  19.710)  0.130     
+lambda:        4 x 4       (   292,  215  ), (   296,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 28.440,  19.350), ( 28.800,  19.710)  0.130     
+lambda:        4 x 4       (   316,  215  ), (   320,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 30.600,  19.350), ( 30.960,  19.710)  0.130     
+lambda:        4 x 4       (   340,  215  ), (   344,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 32.760,  19.350), ( 33.120,  19.710)  0.130     
+lambda:        4 x 4       (   364,  215  ), (   368,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 34.920,  19.350), ( 35.280,  19.710)  0.130     
+lambda:        4 x 4       (   388,  215  ), (   392,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 37.080,  19.350), ( 37.440,  19.710)  0.130     
+lambda:        4 x 4       (   412,  215  ), (   416,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 39.240,  19.350), ( 39.600,  19.710)  0.130     
+lambda:        4 x 4       (   436,  215  ), (   440,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 41.400,  19.350), ( 41.760,  19.710)  0.130     
+lambda:        4 x 4       (   460,  215  ), (   464,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 43.560,  19.350), ( 43.920,  19.710)  0.130     
+lambda:        4 x 4       (   484,  215  ), (   488,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 45.720,  19.350), ( 46.080,  19.710)  0.130     
+lambda:        4 x 4       (   508,  215  ), (   512,  219  )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  47.250 x 0.540   ( 0.000,  0.000), ( 47.250,  0.540)  25.515    
+lambda:      525 x 6       (     0,  0    ), (   525,  6    )  3150      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  47.250 x 0.540   ( 0.000,  19.260), ( 47.250,  19.800)  25.515    
+lambda:      525 x 6       (     0,  214  ), (   525,  220  )  3150      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 0.720,  2.250), ( 1.080,  3.150)  0.324     
+lambda:        4 x 10      (     8,  25   ), (    12,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 0.720,  2.250), ( 1.080,  3.690)  0.518     
+lambda:        4 x 16      (     8,  25   ), (    12,  41   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 1.530,  2.250), ( 1.890,  3.150)  0.324     
+lambda:        4 x 10      (    17,  25   ), (    21,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 1.530,  0.000), ( 1.890,  3.150)  1.134     
+lambda:        4 x 35      (    17,  0    ), (    21,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 2.340,  2.250), ( 2.700,  3.150)  0.324     
+lambda:        4 x 10      (    26,  25   ), (    30,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 2.340,  2.250), ( 2.700,  3.690)  0.518     
+lambda:        4 x 16      (    26,  25   ), (    30,  41   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 3.150,  2.250), ( 3.510,  3.150)  0.324     
+lambda:        4 x 10      (    35,  25   ), (    39,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 3.150,  2.250), ( 3.510,  3.690)  0.518     
+lambda:        4 x 16      (    35,  25   ), (    39,  41   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 3.960,  2.250), ( 4.320,  3.150)  0.324     
+lambda:        4 x 10      (    44,  25   ), (    48,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 3.960,  2.250), ( 4.320,  3.690)  0.518     
+lambda:        4 x 16      (    44,  25   ), (    48,  41   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 4.770,  2.250), ( 5.130,  3.150)  0.324     
+lambda:        4 x 10      (    53,  25   ), (    57,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 4.770,  0.000), ( 5.130,  3.150)  1.134     
+lambda:        4 x 35      (    53,  0    ), (    57,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 5.580,  0.900), ( 5.940,  3.150)  0.810     
+lambda:        4 x 25      (    62,  10   ), (    66,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 5.580,  0.900), ( 5.940,  3.690)  1.004     
+lambda:        4 x 31      (    62,  10   ), (    66,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 6.390,  0.900), ( 6.750,  3.150)  0.810     
+lambda:        4 x 25      (    71,  10   ), (    75,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 6.390,  0.000), ( 6.750,  3.150)  1.134     
+lambda:        4 x 35      (    71,  0    ), (    75,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 7.200,  0.900), ( 7.560,  3.150)  0.810     
+lambda:        4 x 25      (    80,  10   ), (    84,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 7.200,  0.900), ( 7.560,  3.690)  1.004     
+lambda:        4 x 31      (    80,  10   ), (    84,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 8.010,  0.900), ( 8.370,  3.150)  0.810     
+lambda:        4 x 25      (    89,  10   ), (    93,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 8.010,  0.900), ( 8.370,  3.690)  1.004     
+lambda:        4 x 31      (    89,  10   ), (    93,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 8.820,  1.710), ( 9.180,  3.150)  0.518     
+lambda:        4 x 16      (    98,  19   ), (   102,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 8.820,  1.710), ( 9.180,  3.690)  0.713     
+lambda:        4 x 22      (    98,  19   ), (   102,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 9.630,  1.710), ( 9.990,  3.150)  0.518     
+lambda:        4 x 16      (   107,  19   ), (   111,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 9.630,  0.000), ( 9.990,  3.150)  1.134     
+lambda:        4 x 35      (   107,  0    ), (   111,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 10.440,  1.710), ( 10.800,  3.150)  0.518     
+lambda:        4 x 16      (   116,  19   ), (   120,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 10.440,  1.710), ( 10.800,  3.690)  0.713     
+lambda:        4 x 22      (   116,  19   ), (   120,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 11.250,  2.250), ( 11.610,  3.150)  0.324     
+lambda:        4 x 10      (   125,  25   ), (   129,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 11.250,  2.250), ( 11.610,  3.690)  0.518     
+lambda:        4 x 16      (   125,  25   ), (   129,  41   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 12.060,  2.250), ( 12.420,  3.150)  0.324     
+lambda:        4 x 10      (   134,  25   ), (   138,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 12.060,  0.000), ( 12.420,  3.150)  1.134     
+lambda:        4 x 35      (   134,  0    ), (   138,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 12.870,  1.710), ( 13.230,  3.150)  0.518     
+lambda:        4 x 16      (   143,  19   ), (   147,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 12.870,  1.710), ( 13.230,  3.690)  0.713     
+lambda:        4 x 22      (   143,  19   ), (   147,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 13.680,  1.710), ( 14.040,  3.150)  0.518     
+lambda:        4 x 16      (   152,  19   ), (   156,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 13.680,  0.000), ( 14.040,  3.150)  1.134     
+lambda:        4 x 35      (   152,  0    ), (   156,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 14.490,  0.900), ( 14.850,  3.150)  0.810     
+lambda:        4 x 25      (   161,  10   ), (   165,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 14.490,  0.900), ( 14.850,  3.690)  1.004     
+lambda:        4 x 31      (   161,  10   ), (   165,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 15.300,  0.900), ( 15.660,  3.150)  0.810     
+lambda:        4 x 25      (   170,  10   ), (   174,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 15.300,  0.000), ( 15.660,  3.150)  1.134     
+lambda:        4 x 35      (   170,  0    ), (   174,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 16.110,  0.900), ( 16.470,  3.150)  0.810     
+lambda:        4 x 25      (   179,  10   ), (   183,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 16.110,  0.900), ( 16.470,  3.690)  1.004     
+lambda:        4 x 31      (   179,  10   ), (   183,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 16.920,  0.900), ( 17.280,  3.150)  0.810     
+lambda:        4 x 25      (   188,  10   ), (   192,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 16.920,  0.900), ( 17.280,  3.690)  1.004     
+lambda:        4 x 31      (   188,  10   ), (   192,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.080   ( 17.730,  2.070), ( 18.090,  3.150)  0.389     
+lambda:        4 x 12      (   197,  23   ), (   201,  35   )  48        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.620   ( 17.730,  2.070), ( 18.090,  3.690)  0.583     
+lambda:        4 x 18      (   197,  23   ), (   201,  41   )  72        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.080   ( 18.540,  2.070), ( 18.900,  3.150)  0.389     
+lambda:        4 x 12      (   206,  23   ), (   210,  35   )  48        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 18.540,  0.000), ( 18.900,  3.150)  1.134     
+lambda:        4 x 35      (   206,  0    ), (   210,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 19.350,  1.350), ( 19.710,  3.150)  0.648     
+lambda:        4 x 20      (   215,  15   ), (   219,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.340   ( 19.350,  1.350), ( 19.710,  3.690)  0.842     
+lambda:        4 x 26      (   215,  15   ), (   219,  41   )  104       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 20.160,  1.350), ( 20.520,  3.150)  0.648     
+lambda:        4 x 20      (   224,  15   ), (   228,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 20.160,  0.000), ( 20.520,  3.150)  1.134     
+lambda:        4 x 35      (   224,  0    ), (   228,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 20.970,  2.250), ( 21.330,  3.150)  0.324     
+lambda:        4 x 10      (   233,  25   ), (   237,  35   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 20.970,  2.250), ( 21.330,  3.690)  0.518     
+lambda:        4 x 16      (   233,  25   ), (   237,  41   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 21.780,  1.350), ( 22.140,  3.150)  0.648     
+lambda:        4 x 20      (   242,  15   ), (   246,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 21.780,  0.000), ( 22.140,  3.150)  1.134     
+lambda:        4 x 35      (   242,  0    ), (   246,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 23.400,  1.350), ( 23.760,  3.150)  0.648     
+lambda:        4 x 20      (   260,  15   ), (   264,  35   )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.340   ( 23.400,  1.350), ( 23.760,  3.690)  0.842     
+lambda:        4 x 26      (   260,  15   ), (   264,  41   )  104       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 24.210,  0.900), ( 24.570,  3.150)  0.810     
+lambda:        4 x 25      (   269,  10   ), (   273,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 24.210,  0.900), ( 24.570,  3.690)  1.004     
+lambda:        4 x 31      (   269,  10   ), (   273,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 25.830,  0.900), ( 26.190,  3.150)  0.810     
+lambda:        4 x 25      (   287,  10   ), (   291,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 25.830,  0.000), ( 26.190,  3.150)  1.134     
+lambda:        4 x 35      (   287,  0    ), (   291,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 26.640,  0.900), ( 27.000,  3.150)  0.810     
+lambda:        4 x 25      (   296,  10   ), (   300,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 26.640,  0.900), ( 27.000,  3.690)  1.004     
+lambda:        4 x 31      (   296,  10   ), (   300,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 27.450,  0.900), ( 27.810,  3.150)  0.810     
+lambda:        4 x 25      (   305,  10   ), (   309,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 27.450,  0.000), ( 27.810,  3.150)  1.134     
+lambda:        4 x 35      (   305,  0    ), (   309,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 28.260,  0.900), ( 28.620,  3.150)  0.810     
+lambda:        4 x 25      (   314,  10   ), (   318,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 28.260,  0.900), ( 28.620,  3.690)  1.004     
+lambda:        4 x 31      (   314,  10   ), (   318,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 29.070,  0.900), ( 29.430,  3.150)  0.810     
+lambda:        4 x 25      (   323,  10   ), (   327,  35   )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 29.070,  0.900), ( 29.430,  3.690)  1.004     
+lambda:        4 x 31      (   323,  10   ), (   327,  41   )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 29.880,  1.710), ( 30.240,  3.150)  0.518     
+lambda:        4 x 16      (   332,  19   ), (   336,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 29.880,  1.710), ( 30.240,  3.690)  0.713     
+lambda:        4 x 22      (   332,  19   ), (   336,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 30.690,  1.710), ( 31.050,  3.150)  0.518     
+lambda:        4 x 16      (   341,  19   ), (   345,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 30.690,  1.710), ( 31.050,  3.690)  0.713     
+lambda:        4 x 22      (   341,  19   ), (   345,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 31.500,  1.710), ( 31.860,  3.150)  0.518     
+lambda:        4 x 16      (   350,  19   ), (   354,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 31.500,  1.710), ( 31.860,  3.690)  0.713     
+lambda:        4 x 22      (   350,  19   ), (   354,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 32.310,  1.710), ( 32.670,  3.150)  0.518     
+lambda:        4 x 16      (   359,  19   ), (   363,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 32.310,  0.000), ( 32.670,  3.150)  1.134     
+lambda:        4 x 35      (   359,  0    ), (   363,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 33.120,  2.430), ( 33.480,  3.150)  0.259     
+lambda:        4 x 8       (   368,  27   ), (   372,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.260   ( 33.120,  2.430), ( 33.480,  3.690)  0.454     
+lambda:        4 x 14      (   368,  27   ), (   372,  41   )  56        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 33.930,  2.430), ( 34.290,  3.150)  0.259     
+lambda:        4 x 8       (   377,  27   ), (   381,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 33.930,  0.000), ( 34.290,  3.150)  1.134     
+lambda:        4 x 35      (   377,  0    ), (   381,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 34.740,  2.430), ( 35.100,  3.150)  0.259     
+lambda:        4 x 8       (   386,  27   ), (   390,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.260   ( 34.740,  2.430), ( 35.100,  3.690)  0.454     
+lambda:        4 x 14      (   386,  27   ), (   390,  41   )  56        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.360   ( 35.550,  2.790), ( 35.910,  3.150)  0.130     
+lambda:        4 x 4       (   395,  31   ), (   399,  35   )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 35.550,  2.790), ( 35.910,  3.690)  0.324     
+lambda:        4 x 10      (   395,  31   ), (   399,  41   )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 36.360,  2.430), ( 36.720,  3.150)  0.259     
+lambda:        4 x 8       (   404,  27   ), (   408,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 36.360,  0.000), ( 36.720,  3.150)  1.134     
+lambda:        4 x 35      (   404,  0    ), (   408,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 37.980,  2.430), ( 38.340,  3.150)  0.259     
+lambda:        4 x 8       (   422,  27   ), (   426,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.260   ( 37.980,  2.430), ( 38.340,  3.690)  0.454     
+lambda:        4 x 14      (   422,  27   ), (   426,  41   )  56        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 38.790,  2.430), ( 39.150,  3.150)  0.259     
+lambda:        4 x 8       (   431,  27   ), (   435,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.260   ( 38.790,  2.430), ( 39.150,  3.690)  0.454     
+lambda:        4 x 14      (   431,  27   ), (   435,  41   )  56        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 40.410,  2.430), ( 40.770,  3.150)  0.259     
+lambda:        4 x 8       (   449,  27   ), (   453,  35   )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 40.410,  0.000), ( 40.770,  3.150)  1.134     
+lambda:        4 x 35      (   449,  0    ), (   453,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 41.220,  1.710), ( 41.580,  3.150)  0.518     
+lambda:        4 x 16      (   458,  19   ), (   462,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 41.220,  1.710), ( 41.580,  3.690)  0.713     
+lambda:        4 x 22      (   458,  19   ), (   462,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 42.030,  1.710), ( 42.390,  3.150)  0.518     
+lambda:        4 x 16      (   467,  19   ), (   471,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.150   ( 42.030,  0.000), ( 42.390,  3.150)  1.134     
+lambda:        4 x 35      (   467,  0    ), (   471,  35   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 42.840,  1.710), ( 43.200,  3.150)  0.518     
+lambda:        4 x 16      (   476,  19   ), (   480,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 42.840,  1.710), ( 43.200,  3.690)  0.713     
+lambda:        4 x 22      (   476,  19   ), (   480,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 43.650,  1.710), ( 44.010,  3.150)  0.518     
+lambda:        4 x 16      (   485,  19   ), (   489,  35   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 43.650,  1.710), ( 44.010,  3.690)  0.713     
+lambda:        4 x 22      (   485,  19   ), (   489,  41   )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 0.720,  13.320), ( 1.080,  15.120)  0.648     
+lambda:        4 x 20      (     8,  148  ), (    12,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.340   ( 0.720,  12.780), ( 1.080,  15.120)  0.842     
+lambda:        4 x 26      (     8,  142  ), (    12,  168  )  104       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 1.530,  13.320), ( 1.890,  15.120)  0.648     
+lambda:        4 x 20      (    17,  148  ), (    21,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 1.530,  13.320), ( 1.890,  19.800)  2.333     
+lambda:        4 x 72      (    17,  148  ), (    21,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 2.340,  13.320), ( 2.700,  15.120)  0.648     
+lambda:        4 x 20      (    26,  148  ), (    30,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 2.340,  13.320), ( 2.700,  19.800)  2.333     
+lambda:        4 x 72      (    26,  148  ), (    30,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 3.960,  13.320), ( 4.320,  15.120)  0.648     
+lambda:        4 x 20      (    44,  148  ), (    48,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.340   ( 3.960,  12.780), ( 4.320,  15.120)  0.842     
+lambda:        4 x 26      (    44,  142  ), (    48,  168  )  104       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.900   ( 4.770,  13.320), ( 5.130,  14.220)  0.324     
+lambda:        4 x 10      (    53,  148  ), (    57,  158  )  40        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 4.770,  13.320), ( 5.130,  19.800)  2.333     
+lambda:        4 x 72      (    53,  148  ), (    57,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 5.580,  13.320), ( 5.940,  17.820)  1.620     
+lambda:        4 x 50      (    62,  148  ), (    66,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 5.580,  13.320), ( 5.940,  19.800)  2.333     
+lambda:        4 x 72      (    62,  148  ), (    66,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 7.200,  13.320), ( 7.560,  17.820)  1.620     
+lambda:        4 x 50      (    80,  148  ), (    84,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 5.040   ( 7.200,  12.780), ( 7.560,  17.820)  1.814     
+lambda:        4 x 56      (    80,  142  ), (    84,  198  )  224       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 8.010,  13.320), ( 8.370,  15.570)  0.810     
+lambda:        4 x 25      (    89,  148  ), (    93,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 8.010,  13.320), ( 8.370,  19.800)  2.333     
+lambda:        4 x 72      (    89,  148  ), (    93,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 5.580   ( 8.820,  13.320), ( 9.180,  18.900)  2.009     
+lambda:        4 x 62      (    98,  148  ), (   102,  210  )  248       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 8.820,  13.320), ( 9.180,  19.800)  2.333     
+lambda:        4 x 72      (    98,  148  ), (   102,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 5.580   ( 10.440,  13.320), ( 10.800,  18.900)  2.009     
+lambda:        4 x 62      (   116,  148  ), (   120,  210  )  248       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.120   ( 10.440,  12.780), ( 10.800,  18.900)  2.203     
+lambda:        4 x 68      (   116,  142  ), (   120,  210  )  272       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 11.250,  13.320), ( 11.610,  15.120)  0.648     
+lambda:        4 x 20      (   125,  148  ), (   129,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.340   ( 11.250,  12.780), ( 11.610,  15.120)  0.842     
+lambda:        4 x 26      (   125,  142  ), (   129,  168  )  104       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.800   ( 12.060,  13.320), ( 12.420,  15.120)  0.648     
+lambda:        4 x 20      (   134,  148  ), (   138,  168  )  80        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 12.060,  13.320), ( 12.420,  19.800)  2.333     
+lambda:        4 x 72      (   134,  148  ), (   138,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 12.870,  13.320), ( 13.230,  16.110)  1.004     
+lambda:        4 x 31      (   143,  148  ), (   147,  179  )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.330   ( 12.870,  12.780), ( 13.230,  16.110)  1.199     
+lambda:        4 x 37      (   143,  142  ), (   147,  179  )  148       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 13.680,  13.320), ( 14.040,  16.110)  1.004     
+lambda:        4 x 31      (   152,  148  ), (   156,  179  )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 13.680,  13.320), ( 14.040,  19.800)  2.333     
+lambda:        4 x 72      (   152,  148  ), (   156,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 14.490,  13.320), ( 14.850,  17.820)  1.620     
+lambda:        4 x 50      (   161,  148  ), (   165,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 14.490,  13.320), ( 14.850,  19.800)  2.333     
+lambda:        4 x 72      (   161,  148  ), (   165,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 16.110,  13.320), ( 16.470,  17.820)  1.620     
+lambda:        4 x 50      (   179,  148  ), (   183,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 5.040   ( 16.110,  12.780), ( 16.470,  17.820)  1.814     
+lambda:        4 x 56      (   179,  142  ), (   183,  198  )  224       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 16.920,  13.320), ( 17.280,  15.570)  0.810     
+lambda:        4 x 25      (   188,  148  ), (   192,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 16.920,  13.320), ( 17.280,  19.800)  2.333     
+lambda:        4 x 72      (   188,  148  ), (   192,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 17.730,  13.320), ( 18.090,  15.570)  0.810     
+lambda:        4 x 25      (   197,  148  ), (   201,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 17.730,  12.780), ( 18.090,  15.570)  1.004     
+lambda:        4 x 31      (   197,  142  ), (   201,  173  )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 18.540,  13.320), ( 18.900,  15.570)  0.810     
+lambda:        4 x 25      (   206,  148  ), (   210,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 18.540,  13.320), ( 18.900,  19.800)  2.333     
+lambda:        4 x 72      (   206,  148  ), (   210,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.510   ( 19.350,  13.320), ( 19.710,  16.830)  1.264     
+lambda:        4 x 39      (   215,  148  ), (   219,  187  )  156       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.050   ( 19.350,  12.780), ( 19.710,  16.830)  1.458     
+lambda:        4 x 45      (   215,  142  ), (   219,  187  )  180       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.510   ( 20.160,  13.320), ( 20.520,  16.830)  1.264     
+lambda:        4 x 39      (   224,  148  ), (   228,  187  )  156       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 20.160,  13.320), ( 20.520,  19.800)  2.333     
+lambda:        4 x 72      (   224,  148  ), (   228,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.600   ( 20.970,  13.320), ( 21.330,  16.920)  1.296     
+lambda:        4 x 40      (   233,  148  ), (   237,  188  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 20.970,  13.320), ( 21.330,  19.800)  2.333     
+lambda:        4 x 72      (   233,  148  ), (   237,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.600   ( 21.780,  13.320), ( 22.140,  16.920)  1.296     
+lambda:        4 x 40      (   242,  148  ), (   246,  188  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.140   ( 21.780,  12.780), ( 22.140,  16.920)  1.490     
+lambda:        4 x 46      (   242,  142  ), (   246,  188  )  184       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.600   ( 22.590,  13.320), ( 22.950,  16.920)  1.296     
+lambda:        4 x 40      (   251,  148  ), (   255,  188  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.140   ( 22.590,  12.780), ( 22.950,  16.920)  1.490     
+lambda:        4 x 46      (   251,  142  ), (   255,  188  )  184       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.600   ( 23.400,  13.320), ( 23.760,  16.920)  1.296     
+lambda:        4 x 40      (   260,  148  ), (   264,  188  )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.140   ( 23.400,  12.780), ( 23.760,  16.920)  1.490     
+lambda:        4 x 46      (   260,  142  ), (   264,  188  )  184       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 24.210,  13.320), ( 24.570,  15.570)  0.810     
+lambda:        4 x 25      (   269,  148  ), (   273,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 24.210,  12.780), ( 24.570,  15.570)  1.004     
+lambda:        4 x 31      (   269,  142  ), (   273,  173  )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 25.020,  13.320), ( 25.380,  15.570)  0.810     
+lambda:        4 x 25      (   278,  148  ), (   282,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 25.020,  13.320), ( 25.380,  19.800)  2.333     
+lambda:        4 x 72      (   278,  148  ), (   282,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 25.830,  13.320), ( 26.190,  15.570)  0.810     
+lambda:        4 x 25      (   287,  148  ), (   291,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.790   ( 25.830,  12.780), ( 26.190,  15.570)  1.004     
+lambda:        4 x 31      (   287,  142  ), (   291,  173  )  124       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 26.640,  13.320), ( 27.000,  17.820)  1.620     
+lambda:        4 x 50      (   296,  148  ), (   300,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 26.640,  13.320), ( 27.000,  19.800)  2.333     
+lambda:        4 x 72      (   296,  148  ), (   300,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 4.500   ( 28.260,  13.320), ( 28.620,  17.820)  1.620     
+lambda:        4 x 50      (   314,  148  ), (   318,  198  )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 5.040   ( 28.260,  12.780), ( 28.620,  17.820)  1.814     
+lambda:        4 x 56      (   314,  142  ), (   318,  198  )  224       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.250   ( 29.070,  13.320), ( 29.430,  15.570)  0.810     
+lambda:        4 x 25      (   323,  148  ), (   327,  173  )  100       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 29.070,  13.320), ( 29.430,  19.800)  2.333     
+lambda:        4 x 72      (   323,  148  ), (   327,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 29.880,  13.320), ( 30.240,  16.200)  1.037     
+lambda:        4 x 32      (   332,  148  ), (   336,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 29.880,  13.320), ( 30.240,  19.800)  2.333     
+lambda:        4 x 72      (   332,  148  ), (   336,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 31.500,  13.320), ( 31.860,  16.200)  1.037     
+lambda:        4 x 32      (   350,  148  ), (   354,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.420   ( 31.500,  12.780), ( 31.860,  16.200)  1.231     
+lambda:        4 x 38      (   350,  142  ), (   354,  180  )  152       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 32.310,  13.320), ( 32.670,  14.760)  0.518     
+lambda:        4 x 16      (   359,  148  ), (   363,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 32.310,  13.320), ( 32.670,  19.800)  2.333     
+lambda:        4 x 72      (   359,  148  ), (   363,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 33.120,  13.320), ( 33.480,  16.200)  1.037     
+lambda:        4 x 32      (   368,  148  ), (   372,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 33.120,  13.320), ( 33.480,  19.800)  2.333     
+lambda:        4 x 72      (   368,  148  ), (   372,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 34.740,  13.320), ( 35.100,  16.200)  1.037     
+lambda:        4 x 32      (   386,  148  ), (   390,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.420   ( 34.740,  12.780), ( 35.100,  16.200)  1.231     
+lambda:        4 x 38      (   386,  142  ), (   390,  180  )  152       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 35.550,  13.320), ( 35.910,  14.760)  0.518     
+lambda:        4 x 16      (   395,  148  ), (   399,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 35.550,  13.320), ( 35.910,  19.800)  2.333     
+lambda:        4 x 72      (   395,  148  ), (   399,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 36.360,  13.320), ( 36.720,  14.760)  0.518     
+lambda:        4 x 16      (   404,  148  ), (   408,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 36.360,  12.780), ( 36.720,  14.760)  0.713     
+lambda:        4 x 22      (   404,  142  ), (   408,  164  )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 37.170,  13.320), ( 37.530,  14.760)  0.518     
+lambda:        4 x 16      (   413,  148  ), (   417,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 37.170,  12.780), ( 37.530,  14.760)  0.713     
+lambda:        4 x 22      (   413,  142  ), (   417,  164  )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 37.980,  13.320), ( 38.340,  14.760)  0.518     
+lambda:        4 x 16      (   422,  148  ), (   426,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.980   ( 37.980,  12.780), ( 38.340,  14.760)  0.713     
+lambda:        4 x 22      (   422,  142  ), (   426,  164  )  88        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 38.790,  13.320), ( 39.150,  14.040)  0.259     
+lambda:        4 x 8       (   431,  148  ), (   435,  156  )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.260   ( 38.790,  12.780), ( 39.150,  14.040)  0.454     
+lambda:        4 x 14      (   431,  142  ), (   435,  156  )  56        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 39.600,  13.320), ( 39.960,  14.040)  0.259     
+lambda:        4 x 8       (   440,  148  ), (   444,  156  )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 39.600,  13.320), ( 39.960,  19.800)  2.333     
+lambda:        4 x 72      (   440,  148  ), (   444,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 0.720   ( 40.410,  13.320), ( 40.770,  14.040)  0.259     
+lambda:        4 x 8       (   449,  148  ), (   453,  156  )  32        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.260   ( 40.410,  12.780), ( 40.770,  14.040)  0.454     
+lambda:        4 x 14      (   449,  142  ), (   453,  156  )  56        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 41.220,  13.320), ( 41.580,  16.200)  1.037     
+lambda:        4 x 32      (   458,  148  ), (   462,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 41.220,  13.320), ( 41.580,  19.800)  2.333     
+lambda:        4 x 72      (   458,  148  ), (   462,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 2.880   ( 42.840,  13.320), ( 43.200,  16.200)  1.037     
+lambda:        4 x 32      (   476,  148  ), (   480,  180  )  128       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 3.420   ( 42.840,  12.780), ( 43.200,  16.200)  1.231     
+lambda:        4 x 38      (   476,  142  ), (   480,  180  )  152       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 1.440   ( 43.650,  13.320), ( 44.010,  14.760)  0.518     
+lambda:        4 x 16      (   485,  148  ), (   489,  164  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.360 x 6.480   ( 43.650,  13.320), ( 44.010,  19.800)  2.333     
+lambda:        4 x 72      (   485,  148  ), (   489,  220  )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  41.400 x 0.450   ( 0.720,  3.960), ( 42.120,  4.410)  18.630    
+lambda:      460 x 5       (     8,  44   ), (   468,  49   )  2300      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  43.740 x 0.450   ( 1.170,  4.770), ( 44.910,  5.220)  19.683    
+lambda:      486 x 5       (    13,  53   ), (   499,  58   )  2430      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.070 x 0.450   ( 2.340,  5.580), ( 4.410,  6.030)  0.932     
+lambda:       23 x 5       (    26,  62   ), (    49,  67   )  115       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.070 x 0.450   ( 5.580,  5.580), ( 7.650,  6.030)  0.932     
+lambda:       23 x 5       (    62,  62   ), (    85,  67   )  115       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  31.680 x 0.450   ( 8.820,  5.580), ( 40.500,  6.030)  14.256    
+lambda:      352 x 5       (    98,  62   ), (   450,  67   )  1760      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.070 x 0.450   ( 41.220,  5.580), ( 43.290,  6.030)  0.932     
+lambda:       23 x 5       (   458,  62   ), (   481,  67   )  115       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   7.740 x 0.450   ( 2.790,  6.390), ( 10.530,  6.840)  3.483     
+lambda:       86 x 5       (    31,  71   ), (   117,  76   )  430       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   5.760 x 0.450   ( 11.250,  6.390), ( 17.010,  6.840)  2.592     
+lambda:       64 x 5       (   125,  71   ), (   189,  76   )  320       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   4.140 x 0.450   ( 17.730,  6.390), ( 21.870,  6.840)  1.863     
+lambda:       46 x 5       (   197,  71   ), (   243,  76   )  230       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   3.330 x 0.450   ( 24.210,  6.390), ( 27.540,  6.840)  1.499     
+lambda:       37 x 5       (   269,  71   ), (   306,  76   )  185       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.070 x 0.450   ( 29.880,  6.390), ( 31.950,  6.840)  0.932     
+lambda:       23 x 5       (   332,  71   ), (   355,  76   )  115       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   6.570 x 0.450   ( 33.120,  6.390), ( 39.690,  6.840)  2.957     
+lambda:       73 x 5       (   368,  71   ), (   441,  76   )  365       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.260 x 0.450   ( 42.840,  6.390), ( 44.100,  6.840)  0.567     
+lambda:       14 x 5       (   476,  71   ), (   490,  76   )  70        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.260 x 0.450   ( 3.150,  7.200), ( 4.410,  7.650)  0.567     
+lambda:       14 x 5       (    35,  80   ), (    49,  85   )  70        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   3.690 x 0.450   ( 6.030,  7.200), ( 9.720,  7.650)  1.661     
+lambda:       41 x 5       (    67,  80   ), (   108,  85   )  205       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.520 x 0.450   ( 12.870,  7.200), ( 15.390,  7.650)  1.134     
+lambda:       28 x 5       (   143,  80   ), (   171,  85   )  140       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  13.410 x 0.450   ( 18.180,  7.200), ( 31.590,  7.650)  6.035     
+lambda:      149 x 5       (   202,  80   ), (   351,  85   )  745       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   8.190 x 0.450   ( 35.550,  7.200), ( 43.740,  7.650)  3.686     
+lambda:       91 x 5       (   395,  80   ), (   486,  85   )  455       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.880 x 0.450   ( 4.410,  8.010), ( 7.290,  8.460)  1.296     
+lambda:       32 x 5       (    49,  89   ), (    81,  94   )  160       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.070 x 0.450   ( 14.490,  8.010), ( 16.560,  8.460)  0.932     
+lambda:       23 x 5       (   161,  89   ), (   184,  94   )  115       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   5.760 x 0.450   ( 19.350,  8.010), ( 25.110,  8.460)  2.592     
+lambda:       64 x 5       (   215,  89   ), (   279,  94   )  320       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.070 x 0.450   ( 26.640,  8.010), ( 28.710,  8.460)  0.932     
+lambda:       23 x 5       (   296,  89   ), (   319,  94   )  115       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   3.690 x 0.450   ( 30.330,  8.010), ( 34.020,  8.460)  1.661     
+lambda:       41 x 5       (   337,  89   ), (   378,  94   )  205       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.070 x 0.450   ( 36.360,  8.010), ( 38.430,  8.460)  0.932     
+lambda:       23 x 5       (   404,  89   ), (   427,  94   )  115       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  30.870 x 0.450   ( 7.200,  8.820), ( 38.070,  9.270)  13.892    
+lambda:      343 x 5       (    80,  98   ), (   423,  103  )  1715      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   4.140 x 0.450   ( 38.790,  8.820), ( 42.930,  9.270)  1.863     
+lambda:       46 x 5       (   431,  98   ), (   477,  103  )  230       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  38.070 x 0.450   ( 7.650,  9.630), ( 45.720,  10.080)  17.132    
+lambda:      423 x 5       (    85,  107  ), (   508,  112  )  2115      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.260 x 0.450   ( 16.110,  10.440), ( 17.370,  10.890)  0.567     
+lambda:       14 x 5       (   179,  116  ), (   193,  121  )  70        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  15.030 x 0.450   ( 19.800,  10.440), ( 34.830,  10.890)  6.764     
+lambda:      167 x 5       (   220,  116  ), (   387,  121  )  835       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   8.190 x 0.450   ( 20.970,  11.250), ( 29.160,  11.700)  3.686     
+lambda:       91 x 5       (   233,  125  ), (   324,  130  )  455       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   5.760 x 0.450   ( 30.690,  11.250), ( 36.450,  11.700)  2.592     
+lambda:       64 x 5       (   341,  125  ), (   405,  130  )  320       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.070 x 0.450   ( 21.780,  12.060), ( 23.850,  12.510)  0.932     
+lambda:       23 x 5       (   242,  134  ), (   265,  139  )  115       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.260 x 0.450   ( 28.260,  12.060), ( 29.520,  12.510)  0.567     
+lambda:       14 x 5       (   314,  134  ), (   328,  139  )  70        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  14.580 x 0.450   ( 31.950,  12.060), ( 46.530,  12.510)  6.561     
+lambda:      162 x 5       (   355,  134  ), (   517,  139  )  810       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 0.720,  3.240), ( 1.170,  3.690)  0.203     
+lambda:        5 x 5       (     8,  36   ), (    13,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 0.720,  3.960), ( 1.170,  4.410)  0.203     
+lambda:        5 x 5       (     8,  44   ), (    13,  49   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 2.340,  3.240), ( 2.790,  3.690)  0.203     
+lambda:        5 x 5       (    26,  36   ), (    31,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 2.340,  5.580), ( 2.790,  6.030)  0.203     
+lambda:        5 x 5       (    26,  62   ), (    31,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.150,  3.240), ( 3.600,  3.690)  0.203     
+lambda:        5 x 5       (    35,  36   ), (    40,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.150,  7.200), ( 3.600,  7.650)  0.203     
+lambda:        5 x 5       (    35,  80   ), (    40,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.960,  3.240), ( 4.410,  3.690)  0.203     
+lambda:        5 x 5       (    44,  36   ), (    49,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.960,  5.580), ( 4.410,  6.030)  0.203     
+lambda:        5 x 5       (    44,  62   ), (    49,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 5.580,  3.240), ( 6.030,  3.690)  0.203     
+lambda:        5 x 5       (    62,  36   ), (    67,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 5.580,  5.580), ( 6.030,  6.030)  0.203     
+lambda:        5 x 5       (    62,  62   ), (    67,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 7.200,  3.240), ( 7.650,  3.690)  0.203     
+lambda:        5 x 5       (    80,  36   ), (    85,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 7.200,  5.580), ( 7.650,  6.030)  0.203     
+lambda:        5 x 5       (    80,  62   ), (    85,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 8.010,  3.240), ( 8.460,  3.690)  0.203     
+lambda:        5 x 5       (    89,  36   ), (    94,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 8.010,  8.820), ( 8.460,  9.270)  0.203     
+lambda:        5 x 5       (    89,  98   ), (    94,  103  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 8.820,  3.240), ( 9.270,  3.690)  0.203     
+lambda:        5 x 5       (    98,  36   ), (   103,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 8.820,  5.580), ( 9.270,  6.030)  0.203     
+lambda:        5 x 5       (    98,  62   ), (   103,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 10.440,  3.240), ( 10.890,  3.690)  0.203     
+lambda:        5 x 5       (   116,  36   ), (   121,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 10.440,  5.580), ( 10.890,  6.030)  0.203     
+lambda:        5 x 5       (   116,  62   ), (   121,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 11.250,  3.240), ( 11.700,  3.690)  0.203     
+lambda:        5 x 5       (   125,  36   ), (   130,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 11.250,  6.390), ( 11.700,  6.840)  0.203     
+lambda:        5 x 5       (   125,  71   ), (   130,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 12.870,  3.240), ( 13.320,  3.690)  0.203     
+lambda:        5 x 5       (   143,  36   ), (   148,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 12.870,  7.200), ( 13.320,  7.650)  0.203     
+lambda:        5 x 5       (   143,  80   ), (   148,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 14.490,  3.240), ( 14.940,  3.690)  0.203     
+lambda:        5 x 5       (   161,  36   ), (   166,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 14.490,  8.010), ( 14.940,  8.460)  0.203     
+lambda:        5 x 5       (   161,  89   ), (   166,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 16.110,  3.240), ( 16.560,  3.690)  0.203     
+lambda:        5 x 5       (   179,  36   ), (   184,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 16.110,  8.010), ( 16.560,  8.460)  0.203     
+lambda:        5 x 5       (   179,  89   ), (   184,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 16.920,  3.240), ( 17.370,  3.690)  0.203     
+lambda:        5 x 5       (   188,  36   ), (   193,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 16.920,  10.440), ( 17.370,  10.890)  0.203     
+lambda:        5 x 5       (   188,  116  ), (   193,  121  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 17.730,  3.240), ( 18.180,  3.690)  0.203     
+lambda:        5 x 5       (   197,  36   ), (   202,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 17.730,  6.390), ( 18.180,  6.840)  0.203     
+lambda:        5 x 5       (   197,  71   ), (   202,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 19.350,  3.240), ( 19.800,  3.690)  0.203     
+lambda:        5 x 5       (   215,  36   ), (   220,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 19.350,  8.010), ( 19.800,  8.460)  0.203     
+lambda:        5 x 5       (   215,  89   ), (   220,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 20.970,  3.240), ( 21.420,  3.690)  0.203     
+lambda:        5 x 5       (   233,  36   ), (   238,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 20.970,  11.250), ( 21.420,  11.700)  0.203     
+lambda:        5 x 5       (   233,  125  ), (   238,  130  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 23.400,  3.240), ( 23.850,  3.690)  0.203     
+lambda:        5 x 5       (   260,  36   ), (   265,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 23.400,  11.250), ( 23.850,  11.700)  0.203     
+lambda:        5 x 5       (   260,  125  ), (   265,  130  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 24.210,  3.240), ( 24.660,  3.690)  0.203     
+lambda:        5 x 5       (   269,  36   ), (   274,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 24.210,  6.390), ( 24.660,  6.840)  0.203     
+lambda:        5 x 5       (   269,  71   ), (   274,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 26.640,  3.240), ( 27.090,  3.690)  0.203     
+lambda:        5 x 5       (   296,  36   ), (   301,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 26.640,  8.010), ( 27.090,  8.460)  0.203     
+lambda:        5 x 5       (   296,  89   ), (   301,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 28.260,  3.240), ( 28.710,  3.690)  0.203     
+lambda:        5 x 5       (   314,  36   ), (   319,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 28.260,  8.010), ( 28.710,  8.460)  0.203     
+lambda:        5 x 5       (   314,  89   ), (   319,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 29.070,  3.240), ( 29.520,  3.690)  0.203     
+lambda:        5 x 5       (   323,  36   ), (   328,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 29.070,  12.060), ( 29.520,  12.510)  0.203     
+lambda:        5 x 5       (   323,  134  ), (   328,  139  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 29.880,  3.240), ( 30.330,  3.690)  0.203     
+lambda:        5 x 5       (   332,  36   ), (   337,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 29.880,  6.390), ( 30.330,  6.840)  0.203     
+lambda:        5 x 5       (   332,  71   ), (   337,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 30.690,  3.240), ( 31.140,  3.690)  0.203     
+lambda:        5 x 5       (   341,  36   ), (   346,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 30.690,  11.250), ( 31.140,  11.700)  0.203     
+lambda:        5 x 5       (   341,  125  ), (   346,  130  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 31.500,  3.240), ( 31.950,  3.690)  0.203     
+lambda:        5 x 5       (   350,  36   ), (   355,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 31.500,  6.390), ( 31.950,  6.840)  0.203     
+lambda:        5 x 5       (   350,  71   ), (   355,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 33.120,  3.240), ( 33.570,  3.690)  0.203     
+lambda:        5 x 5       (   368,  36   ), (   373,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 33.120,  6.390), ( 33.570,  6.840)  0.203     
+lambda:        5 x 5       (   368,  71   ), (   373,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 34.740,  3.240), ( 35.190,  3.690)  0.203     
+lambda:        5 x 5       (   386,  36   ), (   391,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 34.740,  6.390), ( 35.190,  6.840)  0.203     
+lambda:        5 x 5       (   386,  71   ), (   391,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 35.550,  3.240), ( 36.000,  3.690)  0.203     
+lambda:        5 x 5       (   395,  36   ), (   400,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 35.550,  7.200), ( 36.000,  7.650)  0.203     
+lambda:        5 x 5       (   395,  80   ), (   400,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 37.980,  3.240), ( 38.430,  3.690)  0.203     
+lambda:        5 x 5       (   422,  36   ), (   427,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 37.980,  7.200), ( 38.430,  7.650)  0.203     
+lambda:        5 x 5       (   422,  80   ), (   427,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 38.790,  3.240), ( 39.240,  3.690)  0.203     
+lambda:        5 x 5       (   431,  36   ), (   436,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 38.790,  8.820), ( 39.240,  9.270)  0.203     
+lambda:        5 x 5       (   431,  98   ), (   436,  103  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 41.220,  3.240), ( 41.670,  3.690)  0.203     
+lambda:        5 x 5       (   458,  36   ), (   463,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 41.220,  5.580), ( 41.670,  6.030)  0.203     
+lambda:        5 x 5       (   458,  62   ), (   463,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 42.840,  3.240), ( 43.290,  3.690)  0.203     
+lambda:        5 x 5       (   476,  36   ), (   481,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 42.840,  5.580), ( 43.290,  6.030)  0.203     
+lambda:        5 x 5       (   476,  62   ), (   481,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 43.650,  3.240), ( 44.100,  3.690)  0.203     
+lambda:        5 x 5       (   485,  36   ), (   490,  41   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 43.650,  6.390), ( 44.100,  6.840)  0.203     
+lambda:        5 x 5       (   485,  71   ), (   490,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 0.720,  12.780), ( 1.170,  13.230)  0.203     
+lambda:        5 x 5       (     8,  142  ), (    13,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 0.720,  3.960), ( 1.170,  4.410)  0.203     
+lambda:        5 x 5       (     8,  44   ), (    13,  49   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.960,  12.780), ( 4.410,  13.230)  0.203     
+lambda:        5 x 5       (    44,  142  ), (    49,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.960,  7.200), ( 4.410,  7.650)  0.203     
+lambda:        5 x 5       (    44,  80   ), (    49,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 7.200,  12.780), ( 7.650,  13.230)  0.203     
+lambda:        5 x 5       (    80,  142  ), (    85,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 7.200,  8.820), ( 7.650,  9.270)  0.203     
+lambda:        5 x 5       (    80,  98   ), (    85,  103  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 10.440,  12.780), ( 10.890,  13.230)  0.203     
+lambda:        5 x 5       (   116,  142  ), (   121,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 10.440,  5.580), ( 10.890,  6.030)  0.203     
+lambda:        5 x 5       (   116,  62   ), (   121,  67   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 11.250,  12.780), ( 11.700,  13.230)  0.203     
+lambda:        5 x 5       (   125,  142  ), (   130,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 11.250,  6.390), ( 11.700,  6.840)  0.203     
+lambda:        5 x 5       (   125,  71   ), (   130,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 12.870,  12.780), ( 13.320,  13.230)  0.203     
+lambda:        5 x 5       (   143,  142  ), (   148,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 12.870,  7.200), ( 13.320,  7.650)  0.203     
+lambda:        5 x 5       (   143,  80   ), (   148,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 16.110,  12.780), ( 16.560,  13.230)  0.203     
+lambda:        5 x 5       (   179,  142  ), (   184,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 16.110,  10.440), ( 16.560,  10.890)  0.203     
+lambda:        5 x 5       (   179,  116  ), (   184,  121  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 17.730,  12.780), ( 18.180,  13.230)  0.203     
+lambda:        5 x 5       (   197,  142  ), (   202,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 17.730,  6.390), ( 18.180,  6.840)  0.203     
+lambda:        5 x 5       (   197,  71   ), (   202,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 19.350,  12.780), ( 19.800,  13.230)  0.203     
+lambda:        5 x 5       (   215,  142  ), (   220,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 19.350,  8.010), ( 19.800,  8.460)  0.203     
+lambda:        5 x 5       (   215,  89   ), (   220,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 21.780,  12.780), ( 22.230,  13.230)  0.203     
+lambda:        5 x 5       (   242,  142  ), (   247,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 21.780,  12.060), ( 22.230,  12.510)  0.203     
+lambda:        5 x 5       (   242,  134  ), (   247,  139  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 22.590,  12.780), ( 23.040,  13.230)  0.203     
+lambda:        5 x 5       (   251,  142  ), (   256,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 22.590,  11.250), ( 23.040,  11.700)  0.203     
+lambda:        5 x 5       (   251,  125  ), (   256,  130  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 23.400,  12.780), ( 23.850,  13.230)  0.203     
+lambda:        5 x 5       (   260,  142  ), (   265,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 23.400,  12.060), ( 23.850,  12.510)  0.203     
+lambda:        5 x 5       (   260,  134  ), (   265,  139  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 24.210,  12.780), ( 24.660,  13.230)  0.203     
+lambda:        5 x 5       (   269,  142  ), (   274,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 24.210,  6.390), ( 24.660,  6.840)  0.203     
+lambda:        5 x 5       (   269,  71   ), (   274,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 25.830,  12.780), ( 26.280,  13.230)  0.203     
+lambda:        5 x 5       (   287,  142  ), (   292,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 25.830,  6.390), ( 26.280,  6.840)  0.203     
+lambda:        5 x 5       (   287,  71   ), (   292,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 28.260,  12.780), ( 28.710,  13.230)  0.203     
+lambda:        5 x 5       (   314,  142  ), (   319,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 28.260,  12.060), ( 28.710,  12.510)  0.203     
+lambda:        5 x 5       (   314,  134  ), (   319,  139  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 31.500,  12.780), ( 31.950,  13.230)  0.203     
+lambda:        5 x 5       (   350,  142  ), (   355,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 31.500,  11.250), ( 31.950,  11.700)  0.203     
+lambda:        5 x 5       (   350,  125  ), (   355,  130  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 34.740,  12.780), ( 35.190,  13.230)  0.203     
+lambda:        5 x 5       (   386,  142  ), (   391,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 34.740,  6.390), ( 35.190,  6.840)  0.203     
+lambda:        5 x 5       (   386,  71   ), (   391,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 36.360,  12.780), ( 36.810,  13.230)  0.203     
+lambda:        5 x 5       (   404,  142  ), (   409,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 36.360,  8.010), ( 36.810,  8.460)  0.203     
+lambda:        5 x 5       (   404,  89   ), (   409,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 37.170,  12.780), ( 37.620,  13.230)  0.203     
+lambda:        5 x 5       (   413,  142  ), (   418,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 37.170,  7.200), ( 37.620,  7.650)  0.203     
+lambda:        5 x 5       (   413,  80   ), (   418,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 37.980,  12.780), ( 38.430,  13.230)  0.203     
+lambda:        5 x 5       (   422,  142  ), (   427,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 37.980,  8.010), ( 38.430,  8.460)  0.203     
+lambda:        5 x 5       (   422,  89   ), (   427,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 38.790,  12.780), ( 39.240,  13.230)  0.203     
+lambda:        5 x 5       (   431,  142  ), (   436,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 38.790,  8.820), ( 39.240,  9.270)  0.203     
+lambda:        5 x 5       (   431,  98   ), (   436,  103  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 40.410,  12.780), ( 40.860,  13.230)  0.203     
+lambda:        5 x 5       (   449,  142  ), (   454,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 40.410,  8.820), ( 40.860,  9.270)  0.203     
+lambda:        5 x 5       (   449,  98   ), (   454,  103  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 42.840,  12.780), ( 43.290,  13.230)  0.203     
+lambda:        5 x 5       (   476,  142  ), (   481,  147  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 42.840,  6.390), ( 43.290,  6.840)  0.203     
+lambda:        5 x 5       (   476,  71   ), (   481,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 44.460,  4.770), ( 44.910,  5.220)  0.203     
+lambda:        5 x 5       (   494,  53   ), (   499,  58   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 4.770,  8.010), ( 5.220,  8.460)  0.203     
+lambda:        5 x 5       (    53,  89   ), (    58,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 45.270,  9.630), ( 45.720,  10.080)  0.203     
+lambda:        5 x 5       (   503,  107  ), (   508,  112  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 18.540,  7.200), ( 18.990,  7.650)  0.203     
+lambda:        5 x 5       (   206,  80   ), (   211,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 46.080,  12.060), ( 46.530,  12.510)  0.203     
+lambda:        5 x 5       (   512,  134  ), (   517,  139  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.960,  6.390), ( 4.410,  6.840)  0.203     
+lambda:        5 x 5       (    44,  71   ), (    49,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 6.390,  7.200), ( 6.840,  7.650)  0.203     
+lambda:        5 x 5       (    71,  80   ), (    76,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 20.160,  10.440), ( 20.610,  10.890)  0.203     
+lambda:        5 x 5       (   224,  116  ), (   229,  121  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 31.500,  8.010), ( 31.950,  8.460)  0.203     
+lambda:        5 x 5       (   350,  89   ), (   355,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 1.170   ( 0.720,  3.240), ( 1.170,  4.410)  0.527     
+lambda:        5 x 13      (     8,  36   ), (    13,  49   )  65        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 2.340,  3.240), ( 2.790,  6.030)  1.256     
+lambda:        5 x 31      (    26,  36   ), (    31,  67   )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 4.410   ( 3.150,  3.240), ( 3.600,  7.650)  1.985     
+lambda:        5 x 49      (    35,  36   ), (    40,  85   )  245       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 3.960,  3.240), ( 4.410,  6.030)  1.256     
+lambda:        5 x 31      (    44,  36   ), (    49,  67   )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 5.580,  3.240), ( 6.030,  6.030)  1.256     
+lambda:        5 x 31      (    62,  36   ), (    67,  67   )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 7.200,  3.240), ( 7.650,  6.030)  1.256     
+lambda:        5 x 31      (    80,  36   ), (    85,  67   )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.030   ( 8.010,  3.240), ( 8.460,  9.270)  2.714     
+lambda:        5 x 67      (    89,  36   ), (    94,  103  )  335       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 8.820,  3.240), ( 9.270,  6.030)  1.256     
+lambda:        5 x 31      (    98,  36   ), (   103,  67   )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 10.440,  3.240), ( 10.890,  6.030)  1.256     
+lambda:        5 x 31      (   116,  36   ), (   121,  67   )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 3.600   ( 11.250,  3.240), ( 11.700,  6.840)  1.620     
+lambda:        5 x 40      (   125,  36   ), (   130,  76   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 4.410   ( 12.870,  3.240), ( 13.320,  7.650)  1.985     
+lambda:        5 x 49      (   143,  36   ), (   148,  85   )  245       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 5.220   ( 14.490,  3.240), ( 14.940,  8.460)  2.349     
+lambda:        5 x 58      (   161,  36   ), (   166,  94   )  290       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 5.220   ( 16.110,  3.240), ( 16.560,  8.460)  2.349     
+lambda:        5 x 58      (   179,  36   ), (   184,  94   )  290       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 7.650   ( 16.920,  3.240), ( 17.370,  10.890)  3.443     
+lambda:        5 x 85      (   188,  36   ), (   193,  121  )  425       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 3.600   ( 17.730,  3.240), ( 18.180,  6.840)  1.620     
+lambda:        5 x 40      (   197,  36   ), (   202,  76   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 5.220   ( 19.350,  3.240), ( 19.800,  8.460)  2.349     
+lambda:        5 x 58      (   215,  36   ), (   220,  94   )  290       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 8.460   ( 20.970,  3.240), ( 21.420,  11.700)  3.807     
+lambda:        5 x 94      (   233,  36   ), (   238,  130  )  470       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 8.460   ( 23.400,  3.240), ( 23.850,  11.700)  3.807     
+lambda:        5 x 94      (   260,  36   ), (   265,  130  )  470       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 3.600   ( 24.210,  3.240), ( 24.660,  6.840)  1.620     
+lambda:        5 x 40      (   269,  36   ), (   274,  76   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 5.220   ( 26.640,  3.240), ( 27.090,  8.460)  2.349     
+lambda:        5 x 58      (   296,  36   ), (   301,  94   )  290       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 5.220   ( 28.260,  3.240), ( 28.710,  8.460)  2.349     
+lambda:        5 x 58      (   314,  36   ), (   319,  94   )  290       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 9.270   ( 29.070,  3.240), ( 29.520,  12.510)  4.172     
+lambda:        5 x 103     (   323,  36   ), (   328,  139  )  515       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 3.600   ( 29.880,  3.240), ( 30.330,  6.840)  1.620     
+lambda:        5 x 40      (   332,  36   ), (   337,  76   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 8.460   ( 30.690,  3.240), ( 31.140,  11.700)  3.807     
+lambda:        5 x 94      (   341,  36   ), (   346,  130  )  470       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 3.600   ( 31.500,  3.240), ( 31.950,  6.840)  1.620     
+lambda:        5 x 40      (   350,  36   ), (   355,  76   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 3.600   ( 33.120,  3.240), ( 33.570,  6.840)  1.620     
+lambda:        5 x 40      (   368,  36   ), (   373,  76   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 3.600   ( 34.740,  3.240), ( 35.190,  6.840)  1.620     
+lambda:        5 x 40      (   386,  36   ), (   391,  76   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 4.410   ( 35.550,  3.240), ( 36.000,  7.650)  1.985     
+lambda:        5 x 49      (   395,  36   ), (   400,  85   )  245       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 4.410   ( 37.980,  3.240), ( 38.430,  7.650)  1.985     
+lambda:        5 x 49      (   422,  36   ), (   427,  85   )  245       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.030   ( 38.790,  3.240), ( 39.240,  9.270)  2.714     
+lambda:        5 x 67      (   431,  36   ), (   436,  103  )  335       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 41.220,  3.240), ( 41.670,  6.030)  1.256     
+lambda:        5 x 31      (   458,  36   ), (   463,  67   )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 42.840,  3.240), ( 43.290,  6.030)  1.256     
+lambda:        5 x 31      (   476,  36   ), (   481,  67   )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 3.600   ( 43.650,  3.240), ( 44.100,  6.840)  1.620     
+lambda:        5 x 40      (   485,  36   ), (   490,  76   )  200       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 9.270   ( 0.720,  3.960), ( 1.170,  13.230)  4.172     
+lambda:        5 x 103     (     8,  44   ), (    13,  147  )  515       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.030   ( 3.960,  7.200), ( 4.410,  13.230)  2.714     
+lambda:        5 x 67      (    44,  80   ), (    49,  147  )  335       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 4.410   ( 7.200,  8.820), ( 7.650,  13.230)  1.985     
+lambda:        5 x 49      (    80,  98   ), (    85,  147  )  245       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 7.650   ( 10.440,  5.580), ( 10.890,  13.230)  3.443     
+lambda:        5 x 85      (   116,  62   ), (   121,  147  )  425       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.840   ( 11.250,  6.390), ( 11.700,  13.230)  3.078     
+lambda:        5 x 76      (   125,  71   ), (   130,  147  )  380       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.030   ( 12.870,  7.200), ( 13.320,  13.230)  2.714     
+lambda:        5 x 67      (   143,  80   ), (   148,  147  )  335       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 2.790   ( 16.110,  10.440), ( 16.560,  13.230)  1.256     
+lambda:        5 x 31      (   179,  116  ), (   184,  147  )  155       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.840   ( 17.730,  6.390), ( 18.180,  13.230)  3.078     
+lambda:        5 x 76      (   197,  71   ), (   202,  147  )  380       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 5.220   ( 19.350,  8.010), ( 19.800,  13.230)  2.349     
+lambda:        5 x 58      (   215,  89   ), (   220,  147  )  290       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 1.170   ( 21.780,  12.060), ( 22.230,  13.230)  0.527     
+lambda:        5 x 13      (   242,  134  ), (   247,  147  )  65        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 1.980   ( 22.590,  11.250), ( 23.040,  13.230)  0.891     
+lambda:        5 x 22      (   251,  125  ), (   256,  147  )  110       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 1.170   ( 23.400,  12.060), ( 23.850,  13.230)  0.527     
+lambda:        5 x 13      (   260,  134  ), (   265,  147  )  65        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.840   ( 24.210,  6.390), ( 24.660,  13.230)  3.078     
+lambda:        5 x 76      (   269,  71   ), (   274,  147  )  380       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.840   ( 25.830,  6.390), ( 26.280,  13.230)  3.078     
+lambda:        5 x 76      (   287,  71   ), (   292,  147  )  380       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 1.170   ( 28.260,  12.060), ( 28.710,  13.230)  0.527     
+lambda:        5 x 13      (   314,  134  ), (   319,  147  )  65        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 1.980   ( 31.500,  11.250), ( 31.950,  13.230)  0.891     
+lambda:        5 x 22      (   350,  125  ), (   355,  147  )  110       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.840   ( 34.740,  6.390), ( 35.190,  13.230)  3.078     
+lambda:        5 x 76      (   386,  71   ), (   391,  147  )  380       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 5.220   ( 36.360,  8.010), ( 36.810,  13.230)  2.349     
+lambda:        5 x 58      (   404,  89   ), (   409,  147  )  290       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.030   ( 37.170,  7.200), ( 37.620,  13.230)  2.714     
+lambda:        5 x 67      (   413,  80   ), (   418,  147  )  335       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 5.220   ( 37.980,  8.010), ( 38.430,  13.230)  2.349     
+lambda:        5 x 58      (   422,  89   ), (   427,  147  )  290       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 4.410   ( 38.790,  8.820), ( 39.240,  13.230)  1.985     
+lambda:        5 x 49      (   431,  98   ), (   436,  147  )  245       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 4.410   ( 40.410,  8.820), ( 40.860,  13.230)  1.985     
+lambda:        5 x 49      (   449,  98   ), (   454,  147  )  245       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 6.840   ( 42.840,  6.390), ( 43.290,  13.230)  3.078     
+lambda:        5 x 76      (   476,  71   ), (   481,  147  )  380       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 44.460,  4.770), ( 44.910,  5.220)  0.203     
+lambda:        5 x 5       (   494,  53   ), (   499,  58   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 4.770,  8.010), ( 5.220,  8.460)  0.203     
+lambda:        5 x 5       (    53,  89   ), (    58,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 45.270,  9.630), ( 45.720,  10.080)  0.203     
+lambda:        5 x 5       (   503,  107  ), (   508,  112  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 18.540,  7.200), ( 18.990,  7.650)  0.203     
+lambda:        5 x 5       (   206,  80   ), (   211,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 46.080,  12.060), ( 46.530,  12.510)  0.203     
+lambda:        5 x 5       (   512,  134  ), (   517,  139  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.960,  6.390), ( 4.410,  6.840)  0.203     
+lambda:        5 x 5       (    44,  71   ), (    49,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 6.390,  7.200), ( 6.840,  7.650)  0.203     
+lambda:        5 x 5       (    71,  80   ), (    76,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 20.160,  10.440), ( 20.610,  10.890)  0.203     
+lambda:        5 x 5       (   224,  116  ), (   229,  121  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 31.500,  8.010), ( 31.950,  8.460)  0.203     
+lambda:        5 x 5       (   350,  89   ), (   355,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 44.460,  4.770), ( 44.910,  5.220)  0.203     
+lambda:        5 x 5       (   494,  53   ), (   499,  58   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.960,  7.200), ( 4.410,  7.650)  0.203     
+lambda:        5 x 5       (    44,  80   ), (    49,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 16.110,  10.440), ( 16.560,  10.890)  0.203     
+lambda:        5 x 5       (   179,  116  ), (   184,  121  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 28.260,  12.060), ( 28.710,  12.510)  0.203     
+lambda:        5 x 5       (   314,  134  ), (   319,  139  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 42.840,  6.390), ( 43.290,  6.840)  0.203     
+lambda:        5 x 5       (   476,  71   ), (   481,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 4.770,  8.010), ( 5.220,  8.460)  0.203     
+lambda:        5 x 5       (    53,  89   ), (    58,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 45.270,  9.630), ( 45.720,  10.080)  0.203     
+lambda:        5 x 5       (   503,  107  ), (   508,  112  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 18.540,  7.200), ( 18.990,  7.650)  0.203     
+lambda:        5 x 5       (   206,  80   ), (   211,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 46.080,  12.060), ( 46.530,  12.510)  0.203     
+lambda:        5 x 5       (   512,  134  ), (   517,  139  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 3.960,  6.390), ( 4.410,  6.840)  0.203     
+lambda:        5 x 5       (    44,  71   ), (    49,  76   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 6.390,  7.200), ( 6.840,  7.650)  0.203     
+lambda:        5 x 5       (    71,  80   ), (    76,  85   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 20.160,  10.440), ( 20.610,  10.890)  0.203     
+lambda:        5 x 5       (   224,  116  ), (   229,  121  )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.450 x 0.450   ( 31.500,  8.010), ( 31.950,  8.460)  0.203     
+lambda:        5 x 5       (   350,  89   ), (   355,  94   )  25        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 1.170,  4.770), ( 1.350,  5.220)  0.081     
+lambda:        2 x 5       (    13,  53   ), (    15,  58   )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 3.150,  7.200), ( 3.330,  7.650)  0.081     
+lambda:        2 x 5       (    35,  80   ), (    37,  85   )  10        
+Moving label "c1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 16.110,  10.440), ( 16.290,  10.890)  0.081     
+lambda:        2 x 5       (   179,  116  ), (   181,  121  )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 28.260,  12.060), ( 28.440,  12.510)  0.081     
+lambda:        2 x 5       (   314,  134  ), (   316,  139  )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 42.840,  6.390), ( 43.020,  6.840)  0.081     
+lambda:        2 x 5       (   476,  71   ), (   478,  76   )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 4.410,  8.010), ( 4.590,  8.460)  0.081     
+lambda:        2 x 5       (    49,  89   ), (    51,  94   )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 7.650,  9.630), ( 7.830,  10.080)  0.081     
+lambda:        2 x 5       (    85,  107  ), (    87,  112  )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 18.180,  7.200), ( 18.360,  7.650)  0.081     
+lambda:        2 x 5       (   202,  80   ), (   204,  85   )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 31.950,  12.060), ( 32.130,  12.510)  0.081     
+lambda:        2 x 5       (   355,  134  ), (   357,  139  )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 2.790,  6.390), ( 2.970,  6.840)  0.081     
+lambda:        2 x 5       (    31,  71   ), (    33,  76   )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 6.030,  7.200), ( 6.210,  7.650)  0.081     
+lambda:        2 x 5       (    67,  80   ), (    69,  85   )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 19.800,  10.440), ( 19.980,  10.890)  0.081     
+lambda:        2 x 5       (   220,  116  ), (   222,  121  )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 30.330,  8.010), ( 30.510,  8.460)  0.081     
+lambda:        2 x 5       (   337,  89   ), (   339,  94   )  10        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 0.720,  3.960), ( 0.900,  4.410)  0.081     
+lambda:        2 x 5       (     8,  44   ), (    10,  49   )  10        
+Moving label "c0b" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 2.340,  5.580), ( 2.520,  6.030)  0.081     
+lambda:        2 x 5       (    26,  62   ), (    28,  67   )  10        
+Moving label "c1_xn1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 14.490,  8.010), ( 14.670,  8.460)  0.081     
+lambda:        2 x 5       (   161,  89   ), (   163,  94   )  10        
+Moving label "c2_xn1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 26.640,  8.010), ( 26.820,  8.460)  0.081     
+lambda:        2 x 5       (   296,  89   ), (   298,  94   )  10        
+Moving label "c3_xn1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 41.220,  5.580), ( 41.400,  6.030)  0.081     
+lambda:        2 x 5       (   458,  62   ), (   460,  67   )  10        
+Moving label "c4g_xn1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 5.580,  5.580), ( 5.760,  6.030)  0.081     
+lambda:        2 x 5       (    62,  62   ), (    64,  67   )  10        
+Moving label "g10_xn1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 7.200,  8.820), ( 7.380,  9.270)  0.081     
+lambda:        2 x 5       (    80,  98   ), (    82,  103  )  10        
+Moving label "g1_0" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 11.250,  6.390), ( 11.430,  6.840)  0.081     
+lambda:        2 x 5       (   125,  71   ), (   127,  76   )  10        
+Moving label "g1_0b" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 17.730,  6.390), ( 17.910,  6.840)  0.081     
+lambda:        2 x 5       (   197,  71   ), (   199,  76   )  10        
+Moving label "g2" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 21.780,  12.060), ( 21.960,  12.510)  0.081     
+lambda:        2 x 5       (   242,  134  ), (   244,  139  )  10        
+Moving label "g20_xp1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 20.970,  11.250), ( 21.150,  11.700)  0.081     
+lambda:        2 x 5       (   233,  125  ), (   235,  130  )  10        
+Moving label "g2_0b" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 36.360,  8.010), ( 36.540,  8.460)  0.081     
+lambda:        2 x 5       (   404,  89   ), (   406,  94   )  10        
+Moving label "g30_xp1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 29.880,  6.390), ( 30.060,  6.840)  0.081     
+lambda:        2 x 5       (   332,  71   ), (   334,  76   )  10        
+Moving label "g32_xn1" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 35.550,  7.200), ( 35.730,  7.650)  0.081     
+lambda:        2 x 5       (   395,  80   ), (   397,  85   )  10        
+Moving label "g3_0b" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 30.690,  11.250), ( 30.870,  11.700)  0.081     
+lambda:        2 x 5       (   341,  125  ), (   343,  130  )  10        
+Moving label "g3_2" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 8.820,  5.580), ( 9.000,  6.030)  0.081     
+lambda:        2 x 5       (    98,  62   ), (   100,  67   )  10        
+Moving label "t1_0" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 12.870,  7.200), ( 13.050,  7.650)  0.081     
+lambda:        2 x 5       (   143,  80   ), (   145,  85   )  10        
+Moving label "t1_0b" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 19.350,  8.010), ( 19.530,  8.460)  0.081     
+lambda:        2 x 5       (   215,  89   ), (   217,  94   )  10        
+Moving label "t2" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 24.210,  6.390), ( 24.390,  6.840)  0.081     
+lambda:        2 x 5       (   269,  71   ), (   271,  76   )  10        
+Moving label "t2_0b" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 38.790,  8.820), ( 38.970,  9.270)  0.081     
+lambda:        2 x 5       (   431,  98   ), (   433,  103  )  10        
+Moving label "t3_0b" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.450   ( 33.120,  6.390), ( 33.300,  6.840)  0.081     
+lambda:        2 x 5       (   368,  71   ), (   370,  76   )  10        
+Moving label "t3_2" from metal1 to m2contact in cell carry.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.540   ( 0.000,  19.260), ( 0.180,  19.800)  0.097     
+lambda:        2 x 6       (     0,  214  ), (     2,  220  )  12        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.180 x 0.540   ( 0.000,  0.000), ( 0.180,  0.540)  0.097     
+lambda:        2 x 6       (     0,  0    ), (     2,  6    )  12        
+The current style is "default".
+The DRC styles are: default.
+No errors found.
+DRC_COUNT 0
+SCN6M_DEEP.09.tech27: line 13178: section drc:
+	OK types "space" in more than one plane.
+	Assuming same plane (active) as edge.
+"drc" is not one of the DRC styles Magic knows.

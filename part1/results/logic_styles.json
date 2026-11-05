@@ -1,0 +1,7346 @@
+{
+ "best": {
+  "Static CMOS (mirror carry, used)": {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 4,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 344.096,
+   "tpf_ps": 349.67999999999995,
+   "worst_ps": 349.67999999999995,
+   "vlo": 1.52377e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 370.60380000000004,
+   "transistors": 24,
+   "width_um": 198.0
+  },
+  "Pseudo-NMOS": {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 10,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 235.762,
+   "tpf_ps": 229.529,
+   "worst_ps": 235.762,
+   "vlo": 0.175035,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 6056.496,
+   "transistors": 16,
+   "width_um": 223.2
+  },
+  "DCVSL": {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.5,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 424.425,
+   "tpf_ps": 578.842,
+   "worst_ps": 578.842,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1785.3336000000002,
+   "transistors": 48,
+   "width_um": 367.2
+  },
+  "CPL": {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 1,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 573.717,
+   "tpf_ps": 603.668,
+   "worst_ps": 603.668,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 226.2528,
+   "transistors": 40,
+   "width_um": 38.16
+  },
+  "Transmission-gate mux": {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 2,
+    "m": 4
+   },
+   "ok": true,
+   "tpr_ps": 422.47499999999997,
+   "tpf_ps": 420.324,
+   "worst_ps": 422.47499999999997,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 270.8712,
+   "transistors": 24,
+   "width_um": 86.4
+  },
+  "Domino (footed, keeper)": {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 6,
+    "m": 4,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 377.165,
+   "tpf_ps": null,
+   "worst_ps": 377.165,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 150.259,
+   "power_uw": 864.7271999999999,
+   "transistors": 34,
+   "width_um": 271.08
+  },
+  "Domino (footless, keeper)": {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 8,
+    "m": 6,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 328.55699999999996,
+   "tpf_ps": null,
+   "worst_ps": 328.55699999999996,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 275.407,
+   "power_uw": 1417.3308000000002,
+   "transistors": 30,
+   "width_um": 310.68
+  }
+ },
+ "all": [
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 1,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 464.31,
+   "tpf_ps": 450.849,
+   "worst_ps": 464.31,
+   "vlo": 1.31231e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 112.52196,
+   "transistors": 24,
+   "width_um": 39.6
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 1,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 430.365,
+   "tpf_ps": 424.249,
+   "worst_ps": 430.365,
+   "vlo": 1.49938e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 120.21443999999998,
+   "transistors": 24,
+   "width_um": 44.55
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 1,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 411.647,
+   "tpf_ps": 408.89799999999997,
+   "worst_ps": 411.647,
+   "vlo": 1.69046e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 127.97766,
+   "transistors": 24,
+   "width_um": 49.5
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 1,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 396.78900000000004,
+   "tpf_ps": 395.138,
+   "worst_ps": 396.78900000000004,
+   "vlo": 2.07851e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 143.53452,
+   "transistors": 24,
+   "width_um": 59.4
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 1,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 396.28700000000003,
+   "tpf_ps": 392.67,
+   "worst_ps": 396.28700000000003,
+   "vlo": 2.47044e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 159.11208,
+   "transistors": 24,
+   "width_um": 69.3
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 2,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 383.263,
+   "tpf_ps": 385.67699999999996,
+   "worst_ps": 385.67699999999996,
+   "vlo": 1.11364e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 177.82685999999998,
+   "transistors": 24,
+   "width_um": 79.2
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 2,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 365.74199999999996,
+   "tpf_ps": 369.572,
+   "worst_ps": 369.572,
+   "vlo": 1.32363e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 193.3614,
+   "transistors": 24,
+   "width_um": 89.1
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 2,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 358.324,
+   "tpf_ps": 361.612,
+   "worst_ps": 361.612,
+   "vlo": 1.53466e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 208.9098,
+   "transistors": 24,
+   "width_um": 99.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 2,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 358.44,
+   "tpf_ps": 358.02500000000003,
+   "worst_ps": 358.44,
+   "vlo": 1.95833e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 239.99579999999997,
+   "transistors": 24,
+   "width_um": 118.8
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 2,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 367.623,
+   "tpf_ps": 362.586,
+   "worst_ps": 367.623,
+   "vlo": 2.38307e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 271.0728,
+   "transistors": 24,
+   "width_um": 138.6
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 3,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 360.689,
+   "tpf_ps": 368.13399999999996,
+   "worst_ps": 368.13399999999996,
+   "vlo": 1.06946e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 243.0378,
+   "transistors": 24,
+   "width_um": 118.8
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 3,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 349.297,
+   "tpf_ps": 356.106,
+   "worst_ps": 356.106,
+   "vlo": 1.29079e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 266.3586,
+   "transistors": 24,
+   "width_um": 133.65
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 3,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 346.157,
+   "tpf_ps": 351.196,
+   "worst_ps": 351.196,
+   "vlo": 1.51263e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 289.6938,
+   "transistors": 24,
+   "width_um": 148.5
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 3,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 352.072,
+   "tpf_ps": 352.119,
+   "worst_ps": 352.119,
+   "vlo": 1.95706e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 336.348,
+   "transistors": 24,
+   "width_um": 178.2
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 3,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 365.859,
+   "tpf_ps": 360.164,
+   "worst_ps": 365.859,
+   "vlo": 2.40202e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 382.9752,
+   "transistors": 24,
+   "width_um": 207.9
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 4,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 352.945,
+   "tpf_ps": 362.378,
+   "worst_ps": 362.378,
+   "vlo": 1.06255e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 308.2752,
+   "transistors": 24,
+   "width_um": 158.4
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 4,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 344.687,
+   "tpf_ps": 352.71299999999997,
+   "worst_ps": 352.71299999999997,
+   "vlo": 1.29301e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 339.4332,
+   "transistors": 24,
+   "width_um": 178.2
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 4,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 344.096,
+   "tpf_ps": 349.67999999999995,
+   "worst_ps": 349.67999999999995,
+   "vlo": 1.52377e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 370.60380000000004,
+   "transistors": 24,
+   "width_um": 198.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 4,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 353.846,
+   "tpf_ps": 353.552,
+   "worst_ps": 353.846,
+   "vlo": 1.98575e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 432.9468,
+   "transistors": 24,
+   "width_um": 237.6
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 4,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 370.643,
+   "tpf_ps": 363.96200000000005,
+   "worst_ps": 370.643,
+   "vlo": 2.44804e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 495.28620000000006,
+   "transistors": 24,
+   "width_um": 277.2
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 5,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 350.393,
+   "tpf_ps": 361.576,
+   "worst_ps": 361.576,
+   "vlo": 1.07032e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 373.62780000000004,
+   "transistors": 24,
+   "width_um": 198.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 5,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 344.716,
+   "tpf_ps": 353.65299999999996,
+   "worst_ps": 353.65299999999996,
+   "vlo": 1.30912e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 412.677,
+   "transistors": 24,
+   "width_um": 222.75
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 5,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 345.95099999999996,
+   "tpf_ps": 352.023,
+   "worst_ps": 352.023,
+   "vlo": 1.54812e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 451.7586,
+   "transistors": 24,
+   "width_um": 247.5
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 5,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 358.62300000000005,
+   "tpf_ps": 358.18,
+   "worst_ps": 358.62300000000005,
+   "vlo": 2.02643e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 529.9667999999999,
+   "transistors": 24,
+   "width_um": 297.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 5,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 377.868,
+   "tpf_ps": 370.494,
+   "worst_ps": 377.868,
+   "vlo": 2.50495e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 608.2325999999999,
+   "transistors": 24,
+   "width_um": 346.5
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 6,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 350.83799999999997,
+   "tpf_ps": 363.342,
+   "worst_ps": 363.342,
+   "vlo": 1.08536e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 439.14959999999996,
+   "transistors": 24,
+   "width_um": 237.6
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 6,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 346.95799999999997,
+   "tpf_ps": 356.789,
+   "worst_ps": 356.789,
+   "vlo": 1.33212e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 486.18,
+   "transistors": 24,
+   "width_um": 267.3
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 6,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 349.672,
+   "tpf_ps": 356.30300000000005,
+   "worst_ps": 356.30300000000005,
+   "vlo": 1.57904e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 533.2662,
+   "transistors": 24,
+   "width_um": 297.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 6,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 364.815,
+   "tpf_ps": 364.376,
+   "worst_ps": 364.815,
+   "vlo": 2.0731e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 627.5538,
+   "transistors": 24,
+   "width_um": 356.4
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 6,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 386.229,
+   "tpf_ps": 378.32399999999996,
+   "worst_ps": 386.229,
+   "vlo": 2.56731e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 721.9926,
+   "transistors": 24,
+   "width_um": 415.8
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 8,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 355.60200000000003,
+   "tpf_ps": 370.719,
+   "worst_ps": 370.719,
+   "vlo": 1.12624e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 570.9312,
+   "transistors": 24,
+   "width_um": 316.8
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 8,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 354.521,
+   "tpf_ps": 366.322,
+   "worst_ps": 366.322,
+   "vlo": 1.38843e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 634.2264,
+   "transistors": 24,
+   "width_um": 356.4
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 8,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 359.637,
+   "tpf_ps": 367.69,
+   "worst_ps": 367.69,
+   "vlo": 1.65072e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 697.6584,
+   "transistors": 24,
+   "width_um": 396.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 8,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 379.013,
+   "tpf_ps": 378.956,
+   "worst_ps": 379.013,
+   "vlo": 2.17542e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 824.8554,
+   "transistors": 24,
+   "width_um": 475.2
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 8,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 404.329,
+   "tpf_ps": 395.745,
+   "worst_ps": 404.329,
+   "vlo": 2.70023e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 952.4772,
+   "transistors": 24,
+   "width_um": 554.4
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 10,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 362.645,
+   "tpf_ps": 380.612,
+   "worst_ps": 380.612,
+   "vlo": 1.17428e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 703.989,
+   "transistors": 24,
+   "width_um": 396.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 10,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 363.81399999999996,
+   "tpf_ps": 377.932,
+   "worst_ps": 377.932,
+   "vlo": 1.45157e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 784.0188,
+   "transistors": 24,
+   "width_um": 445.5
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 10,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 370.95399999999995,
+   "tpf_ps": 380.82099999999997,
+   "worst_ps": 380.82099999999997,
+   "vlo": 1.72893e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 864.3042,
+   "transistors": 24,
+   "width_um": 495.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 10,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 394.098,
+   "tpf_ps": 394.84299999999996,
+   "worst_ps": 394.84299999999996,
+   "vlo": 2.28374e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1025.5194,
+   "transistors": 24,
+   "width_um": 594.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 10,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 423.01099999999997,
+   "tpf_ps": 414.10999999999996,
+   "worst_ps": 423.01099999999997,
+   "vlo": 2.83861e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1187.5392,
+   "transistors": 24,
+   "width_um": 693.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 12,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 370.62600000000003,
+   "tpf_ps": 391.679,
+   "worst_ps": 391.679,
+   "vlo": 1.22587e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 838.6038,
+   "transistors": 24,
+   "width_um": 475.2
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 12,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 373.774,
+   "tpf_ps": 390.478,
+   "worst_ps": 390.478,
+   "vlo": 1.51811e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 935.8974000000001,
+   "transistors": 24,
+   "width_um": 534.6
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 12,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 382.76500000000004,
+   "tpf_ps": 394.73,
+   "worst_ps": 394.73,
+   "vlo": 1.8104e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1033.5924,
+   "transistors": 24,
+   "width_um": 594.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 12,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 409.43399999999997,
+   "tpf_ps": 411.207,
+   "worst_ps": 411.207,
+   "vlo": 2.39504e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1230.0246,
+   "transistors": 24,
+   "width_um": 712.8
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 12,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 441.796,
+   "tpf_ps": 432.787,
+   "worst_ps": 441.796,
+   "vlo": 2.97973e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1427.742,
+   "transistors": 24,
+   "width_um": 831.6
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 16,
+    "beta": 1
+   },
+   "ok": true,
+   "tpr_ps": 387.677,
+   "tpf_ps": 415.362,
+   "worst_ps": 415.362,
+   "vlo": 1.33437e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1113.3378,
+   "transistors": 24,
+   "width_um": 633.6
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 16,
+    "beta": 1.25
+   },
+   "ok": true,
+   "tpr_ps": 394.412,
+   "tpf_ps": 416.719,
+   "worst_ps": 416.719,
+   "vlo": 1.65627e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1246.869,
+   "transistors": 24,
+   "width_um": 712.8
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 16,
+    "beta": 1.5
+   },
+   "ok": true,
+   "tpr_ps": 406.845,
+   "tpf_ps": 423.346,
+   "worst_ps": 423.346,
+   "vlo": 1.97821e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1381.1814,
+   "transistors": 24,
+   "width_um": 792.0
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 16,
+    "beta": 2
+   },
+   "ok": true,
+   "tpr_ps": 440.249,
+   "tpf_ps": 444.365,
+   "worst_ps": 444.365,
+   "vlo": 2.62212e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1651.8744000000002,
+   "transistors": 24,
+   "width_um": 950.4
+  },
+  {
+   "style": "Static CMOS (mirror carry, used)",
+   "params": {
+    "k": 16,
+    "beta": 2.5
+   },
+   "ok": true,
+   "tpr_ps": 479.291,
+   "tpf_ps": 470.336,
+   "worst_ps": 479.291,
+   "vlo": 3.26606e-08,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1925.1180000000002,
+   "transistors": 24,
+   "width_um": 1108.8
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 1,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 768.536,
+   "tpf_ps": 606.905,
+   "worst_ps": 768.536,
+   "vlo": 0.0622009,
+   "vhi": 1.78591,
+   "precharge_ps": null,
+   "power_uw": 359.5446,
+   "transistors": 16,
+   "width_um": 20.88
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 1,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 509.7,
+   "tpf_ps": 450.656,
+   "worst_ps": 509.7,
+   "vlo": 0.0988621,
+   "vhi": 1.79991,
+   "precharge_ps": null,
+   "power_uw": 521.478,
+   "transistors": 16,
+   "width_um": 21.6
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 1,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 442.117,
+   "tpf_ps": 405.171,
+   "worst_ps": 442.117,
+   "vlo": 0.117898,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 602.3736,
+   "transistors": 16,
+   "width_um": 21.96
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 1,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 392.82399999999996,
+   "tpf_ps": 370.945,
+   "worst_ps": 392.82399999999996,
+   "vlo": 0.137431,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 683.1216,
+   "transistors": 16,
+   "width_um": 22.32
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 1,
+    "r": 0.45
+   },
+   "ok": true,
+   "tpr_ps": 325.604,
+   "tpf_ps": 323.36800000000005,
+   "worst_ps": 325.604,
+   "vlo": 0.178118,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 844.0272,
+   "transistors": 16,
+   "width_um": 23.04
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 1,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 301.681,
+   "tpf_ps": 306.456,
+   "worst_ps": 306.456,
+   "vlo": 0.199348,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 924.1074,
+   "transistors": 16,
+   "width_um": 23.4
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 2,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 561.4259999999999,
+   "tpf_ps": 495.98800000000006,
+   "worst_ps": 561.4259999999999,
+   "vlo": 0.0608998,
+   "vhi": 1.79987,
+   "precharge_ps": null,
+   "power_uw": 632.322,
+   "transistors": 16,
+   "width_um": 41.76
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 2,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 379.31899999999996,
+   "tpf_ps": 358.55899999999997,
+   "worst_ps": 379.31899999999996,
+   "vlo": 0.100144,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 959.1533999999999,
+   "transistors": 16,
+   "width_um": 43.2
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 2,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 331.449,
+   "tpf_ps": 320.411,
+   "worst_ps": 331.449,
+   "vlo": 0.1205,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1122.2352,
+   "transistors": 16,
+   "width_um": 43.92
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 2,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 296.603,
+   "tpf_ps": 292.13800000000003,
+   "worst_ps": 296.603,
+   "vlo": 0.141375,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1284.8994,
+   "transistors": 16,
+   "width_um": 44.64
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 2,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 249.35699999999997,
+   "tpf_ps": 253.38200000000003,
+   "worst_ps": 253.38200000000003,
+   "vlo": 0.184808,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 1608.5195999999999,
+   "transistors": 16,
+   "width_um": 46.08
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 2,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 232.67399999999998,
+   "tpf_ps": 239.73999999999998,
+   "worst_ps": 239.73999999999998,
+   "vlo": 0.207444,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 1769.2758000000001,
+   "transistors": 16,
+   "width_um": 46.8
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 3,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 494.15500000000003,
+   "tpf_ps": 455.10799999999995,
+   "worst_ps": 494.15500000000003,
+   "vlo": 0.0617337,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 906.0984,
+   "transistors": 16,
+   "width_um": 62.64
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 3,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 336.575,
+   "tpf_ps": 325.922,
+   "worst_ps": 336.575,
+   "vlo": 0.102724,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1398.114,
+   "transistors": 16,
+   "width_um": 64.8
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 3,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 295.472,
+   "tpf_ps": 290.671,
+   "worst_ps": 295.472,
+   "vlo": 0.123948,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1643.2505999999998,
+   "transistors": 16,
+   "width_um": 65.88
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 3,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 265.682,
+   "tpf_ps": 264.683,
+   "worst_ps": 265.682,
+   "vlo": 0.145684,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1887.48,
+   "transistors": 16,
+   "width_um": 66.96
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 3,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 225.532,
+   "tpf_ps": 229.198,
+   "worst_ps": 229.198,
+   "vlo": 0.190823,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 2372.526,
+   "transistors": 16,
+   "width_um": 69.12
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 3,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 211.48,
+   "tpf_ps": 216.731,
+   "worst_ps": 216.731,
+   "vlo": 0.214306,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 2613.042,
+   "transistors": 16,
+   "width_um": 70.2
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 4,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 460.948,
+   "tpf_ps": 434.44800000000004,
+   "worst_ps": 460.948,
+   "vlo": 0.0631122,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1180.4328,
+   "transistors": 16,
+   "width_um": 83.52
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 4,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 316.01500000000004,
+   "tpf_ps": 309.601,
+   "worst_ps": 316.01500000000004,
+   "vlo": 0.105596,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1837.278,
+   "transistors": 16,
+   "width_um": 86.4
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 4,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 278.454,
+   "tpf_ps": 275.856,
+   "worst_ps": 278.454,
+   "vlo": 0.127547,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2163.996,
+   "transistors": 16,
+   "width_um": 87.84
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 4,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 251.31699999999998,
+   "tpf_ps": 251.04,
+   "worst_ps": 251.31699999999998,
+   "vlo": 0.149998,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2489.1299999999997,
+   "transistors": 16,
+   "width_um": 89.28
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 4,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 214.93,
+   "tpf_ps": 217.19799999999998,
+   "worst_ps": 217.19799999999998,
+   "vlo": 0.196534,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 3133.8900000000003,
+   "transistors": 16,
+   "width_um": 92.16
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 4,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 202.482,
+   "tpf_ps": 205.294,
+   "worst_ps": 205.294,
+   "vlo": 0.220701,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 3453.192,
+   "transistors": 16,
+   "width_um": 93.6
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 5,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 441.531,
+   "tpf_ps": 422.248,
+   "worst_ps": 441.531,
+   "vlo": 0.064701,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1455.0462,
+   "transistors": 16,
+   "width_um": 104.4
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 5,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 304.488,
+   "tpf_ps": 300.06399999999996,
+   "worst_ps": 304.488,
+   "vlo": 0.108556,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2276.064,
+   "transistors": 16,
+   "width_um": 108.0
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 5,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 269.142,
+   "tpf_ps": 267.214,
+   "worst_ps": 269.142,
+   "vlo": 0.13117,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2683.782,
+   "transistors": 16,
+   "width_um": 109.8
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 5,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 243.67399999999998,
+   "tpf_ps": 243.07799999999997,
+   "worst_ps": 243.67399999999998,
+   "vlo": 0.15427,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3089.1420000000003,
+   "transistors": 16,
+   "width_um": 111.6
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 5,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 209.68800000000002,
+   "tpf_ps": 210.178,
+   "worst_ps": 210.178,
+   "vlo": 0.202064,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 3891.852,
+   "transistors": 16,
+   "width_um": 115.2
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 5,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 197.988,
+   "tpf_ps": 198.62699999999998,
+   "worst_ps": 198.62699999999998,
+   "vlo": 0.226844,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 4288.806,
+   "transistors": 16,
+   "width_um": 117.0
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 6,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 429.101,
+   "tpf_ps": 414.414,
+   "worst_ps": 429.101,
+   "vlo": 0.0663876,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1729.7334,
+   "transistors": 16,
+   "width_um": 125.28
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 6,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 297.50600000000003,
+   "tpf_ps": 294.011,
+   "worst_ps": 297.50600000000003,
+   "vlo": 0.111545,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2714.13,
+   "transistors": 16,
+   "width_um": 129.6
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 6,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 263.70099999999996,
+   "tpf_ps": 261.72499999999997,
+   "worst_ps": 263.70099999999996,
+   "vlo": 0.134785,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3202.272,
+   "transistors": 16,
+   "width_um": 131.76
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 6,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 239.398,
+   "tpf_ps": 238.012,
+   "worst_ps": 239.398,
+   "vlo": 0.158497,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3687.156,
+   "transistors": 16,
+   "width_um": 133.92
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 6,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 207.13000000000002,
+   "tpf_ps": 205.68699999999998,
+   "worst_ps": 207.13000000000002,
+   "vlo": 0.207473,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 4646.07,
+   "transistors": 16,
+   "width_um": 138.24
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 6,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 196.096,
+   "tpf_ps": 194.34,
+   "worst_ps": 196.096,
+   "vlo": 0.232824,
+   "vhi": 1.79998,
+   "precharge_ps": null,
+   "power_uw": 5119.704,
+   "transistors": 16,
+   "width_um": 140.4
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 8,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 414.805,
+   "tpf_ps": 405.513,
+   "worst_ps": 414.805,
+   "vlo": 0.0698909,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2278.8179999999998,
+   "transistors": 16,
+   "width_um": 167.04
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 8,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 290.558,
+   "tpf_ps": 287.229,
+   "worst_ps": 290.558,
+   "vlo": 0.117531,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3587.544,
+   "transistors": 16,
+   "width_um": 172.8
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 8,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 258.63100000000003,
+   "tpf_ps": 255.55700000000002,
+   "worst_ps": 258.63100000000003,
+   "vlo": 0.141961,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 4234.679999999999,
+   "transistors": 16,
+   "width_um": 175.68
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 8,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 235.90900000000002,
+   "tpf_ps": 232.283,
+   "worst_ps": 235.90900000000002,
+   "vlo": 0.166831,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 4876.488,
+   "transistors": 16,
+   "width_um": 178.56
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 8,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 206.02700000000002,
+   "tpf_ps": 200.55800000000002,
+   "worst_ps": 206.02700000000002,
+   "vlo": 0.218037,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 6142.752,
+   "transistors": 16,
+   "width_um": 184.32
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 8,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 195.94199999999998,
+   "tpf_ps": 189.417,
+   "worst_ps": 195.94199999999998,
+   "vlo": 0.244461,
+   "vhi": 1.79998,
+   "precharge_ps": null,
+   "power_uw": 6766.722000000001,
+   "transistors": 16,
+   "width_um": 187.2
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 10,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 407.594,
+   "tpf_ps": 401.289,
+   "worst_ps": 407.594,
+   "vlo": 0.0734638,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2827.0260000000003,
+   "transistors": 16,
+   "width_um": 208.8
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 10,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 287.797,
+   "tpf_ps": 284.06100000000004,
+   "worst_ps": 287.797,
+   "vlo": 0.123489,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 4456.584000000001,
+   "transistors": 16,
+   "width_um": 216.0
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 10,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 257.40799999999996,
+   "tpf_ps": 252.63,
+   "worst_ps": 257.40799999999996,
+   "vlo": 0.149058,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 5260.5,
+   "transistors": 16,
+   "width_um": 219.6
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 10,
+    "r": 0.35
+   },
+   "ok": true,
+   "tpr_ps": 235.762,
+   "tpf_ps": 229.529,
+   "worst_ps": 235.762,
+   "vlo": 0.175035,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 6056.496,
+   "transistors": 16,
+   "width_um": 223.2
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 10,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 207.585,
+   "tpf_ps": 198.033,
+   "worst_ps": 207.585,
+   "vlo": 0.228357,
+   "vhi": 1.79998,
+   "precharge_ps": null,
+   "power_uw": 7623.414000000001,
+   "transistors": 16,
+   "width_um": 230.4
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 10,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 198.20499999999998,
+   "tpf_ps": 186.965,
+   "worst_ps": 198.20499999999998,
+   "vlo": 0.255795,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 8393.903999999999,
+   "transistors": 16,
+   "width_um": 234.0
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 12,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 403.914,
+   "tpf_ps": 399.48900000000003,
+   "worst_ps": 403.914,
+   "vlo": 0.0770584,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3373.992,
+   "transistors": 16,
+   "width_um": 250.56
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 12,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 287.457,
+   "tpf_ps": 282.70799999999997,
+   "worst_ps": 287.457,
+   "vlo": 0.129406,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 5321.124,
+   "transistors": 16,
+   "width_um": 259.2
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 12,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 258.085,
+   "tpf_ps": 251.342,
+   "worst_ps": 258.085,
+   "vlo": 0.156081,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 6279.462,
+   "transistors": 16,
+   "width_um": 263.52
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 12,
+    "r": 0.35
+   },
+   "ok": false,
+   "tpr_ps": 237.27999999999997,
+   "tpf_ps": 228.28300000000002,
+   "worst_ps": 237.27999999999997,
+   "vlo": 0.183128,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 7226.928,
+   "transistors": 16,
+   "width_um": 267.84
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 12,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 210.47899999999998,
+   "tpf_ps": 196.844,
+   "worst_ps": 210.47899999999998,
+   "vlo": 0.23849,
+   "vhi": 1.79998,
+   "precharge_ps": null,
+   "power_uw": 9088.092,
+   "transistors": 16,
+   "width_um": 276.48
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 12,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 201.673,
+   "tpf_ps": 185.76999999999998,
+   "worst_ps": 201.673,
+   "vlo": 0.266899,
+   "vhi": 1.79996,
+   "precharge_ps": null,
+   "power_uw": 10001.448,
+   "transistors": 16,
+   "width_um": 280.8
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 16,
+    "r": 0.15
+   },
+   "ok": true,
+   "tpr_ps": 401.779,
+   "tpf_ps": 399.62100000000004,
+   "worst_ps": 401.779,
+   "vlo": 0.0842492,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 4463.676,
+   "transistors": 16,
+   "width_um": 334.08
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 16,
+    "r": 0.25
+   },
+   "ok": true,
+   "tpr_ps": 290.066,
+   "tpf_ps": 282.746,
+   "worst_ps": 290.066,
+   "vlo": 0.141112,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 7036.0019999999995,
+   "transistors": 16,
+   "width_um": 345.6
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 16,
+    "r": 0.3
+   },
+   "ok": true,
+   "tpr_ps": 262.24899999999997,
+   "tpf_ps": 251.275,
+   "worst_ps": 262.24899999999997,
+   "vlo": 0.169924,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 8296.434000000001,
+   "transistors": 16,
+   "width_um": 351.36
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 16,
+    "r": 0.35
+   },
+   "ok": false,
+   "tpr_ps": 242.777,
+   "tpf_ps": 228.142,
+   "worst_ps": 242.777,
+   "vlo": 0.199031,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 9539.046,
+   "transistors": 16,
+   "width_um": 357.12
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 16,
+    "r": 0.45
+   },
+   "ok": false,
+   "tpr_ps": 218.283,
+   "tpf_ps": 196.546,
+   "worst_ps": 218.283,
+   "vlo": 0.258293,
+   "vhi": 1.79996,
+   "precharge_ps": null,
+   "power_uw": 11970.36,
+   "transistors": 16,
+   "width_um": 368.64
+  },
+  {
+   "style": "Pseudo-NMOS",
+   "params": {
+    "k": 16,
+    "r": 0.5
+   },
+   "ok": false,
+   "tpr_ps": 210.452,
+   "tpf_ps": 185.302,
+   "worst_ps": 210.452,
+   "vlo": 0.288544,
+   "vhi": 1.79992,
+   "precharge_ps": null,
+   "power_uw": 13159.26,
+   "transistors": 16,
+   "width_um": 374.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.15,
+    "buf": 0
+   },
+   "ok": false,
+   "tpr_ps": 1714.53,
+   "tpf_ps": 1113.54,
+   "worst_ps": 1714.53,
+   "vlo": 4.74622e-09,
+   "vhi": 1.0401,
+   "precharge_ps": null,
+   "power_uw": 238.0194,
+   "transistors": 32,
+   "width_um": 41.76
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.15,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 421.556,
+   "tpf_ps": 1095.6,
+   "worst_ps": 1095.6,
+   "vlo": 7.11608e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 440.87399999999997,
+   "transistors": 48,
+   "width_um": 63.36
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.15,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 388.697,
+   "tpf_ps": 1370.48,
+   "worst_ps": 1370.48,
+   "vlo": 6.49782e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 643.4802,
+   "transistors": 48,
+   "width_um": 84.96
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.15,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 412.64300000000003,
+   "tpf_ps": 1704.6499999999999,
+   "worst_ps": 1704.6499999999999,
+   "vlo": 6.34172e-09,
+   "vhi": 1.79991,
+   "precharge_ps": null,
+   "power_uw": 875.6694,
+   "transistors": 48,
+   "width_um": 106.56
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.15,
+    "buf": 4
+   },
+   "ok": false,
+   "tpr_ps": 449.239,
+   "tpf_ps": 2051.73,
+   "worst_ps": 2051.73,
+   "vlo": 6.31026e-09,
+   "vhi": 1.79957,
+   "precharge_ps": null,
+   "power_uw": 1119.9186,
+   "transistors": 48,
+   "width_um": 128.16
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.25,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1310.96,
+   "tpf_ps": 906.869,
+   "worst_ps": 1310.96,
+   "vlo": 4.45714e-09,
+   "vhi": 1.75296,
+   "precharge_ps": null,
+   "power_uw": 269.3232,
+   "transistors": 32,
+   "width_um": 43.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.25,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 431.801,
+   "tpf_ps": 841.098,
+   "worst_ps": 841.098,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 432.6156,
+   "transistors": 48,
+   "width_um": 64.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.25,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 397.871,
+   "tpf_ps": 1004.1500000000001,
+   "worst_ps": 1004.1500000000001,
+   "vlo": 6.4978e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 612.2232,
+   "transistors": 48,
+   "width_um": 86.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.25,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 423.594,
+   "tpf_ps": 1219.6599999999999,
+   "worst_ps": 1219.6599999999999,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 820.1573999999999,
+   "transistors": 48,
+   "width_um": 108.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.25,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 462.452,
+   "tpf_ps": 1446.03,
+   "worst_ps": 1446.03,
+   "vlo": 6.31024e-09,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 1049.1246,
+   "transistors": 48,
+   "width_um": 129.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.5,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1015.78,
+   "tpf_ps": 751.4150000000001,
+   "worst_ps": 1015.78,
+   "vlo": 5.33361e-09,
+   "vhi": 1.79998,
+   "precharge_ps": null,
+   "power_uw": 334.5228,
+   "transistors": 32,
+   "width_um": 46.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.5,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 505.35599999999994,
+   "tpf_ps": 650.658,
+   "worst_ps": 650.658,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 413.01,
+   "transistors": 48,
+   "width_um": 68.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.5,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 459.868,
+   "tpf_ps": 713.88,
+   "worst_ps": 713.88,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 572.5818,
+   "transistors": 48,
+   "width_um": 90.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.5,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 489.33,
+   "tpf_ps": 827.812,
+   "worst_ps": 827.812,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 739.7334,
+   "transistors": 48,
+   "width_um": 111.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 0.5,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 534.957,
+   "tpf_ps": 953.0440000000001,
+   "worst_ps": 953.0440000000001,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 924.3251999999999,
+   "transistors": 48,
+   "width_um": 133.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 1,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1056.6799999999998,
+   "tpf_ps": 850.376,
+   "worst_ps": 1056.6799999999998,
+   "vlo": 7.78953e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 512.5914,
+   "transistors": 32,
+   "width_um": 54.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 1,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 766.0490000000001,
+   "tpf_ps": 834.308,
+   "worst_ps": 834.308,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 532.9638,
+   "transistors": 48,
+   "width_um": 75.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 1,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 718.427,
+   "tpf_ps": 818.311,
+   "worst_ps": 818.311,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 662.0436000000001,
+   "transistors": 48,
+   "width_um": 97.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 1,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 776.3679999999999,
+   "tpf_ps": 910.224,
+   "worst_ps": 910.224,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 828.522,
+   "transistors": 48,
+   "width_um": 118.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 1,
+    "r": 1,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 855.6179999999999,
+   "tpf_ps": 1022.8599999999999,
+   "worst_ps": 1022.8599999999999,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1016.0262,
+   "transistors": 48,
+   "width_um": 140.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.15,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1355.23,
+   "tpf_ps": 949.056,
+   "worst_ps": 1355.23,
+   "vlo": 2.44335e-09,
+   "vhi": 1.73715,
+   "precharge_ps": null,
+   "power_uw": 364.0554,
+   "transistors": 32,
+   "width_um": 83.52
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.15,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 401.827,
+   "tpf_ps": 975.3860000000001,
+   "worst_ps": 975.3860000000001,
+   "vlo": 7.11608e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 620.1414,
+   "transistors": 48,
+   "width_um": 105.12
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.15,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 345.827,
+   "tpf_ps": 1093.5800000000002,
+   "worst_ps": 1093.5800000000002,
+   "vlo": 6.49781e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 798.6366,
+   "transistors": 48,
+   "width_um": 126.72
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.15,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 338.432,
+   "tpf_ps": 1253.78,
+   "worst_ps": 1253.78,
+   "vlo": 6.34171e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 998.6526000000001,
+   "transistors": 48,
+   "width_um": 148.32
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.15,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 349.79400000000004,
+   "tpf_ps": 1435.8600000000001,
+   "worst_ps": 1435.8600000000001,
+   "vlo": 6.31025e-09,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 1215.7326,
+   "transistors": 48,
+   "width_um": 169.92
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.25,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1042.16,
+   "tpf_ps": 762.888,
+   "worst_ps": 1042.16,
+   "vlo": 2.85767e-09,
+   "vhi": 1.79983,
+   "precharge_ps": null,
+   "power_uw": 409.8798,
+   "transistors": 32,
+   "width_um": 86.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.25,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 425.769,
+   "tpf_ps": 755.607,
+   "worst_ps": 755.607,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 612.8424,
+   "transistors": 48,
+   "width_um": 108.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.25,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 364.895,
+   "tpf_ps": 811.5110000000001,
+   "worst_ps": 811.5110000000001,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 781.0794,
+   "transistors": 48,
+   "width_um": 129.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.25,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 356.166,
+   "tpf_ps": 903.9979999999999,
+   "worst_ps": 903.9979999999999,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 955.7676000000001,
+   "transistors": 48,
+   "width_um": 151.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.25,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 367.878,
+   "tpf_ps": 1015.9100000000001,
+   "worst_ps": 1015.9100000000001,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1145.4587999999999,
+   "transistors": 48,
+   "width_um": 172.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.5,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 831.662,
+   "tpf_ps": 645.329,
+   "worst_ps": 831.662,
+   "vlo": 4.17352e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 523.4562,
+   "transistors": 32,
+   "width_um": 93.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.5,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 512.4549999999999,
+   "tpf_ps": 613.5160000000001,
+   "worst_ps": 613.5160000000001,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 585.9504000000001,
+   "transistors": 48,
+   "width_um": 115.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.5,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 436.683,
+   "tpf_ps": 612.645,
+   "worst_ps": 612.645,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 753.0678,
+   "transistors": 48,
+   "width_um": 136.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.5,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 422.529,
+   "tpf_ps": 649.904,
+   "worst_ps": 649.904,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 908.7065999999999,
+   "transistors": 48,
+   "width_um": 158.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 0.5,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 435.21,
+   "tpf_ps": 706.477,
+   "worst_ps": 706.477,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1066.275,
+   "transistors": 48,
+   "width_um": 180.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 1,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 934.19,
+   "tpf_ps": 786.4780000000001,
+   "worst_ps": 934.19,
+   "vlo": 6.96284e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 871.0308,
+   "transistors": 32,
+   "width_um": 108.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 1,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 775.062,
+   "tpf_ps": 832.461,
+   "worst_ps": 832.461,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 849.42,
+   "transistors": 48,
+   "width_um": 129.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 1,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 721.4,
+   "tpf_ps": 800.206,
+   "worst_ps": 800.206,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 982.4274,
+   "transistors": 48,
+   "width_um": 151.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 1,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 702.549,
+   "tpf_ps": 798.169,
+   "worst_ps": 798.169,
+   "vlo": 6.34168e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1113.9768,
+   "transistors": 48,
+   "width_um": 172.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 2,
+    "r": 1,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 729.768,
+   "tpf_ps": 842.252,
+   "worst_ps": 842.252,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1273.0482,
+   "transistors": 48,
+   "width_um": 194.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.15,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1231.21,
+   "tpf_ps": 888.563,
+   "worst_ps": 1231.21,
+   "vlo": 1.90927e-09,
+   "vhi": 1.79229,
+   "precharge_ps": null,
+   "power_uw": 485.28180000000003,
+   "transistors": 32,
+   "width_um": 125.28
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.15,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 421.786,
+   "tpf_ps": 955.3100000000001,
+   "worst_ps": 955.3100000000001,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 802.1088000000001,
+   "transistors": 48,
+   "width_um": 146.88
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.15,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 339.979,
+   "tpf_ps": 988.8550000000001,
+   "worst_ps": 988.8550000000001,
+   "vlo": 6.49781e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 968.4504,
+   "transistors": 48,
+   "width_um": 168.48
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.15,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 325.721,
+   "tpf_ps": 1093.19,
+   "worst_ps": 1093.19,
+   "vlo": 6.34171e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1152.0395999999998,
+   "transistors": 48,
+   "width_um": 190.08
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.15,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 323.895,
+   "tpf_ps": 1205.53,
+   "worst_ps": 1205.53,
+   "vlo": 6.31025e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1350.3492,
+   "transistors": 48,
+   "width_um": 211.68
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.25,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 950.9090000000001,
+   "tpf_ps": 713.94,
+   "worst_ps": 950.9090000000001,
+   "vlo": 2.43744e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 546.4008,
+   "transistors": 32,
+   "width_um": 129.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.25,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 452.73,
+   "tpf_ps": 750.154,
+   "worst_ps": 750.154,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 792.5292,
+   "transistors": 48,
+   "width_um": 151.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.25,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 362.246,
+   "tpf_ps": 744.4749999999999,
+   "worst_ps": 744.4749999999999,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 958.0446000000001,
+   "transistors": 48,
+   "width_um": 172.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.25,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 346.314,
+   "tpf_ps": 802.351,
+   "worst_ps": 802.351,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1125.6588000000002,
+   "transistors": 48,
+   "width_um": 194.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.25,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 343.534,
+   "tpf_ps": 866.797,
+   "worst_ps": 866.797,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1298.3328,
+   "transistors": 48,
+   "width_um": 216.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.5,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 773.119,
+   "tpf_ps": 612.926,
+   "worst_ps": 773.119,
+   "vlo": 3.87428e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 713.1924,
+   "transistors": 32,
+   "width_um": 140.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.5,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 550.125,
+   "tpf_ps": 634.5409999999999,
+   "worst_ps": 634.5409999999999,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 759.7620000000001,
+   "transistors": 48,
+   "width_um": 162.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.5,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 439.138,
+   "tpf_ps": 581.96,
+   "worst_ps": 581.96,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 929.4282000000001,
+   "transistors": 48,
+   "width_um": 183.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.5,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 417.98400000000004,
+   "tpf_ps": 603.45,
+   "worst_ps": 603.45,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1091.259,
+   "transistors": 48,
+   "width_um": 205.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 0.5,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 411.783,
+   "tpf_ps": 629.708,
+   "worst_ps": 629.708,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1244.7720000000002,
+   "transistors": 48,
+   "width_um": 226.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 1,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 903.021,
+   "tpf_ps": 775.33,
+   "worst_ps": 903.021,
+   "vlo": 6.82029e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1235.0087999999998,
+   "transistors": 32,
+   "width_um": 162.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 1,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 832.193,
+   "tpf_ps": 884.9490000000001,
+   "worst_ps": 884.9490000000001,
+   "vlo": 7.11604e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1190.9286,
+   "transistors": 48,
+   "width_um": 183.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 1,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 719.464,
+   "tpf_ps": 789.934,
+   "worst_ps": 789.934,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1292.2056,
+   "transistors": 48,
+   "width_um": 205.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 1,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 714.347,
+   "tpf_ps": 799.4609999999999,
+   "worst_ps": 799.4609999999999,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1439.7372,
+   "transistors": 48,
+   "width_um": 226.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 3,
+    "r": 1,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 704.346,
+   "tpf_ps": 800.634,
+   "worst_ps": 800.634,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1573.0488,
+   "transistors": 48,
+   "width_um": 248.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.15,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1169.31,
+   "tpf_ps": 858.104,
+   "worst_ps": 1169.31,
+   "vlo": 1.68543e-09,
+   "vhi": 1.79835,
+   "precharge_ps": null,
+   "power_uw": 604.1628,
+   "transistors": 32,
+   "width_um": 167.04
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.15,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 448.93699999999995,
+   "tpf_ps": 961.209,
+   "worst_ps": 961.209,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 985.7015999999999,
+   "transistors": 48,
+   "width_um": 188.64
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.15,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 348.671,
+   "tpf_ps": 946.519,
+   "worst_ps": 946.519,
+   "vlo": 6.49781e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1143.6696000000002,
+   "transistors": 48,
+   "width_um": 210.24
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.15,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 322.563,
+   "tpf_ps": 1007.75,
+   "worst_ps": 1007.75,
+   "vlo": 6.34171e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1316.8458,
+   "transistors": 48,
+   "width_um": 231.84
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.15,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 318.334,
+   "tpf_ps": 1092.68,
+   "worst_ps": 1092.68,
+   "vlo": 6.31025e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1503.5616,
+   "transistors": 48,
+   "width_um": 253.44
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.25,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 906.9240000000001,
+   "tpf_ps": 690.424,
+   "worst_ps": 906.9240000000001,
+   "vlo": 2.26448e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 683.154,
+   "transistors": 32,
+   "width_um": 172.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.25,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 485.83500000000004,
+   "tpf_ps": 764.5060000000001,
+   "worst_ps": 764.5060000000001,
+   "vlo": 7.11608e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 971.7534,
+   "transistors": 48,
+   "width_um": 194.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.25,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 374.185,
+   "tpf_ps": 721.8629999999999,
+   "worst_ps": 721.8629999999999,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1135.7316,
+   "transistors": 48,
+   "width_um": 216.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.25,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 344.88100000000003,
+   "tpf_ps": 749.812,
+   "worst_ps": 749.812,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1299.9204,
+   "transistors": 48,
+   "width_um": 237.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.25,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 339.764,
+   "tpf_ps": 798.068,
+   "worst_ps": 798.068,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1467.9234000000001,
+   "transistors": 48,
+   "width_um": 259.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.5,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 747.769,
+   "tpf_ps": 599.205,
+   "worst_ps": 747.769,
+   "vlo": 3.77791e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 904.1418000000001,
+   "transistors": 32,
+   "width_um": 187.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.5,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 591.158,
+   "tpf_ps": 667.145,
+   "worst_ps": 667.145,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 937.0134,
+   "transistors": 48,
+   "width_um": 208.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.5,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 458.84,
+   "tpf_ps": 582.3489999999999,
+   "worst_ps": 582.3489999999999,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1103.7474000000002,
+   "transistors": 48,
+   "width_um": 230.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.5,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 420.092,
+   "tpf_ps": 580.164,
+   "worst_ps": 580.164,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1269.1278,
+   "transistors": 48,
+   "width_um": 252.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 0.5,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 412.485,
+   "tpf_ps": 600.755,
+   "worst_ps": 600.755,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1427.9274,
+   "transistors": 48,
+   "width_um": 273.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 1,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 895.516,
+   "tpf_ps": 776.5070000000001,
+   "worst_ps": 895.516,
+   "vlo": 6.84762e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1603.8702,
+   "transistors": 32,
+   "width_um": 216.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 1,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 891.385,
+   "tpf_ps": 940.779,
+   "worst_ps": 940.779,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1545.5088,
+   "transistors": 48,
+   "width_um": 237.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 1,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 749.804,
+   "tpf_ps": 815.851,
+   "worst_ps": 815.851,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1625.9148,
+   "transistors": 48,
+   "width_um": 259.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 1,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 712.816,
+   "tpf_ps": 791.08,
+   "worst_ps": 791.08,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1749.4524,
+   "transistors": 48,
+   "width_um": 280.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 4,
+    "r": 1,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 718.461,
+   "tpf_ps": 806.517,
+   "worst_ps": 806.517,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1903.842,
+   "transistors": 48,
+   "width_um": 302.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.15,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1110.24,
+   "tpf_ps": 830.153,
+   "worst_ps": 1110.24,
+   "vlo": 1.50759e-09,
+   "vhi": 1.79977,
+   "precharge_ps": null,
+   "power_uw": 840.4704,
+   "transistors": 32,
+   "width_um": 250.56
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.15,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 510.03099999999995,
+   "tpf_ps": 1001.5999999999999,
+   "worst_ps": 1001.5999999999999,
+   "vlo": 7.11608e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1358.4959999999999,
+   "transistors": 48,
+   "width_um": 272.16
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.15,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 376.59400000000005,
+   "tpf_ps": 921.171,
+   "worst_ps": 921.171,
+   "vlo": 6.4978e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1498.2930000000001,
+   "transistors": 48,
+   "width_um": 293.76
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.15,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 335.852,
+   "tpf_ps": 937.757,
+   "worst_ps": 937.757,
+   "vlo": 6.34171e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1660.2839999999999,
+   "transistors": 48,
+   "width_um": 315.36
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.15,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 320.248,
+   "tpf_ps": 979.7599999999999,
+   "worst_ps": 979.7599999999999,
+   "vlo": 6.31024e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1832.256,
+   "transistors": 48,
+   "width_um": 336.96
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.25,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 868.014,
+   "tpf_ps": 671.0450000000001,
+   "worst_ps": 868.014,
+   "vlo": 2.14862e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 957.7134000000001,
+   "transistors": 32,
+   "width_um": 259.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.25,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 558.005,
+   "tpf_ps": 815.666,
+   "worst_ps": 815.666,
+   "vlo": 7.11608e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1333.1483999999998,
+   "transistors": 48,
+   "width_um": 280.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.25,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 408.40999999999997,
+   "tpf_ps": 717.476,
+   "worst_ps": 717.476,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1488.096,
+   "transistors": 48,
+   "width_um": 302.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.25,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 362.519,
+   "tpf_ps": 713.432,
+   "worst_ps": 713.432,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1650.6774,
+   "transistors": 48,
+   "width_um": 324.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.25,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 344.637,
+   "tpf_ps": 732.514,
+   "worst_ps": 732.514,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1813.9140000000002,
+   "transistors": 48,
+   "width_um": 345.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.5,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 730.5600000000001,
+   "tpf_ps": 592.766,
+   "worst_ps": 730.5600000000001,
+   "vlo": 3.78243e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1289.8962,
+   "transistors": 32,
+   "width_um": 280.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.5,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 676.148,
+   "tpf_ps": 743.8580000000001,
+   "worst_ps": 743.8580000000001,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1308.1284,
+   "transistors": 48,
+   "width_um": 302.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.5,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 507.451,
+   "tpf_ps": 608.466,
+   "worst_ps": 608.466,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1449.3852,
+   "transistors": 48,
+   "width_um": 324.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.5,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 449.065,
+   "tpf_ps": 580.3729999999999,
+   "worst_ps": 580.3729999999999,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1620.693,
+   "transistors": 48,
+   "width_um": 345.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 0.5,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 424.425,
+   "tpf_ps": 578.842,
+   "worst_ps": 578.842,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1785.3336000000002,
+   "transistors": 48,
+   "width_um": 367.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 1,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 904.658,
+   "tpf_ps": 792.851,
+   "worst_ps": 904.658,
+   "vlo": 7.07114e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2355.7859999999996,
+   "transistors": 32,
+   "width_um": 324.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 1,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 1011.51,
+   "tpf_ps": 1055.79,
+   "worst_ps": 1055.79,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2294.8740000000003,
+   "transistors": 48,
+   "width_um": 345.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 1,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 819.9409999999999,
+   "tpf_ps": 880.255,
+   "worst_ps": 880.255,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2321.388,
+   "transistors": 48,
+   "width_um": 367.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 1,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 759.715,
+   "tpf_ps": 830.647,
+   "worst_ps": 830.647,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2424.492,
+   "transistors": 48,
+   "width_um": 388.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 6,
+    "r": 1,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 736.734,
+   "tpf_ps": 815.24,
+   "worst_ps": 815.24,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2551.9320000000002,
+   "transistors": 48,
+   "width_um": 410.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.15,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 1084.86,
+   "tpf_ps": 819.634,
+   "worst_ps": 1084.86,
+   "vlo": 1.45388e-09,
+   "vhi": 1.79993,
+   "precharge_ps": null,
+   "power_uw": 1076.9976000000001,
+   "transistors": 32,
+   "width_um": 334.08
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.15,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 574.41,
+   "tpf_ps": 1057.88,
+   "worst_ps": 1057.88,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1740.4452,
+   "transistors": 48,
+   "width_um": 355.68
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.15,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 409.597,
+   "tpf_ps": 926.866,
+   "worst_ps": 926.866,
+   "vlo": 6.4978e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1855.9080000000001,
+   "transistors": 48,
+   "width_um": 377.28
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.15,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 356.316,
+   "tpf_ps": 915.2620000000001,
+   "worst_ps": 915.2620000000001,
+   "vlo": 6.34171e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2008.8359999999998,
+   "transistors": 48,
+   "width_um": 398.88
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.15,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 333.281,
+   "tpf_ps": 934.7409999999999,
+   "worst_ps": 934.7409999999999,
+   "vlo": 6.31024e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2173.176,
+   "transistors": 48,
+   "width_um": 420.48
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.25,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 854.549,
+   "tpf_ps": 666.11,
+   "worst_ps": 854.549,
+   "vlo": 2.14268e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1234.0403999999999,
+   "transistors": 32,
+   "width_um": 345.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.25,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 632.7520000000001,
+   "tpf_ps": 879.5179999999999,
+   "worst_ps": 879.5179999999999,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1704.2598,
+   "transistors": 48,
+   "width_um": 367.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.25,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 447.857,
+   "tpf_ps": 734.71,
+   "worst_ps": 734.71,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1837.2959999999998,
+   "transistors": 48,
+   "width_um": 388.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.25,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 387.817,
+   "tpf_ps": 708.49,
+   "worst_ps": 708.49,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1998.252,
+   "transistors": 48,
+   "width_um": 410.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.25,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 361.532,
+   "tpf_ps": 711.6650000000001,
+   "worst_ps": 711.6650000000001,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2160.684,
+   "transistors": 48,
+   "width_um": 432.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.5,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 730.8549999999999,
+   "tpf_ps": 596.8149999999999,
+   "worst_ps": 730.8549999999999,
+   "vlo": 3.88369e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1681.047,
+   "transistors": 32,
+   "width_um": 374.4
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.5,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 762.624,
+   "tpf_ps": 826.161,
+   "worst_ps": 826.161,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1705.005,
+   "transistors": 48,
+   "width_um": 396.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.5,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 558.837,
+   "tpf_ps": 647.896,
+   "worst_ps": 647.896,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1801.2420000000002,
+   "transistors": 48,
+   "width_um": 417.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.5,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 485.98300000000006,
+   "tpf_ps": 599.5649999999999,
+   "worst_ps": 599.5649999999999,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 1967.2199999999998,
+   "transistors": 48,
+   "width_um": 439.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 0.5,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 451.221,
+   "tpf_ps": 585.3779999999999,
+   "worst_ps": 585.3779999999999,
+   "vlo": 6.31023e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 2137.608,
+   "transistors": 48,
+   "width_um": 460.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 1,
+    "buf": 0
+   },
+   "ok": true,
+   "tpr_ps": 926.204,
+   "tpf_ps": 816.621,
+   "worst_ps": 926.204,
+   "vlo": 7.37869e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3126.474,
+   "transistors": 32,
+   "width_um": 432.0
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 1,
+    "buf": 1
+   },
+   "ok": true,
+   "tpr_ps": 1132.31,
+   "tpf_ps": 1172.52,
+   "worst_ps": 1172.52,
+   "vlo": 7.11604e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3098.1059999999998,
+   "transistors": 48,
+   "width_um": 453.6
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 1,
+    "buf": 2
+   },
+   "ok": true,
+   "tpr_ps": 894.43,
+   "tpf_ps": 950.691,
+   "worst_ps": 950.691,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3052.638,
+   "transistors": 48,
+   "width_um": 475.2
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 1,
+    "buf": 3
+   },
+   "ok": true,
+   "tpr_ps": 815.331,
+   "tpf_ps": 881.479,
+   "worst_ps": 881.479,
+   "vlo": 6.34168e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3131.262,
+   "transistors": 48,
+   "width_um": 496.8
+  },
+  {
+   "style": "DCVSL",
+   "params": {
+    "k": 8,
+    "r": 1,
+    "buf": 4
+   },
+   "ok": true,
+   "tpr_ps": 780.823,
+   "tpf_ps": 853.923,
+   "worst_ps": 853.923,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 3247.1099999999997,
+   "transistors": 48,
+   "width_um": 518.4
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 0.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 878.8140000000001,
+   "tpf_ps": 813.213,
+   "worst_ps": 878.8140000000001,
+   "vlo": 0.000123137,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 227.3544,
+   "transistors": 32,
+   "width_um": 18.0
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 0.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 628.349,
+   "tpf_ps": 625.626,
+   "worst_ps": 628.349,
+   "vlo": 8.23299e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 162.40608,
+   "transistors": 40,
+   "width_um": 20.16
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 1,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 765.934,
+   "tpf_ps": 712.5210000000001,
+   "worst_ps": 765.934,
+   "vlo": 0.000117689,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 377.73179999999996,
+   "transistors": 32,
+   "width_um": 28.8
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 1,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 591.2199999999999,
+   "tpf_ps": 621.821,
+   "worst_ps": 621.821,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 215.163,
+   "transistors": 40,
+   "width_um": 30.96
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 1.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 801.533,
+   "tpf_ps": 737.261,
+   "worst_ps": 801.533,
+   "vlo": 0.00011651,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 553.4064,
+   "transistors": 32,
+   "width_um": 39.6
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 1.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 639.154,
+   "tpf_ps": 682.9449999999999,
+   "worst_ps": 682.9449999999999,
+   "vlo": 6.69574e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 277.65360000000004,
+   "transistors": 40,
+   "width_um": 41.76
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 2,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 877.224,
+   "tpf_ps": 794.846,
+   "worst_ps": 877.224,
+   "vlo": 0.000116403,
+   "vhi": 1.79996,
+   "precharge_ps": null,
+   "power_uw": 750.6054,
+   "transistors": 32,
+   "width_um": 50.4
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 2,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 709.9209999999999,
+   "tpf_ps": 761.166,
+   "worst_ps": 761.166,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 352.9548,
+   "transistors": 40,
+   "width_um": 52.56
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 3,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 1068.3600000000001,
+   "tpf_ps": 947.778,
+   "worst_ps": 1068.3600000000001,
+   "vlo": 0.000117194,
+   "vhi": 1.79992,
+   "precharge_ps": null,
+   "power_uw": 1198.7352,
+   "transistors": 32,
+   "width_um": 72.0
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 0.5,
+    "m": 3,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 872.61,
+   "tpf_ps": 940.9089999999999,
+   "worst_ps": 940.9089999999999,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 542.475,
+   "transistors": 40,
+   "width_um": 74.16
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 0.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 969.221,
+   "tpf_ps": 845.292,
+   "worst_ps": 969.221,
+   "vlo": 0.000123613,
+   "vhi": 1.79996,
+   "precharge_ps": null,
+   "power_uw": 232.63739999999999,
+   "transistors": 32,
+   "width_um": 25.2
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 0.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 672.8870000000001,
+   "tpf_ps": 670.6120000000001,
+   "worst_ps": 672.8870000000001,
+   "vlo": 8.233e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 176.01282,
+   "transistors": 40,
+   "width_um": 27.36
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 1,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 754.489,
+   "tpf_ps": 673.308,
+   "worst_ps": 754.489,
+   "vlo": 0.000118148,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 369.5094,
+   "transistors": 32,
+   "width_um": 36.0
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 1,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 573.717,
+   "tpf_ps": 603.668,
+   "worst_ps": 603.668,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 226.2528,
+   "transistors": 40,
+   "width_um": 38.16
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 1.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 726.164,
+   "tpf_ps": 645.706,
+   "worst_ps": 726.164,
+   "vlo": 0.000116964,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 524.3328,
+   "transistors": 32,
+   "width_um": 46.8
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 1.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 578.462,
+   "tpf_ps": 617.803,
+   "worst_ps": 617.803,
+   "vlo": 6.69574e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 282.9222,
+   "transistors": 40,
+   "width_um": 48.96
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 2,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 746.429,
+   "tpf_ps": 658.108,
+   "worst_ps": 746.429,
+   "vlo": 0.000116858,
+   "vhi": 1.79996,
+   "precharge_ps": null,
+   "power_uw": 694.4598,
+   "transistors": 32,
+   "width_um": 57.6
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 2,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 609.539,
+   "tpf_ps": 653.118,
+   "worst_ps": 653.118,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 348.4134,
+   "transistors": 40,
+   "width_um": 59.76
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 3,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 836.556,
+   "tpf_ps": 727.34,
+   "worst_ps": 836.556,
+   "vlo": 0.000117652,
+   "vhi": 1.79995,
+   "precharge_ps": null,
+   "power_uw": 1073.3472,
+   "transistors": 32,
+   "width_um": 79.2
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1,
+    "m": 3,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 697.72,
+   "tpf_ps": 751.085,
+   "worst_ps": 751.085,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 507.16079999999994,
+   "transistors": 40,
+   "width_um": 81.36
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 0.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 1043.27,
+   "tpf_ps": 883.756,
+   "worst_ps": 1043.27,
+   "vlo": 0.000121678,
+   "vhi": 1.79995,
+   "precharge_ps": null,
+   "power_uw": 238.91400000000002,
+   "transistors": 32,
+   "width_um": 32.4
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 0.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 728.337,
+   "tpf_ps": 727.082,
+   "worst_ps": 728.337,
+   "vlo": 8.233e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 190.287,
+   "transistors": 40,
+   "width_um": 34.56
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 1,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 765.391,
+   "tpf_ps": 668.979,
+   "worst_ps": 765.391,
+   "vlo": 0.000116286,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 368.27819999999997,
+   "transistors": 32,
+   "width_um": 43.2
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 1,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 588.959,
+   "tpf_ps": 618.473,
+   "worst_ps": 618.473,
+   "vlo": 7.11609e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 239.62680000000003,
+   "transistors": 40,
+   "width_um": 45.36
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 1.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 702.9889999999999,
+   "tpf_ps": 615.391,
+   "worst_ps": 702.9889999999999,
+   "vlo": 0.000115117,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 512.0622000000001,
+   "transistors": 32,
+   "width_um": 54.0
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 1.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 570.2230000000001,
+   "tpf_ps": 606.883,
+   "worst_ps": 606.883,
+   "vlo": 6.69574e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 294.3324,
+   "transistors": 40,
+   "width_um": 56.16
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 2,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 695.93,
+   "tpf_ps": 606.601,
+   "worst_ps": 695.93,
+   "vlo": 0.000115011,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 668.286,
+   "transistors": 32,
+   "width_um": 64.8
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 2,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 581.4780000000001,
+   "tpf_ps": 620.489,
+   "worst_ps": 620.489,
+   "vlo": 6.4978e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 356.2704,
+   "transistors": 40,
+   "width_um": 66.96
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 3,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 738.394,
+   "tpf_ps": 638.441,
+   "worst_ps": 738.394,
+   "vlo": 0.000115791,
+   "vhi": 1.79996,
+   "precharge_ps": null,
+   "power_uw": 1012.194,
+   "transistors": 32,
+   "width_um": 86.4
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 1.5,
+    "m": 3,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 634.7579999999999,
+   "tpf_ps": 679.892,
+   "worst_ps": 679.892,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 503.34299999999996,
+   "transistors": 40,
+   "width_um": 88.56
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 0.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 1114.69,
+   "tpf_ps": 925.724,
+   "worst_ps": 1114.69,
+   "vlo": 0.000120063,
+   "vhi": 1.79993,
+   "precharge_ps": null,
+   "power_uw": 246.13920000000002,
+   "transistors": 32,
+   "width_um": 39.6
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 0.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 787.073,
+   "tpf_ps": 785.524,
+   "worst_ps": 787.073,
+   "vlo": 8.23301e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 204.7518,
+   "transistors": 40,
+   "width_um": 41.76
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 1,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 785.968,
+   "tpf_ps": 677.486,
+   "worst_ps": 785.968,
+   "vlo": 0.000114733,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 370.6452,
+   "transistors": 32,
+   "width_um": 50.4
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 1,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 613.423,
+   "tpf_ps": 642.561,
+   "worst_ps": 642.561,
+   "vlo": 7.11608e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 253.593,
+   "transistors": 40,
+   "width_um": 52.56
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 1.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 699.688,
+   "tpf_ps": 605.486,
+   "worst_ps": 699.688,
+   "vlo": 0.000113577,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 507.40740000000005,
+   "transistors": 32,
+   "width_um": 61.2
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 1.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 577.259,
+   "tpf_ps": 610.816,
+   "worst_ps": 610.816,
+   "vlo": 6.69575e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 307.269,
+   "transistors": 40,
+   "width_um": 63.36
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 2,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 674.74,
+   "tpf_ps": 584.0649999999999,
+   "worst_ps": 674.74,
+   "vlo": 0.000113471,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 654.7086,
+   "transistors": 32,
+   "width_um": 72.0
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 2,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 575.1669999999999,
+   "tpf_ps": 611.008,
+   "worst_ps": 611.008,
+   "vlo": 6.4978e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 367.3836,
+   "transistors": 40,
+   "width_um": 74.16
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 3,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 688.331,
+   "tpf_ps": 592.806,
+   "worst_ps": 688.331,
+   "vlo": 0.000114239,
+   "vhi": 1.79996,
+   "precharge_ps": null,
+   "power_uw": 976.644,
+   "transistors": 32,
+   "width_um": 93.6
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 2,
+    "m": 3,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 606.2189999999999,
+   "tpf_ps": 644.6279999999999,
+   "worst_ps": 644.6279999999999,
+   "vlo": 6.34171e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 508.01039999999995,
+   "transistors": 40,
+   "width_um": 95.76
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 0.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 1255.1499999999999,
+   "tpf_ps": 1017.9100000000001,
+   "worst_ps": 1255.1499999999999,
+   "vlo": 0.000117899,
+   "vhi": 1.79966,
+   "precharge_ps": null,
+   "power_uw": 261.6048,
+   "transistors": 32,
+   "width_um": 54.0
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 0.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 907.28,
+   "tpf_ps": 907.524,
+   "worst_ps": 907.524,
+   "vlo": 8.23302e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 234.02519999999998,
+   "transistors": 40,
+   "width_um": 56.16
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 1,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 839.555,
+   "tpf_ps": 710.3520000000001,
+   "worst_ps": 839.555,
+   "vlo": 0.000112652,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 380.7054,
+   "transistors": 32,
+   "width_um": 64.8
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 1,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 672.0129999999999,
+   "tpf_ps": 700.26,
+   "worst_ps": 700.26,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 282.1914,
+   "transistors": 40,
+   "width_um": 66.96
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 1.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 716.625,
+   "tpf_ps": 612.894,
+   "worst_ps": 716.625,
+   "vlo": 0.000111512,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 508.6008,
+   "transistors": 32,
+   "width_um": 75.6
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 1.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 607.761,
+   "tpf_ps": 639.582,
+   "worst_ps": 639.582,
+   "vlo": 6.69576e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 334.8972,
+   "transistors": 40,
+   "width_um": 77.76
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 2,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 667.425,
+   "tpf_ps": 572.6719999999999,
+   "worst_ps": 667.425,
+   "vlo": 0.000111406,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 644.9886,
+   "transistors": 32,
+   "width_um": 86.4
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 2,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 586.122,
+   "tpf_ps": 617.6049999999999,
+   "worst_ps": 617.6049999999999,
+   "vlo": 6.49781e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 393.0732,
+   "transistors": 40,
+   "width_um": 88.56
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 3,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 644.242,
+   "tpf_ps": 554.759,
+   "worst_ps": 644.242,
+   "vlo": 0.000112159,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 939.4362,
+   "transistors": 32,
+   "width_um": 108.0
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 3,
+    "m": 3,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 588.127,
+   "tpf_ps": 621.0899999999999,
+   "worst_ps": 621.0899999999999,
+   "vlo": 6.34172e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 526.9086,
+   "transistors": 40,
+   "width_um": 110.16
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 0.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 1394.18,
+   "tpf_ps": 1113.3000000000002,
+   "worst_ps": 1394.18,
+   "vlo": 0.000116574,
+   "vhi": 1.79627,
+   "precharge_ps": null,
+   "power_uw": 275.64840000000004,
+   "transistors": 32,
+   "width_um": 68.4
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 0.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 1028.73,
+   "tpf_ps": 1028.53,
+   "worst_ps": 1028.73,
+   "vlo": 8.23303e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 263.34000000000003,
+   "transistors": 40,
+   "width_um": 70.56
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 1,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 900.2489999999999,
+   "tpf_ps": 752.409,
+   "worst_ps": 900.2489999999999,
+   "vlo": 0.000111379,
+   "vhi": 1.79996,
+   "precharge_ps": null,
+   "power_uw": 394.3116,
+   "transistors": 32,
+   "width_um": 79.2
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 1,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 735.4599999999999,
+   "tpf_ps": 762.476,
+   "worst_ps": 762.476,
+   "vlo": 7.1161e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 311.15880000000004,
+   "transistors": 40,
+   "width_um": 81.36
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 1.5,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 747.316,
+   "tpf_ps": 633.5649999999999,
+   "worst_ps": 747.316,
+   "vlo": 0.000110249,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 516.8592,
+   "transistors": 32,
+   "width_um": 90.0
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 1.5,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 646.7810000000001,
+   "tpf_ps": 676.1949999999999,
+   "worst_ps": 676.1949999999999,
+   "vlo": 6.69577e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 363.39300000000003,
+   "transistors": 40,
+   "width_um": 92.16
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 2,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 679.813,
+   "tpf_ps": 579.934,
+   "worst_ps": 679.813,
+   "vlo": 0.000110143,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 646.5366,
+   "transistors": 32,
+   "width_um": 100.8
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 2,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 609.6279999999999,
+   "tpf_ps": 638.056,
+   "worst_ps": 638.056,
+   "vlo": 6.49782e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 420.624,
+   "transistors": 40,
+   "width_um": 102.96
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 3,
+    "restore": 0
+   },
+   "ok": true,
+   "tpr_ps": 631.889,
+   "tpf_ps": 543.811,
+   "worst_ps": 631.889,
+   "vlo": 0.000110886,
+   "vhi": 1.79997,
+   "precharge_ps": null,
+   "power_uw": 924.2135999999999,
+   "transistors": 32,
+   "width_um": 122.4
+  },
+  {
+   "style": "CPL",
+   "params": {
+    "k": 4,
+    "m": 3,
+    "restore": 1
+   },
+   "ok": true,
+   "tpr_ps": 590.6419999999999,
+   "tpf_ps": 619.7230000000001,
+   "worst_ps": 619.7230000000001,
+   "vlo": 6.34173e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 550.7082,
+   "transistors": 40,
+   "width_um": 124.56
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 0.5,
+    "m": 1
+   },
+   "ok": true,
+   "tpr_ps": 469.72799999999995,
+   "tpf_ps": 476.733,
+   "worst_ps": 476.733,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 103.04603999999999,
+   "transistors": 24,
+   "width_um": 21.6
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 0.5,
+    "m": 2
+   },
+   "ok": true,
+   "tpr_ps": 470.9429999999999,
+   "tpf_ps": 478.61199999999997,
+   "worst_ps": 478.61199999999997,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 143.60940000000002,
+   "transistors": 24,
+   "width_um": 32.4
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 0.5,
+    "m": 3
+   },
+   "ok": true,
+   "tpr_ps": 528.336,
+   "tpf_ps": 535.612,
+   "worst_ps": 535.612,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 191.9682,
+   "transistors": 24,
+   "width_um": 43.2
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 0.5,
+    "m": 4
+   },
+   "ok": true,
+   "tpr_ps": 599.977,
+   "tpf_ps": 605.786,
+   "worst_ps": 605.786,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 250.9506,
+   "transistors": 24,
+   "width_um": 54.0
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 0.5,
+    "m": 6
+   },
+   "ok": true,
+   "tpr_ps": 758.4300000000001,
+   "tpf_ps": 761.503,
+   "worst_ps": 761.503,
+   "vlo": 6.37518e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 405.44820000000004,
+   "transistors": 24,
+   "width_um": 75.6
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1,
+    "m": 1
+   },
+   "ok": true,
+   "tpr_ps": 504.032,
+   "tpf_ps": 502.19,
+   "worst_ps": 504.032,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 120.77856,
+   "transistors": 24,
+   "width_um": 32.4
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1,
+    "m": 2
+   },
+   "ok": true,
+   "tpr_ps": 431.838,
+   "tpf_ps": 433.09200000000004,
+   "worst_ps": 433.09200000000004,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 158.48244,
+   "transistors": 24,
+   "width_um": 43.2
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1,
+    "m": 3
+   },
+   "ok": true,
+   "tpr_ps": 440.439,
+   "tpf_ps": 442.70300000000003,
+   "worst_ps": 442.70300000000003,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 198.39239999999998,
+   "transistors": 24,
+   "width_um": 54.0
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1,
+    "m": 4
+   },
+   "ok": true,
+   "tpr_ps": 469.346,
+   "tpf_ps": 470.537,
+   "worst_ps": 470.537,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 241.848,
+   "transistors": 24,
+   "width_um": 64.8
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1,
+    "m": 6
+   },
+   "ok": true,
+   "tpr_ps": 547.5039999999999,
+   "tpf_ps": 545.6379999999999,
+   "worst_ps": 547.5039999999999,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 343.71360000000004,
+   "transistors": 24,
+   "width_um": 86.4
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1.5,
+    "m": 1
+   },
+   "ok": true,
+   "tpr_ps": 561.573,
+   "tpf_ps": 553.945,
+   "worst_ps": 561.573,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 138.92652,
+   "transistors": 24,
+   "width_um": 43.2
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1.5,
+    "m": 2
+   },
+   "ok": true,
+   "tpr_ps": 440.539,
+   "tpf_ps": 438.453,
+   "worst_ps": 440.539,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 176.16132000000002,
+   "transistors": 24,
+   "width_um": 54.0
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1.5,
+    "m": 3
+   },
+   "ok": true,
+   "tpr_ps": 423.018,
+   "tpf_ps": 423.506,
+   "worst_ps": 423.506,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 214.4394,
+   "transistors": 24,
+   "width_um": 64.8
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1.5,
+    "m": 4
+   },
+   "ok": true,
+   "tpr_ps": 432.07099999999997,
+   "tpf_ps": 432.349,
+   "worst_ps": 432.349,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 254.48760000000001,
+   "transistors": 24,
+   "width_um": 75.6
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 1.5,
+    "m": 6
+   },
+   "ok": true,
+   "tpr_ps": 476.264,
+   "tpf_ps": 474.779,
+   "worst_ps": 476.264,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 342.4302,
+   "transistors": 24,
+   "width_um": 97.2
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 2,
+    "m": 1
+   },
+   "ok": true,
+   "tpr_ps": 625.271,
+   "tpf_ps": 612.754,
+   "worst_ps": 625.271,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 157.15386,
+   "transistors": 24,
+   "width_um": 54.0
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 2,
+    "m": 2
+   },
+   "ok": true,
+   "tpr_ps": 463.182,
+   "tpf_ps": 458.464,
+   "worst_ps": 463.182,
+   "vlo": 6.4978e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 194.2776,
+   "transistors": 24,
+   "width_um": 64.8
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 2,
+    "m": 3
+   },
+   "ok": true,
+   "tpr_ps": 426.795,
+   "tpf_ps": 424.182,
+   "worst_ps": 426.795,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 232.011,
+   "transistors": 24,
+   "width_um": 75.6
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 2,
+    "m": 4
+   },
+   "ok": true,
+   "tpr_ps": 422.47499999999997,
+   "tpf_ps": 420.324,
+   "worst_ps": 422.47499999999997,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 270.8712,
+   "transistors": 24,
+   "width_um": 86.4
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 2,
+    "m": 6
+   },
+   "ok": true,
+   "tpr_ps": 445.904,
+   "tpf_ps": 442.93,
+   "worst_ps": 445.904,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 353.5794,
+   "transistors": 24,
+   "width_um": 108.0
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 3,
+    "m": 1
+   },
+   "ok": true,
+   "tpr_ps": 758.2710000000001,
+   "tpf_ps": 736.9870000000001,
+   "worst_ps": 758.2710000000001,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 193.6944,
+   "transistors": 24,
+   "width_um": 75.6
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 3,
+    "m": 2
+   },
+   "ok": true,
+   "tpr_ps": 522.976,
+   "tpf_ps": 513.69,
+   "worst_ps": 522.976,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 230.8302,
+   "transistors": 24,
+   "width_um": 86.4
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 3,
+    "m": 3
+   },
+   "ok": true,
+   "tpr_ps": 455.30699999999996,
+   "tpf_ps": 452.539,
+   "worst_ps": 455.30699999999996,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 268.3188,
+   "transistors": 24,
+   "width_um": 97.2
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 3,
+    "m": 4
+   },
+   "ok": true,
+   "tpr_ps": 431.31,
+   "tpf_ps": 430.591,
+   "worst_ps": 431.31,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 306.468,
+   "transistors": 24,
+   "width_um": 108.0
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 3,
+    "m": 6
+   },
+   "ok": true,
+   "tpr_ps": 427.004,
+   "tpf_ps": 427.919,
+   "worst_ps": 427.919,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 385.6554,
+   "transistors": 24,
+   "width_um": 129.6
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 4,
+    "m": 1
+   },
+   "ok": true,
+   "tpr_ps": 893.414,
+   "tpf_ps": 863.9079999999999,
+   "worst_ps": 893.414,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 230.25600000000003,
+   "transistors": 24,
+   "width_um": 97.2
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 4,
+    "m": 2
+   },
+   "ok": true,
+   "tpr_ps": 589.916,
+   "tpf_ps": 576.332,
+   "worst_ps": 589.916,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 267.5196,
+   "transistors": 24,
+   "width_um": 108.0
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 4,
+    "m": 3
+   },
+   "ok": true,
+   "tpr_ps": 495.75800000000004,
+   "tpf_ps": 490.909,
+   "worst_ps": 495.75800000000004,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 305.03520000000003,
+   "transistors": 24,
+   "width_um": 118.8
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 4,
+    "m": 4
+   },
+   "ok": true,
+   "tpr_ps": 456.15500000000003,
+   "tpf_ps": 454.499,
+   "worst_ps": 456.15500000000003,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 343.0584,
+   "transistors": 24,
+   "width_um": 129.6
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 4,
+    "m": 6
+   },
+   "ok": true,
+   "tpr_ps": 431.813,
+   "tpf_ps": 433.374,
+   "worst_ps": 433.374,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 421.25579999999997,
+   "transistors": 24,
+   "width_um": 151.2
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 6,
+    "m": 1
+   },
+   "ok": true,
+   "tpr_ps": 1164.4099999999999,
+   "tpf_ps": 1118.94,
+   "worst_ps": 1164.4099999999999,
+   "vlo": 7.11607e-09,
+   "vhi": 1.79999,
+   "precharge_ps": null,
+   "power_uw": 301.6332,
+   "transistors": 24,
+   "width_um": 140.4
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 6,
+    "m": 2
+   },
+   "ok": true,
+   "tpr_ps": 730.355,
+   "tpf_ps": 708.192,
+   "worst_ps": 730.355,
+   "vlo": 6.4978e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 341.0496,
+   "transistors": 24,
+   "width_um": 151.2
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 6,
+    "m": 3
+   },
+   "ok": true,
+   "tpr_ps": 588.042,
+   "tpf_ps": 578.551,
+   "worst_ps": 588.042,
+   "vlo": 6.3417e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 378.8244,
+   "transistors": 24,
+   "width_um": 162.0
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 6,
+    "m": 4
+   },
+   "ok": true,
+   "tpr_ps": 521.7090000000001,
+   "tpf_ps": 517.259,
+   "worst_ps": 521.7090000000001,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 417.0276,
+   "transistors": 24,
+   "width_um": 172.8
+  },
+  {
+   "style": "Transmission-gate mux",
+   "params": {
+    "k": 6,
+    "m": 6
+   },
+   "ok": true,
+   "tpr_ps": 465.58299999999997,
+   "tpf_ps": 466.76000000000005,
+   "worst_ps": 466.76000000000005,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": null,
+   "power_uw": 495.10079999999994,
+   "transistors": 24,
+   "width_um": 194.4
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 1,
+    "m": 0.5,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 562.371,
+   "tpf_ps": null,
+   "worst_ps": 562.371,
+   "vlo": 8.23297e-09,
+   "vhi": 1.8,
+   "precharge_ps": 199.68,
+   "power_uw": 194.25060000000002,
+   "transistors": 34,
+   "width_um": 44.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 1,
+    "m": 1,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 468.314,
+   "tpf_ps": null,
+   "worst_ps": 468.314,
+   "vlo": 7.11604e-09,
+   "vhi": 1.8,
+   "precharge_ps": 178.184,
+   "power_uw": 211.833,
+   "transistors": 34,
+   "width_um": 49.68
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 1,
+    "m": 2,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 451.706,
+   "tpf_ps": null,
+   "worst_ps": 451.706,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 170.114,
+   "power_uw": 253.5858,
+   "transistors": 34,
+   "width_um": 60.48
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 1,
+    "m": 3,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 490.30199999999996,
+   "tpf_ps": null,
+   "worst_ps": 490.30199999999996,
+   "vlo": 6.34168e-09,
+   "vhi": 1.8,
+   "precharge_ps": 178.608,
+   "power_uw": 300.3462,
+   "transistors": 34,
+   "width_um": 71.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 1,
+    "m": 4,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 542.023,
+   "tpf_ps": null,
+   "worst_ps": 542.023,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 190.19899999999998,
+   "power_uw": 352.224,
+   "transistors": 34,
+   "width_um": 82.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 1,
+    "m": 6,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 660.307,
+   "tpf_ps": null,
+   "worst_ps": 660.307,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 216.669,
+   "power_uw": 473.49899999999997,
+   "transistors": 34,
+   "width_um": 103.68
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 2,
+    "m": 0.5,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 586.549,
+   "tpf_ps": null,
+   "worst_ps": 586.549,
+   "vlo": 8.23298e-09,
+   "vhi": 1.79999,
+   "precharge_ps": 197.769,
+   "power_uw": 310.4424,
+   "transistors": 34,
+   "width_um": 82.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 2,
+    "m": 1,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 449.844,
+   "tpf_ps": null,
+   "worst_ps": 449.844,
+   "vlo": 7.11604e-09,
+   "vhi": 1.8,
+   "precharge_ps": 167.007,
+   "power_uw": 324.3996,
+   "transistors": 34,
+   "width_um": 87.48
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 2,
+    "m": 2,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 405.578,
+   "tpf_ps": null,
+   "worst_ps": 405.578,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 159.284,
+   "power_uw": 361.422,
+   "transistors": 34,
+   "width_um": 98.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 2,
+    "m": 3,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 400.974,
+   "tpf_ps": null,
+   "worst_ps": 400.974,
+   "vlo": 6.34168e-09,
+   "vhi": 1.8,
+   "precharge_ps": 155.072,
+   "power_uw": 402.4386,
+   "transistors": 34,
+   "width_um": 109.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 2,
+    "m": 4,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 418.806,
+   "tpf_ps": null,
+   "worst_ps": 418.806,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 159.263,
+   "power_uw": 446.0778,
+   "transistors": 34,
+   "width_um": 119.88
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 2,
+    "m": 6,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 470.322,
+   "tpf_ps": null,
+   "worst_ps": 470.322,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 171.157,
+   "power_uw": 539.9567999999999,
+   "transistors": 34,
+   "width_um": 141.48
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 3,
+    "m": 0.5,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 630.556,
+   "tpf_ps": null,
+   "worst_ps": 630.556,
+   "vlo": 8.23297e-09,
+   "vhi": 1.79999,
+   "precharge_ps": 199.553,
+   "power_uw": 426.807,
+   "transistors": 34,
+   "width_um": 119.88
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 3,
+    "m": 1,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 467.92800000000005,
+   "tpf_ps": null,
+   "worst_ps": 467.92800000000005,
+   "vlo": 7.11603e-09,
+   "vhi": 1.8,
+   "precharge_ps": 167.51,
+   "power_uw": 437.77079999999995,
+   "transistors": 34,
+   "width_um": 125.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 3,
+    "m": 2,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 393.52,
+   "tpf_ps": null,
+   "worst_ps": 393.52,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 151.745,
+   "power_uw": 470.3454,
+   "transistors": 34,
+   "width_um": 136.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 3,
+    "m": 3,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 388.526,
+   "tpf_ps": null,
+   "worst_ps": 388.526,
+   "vlo": 6.34168e-09,
+   "vhi": 1.8,
+   "precharge_ps": 154.28699999999998,
+   "power_uw": 509.6988,
+   "transistors": 34,
+   "width_um": 146.88
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 3,
+    "m": 4,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 385.671,
+   "tpf_ps": null,
+   "worst_ps": 385.671,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 150.765,
+   "power_uw": 550.359,
+   "transistors": 34,
+   "width_um": 157.68
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 3,
+    "m": 6,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 413.101,
+   "tpf_ps": null,
+   "worst_ps": 413.101,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 157.552,
+   "power_uw": 637.0631999999999,
+   "transistors": 34,
+   "width_um": 179.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 4,
+    "m": 0.5,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 679.1700000000001,
+   "tpf_ps": null,
+   "worst_ps": 679.1700000000001,
+   "vlo": 8.23298e-09,
+   "vhi": 1.79996,
+   "precharge_ps": 202.383,
+   "power_uw": 542.0574,
+   "transistors": 34,
+   "width_um": 157.68
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 4,
+    "m": 1,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 493.09400000000005,
+   "tpf_ps": null,
+   "worst_ps": 493.09400000000005,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": 169.73,
+   "power_uw": 550.2798,
+   "transistors": 34,
+   "width_um": 163.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 4,
+    "m": 2,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 401.115,
+   "tpf_ps": null,
+   "worst_ps": 401.115,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 152.424,
+   "power_uw": 578.6766,
+   "transistors": 34,
+   "width_um": 173.88
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 4,
+    "m": 3,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 378.534,
+   "tpf_ps": null,
+   "worst_ps": 378.534,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": 148.37199999999999,
+   "power_uw": 616.0374,
+   "transistors": 34,
+   "width_um": 184.68
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 4,
+    "m": 4,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 382.824,
+   "tpf_ps": null,
+   "worst_ps": 382.824,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 153.392,
+   "power_uw": 655.9848,
+   "transistors": 34,
+   "width_um": 195.48
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 4,
+    "m": 6,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 389.34000000000003,
+   "tpf_ps": null,
+   "worst_ps": 389.34000000000003,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 152.46099999999998,
+   "power_uw": 738.6497999999999,
+   "transistors": 34,
+   "width_um": 217.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 6,
+    "m": 0.5,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 779.894,
+   "tpf_ps": null,
+   "worst_ps": 779.894,
+   "vlo": 8.23298e-09,
+   "vhi": 1.79976,
+   "precharge_ps": 209.575,
+   "power_uw": 772.8048,
+   "transistors": 34,
+   "width_um": 233.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 6,
+    "m": 1,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 549.5020000000001,
+   "tpf_ps": null,
+   "worst_ps": 549.5020000000001,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": 176.278,
+   "power_uw": 775.737,
+   "transistors": 34,
+   "width_um": 238.68
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 6,
+    "m": 2,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 427.855,
+   "tpf_ps": null,
+   "worst_ps": 427.855,
+   "vlo": 6.49777e-09,
+   "vhi": 1.8,
+   "precharge_ps": 157.711,
+   "power_uw": 794.7378,
+   "transistors": 34,
+   "width_um": 249.48
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 6,
+    "m": 3,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 390.655,
+   "tpf_ps": null,
+   "worst_ps": 390.655,
+   "vlo": 6.34168e-09,
+   "vhi": 1.8,
+   "precharge_ps": 151.832,
+   "power_uw": 828.2808,
+   "transistors": 34,
+   "width_um": 260.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 6,
+    "m": 4,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 377.165,
+   "tpf_ps": null,
+   "worst_ps": 377.165,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 150.259,
+   "power_uw": 864.7271999999999,
+   "transistors": 34,
+   "width_um": 271.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 6,
+    "m": 6,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 382.592,
+   "tpf_ps": null,
+   "worst_ps": 382.592,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 156.399,
+   "power_uw": 945.7937999999999,
+   "transistors": 34,
+   "width_um": 292.68
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 8,
+    "m": 0.5,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 881.402,
+   "tpf_ps": null,
+   "worst_ps": 881.402,
+   "vlo": 8.23298e-09,
+   "vhi": 1.79837,
+   "precharge_ps": 217.543,
+   "power_uw": 1019.0628,
+   "transistors": 34,
+   "width_um": 308.88
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 8,
+    "m": 1,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 608.098,
+   "tpf_ps": null,
+   "worst_ps": 608.098,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": 183.906,
+   "power_uw": 1022.4972,
+   "transistors": 34,
+   "width_um": 314.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 8,
+    "m": 2,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 459.73,
+   "tpf_ps": null,
+   "worst_ps": 459.73,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 164.677,
+   "power_uw": 1032.8147999999999,
+   "transistors": 34,
+   "width_um": 325.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 8,
+    "m": 3,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 410.813,
+   "tpf_ps": null,
+   "worst_ps": 410.813,
+   "vlo": 6.34168e-09,
+   "vhi": 1.8,
+   "precharge_ps": 157.952,
+   "power_uw": 1059.9624,
+   "transistors": 34,
+   "width_um": 335.88
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 8,
+    "m": 4,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 389.857,
+   "tpf_ps": null,
+   "worst_ps": 389.857,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 155.543,
+   "power_uw": 1092.969,
+   "transistors": 34,
+   "width_um": 346.68
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 8,
+    "m": 6,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 377.441,
+   "tpf_ps": null,
+   "worst_ps": 377.441,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 155.152,
+   "power_uw": 1168.5186,
+   "transistors": 34,
+   "width_um": 368.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 12,
+    "m": 0.5,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 1082.8,
+   "tpf_ps": null,
+   "worst_ps": 1082.8,
+   "vlo": 8.23298e-09,
+   "vhi": 1.7336,
+   "precharge_ps": 232.307,
+   "power_uw": 1578.1878000000002,
+   "transistors": 34,
+   "width_um": 460.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 12,
+    "m": 1,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 725.693,
+   "tpf_ps": null,
+   "worst_ps": 725.693,
+   "vlo": 7.11607e-09,
+   "vhi": 1.8,
+   "precharge_ps": 198.05,
+   "power_uw": 1592.136,
+   "transistors": 34,
+   "width_um": 465.48
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 12,
+    "m": 2,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 527.21,
+   "tpf_ps": null,
+   "worst_ps": 527.21,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 178.333,
+   "power_uw": 1587.4560000000001,
+   "transistors": 34,
+   "width_um": 476.28
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 12,
+    "m": 3,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 458.156,
+   "tpf_ps": null,
+   "worst_ps": 458.156,
+   "vlo": 6.34168e-09,
+   "vhi": 1.8,
+   "precharge_ps": 170.75699999999998,
+   "power_uw": 1604.1474,
+   "transistors": 34,
+   "width_um": 487.08
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 12,
+    "m": 4,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 425.248,
+   "tpf_ps": null,
+   "worst_ps": 425.248,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 167.56599999999997,
+   "power_uw": 1628.8254,
+   "transistors": 34,
+   "width_um": 497.88
+  },
+  {
+   "style": "Domino (footed, keeper)",
+   "params": {
+    "k": 12,
+    "m": 6,
+    "foot": 1
+   },
+   "ok": true,
+   "tpr_ps": 397.71000000000004,
+   "tpf_ps": null,
+   "worst_ps": 397.71000000000004,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 165.63400000000001,
+   "power_uw": 1694.376,
+   "transistors": 34,
+   "width_um": 519.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 1,
+    "m": 0.5,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 508.866,
+   "tpf_ps": null,
+   "worst_ps": 508.866,
+   "vlo": 8.23298e-09,
+   "vhi": 1.8,
+   "precharge_ps": 529.76,
+   "power_uw": 362.39579999999995,
+   "transistors": 30,
+   "width_um": 37.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 1,
+    "m": 1,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 410.80899999999997,
+   "tpf_ps": null,
+   "worst_ps": 410.80899999999997,
+   "vlo": 7.11604e-09,
+   "vhi": 1.8,
+   "precharge_ps": 481.92,
+   "power_uw": 361.4616,
+   "transistors": 30,
+   "width_um": 42.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 1,
+    "m": 2,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 382.377,
+   "tpf_ps": null,
+   "worst_ps": 382.377,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 463.854,
+   "power_uw": 404.6112,
+   "transistors": 30,
+   "width_um": 53.28
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 1,
+    "m": 3,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 406.861,
+   "tpf_ps": null,
+   "worst_ps": 406.861,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": 483.74,
+   "power_uw": 452.4084,
+   "transistors": 30,
+   "width_um": 64.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 1,
+    "m": 4,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 443.012,
+   "tpf_ps": null,
+   "worst_ps": 443.012,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 510.549,
+   "power_uw": 505.5462,
+   "transistors": 30,
+   "width_um": 74.88
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 1,
+    "m": 6,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 527.2,
+   "tpf_ps": null,
+   "worst_ps": 527.2,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 572.845,
+   "power_uw": 628.5726,
+   "transistors": 30,
+   "width_um": 96.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 2,
+    "m": 0.5,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 539.0060000000001,
+   "tpf_ps": null,
+   "worst_ps": 539.0060000000001,
+   "vlo": 8.23298e-09,
+   "vhi": 1.8,
+   "precharge_ps": 525.76,
+   "power_uw": 613.9656,
+   "transistors": 30,
+   "width_um": 67.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 2,
+    "m": 1,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 401.99699999999996,
+   "tpf_ps": null,
+   "worst_ps": 401.99699999999996,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": 433.053,
+   "power_uw": 578.2464,
+   "transistors": 30,
+   "width_um": 73.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 2,
+    "m": 2,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 353.037,
+   "tpf_ps": null,
+   "worst_ps": 353.037,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": 413.22700000000003,
+   "power_uw": 589.383,
+   "transistors": 30,
+   "width_um": 83.88
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 2,
+    "m": 3,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 342.622,
+   "tpf_ps": null,
+   "worst_ps": 342.622,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": 398.084,
+   "power_uw": 634.9932,
+   "transistors": 30,
+   "width_um": 94.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 2,
+    "m": 4,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 353.615,
+   "tpf_ps": null,
+   "worst_ps": 353.615,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 406.575,
+   "power_uw": 679.8348,
+   "transistors": 30,
+   "width_um": 105.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 2,
+    "m": 6,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 389.775,
+   "tpf_ps": null,
+   "worst_ps": 389.775,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 432.00600000000003,
+   "power_uw": 777.9546,
+   "transistors": 30,
+   "width_um": 127.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 3,
+    "m": 0.5,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 584.3629999999999,
+   "tpf_ps": null,
+   "worst_ps": 584.3629999999999,
+   "vlo": 8.23298e-09,
+   "vhi": 1.79999,
+   "precharge_ps": 540.884,
+   "power_uw": 867.3498,
+   "transistors": 30,
+   "width_um": 98.28
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 3,
+    "m": 1,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 422.557,
+   "tpf_ps": null,
+   "worst_ps": 422.557,
+   "vlo": 7.11605e-09,
+   "vhi": 1.8,
+   "precharge_ps": 417.295,
+   "power_uw": 763.5546,
+   "transistors": 30,
+   "width_um": 103.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 3,
+    "m": 2,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 345.99100000000004,
+   "tpf_ps": null,
+   "worst_ps": 345.99100000000004,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 364.28200000000004,
+   "power_uw": 749.3958,
+   "transistors": 30,
+   "width_um": 114.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 3,
+    "m": 3,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 337.372,
+   "tpf_ps": null,
+   "worst_ps": 337.372,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": 373.515,
+   "power_uw": 779.5098,
+   "transistors": 30,
+   "width_um": 125.28
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 3,
+    "m": 4,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 330.658,
+   "tpf_ps": null,
+   "worst_ps": 330.658,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 358.95599999999996,
+   "power_uw": 825.1686000000001,
+   "transistors": 30,
+   "width_um": 136.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 3,
+    "m": 6,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 348.595,
+   "tpf_ps": null,
+   "worst_ps": 348.595,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 372.072,
+   "power_uw": 915.9101999999999,
+   "transistors": 30,
+   "width_um": 157.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 4,
+    "m": 0.5,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 633.149,
+   "tpf_ps": null,
+   "worst_ps": 633.149,
+   "vlo": 8.23298e-09,
+   "vhi": 1.79998,
+   "precharge_ps": 564.56,
+   "power_uw": 1130.8284,
+   "transistors": 30,
+   "width_um": 128.88
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 4,
+    "m": 1,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 448.406,
+   "tpf_ps": null,
+   "worst_ps": 448.406,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": 411.66999999999996,
+   "power_uw": 936.0485999999999,
+   "transistors": 30,
+   "width_um": 134.28
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 4,
+    "m": 2,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 355.469,
+   "tpf_ps": null,
+   "worst_ps": 355.469,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": 342.65200000000004,
+   "power_uw": 877.5144,
+   "transistors": 30,
+   "width_um": 145.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 4,
+    "m": 3,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 330.724,
+   "tpf_ps": null,
+   "worst_ps": 330.724,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": 329.497,
+   "power_uw": 903.6594000000001,
+   "transistors": 30,
+   "width_um": 155.88
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 4,
+    "m": 4,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 332.067,
+   "tpf_ps": null,
+   "worst_ps": 332.067,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 342.73,
+   "power_uw": 935.0442,
+   "transistors": 30,
+   "width_um": 166.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 4,
+    "m": 6,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 332.181,
+   "tpf_ps": null,
+   "worst_ps": 332.181,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 333.005,
+   "power_uw": 1023.39,
+   "transistors": 30,
+   "width_um": 188.28
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 6,
+    "m": 0.5,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 733.079,
+   "tpf_ps": null,
+   "worst_ps": 733.079,
+   "vlo": 8.23298e-09,
+   "vhi": 1.79989,
+   "precharge_ps": 632.907,
+   "power_uw": 1743.4152,
+   "transistors": 30,
+   "width_um": 190.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 6,
+    "m": 1,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 504.433,
+   "tpf_ps": null,
+   "worst_ps": 504.433,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": 422.827,
+   "power_uw": 1295.5302,
+   "transistors": 30,
+   "width_um": 195.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 6,
+    "m": 2,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 383.071,
+   "tpf_ps": null,
+   "worst_ps": 383.071,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": 323.93,
+   "power_uw": 1112.6808,
+   "transistors": 30,
+   "width_um": 206.28
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 6,
+    "m": 3,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 344.93199999999996,
+   "tpf_ps": null,
+   "worst_ps": 344.93199999999996,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": 299.179,
+   "power_uw": 1105.8282000000002,
+   "transistors": 30,
+   "width_um": 217.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 6,
+    "m": 4,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 330.036,
+   "tpf_ps": null,
+   "worst_ps": 330.036,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 289.92,
+   "power_uw": 1124.8578,
+   "transistors": 30,
+   "width_um": 227.88
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 6,
+    "m": 6,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 331.428,
+   "tpf_ps": null,
+   "worst_ps": 331.428,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 302.606,
+   "power_uw": 1198.5318,
+   "transistors": 30,
+   "width_um": 249.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 8,
+    "m": 0.5,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 833.246,
+   "tpf_ps": null,
+   "worst_ps": 833.246,
+   "vlo": 8.23298e-09,
+   "vhi": 1.7993,
+   "precharge_ps": 720.7520000000001,
+   "power_uw": 2543.4719999999998,
+   "transistors": 30,
+   "width_um": 251.28
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 8,
+    "m": 1,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 561.6890000000001,
+   "tpf_ps": null,
+   "worst_ps": 561.6890000000001,
+   "vlo": 7.11604e-09,
+   "vhi": 1.8,
+   "precharge_ps": 458.149,
+   "power_uw": 1763.0153999999998,
+   "transistors": 30,
+   "width_um": 256.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 8,
+    "m": 2,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 414.269,
+   "tpf_ps": null,
+   "worst_ps": 414.269,
+   "vlo": 6.49778e-09,
+   "vhi": 1.8,
+   "precharge_ps": 333.42199999999997,
+   "power_uw": 1423.1556,
+   "transistors": 30,
+   "width_um": 267.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 8,
+    "m": 3,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 365.076,
+   "tpf_ps": null,
+   "worst_ps": 365.076,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": 297.822,
+   "power_uw": 1364.0472000000002,
+   "transistors": 30,
+   "width_um": 278.28
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 8,
+    "m": 4,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 343.369,
+   "tpf_ps": null,
+   "worst_ps": 343.369,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 283.51800000000003,
+   "power_uw": 1362.3642,
+   "transistors": 30,
+   "width_um": 289.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 8,
+    "m": 6,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 328.55699999999996,
+   "tpf_ps": null,
+   "worst_ps": 328.55699999999996,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 275.407,
+   "power_uw": 1417.3308000000002,
+   "transistors": 30,
+   "width_um": 310.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 12,
+    "m": 0.5,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 1031.3600000000001,
+   "tpf_ps": null,
+   "worst_ps": 1031.3600000000001,
+   "vlo": 8.23298e-09,
+   "vhi": 1.77169,
+   "precharge_ps": 915.806,
+   "power_uw": 4756.302000000001,
+   "transistors": 30,
+   "width_um": 373.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 12,
+    "m": 1,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 675.229,
+   "tpf_ps": null,
+   "worst_ps": 675.229,
+   "vlo": 7.11606e-09,
+   "vhi": 1.8,
+   "precharge_ps": 556.657,
+   "power_uw": 3094.02,
+   "transistors": 30,
+   "width_um": 379.08
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 12,
+    "m": 2,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 478.50600000000003,
+   "tpf_ps": null,
+   "worst_ps": 478.50600000000003,
+   "vlo": 6.49779e-09,
+   "vhi": 1.8,
+   "precharge_ps": 384.092,
+   "power_uw": 2323.422,
+   "transistors": 30,
+   "width_um": 389.88
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 12,
+    "m": 3,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 409.83299999999997,
+   "tpf_ps": null,
+   "worst_ps": 409.83299999999997,
+   "vlo": 6.34169e-09,
+   "vhi": 1.8,
+   "precharge_ps": 330.49,
+   "power_uw": 2125.8,
+   "transistors": 30,
+   "width_um": 400.68
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 12,
+    "m": 4,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 376.89099999999996,
+   "tpf_ps": null,
+   "worst_ps": 376.89099999999996,
+   "vlo": 6.31022e-09,
+   "vhi": 1.8,
+   "precharge_ps": 307.121,
+   "power_uw": 2061.234,
+   "transistors": 30,
+   "width_um": 411.48
+  },
+  {
+   "style": "Domino (footless, keeper)",
+   "params": {
+    "k": 12,
+    "m": 6,
+    "foot": 0
+   },
+   "ok": true,
+   "tpr_ps": 348.416,
+   "tpf_ps": null,
+   "worst_ps": 348.416,
+   "vlo": 6.37517e-09,
+   "vhi": 1.8,
+   "precharge_ps": 289.1,
+   "power_uw": 2061.306,
+   "transistors": 30,
+   "width_um": 433.08
+  }
+ ]
+}

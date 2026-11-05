@@ -1,0 +1,33 @@
+VCD info: dumpfile tb_fpga_tops.vcd opened for output.
+
+--- TEST 1: CLA4 board, automatic self-test ---
+  ok   phases visited (1111): 000f
+  ok   error LED6 stays off: 0000
+
+--- TEST 2: CLA4 board, manual: A on sw[3:0], B on sw[8:5], Cin on sw[10] ---
+  ok   7 + 1 + 1: registered {C4,S} = 9: 0009
+  ok   left display A=07 B=01: 0701
+  ok   right display S=09: 0009
+  ok   LED0 Cin on: 0001
+  ok   LED3 Cout off: 0000
+  ok   15 + 15: registered {C4,S} = 30: 001e
+  ok   left display A=15 B=15: 1515
+  ok   right display S=14: 0014
+  ok   LED0 Cin off: 0000
+  ok   LED3 Cout on: 0001
+
+--- TEST 3: SIMD8 board, automatic self-test ---
+  ok   phases visited (1111): 000f
+  ok   error LED6 stays off: 0000
+
+--- TEST 4: SIMD8 board, manual A=0x37, B=0x59, Cin=1 ---
+  ok   8-bit: {Cout,S} = 0x091: 0091
+  ok   dual: {Cout,CoutLo,S} = 0x181: 0181
+  ok   gated carry LED3 off: 0000
+
+--- TEST 5: self-check catches a fault ---
+  ok   error LED6 lights: 0001
+  ok   error clears in manual mode: 0000
+
+--- RESULT: 0 errors: PASS ---
+/Users/bhargav_vemparala/Documents/Academics/Semester-3/VLSI_CP/part3/tb/tb_fpga_tops.v:110: $finish called at 126095000 (1ps)

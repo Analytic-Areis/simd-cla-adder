@@ -1,0 +1,93 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * truth table of sum_xor_nand4_x1: inputs through unit inverters, outputs load 20l/10l inverter
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+src_p0                                     1.8
+p0                                 7.11606e-09
+src_p1                                     1.8
+p1                                 7.11606e-09
+src_p2                                     1.8
+p2                                 7.11606e-09
+src_p3                                     1.8
+p3                                 7.11606e-09
+src_c0                                     1.8
+c0                                 7.11606e-09
+src_c1                                     1.8
+c1                                 7.11606e-09
+src_c2                                     1.8
+c2                                 7.11606e-09
+src_c3                                     1.8
+c3                                 7.11606e-09
+lo_s0                                      1.8
+s0                                 1.55791e-08
+lo_s1                                      1.8
+s1                                 1.55791e-08
+lo_s2                                      1.8
+s2                                 1.55791e-08
+lo_s3                                      1.8
+s3                                 1.55791e-08
+x0.xsum0.n1                                1.8
+x0.xsum0.s0xn1                       0.0379134
+x0.xsum0.n2                                1.8
+x0.xsum0.s1xn1                     6.66767e-09
+x0.xsum0.n3                                1.8
+x0.xsum0.s2xn1                     6.66767e-09
+x0.xsum0.s3xn1                     7.78954e-09
+x0.xsum1.n1                                1.8
+x0.xsum1.s0xn1                       0.0379134
+x0.xsum1.n2                                1.8
+x0.xsum1.s1xn1                     6.66767e-09
+x0.xsum1.n3                                1.8
+x0.xsum1.s2xn1                     6.66767e-09
+x0.xsum1.s3xn1                     7.78954e-09
+x0.xsum2.n1                                1.8
+x0.xsum2.s0xn1                       0.0379134
+x0.xsum2.n2                                1.8
+x0.xsum2.s1xn1                     6.66767e-09
+x0.xsum2.n3                                1.8
+x0.xsum2.s2xn1                     6.66767e-09
+x0.xsum2.s3xn1                     7.78954e-09
+x0.xsum3.n1                                1.8
+x0.xsum3.s0xn1                       0.0379134
+x0.xsum3.n2                                1.8
+x0.xsum3.s1xn1                     6.66767e-09
+x0.xsum3.n3                                1.8
+x0.xsum3.s2xn1                     6.66767e-09
+x0.xsum3.s3xn1                     7.78954e-09
+vc3#branch                                   0
+vc2#branch                                   0
+vc1#branch                                   0
+vc0#branch                                   0
+vp3#branch                                   0
+vp2#branch                                   0
+vp1#branch                                   0
+vp0#branch                                   0
+vdd#branch                        -4.10912e-10
+
+ Reference value :  4.20500e-08
+ Reference value :  8.71359e-08
+ Reference value :  1.32220e-07
+ Reference value :  1.78254e-07
+ Reference value :  2.22461e-07
+ Reference value :  2.66053e-07
+ Reference value :  3.10685e-07
+ Reference value :  3.55495e-07
+ Reference value :  4.01554e-07
+ Reference value :  4.49254e-07
+ Reference value :  5.01443e-07
+No. of Data Rows : 10874
+ngspice-46 done
+
+--- STDERR ---

@@ -1,0 +1,34 @@
+* E2 FO4 inverter beta=3.0
+.include ../../../../TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vin in0 gnd PULSE(0 1.8 1n 20p 20p 2n 4n)
+.subckt sh in out vdd gnd
+mp out in vdd vdd CMOSP W=8.1000e-07 L=1.8000e-07 AS=4.3740e-13 PS=2.7000e-06 AD=4.3740e-13 PD=2.7000e-06
+mn out in gnd gnd CMOSN W=2.7000e-07 L=1.8000e-07 AS=1.4580e-13 PS=1.6200e-06 AD=1.4580e-13 PD=1.6200e-06
+.ends
+.subckt dr in out vdd gnd
+mp out in vdd vdd CMOSP W=8.1000e-07 L=1.8000e-07 AS=4.3740e-13 PS=2.7000e-06 AD=4.3740e-13 PD=2.7000e-06
+mn out in gnd gnd CMOSN W=2.7000e-07 L=1.8000e-07 AS=1.4580e-13 PS=1.6200e-06 AD=1.4580e-13 PD=1.6200e-06
+.ends
+.subckt du in out vdd gnd
+mp out in vdd vdd CMOSP W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=1.4580e-12 PD=6.4800e-06
+mn out in gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends
+.subckt lo in out vdd gnd
+mp out in vdd vdd CMOSP W=1.0800e-05 L=1.8000e-07 AS=5.8320e-12 PS=2.2680e-05 AD=5.8320e-12 PD=2.2680e-05
+mn out in gnd gnd CMOSN W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+.ends
+.subckt ll in out vdd gnd
+mp out in vdd vdd CMOSP W=4.3200e-05 L=1.8000e-07 AS=2.3328e-11 PS=8.7480e-05 AD=2.3328e-11 PD=8.7480e-05
+mn out in gnd gnd CMOSN W=1.4400e-05 L=1.8000e-07 AS=7.7760e-12 PS=2.9880e-05 AD=7.7760e-12 PD=2.9880e-05
+.ends
+X0 in0 n1 vdd gnd sh
+X1 n1 ndut vdd gnd dr
+X2 ndut nout vdd gnd du
+X3 nout n3 vdd gnd lo
+X4 n3 n4 vdd gnd ll
+.tran 0.5p 11n
+.meas tran tphl TRIG v(ndut) VAL=0.9 RISE=2 TARG v(nout) VAL=0.9 FALL=2
+.meas tran tplh TRIG v(ndut) VAL=0.9 FALL=2 TARG v(nout) VAL=0.9 RISE=2
+.end

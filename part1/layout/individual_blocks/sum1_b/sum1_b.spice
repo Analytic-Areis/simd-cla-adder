@@ -1,0 +1,57 @@
+* NGSPICE file created from sum1_b.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt sum1_b c1 p1 p1b s1 vdd gnd
+M1000 x1_s1xp1 p1 vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.0206p ps=4.23u
+M1001 gnd x1_cb a_34_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.4536p pd=2.43u as=0.567p ps=2.43u
+M1002 s1 p1b x1_s1xp1 vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1003 x1_cb c1 gnd Gnd nfet w=0.54u l=0.18u
++  ad=0.243p pd=1.98u as=0.4536p ps=2.43u
+M1004 x1_s1xp1 x1_cb s1 vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1005 a_16_10# c1 gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1006 vdd c1 x1_s1xp1 vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1007 s1 p1 a_16_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1008 vdd c1 x1_cb vdd pfet w=1.17u l=0.18u
++  ad=1.0206p pd=4.23u as=0.6318p ps=3.42u
+M1009 a_34_10# p1b s1 Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+C0 x1_cb x1_s1xp1 0.01378f
+C1 s1 gnd 0.04131f
+C2 p1 gnd 0.00105f
+C3 p1b s1 0.0943f
+C4 a_34_10# s1 0
+C5 a_16_10# gnd 0
+C6 vdd c1 0.0445f
+C7 p1 p1b 0.2539f
+C8 x1_s1xp1 c1 0.00654f
+C9 x1_cb s1 0.08499f
+C10 x1_s1xp1 vdd 0.76812f
+C11 x1_cb p1 0.01812f
+C12 p1b gnd 0.00105f
+C13 c1 s1 0.0228f
+C14 a_34_10# gnd 0
+C15 vdd s1 0.05318f
+C16 p1 c1 0.584f
+C17 vdd p1 0.0237f
+C18 x1_s1xp1 s1 1.06211f
+C19 x1_cb gnd 0.05298f
+C20 x1_s1xp1 p1 0.00656f
+C21 x1_cb p1b 0.26268f
+C22 c1 gnd 0.0046f
+C23 p1 s1 0.1592f
+C24 p1b c1 0.01832f
+C25 a_16_10# s1 0
+C26 vdd p1b 0.02078f
+C27 x1_s1xp1 p1b 0.27828f
+C28 x1_cb c1 0.70483f
+C29 x1_cb vdd 0.13873f
+.ends
+

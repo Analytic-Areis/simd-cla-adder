@@ -1,0 +1,36 @@
+* E4 nand2 far-rail input FO2
+.include ../../../../TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vin in0 gnd PULSE(0 1.8 1n 20p 20p 2n 4n)
+.subckt gnand2 i0 i1 out vdd gnd
+mp0 out i0 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn0 out i0 x1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+mp1 out i1 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn1 x1 i1 gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+.ends
+.subckt sh in out vdd gnd
+mp out in vdd vdd CMOSP W=5.4000e-07 L=1.8000e-07 AS=2.9160e-13 PS=2.1600e-06 AD=2.9160e-13 PD=2.1600e-06
+mn out in gnd gnd CMOSN W=2.7000e-07 L=1.8000e-07 AS=1.4580e-13 PS=1.6200e-06 AD=1.4580e-13 PD=1.6200e-06
+.ends
+.subckt dr in out vdd gnd
+mp out in vdd vdd CMOSP W=6.1581e-07 L=1.8000e-07 AS=3.3254e-13 PS=2.3116e-06 AD=3.3254e-13 PD=2.3116e-06
+mn out in gnd gnd CMOSN W=3.0790e-07 L=1.8000e-07 AS=1.6627e-13 PS=1.6958e-06 AD=1.6627e-13 PD=1.6958e-06
+.ends
+.subckt lo in out vdd gnd
+mp out in vdd vdd CMOSP W=4.9265e-06 L=1.8000e-07 AS=2.6603e-12 PS=1.0933e-05 AD=2.6603e-12 PD=1.0933e-05
+mn out in gnd gnd CMOSN W=2.4632e-06 L=1.8000e-07 AS=1.3301e-12 PS=6.0065e-06 AD=1.3301e-12 PD=6.0065e-06
+.ends
+.subckt ll in out vdd gnd
+mp out in vdd vdd CMOSP W=1.9706e-05 L=1.8000e-07 AS=1.0641e-11 PS=4.0492e-05 AD=1.0641e-11 PD=4.0492e-05
+mn out in gnd gnd CMOSN W=9.8529e-06 L=1.8000e-07 AS=5.3206e-12 PS=2.0786e-05 AD=5.3206e-12 PD=2.0786e-05
+.ends
+X0 in0 n1 vdd gnd sh
+X1 n1 ndut vdd gnd dr
+X2 vdd ndut nout vdd gnd gnand2
+X3 nout n3 vdd gnd lo
+X4 n3 n4 vdd gnd ll
+.tran 0.5p 11n
+.meas tran tphl TRIG v(ndut) VAL=0.9 RISE=2 TARG v(nout) VAL=0.9 FALL=2
+.meas tran tplh TRIG v(ndut) VAL=0.9 FALL=2 TARG v(nout) VAL=0.9 RISE=2
+.end

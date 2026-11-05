@@ -1,0 +1,60 @@
+* sum0_schematic
+.include ../../part1/spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* xor_aoi22_x1p25_0p51: dual-rail XOR, AOI22 with c-bar inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt xor_aoi22_x1p25_0p51 p pb c s vdd gnd
+Ms0p1 cb c vdd vdd CMOSP W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms0n1 cb c gnd gnd CMOSN W=4.5000e-07 L=1.8000e-07 AS=2.4300e-13 PS=1.9800e-06 AD=2.4300e-13 PD=1.9800e-06
+Ms1p1 s1xp1 p vdd vdd CMOSP W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Ms1p2 s1xp1 c vdd vdd CMOSP W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Ms1p3 s pb s1xp1 vdd CMOSP W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Ms1p4 s cb s1xp1 vdd CMOSP W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Ms1n1 s p s1xn1 gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=6.0750e-13 PS=5.0400e-06 AD=1.2150e-12 PD=5.5800e-06
+Ms1n2 s1xn1 c gnd gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=6.0750e-13 PD=5.0400e-06
+Ms1n3 s pb s1xn2 gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=6.0750e-13 PS=5.0400e-06 AD=1.2150e-12 PD=5.5800e-06
+Ms1n4 s1xn2 cb gnd gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=6.0750e-13 PD=5.0400e-06
+.ends xor_aoi22_x1p25_0p51
+* sum0_b: tile sum0
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt sum0_b c0 p0 p0b s0 vdd gnd
+Xx0 p0 p0b c0 s0 vdd gnd xor_aoi22_x1p25_0p51
+.ends sum0_b
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Vc0 src_c0 gnd PWL(
++ 0.00000e+00 0.000 1.00000e-09 0.000 1.02000e-09 1.800 2.00000e-09 1.800 2.02000e-09 0.000 4.00000e-09 0.000
++ 4.02000e-09 1.800 7.00000e-09 1.800 7.02000e-09 0.000 9.00000e-09 0.000
++ )
+Xs_c0 src_c0 drv_c0 vdd gnd tb_x1
+Xd_c0 drv_c0 c0 vdd gnd tb_x2
+Vp0 src_p0 gnd PWL(
++ 0.00000e+00 0.000 3.00000e-09 0.000 3.02000e-09 1.800 5.00000e-09 1.800 5.02000e-09 0.000 6.00000e-09 0.000
++ 6.02000e-09 1.800 8.00000e-09 1.800 8.02000e-09 0.000 9.00000e-09 0.000
++ )
+Xs_p0 src_p0 drv_p0 vdd gnd tb_x1
+Xd_p0 drv_p0 p0 vdd gnd tb_x2
+Vp0b src_p0b gnd PWL(
++ 0.00000e+00 1.800 3.00000e-09 1.800 3.02000e-09 0.000 5.00000e-09 0.000 5.02000e-09 1.800 6.00000e-09 1.800
++ 6.02000e-09 0.000 8.00000e-09 0.000 8.02000e-09 1.800 9.00000e-09 1.800
++ )
+Xs_p0b src_p0b drv_p0b vdd gnd tb_x1
+Xd_p0b drv_p0b p0b vdd gnd tb_x2
+Xl_s0 s0 lo_s0 vdd gnd tb_x1
+X0 c0 p0 p0b s0 vdd gnd sum0_b
+.tran 5p 9.00000e-09
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata sum0_schematic.txt v(c0) v(p0) v(p0b) v(s0)
+quit
+.endc
+.end

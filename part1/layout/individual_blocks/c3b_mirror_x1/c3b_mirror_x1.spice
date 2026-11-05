@@ -1,0 +1,56 @@
+* NGSPICE file created from c3b_mirror_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt c3b_mirror_x1 a2 b2 c2 c3b vdd gnd
+M1000 vdd a2 a_32_98# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1001 a_32_10# c2 c3b Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1002 c3b a2 a_16_98# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=0.81p ps=4.05u
+M1003 a_32_98# b2 vdd vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1004 a_32_98# c2 c3b vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1005 a_16_10# b2 gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.405p pd=2.25u as=0.972p ps=4.68u
+M1006 gnd a2 a_32_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1007 a_16_98# b2 vdd vdd pfet w=3.6u l=0.18u
++  ad=0.81p pd=4.05u as=1.944p ps=8.28u
+M1008 c3b a2 a_16_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.405p ps=2.25u
+M1009 a_32_10# b2 gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+C0 a_32_10# b2 0.13252f
+C1 a_16_98# c3b 0.00113f
+C2 a_32_98# c2 0.00652f
+C3 a_32_98# vdd 0.76904f
+C4 a2 gnd 0.00444f
+C5 c2 c3b 0.01061f
+C6 a_32_10# gnd 0.41315f
+C7 vdd c3b 0.05396f
+C8 b2 c2 0.01832f
+C9 vdd b2 0.04728f
+C10 a_32_98# c3b 0.42469f
+C11 a_32_10# a2 0.04522f
+C12 a_32_98# b2 0.01377f
+C13 c2 gnd 0.00105f
+C14 b2 c3b 0.07805f
+C15 a2 c2 0.50784f
+C16 vdd a2 0.04293f
+C17 a_16_10# c3b 0
+C18 a_32_10# c2 0.26211f
+C19 a_32_98# a2 0.01377f
+C20 a_32_98# a_32_10# 0.26322f
+C21 a_16_98# vdd 0.00102f
+C22 c3b gnd 0.04131f
+C23 b2 gnd 0.00678f
+C24 a2 c3b 0.07044f
+C25 a_16_10# gnd 0
+C26 a_32_10# c3b 0.35408f
+C27 b2 a2 0.94982f
+C28 vdd c2 0.01968f
+.ends
+

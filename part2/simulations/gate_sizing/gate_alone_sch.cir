@@ -1,0 +1,63 @@
+* carry_gate_n1_i2
+.include ../../../part1/spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vdut vdut gnd 1.8
+* inv_x1: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt inv_x1 a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y a gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends inv_x1
+* nand2_x1: 2-input NAND
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nand2_x1 i0 i1 y vdd gnd
+Mp1 y i0 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp2 y i1 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y i0 xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn2 xn1 i1 gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+.ends nand2_x1
+* inv_x2: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt inv_x2 a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn1 y a gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+.ends inv_x2
+* carry_gate_n1_i2: carry-gating cell: cin_hi = cout_lo AND NOT mode
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt carry_gate_n1_i2 cout_lo mode cin_hi vdd gnd
+Xinvm mode modeb vdd gnd inv_x1
+Xnandg cout_lo modeb gn vdd gnd nand2_x1
+Xinvg gn cin_hi vdd gnd inv_x2
+.ends carry_gate_n1_i2
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Vcout_lo src_cout_lo gnd PWL(
++ 0.00000e+00 0.000 2.00000e-09 0.000 2.02000e-09 1.800 4.00000e-09 1.800 4.02000e-09 0.000 6.00000e-09 0.000
++ 6.02000e-09 1.800 8.00000e-09 1.800 8.02000e-09 0.000 1.00000e-08 0.000 1.00200e-08 1.800 1.20000e-08 1.800
++ 1.20200e-08 0.000 1.40000e-08 0.000 1.40200e-08 1.800 1.60000e-08 1.800 1.60200e-08 0.000 1.80000e-08 0.000
++ )
+Xs_cout_lo src_cout_lo drv_cout_lo vdd gnd tb_x1
+Xd_cout_lo drv_cout_lo cout_lo vdd gnd tb_x2
+Vmode src_mode gnd PWL(
++ 0.00000e+00 0.000 1.00000e-08 0.000 1.00200e-08 1.800 1.80000e-08 1.800
++ )
+Xs_mode src_mode drv_mode vdd gnd tb_x1
+Xd_mode drv_mode mode vdd gnd tb_x2
+Xl_cin_hi cin_hi lo_cin_hi vdd gnd tb_x1
+X0 cout_lo mode cin_hi vdut gnd carry_gate_n1_i2
+.tran 20p 1.80000e-08
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata gate_alone_sch.txt v(cout_lo) v(mode) v(drv_cout_lo) v(drv_mode) v(cin_hi)
+quit
+.endc
+.end

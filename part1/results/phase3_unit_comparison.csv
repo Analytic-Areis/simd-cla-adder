@@ -1,0 +1,10 @@
+candidate,adder,transistors,total_width_lambda,arcs,settled_errors,truth_table_errors,worst_pin_ps,worst_pin_arc,worst_drv_ps,worst_drv_arc,worst_c0_pin_ps,hint_vector_pin_ps,hint_arc
+C1,cla_c1,208,5260,8224,0,0,771.3,"b1 rise to s3 rise, A=0001 B=0100 C0=1",832.5,b1 rise to s3 rise,488.0,421.4,rise to s3 fall
+C2,cla_c2,170,5470,8224,0,0,764.0,"a0 rise to s3 rise, A=1100 B=1010 C0=1",840.6,a0 rise to s3 rise,643.8,577.2,rise to s3 fall
+R,cla_r_aoi22,172,5160,8224,0,0,727.0,"a0 rise to c4 rise, A=0010 B=1100 C0=1",803.5,a0 rise to c4 rise,618.0,574.2,rise to c4 rise
+C3,cla_c3,170,4800,8224,0,0,796.4,"a0 rise to s3 rise, A=0010 B=0100 C0=1",873.1,a0 rise to s3 rise,689.6,623.5,rise to s3 fall
+C4,cla_c4,194,4930,8224,0,0,658.9,"a1 rise to s3 rise, A=1001 B=1101 C0=0",735.5,a1 rise to s3 rise,388.3,360.0,fall to s2 rise
+E,cla_e,144,3480,8224,0,0,799.8,"a0 rise to c4 rise, A=0000 B=1111 C0=0",882.2,a0 rise to c4 rise,629.3,629.1,rise to c4 rise
+R/tg,cla_r_tg,164,4560,8224,0,0,698.8,"a0 rise to c4 rise, A=0010 B=1100 C0=1",787.0,a2 rise to s3 fall,583.2,542.1,rise to c4 rise
+R/static12,cla_r_static12,180,5280,8224,0,0,726.8,"a0 rise to c4 rise, A=0010 B=1100 C0=1",803.4,a0 rise to c4 rise,617.8,574.2,rise to c4 rise
+R/nand4,cla_r_nand4,196,5360,8224,0,0,740.4,"a1 rise to s3 fall, A=1100 B=0001 C0=1",848.8,a2 rise to s3 fall,606.6,605.5,rise to s3 fall

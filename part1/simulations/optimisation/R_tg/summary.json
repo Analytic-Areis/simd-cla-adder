@@ -1,0 +1,61 @@
+{
+ "label": "R_tg",
+ "sizes": {
+  "nand0": 0.3,
+  "nand1": 0.41,
+  "nand2": 0.8,
+  "nand3": 1.0,
+  "nor0": 2.44,
+  "nor1": 1.95,
+  "nor2": 1.56,
+  "nor3": 0.33,
+  "aoi0": 0.33,
+  "aoi1": 0.33,
+  "aoi2": 0.64,
+  "aoi3": 3.05,
+  "oai0": 0.33,
+  "oai1": 0.33,
+  "oai2": 0.41,
+  "oai3": 1.0,
+  "xor0": 1.0,
+  "xor1": 1.0,
+  "xor2": 1.0,
+  "xor3": 0.8,
+  "xinv0": 1.0,
+  "xinv1": 1.0,
+  "xinv2": 0.64,
+  "xinv3": 0.8,
+  "xtg0": 1.0,
+  "xtg1": 0.8,
+  "xtg2": 0.51,
+  "xtg3": 0.41,
+  "invc0": 3.05,
+  "c1": 0.64,
+  "c2": 1.0,
+  "c3": 0.8,
+  "c4m": 0.33,
+  "invc4": 0.8
+ },
+ "flips": {
+  "c1": [
+   false,
+   false
+  ],
+  "c2": [
+   false,
+   false
+  ],
+  "c3": [
+   false,
+   false
+  ]
+ },
+ "transistors": 164,
+ "total_width_lambda": 3680,
+ "functional_errors": 0,
+ "worst_drv_ps": 753.3256877205499,
+ "worst_pin_ps": 692.6783008648471,
+ "critical": "{'pin': 'b0', 'pin_edge': 'fall', 'state': 61, 'output': 'c4', 'out_edge': 'fall', 'tpd_pin_ps': np.float64(692.6783008648471), 'tpd_drv_ps': np.float64(753.3256877205499), 'extra_crossings': 0}",
+ "elapsed_s": 3464,
+ "config": "R_tg"
+}

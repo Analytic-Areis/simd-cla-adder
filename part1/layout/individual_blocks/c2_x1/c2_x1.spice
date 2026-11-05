@@ -1,0 +1,75 @@
+* NGSPICE file created from c2_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt c2_x1 c0b c2 g0b g1b t0b t1b vdd gnd
+M1000 a_43_10# t0b gnd Gnd nfet w=2.7u l=0.18u
++  ad=1.215p pd=6.3u as=0.8505p ps=3.33u
+M1001 c2 g0b a_34_117# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=6.03u as=1.539p ps=6.03u
+M1002 a_43_10# g0b a_8_10# Gnd nfet w=2.7u l=0.18u
++  ad=0.8505p pd=3.33u as=0.81p ps=3.33u
+M1003 a_34_117# t0b a_52_117# vdd pfet w=5.4u l=0.18u
++  ad=2.43p pd=11.7u as=1.701p ps=6.03u
+M1004 gnd c0b a_43_10# Gnd nfet w=2.7u l=0.18u
++  ad=0.8505p pd=3.33u as=0.8505p ps=3.33u
+M1005 vdd g1b c2 vdd pfet w=1.8u l=0.18u
++  ad=2.916p pd=6.84u as=0.972p ps=4.68u
+M1006 a_34_117# t1b vdd vdd pfet w=5.4u l=0.18u
++  ad=1.539p pd=6.03u as=2.916p ps=6.84u
+M1007 c2 g1b a_8_10# Gnd nfet w=2.7u l=0.18u
++  ad=1.215p pd=6.3u as=1.458p ps=6.48u
+M1008 a_8_10# t1b gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=3.33u as=0.972p ps=4.68u
+M1009 a_52_117# c0b c2 vdd pfet w=5.4u l=0.18u
++  ad=1.701p pd=6.03u as=1.62p ps=6.03u
+C0 c0b gnd 0.0042f
+C1 t0b g0b 0.00894f
+C2 g1b c2 0.02677f
+C3 vdd g0b 0.01876f
+C4 c0b g1b 0.28789f
+C5 t1b c2 0.00958f
+C6 a_43_10# gnd 0.57844f
+C7 a_43_10# g1b 0.01998f
+C8 a_8_10# c2 0.41971f
+C9 t1b c0b 0.00874f
+C10 vdd t0b 0.01988f
+C11 a_43_10# t1b 0.0196f
+C12 a_52_117# vdd 0
+C13 a_34_117# t1b 0.00814f
+C14 a_8_10# a_43_10# 0.34205f
+C15 g0b gnd 0.00105f
+C16 t0b gnd 0.0042f
+C17 g1b g0b 0.00906f
+C18 t1b g0b 0.72834f
+C19 t0b g1b 0.00894f
+C20 c0b c2 0.00815f
+C21 a_43_10# c2 0.0646f
+C22 a_8_10# g0b 0.00572f
+C23 t1b t0b 0.00894f
+C24 vdd g1b 0.02111f
+C25 a_43_10# c0b 0.10572f
+C26 a_34_117# c2 0.81203f
+C27 vdd t1b 0.02525f
+C28 a_34_117# c0b 0.00938f
+C29 g1b gnd 0.00105f
+C30 c2 g0b 0.01451f
+C31 t1b gnd 0.00234f
+C32 c0b g0b 0.27333f
+C33 vdd c2 0.06765f
+C34 t1b g1b 0.65924f
+C35 c0b t0b 0.28356f
+C36 a_8_10# gnd 0.33033f
+C37 a_43_10# g0b 0.26215f
+C38 a_43_10# t0b 0.10619f
+C39 a_52_117# c2 0.00136f
+C40 a_8_10# g1b 0.29222f
+C41 a_34_117# g0b 0.01449f
+C42 vdd c0b 0.01975f
+C43 a_8_10# t1b 0.01308f
+C44 a_34_117# t0b 0.10887f
+C45 a_34_117# vdd 0.11287f
+C46 a_34_117# a_52_117# 0.0017f
+C47 c2 gnd 0.28869f
+.ends
+

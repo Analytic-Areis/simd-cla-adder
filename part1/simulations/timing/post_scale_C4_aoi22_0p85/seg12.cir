@@ -1,0 +1,1263 @@
+* All-arc segment for post_scale_C4_aoi22_0p85_post
+.include ../../../spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* NGSPICE file created from top_scale_C4_aoi22_0p85.ext - technology: scmos
+
+.subckt top_scale_C4_aoi22_0p85 a0 a1 a2 a3 b0 b1 b2 b3 c0 c4 s0 s1 s2 s3 vdd gnd
+M1000 pg2_0/t2b b2 pg2_0/a_43_99# vdd CMOSP w=3.78u l=0.18u
++  ad=1.701p pd=8.46u as=1.1907p ps=4.41u
+M1001 pg2_0/t2b b2 gnd Gnd CMOSN w=0.99u l=0.18u
++  ad=0.4455p pd=2.88u as=0.3078p ps=1.62u
+M1002 pg2_0/aoi2_xp1 b2 vdd vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=0.7614p ps=3.06u
+M1003 vdd a2 pg2_0/g2b vdd CMOSP w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1004 pg2_0/p2b a2 pg2_0/oai2_xn1 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1005 pg2_0/p2 pg2_0/t2b pg2_0/aoi2_xp1 vdd CMOSP w=2.43u l=0.18u
++  ad=1.0935p pd=5.76u as=0.7614p ps=3.06u
+M1006 pg2_0/g2b b2 vdd vdd CMOSP w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1007 pg2_0/oai2_xn1 b2 pg2_0/p2b Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.3969p ps=1.89u
+M1008 pg2_0/a_106_99# a2 vdd vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=1.3122p ps=5.94u
+M1009 pg2_0/a_16_10# a2 pg2_0/g2b Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1010 gnd pg2_0/g2b pg2_0/oai2_xn1 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.3969p ps=1.89u
+M1011 pg2_0/p2b b2 pg2_0/a_106_99# vdd CMOSP w=2.43u l=0.18u
++  ad=0.6561p pd=3.06u as=0.7614p ps=3.06u
+M1012 pg2_0/a_70_17# a2 pg2_0/p2 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1013 gnd b2 pg2_0/a_16_10# Gnd CMOSN w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1014 pg2_0/p2 pg2_0/t2b gnd Gnd CMOSN w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.3402p ps=1.89u
+M1015 pg2_0/a_43_99# a2 vdd vdd CMOSP w=3.78u l=0.18u
++  ad=1.1907p pd=4.41u as=2.0412p ps=8.64u
+M1016 gnd a2 pg2_0/t2b Gnd CMOSN w=0.99u l=0.18u
++  ad=0.3078p pd=1.62u as=0.5346p ps=3.06u
+M1017 vdd pg2_0/g2b pg2_0/p2b vdd CMOSP w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.6561p ps=3.06u
+M1018 gnd b2 pg2_0/a_70_17# Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3402p pd=1.89u as=0.3969p ps=1.89u
+M1019 vdd a2 pg2_0/aoi2_xp1 vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=1.3122p ps=5.94u
+M1020 vdd sum2_0/c2 sum2_0/x2_s1xp1 vdd CMOSP w=2.43u l=0.18u
++  ad=1.0935p pd=5.76u as=0.7614p ps=3.06u
+M1021 sum2_0/x2_cb sum2_0/c2 gnd Gnd CMOSN w=0.99u l=0.18u
++  ad=0.4455p pd=2.88u as=0.3726p ps=1.89u
+M1022 s2 pg2_0/p2 sum2_0/a_16_17# Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.3969p ps=1.89u
+M1023 vdd sum2_0/c2 sum2_0/x2_cb vdd CMOSP w=1.89u l=0.18u
++  ad=0.7371p pd=3.06u as=1.0206p ps=4.86u
+M1024 sum2_0/a_34_17# pg2_0/p2b s2 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.3969p ps=1.89u
+M1025 sum2_0/x2_s1xp1 pg2_0/p2 vdd vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=0.7371p ps=3.06u
+M1026 gnd sum2_0/x2_cb sum2_0/a_34_17# Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3726p pd=1.89u as=0.3969p ps=1.89u
+M1027 s2 pg2_0/p2b sum2_0/x2_s1xp1 vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=0.7614p ps=3.06u
+M1028 sum2_0/x2_s1xp1 sum2_0/x2_cb s2 vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=0.7614p ps=3.06u
+M1029 sum2_0/a_16_17# sum2_0/c2 gnd Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1030 carry_0/g3_2 pg2_0/g2b carry_0/a_340_144# vdd CMOSP w=2.43u l=0.18u
++  ad=0.6561p pd=3.06u as=0.7614p ps=3.06u
+M1031 gnd carry_0/t1_0 carry_0/a_277_10# Gnd CMOSN w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1032 carry_0/c2_xn1 carry_0/c0b gnd Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=0.5913p ps=2.52u
+M1033 vdd pg1_0/g1b carry_0/g1_0 vdd CMOSP w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=1.0206p ps=4.41u
+M1034 carry_0/g20_xp1 carry_0/g1_0 carry_0/g2_0b vdd CMOSP w=3.06u l=0.18u
++  ad=1.377p pd=7.02u as=0.9639p ps=3.69u
+M1035 carry_0/a_106_144# pg1_0/t1b vdd vdd CMOSP w=4.77u l=0.18u
++  ad=1.4985p pd=5.4u as=2.5758p ps=10.62u
+M1036 carry_0/a_169_144# carry_0/t1_0b vdd vdd CMOSP w=3.78u l=0.18u
++  ad=1.1907p pd=4.41u as=2.0412p ps=8.64u
+M1037 gnd carry_0/t1_0 carry_0/t1_0b Gnd CMOSN w=1.17u l=0.18u
++  ad=0.5265p pd=3.24u as=0.6318p ps=3.42u
+M1038 carry_0/g3_2 pg3_0/t3b carry_0/g32_xn1 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1039 carry_0/g3_0b carry_0/g1_0 carry_0/a_412_24# Gnd CMOSN w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.1944p ps=1.26u
+M1040 carry_0/a_304_144# carry_0/t2_0b vdd vdd CMOSP w=3.78u l=0.18u
++  ad=1.1907p pd=4.41u as=2.0412p ps=8.64u
+M1041 sum1_0/c1 carry_0/c0b carry_0/a_34_144# vdd CMOSP w=1.53u l=0.18u
++  ad=0.4131p pd=2.16u as=0.4779p ps=2.16u
+M1042 vdd carry_0/t2 carry_0/t2_0b vdd CMOSP w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1043 gnd carry_0/g1_0 carry_0/g1_0b Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.3888p ps=2.52u
+M1044 vdd carry_0/g1_0b sum2_0/c2 vdd CMOSP w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=1.0206p ps=4.41u
+M1045 carry_0/g3_0b carry_0/t3_2 carry_0/g30_xp1 vdd CMOSP w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.3969p ps=1.89u
+M1046 c4 carry_0/t3_0b carry_0/a_466_144# vdd CMOSP w=2.43u l=0.18u
++  ad=0.6561p pd=3.06u as=0.7614p ps=3.06u
+M1047 sum2_0/c2 carry_0/g1_0b carry_0/c2_xn1 Gnd CMOSN w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1048 gnd c0 carry_0/c0b Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.3888p ps=2.52u
+M1049 vdd carry_0/g2_0b sum3_0/c3 vdd CMOSP w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=1.0206p ps=4.41u
+M1050 carry_0/t3_2 pg2_0/t2b carry_0/a_376_144# vdd CMOSP w=2.43u l=0.18u
++  ad=1.0935p pd=5.76u as=0.7614p ps=3.06u
+M1051 gnd pg1_0/t1b carry_0/g10_xn1 Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1052 gnd pg2_0/g2b carry_0/g2 Gnd CMOSN w=0.99u l=0.18u
++  ad=0.4455p pd=2.88u as=0.5346p ps=3.06u
+M1053 carry_0/g32_xn1 pg2_0/g2b carry_0/g3_2 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.3969p ps=1.89u
+M1054 sum1_0/c1 pg0_0/t0b carry_0/c1_xn1 Gnd CMOSN w=0.81u l=0.18u
++  ad=0.2511p pd=1.44u as=0.4374p ps=2.7u
+M1055 gnd pg2_0/t2b carry_0/t2 Gnd CMOSN w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.8262p ps=4.14u
+M1056 gnd carry_0/t2_0b carry_0/c3_xn1 Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1057 carry_0/a_340_144# pg3_0/t3b vdd vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=1.3122p ps=5.94u
+M1058 carry_0/a_412_24# carry_0/t3_2 gnd Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.1782p ps=1.26u
+M1059 vdd c0 carry_0/c0b vdd CMOSP w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.8262p ps=4.14u
+M1060 carry_0/g1_0 pg0_0/g0b carry_0/a_70_144# vdd CMOSP w=3.78u l=0.18u
++  ad=1.0206p pd=4.41u as=1.1907p ps=4.41u
+M1061 carry_0/g2_0b carry_0/t2 carry_0/g20_xp1 vdd CMOSP w=3.06u l=0.18u
++  ad=0.9639p pd=3.69u as=0.9639p ps=3.69u
+M1062 carry_0/a_250_14# carry_0/t2 gnd Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.4455p ps=2.16u
+M1063 carry_0/t3_0b carry_0/t1_0 vdd vdd CMOSP w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.1944p ps=1.26u
+M1064 carry_0/g10_xn1 pg0_0/g0b gnd Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=0.5913p ps=2.52u
+M1065 gnd pg3_0/g3b carry_0/g32_xn1 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.3969p ps=1.89u
+M1066 gnd carry_0/c0b carry_0/c4g_xn1 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1067 carry_0/c1_xn1 carry_0/c0b sum1_0/c1 Gnd CMOSN w=0.81u l=0.18u
++  ad=0.2511p pd=1.44u as=0.2511p ps=1.44u
+M1068 gnd pg1_0/t1b carry_0/t1_0 Gnd CMOSN w=1.17u l=0.18u
++  ad=0.3645p pd=1.8u as=0.6318p ps=3.42u
+M1069 carry_0/a_439_24# carry_0/t3_2 carry_0/t3_0b Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.3402p ps=2.34u
+M1070 vdd pg3_0/g3b carry_0/g3_2 vdd CMOSP w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.6561p ps=3.06u
+M1071 gnd carry_0/g3_2 carry_0/g3_0b Gnd CMOSN w=0.27u l=0.18u
++  ad=0.1782p pd=1.26u as=0.1782p ps=1.8u
+M1072 carry_0/a_34_144# pg0_0/t0b vdd vdd CMOSP w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.8262p ps=4.14u
+M1073 vdd pg2_0/g2b carry_0/g2 vdd CMOSP w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=1.0206p ps=4.86u
+M1074 carry_0/c3_xn1 carry_0/c0b gnd Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=0.5913p ps=2.52u
+M1075 gnd pg3_0/t3b carry_0/t3_2 Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.3402p ps=2.34u
+M1076 carry_0/t1_0 pg0_0/t0b carry_0/a_106_144# vdd CMOSP w=4.77u l=0.18u
++  ad=2.1465p pd=10.44u as=1.4985p ps=5.4u
+M1077 sum2_0/c2 carry_0/c0b carry_0/a_169_144# vdd CMOSP w=3.78u l=0.18u
++  ad=1.0206p pd=4.41u as=1.1907p ps=4.41u
+M1078 carry_0/g30_xp1 carry_0/g3_2 vdd vdd CMOSP w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1079 carry_0/a_466_144# carry_0/c0b vdd vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=1.3122p ps=5.94u
+M1080 gnd carry_0/g2 carry_0/g2_0b Gnd CMOSN w=0.72u l=0.18u
++  ad=0.4455p pd=2.16u as=0.3888p ps=2.52u
+M1081 sum3_0/c3 carry_0/c0b carry_0/a_304_144# vdd CMOSP w=3.78u l=0.18u
++  ad=1.0206p pd=4.41u as=1.1907p ps=4.41u
+M1082 carry_0/a_376_144# pg3_0/t3b vdd vdd CMOSP w=2.43u l=0.18u
++  ad=0.7614p pd=3.06u as=1.3122p ps=5.94u
+M1083 carry_0/g1_0 pg1_0/g1b carry_0/g10_xn1 Gnd CMOSN w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1084 carry_0/g2_0b carry_0/g1_0 carry_0/a_250_14# Gnd CMOSN w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.4779p ps=2.16u
+M1085 carry_0/c4g_xn1 carry_0/t3_0b gnd Gnd CMOSN w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.3969p ps=1.89u
+M1086 vdd pg2_0/t2b carry_0/t2 vdd CMOSP w=2.97u l=0.18u
++  ad=1.3365p pd=6.84u as=1.6038p ps=7.02u
+M1087 carry_0/t2_0b carry_0/t1_0 vdd vdd CMOSP w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1088 gnd carry_0/t1_0 carry_0/a_439_24# Gnd CMOSN w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.1944p ps=1.26u
+M1089 vdd pg0_0/g0b sum1_0/c1 vdd CMOSP w=0.81u l=0.18u
++  ad=0.3645p pd=2.52u as=0.4131p ps=2.16u
+M1090 vdd carry_0/g1_0 carry_0/g1_0b vdd CMOSP w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.8262p ps=4.14u
+M1091 gnd pg0_0/g0b carry_0/c1_xn1 Gnd CMOSN w=0.81u l=0.18u
++  ad=0.3645p pd=2.52u as=0.2511p ps=1.44u
+M1092 carry_0/t1_0 pg0_0/t0b gnd Gnd CMOSN w=1.17u l=0.18u
++  ad=0.5265p pd=3.24u as=0.3645p ps=1.8u
+M1093 carry_0/a_277_10# carry_0/t2 carry_0/t2_0b Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1094 vdd carry_0/g3_0b c4 vdd CMOSP w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.6561p ps=3.06u
+M1095 gnd carry_0/t1_0b carry_0/c2_xn1 Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1096 sum3_0/c3 carry_0/g2_0b carry_0/c3_xn1 Gnd CMOSN w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1097 carry_0/g30_xp1 carry_0/g1_0 carry_0/g3_0b vdd CMOSP w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.3969p ps=1.89u
+M1098 carry_0/t3_2 pg2_0/t2b gnd Gnd CMOSN w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.1944p ps=1.26u
+M1099 carry_0/a_70_144# pg1_0/t1b vdd vdd CMOSP w=3.78u l=0.18u
++  ad=1.1907p pd=4.41u as=2.0412p ps=8.64u
+M1100 carry_0/g20_xp1 carry_0/g2 vdd vdd CMOSP w=3.06u l=0.18u
++  ad=0.9639p pd=3.69u as=1.6524p ps=7.2u
+M1101 c4 carry_0/g3_0b carry_0/c4g_xn1 Gnd CMOSN w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.3969p ps=1.89u
+M1102 vdd carry_0/t1_0 carry_0/t1_0b vdd CMOSP w=2.43u l=0.18u
++  ad=1.0935p pd=5.76u as=1.3122p ps=5.94u
+M1103 vdd carry_0/t3_2 carry_0/t3_0b vdd CMOSP w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.3402p ps=2.34u
+M1104 pg0_0/t0b b0 pg0_0/a_43_99# vdd CMOSP w=4.77u l=0.18u
++  ad=2.1465p pd=10.44u as=1.4985p ps=5.4u
+M1105 pg0_0/oai0_xn1 b0 pg0_0/p0b Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.1944p ps=1.26u
+M1106 pg0_0/t0b b0 gnd Gnd CMOSN w=1.17u l=0.18u
++  ad=0.5265p pd=3.24u as=0.3645p ps=1.8u
+M1107 pg0_0/p0 pg0_0/t0b gnd Gnd CMOSN w=0.27u l=0.18u
++  ad=0.1539p pd=1.62u as=0.162p ps=1.26u
+M1108 pg0_0/aoi0_xp1 b0 vdd vdd CMOSP w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.3969p ps=1.89u
+M1109 vdd a0 pg0_0/g0b vdd CMOSP w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1110 gnd pg0_0/g0b pg0_0/oai0_xn1 Gnd CMOSN w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.1944p ps=1.26u
+M1111 pg0_0/a_70_24# a0 pg0_0/p0 Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.3402p ps=2.34u
+M1112 pg0_0/p0 pg0_0/t0b pg0_0/aoi0_xp1 vdd CMOSP w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.3969p ps=1.89u
+M1113 pg0_0/g0b b0 vdd vdd CMOSP w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1114 pg0_0/a_106_99# a0 vdd vdd CMOSP w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1115 pg0_0/a_16_10# a0 pg0_0/g0b Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1116 gnd b0 pg0_0/a_70_24# Gnd CMOSN w=0.63u l=0.18u
++  ad=0.162p pd=1.26u as=0.1944p ps=1.26u
+M1117 pg0_0/p0b b0 pg0_0/a_106_99# vdd CMOSP w=1.26u l=0.18u
++  ad=0.3402p pd=1.89u as=0.3969p ps=1.89u
+M1118 gnd b0 pg0_0/a_16_10# Gnd CMOSN w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1119 pg0_0/a_43_99# a0 vdd vdd CMOSP w=4.77u l=0.18u
++  ad=1.4985p pd=5.4u as=2.5758p ps=10.62u
+M1120 pg0_0/p0b a0 pg0_0/oai0_xn1 Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.3402p ps=2.34u
+M1121 vdd pg0_0/g0b pg0_0/p0b vdd CMOSP w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.3402p ps=1.89u
+M1122 gnd a0 pg0_0/t0b Gnd CMOSN w=1.17u l=0.18u
++  ad=0.3645p pd=1.8u as=0.6318p ps=3.42u
+M1123 vdd a0 pg0_0/aoi0_xp1 vdd CMOSP w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1124 vdd c0 sum0_0/x0_s1xp1 vdd CMOSP w=3.78u l=0.18u
++  ad=1.701p pd=8.46u as=1.1907p ps=4.41u
+M1125 vdd c0 sum0_0/x0_cb vdd CMOSP w=0.81u l=0.18u
++  ad=1.053p pd=4.41u as=0.4374p ps=2.7u
+M1126 gnd sum0_0/x0_cb sum0_0/a_34_10# Gnd CMOSN w=1.89u l=0.18u
++  ad=0.4536p pd=2.52u as=0.5913p ps=2.52u
+M1127 sum0_0/x0_s1xp1 pg0_0/p0 vdd vdd CMOSP w=3.78u l=0.18u
++  ad=1.1907p pd=4.41u as=1.053p ps=4.41u
+M1128 sum0_0/x0_cb c0 gnd Gnd CMOSN w=0.36u l=0.18u
++  ad=0.162p pd=1.62u as=0.4536p ps=2.52u
+M1129 sum0_0/a_16_10# c0 gnd Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1130 s0 pg0_0/p0b sum0_0/x0_s1xp1 vdd CMOSP w=3.78u l=0.18u
++  ad=1.1907p pd=4.41u as=1.1907p ps=4.41u
+M1131 s0 pg0_0/p0 sum0_0/a_16_10# Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=0.5913p ps=2.52u
+M1132 sum0_0/x0_s1xp1 sum0_0/x0_cb s0 vdd CMOSP w=3.78u l=0.18u
++  ad=1.1907p pd=4.41u as=1.1907p ps=4.41u
+M1133 sum0_0/a_34_10# pg0_0/p0b s0 Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=0.5913p ps=2.52u
+M1134 pg3_0/t3b b3 pg3_0/a_43_99# vdd CMOSP w=3.78u l=0.18u
++  ad=1.701p pd=8.46u as=1.1907p ps=4.41u
+M1135 pg3_0/t3b b3 gnd Gnd CMOSN w=0.99u l=0.18u
++  ad=0.4455p pd=2.88u as=0.3078p ps=1.62u
+M1136 gnd b3 pg3_0/a_16_14# Gnd CMOSN w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.4779p ps=2.16u
+M1137 pg3_0/aoi3_xp1 b3 vdd vdd CMOSP w=3.06u l=0.18u
++  ad=0.9639p pd=3.69u as=0.9639p ps=3.69u
+M1138 vdd a3 pg3_0/g3b vdd CMOSP w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.8262p ps=4.14u
+M1139 pg3_0/p3b a3 pg3_0/oai3_xn1 Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.8262p ps=4.14u
+M1140 pg3_0/p3 pg3_0/t3b pg3_0/aoi3_xp1 vdd CMOSP w=3.06u l=0.18u
++  ad=1.377p pd=7.02u as=0.9639p ps=3.69u
+M1141 pg3_0/g3b b3 vdd vdd CMOSP w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.4779p ps=2.16u
+M1142 pg3_0/oai3_xn1 b3 pg3_0/p3b Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.4779p ps=2.16u
+M1143 pg3_0/p3 pg3_0/t3b gnd Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.405p ps=2.16u
+M1144 pg3_0/a_106_99# a3 vdd vdd CMOSP w=3.06u l=0.18u
++  ad=0.9639p pd=3.69u as=1.6524p ps=7.2u
+M1145 gnd pg3_0/g3b pg3_0/oai3_xn1 Gnd CMOSN w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.4779p ps=2.16u
+M1146 pg3_0/a_70_14# a3 pg3_0/p3 Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.8262p ps=4.14u
+M1147 pg3_0/p3b b3 pg3_0/a_106_99# vdd CMOSP w=3.06u l=0.18u
++  ad=0.8262p pd=3.69u as=0.9639p ps=3.69u
+M1148 pg3_0/a_43_99# a3 vdd vdd CMOSP w=3.78u l=0.18u
++  ad=1.1907p pd=4.41u as=2.0412p ps=8.64u
+M1149 gnd a3 pg3_0/t3b Gnd CMOSN w=0.99u l=0.18u
++  ad=0.3078p pd=1.62u as=0.5346p ps=3.06u
+M1150 gnd b3 pg3_0/a_70_14# Gnd CMOSN w=1.53u l=0.18u
++  ad=0.405p pd=2.16u as=0.4779p ps=2.16u
+M1151 vdd pg3_0/g3b pg3_0/p3b vdd CMOSP w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.8262p ps=3.69u
+M1152 pg3_0/a_16_14# a3 pg3_0/g3b Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.8262p ps=4.14u
+M1153 vdd a3 pg3_0/aoi3_xp1 vdd CMOSP w=3.06u l=0.18u
++  ad=0.9639p pd=3.69u as=1.6524p ps=7.2u
+M1154 vdd sum3_0/c3 sum3_0/x3_s1xp1 vdd CMOSP w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.4779p ps=2.16u
+M1155 s3 pg3_0/p3 sum3_0/a_16_22# Gnd CMOSN w=0.81u l=0.18u
++  ad=0.2511p pd=1.44u as=0.2511p ps=1.44u
+M1156 sum3_0/x3_cb sum3_0/c3 gnd Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.243p ps=1.44u
+M1157 vdd sum3_0/c3 sum3_0/x3_cb vdd CMOSP w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.8262p ps=4.14u
+M1158 sum3_0/a_34_22# pg3_0/p3b s3 Gnd CMOSN w=0.81u l=0.18u
++  ad=0.2511p pd=1.44u as=0.2511p ps=1.44u
+M1159 sum3_0/x3_s1xp1 pg3_0/p3 vdd vdd CMOSP w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.4779p ps=2.16u
+M1160 gnd sum3_0/x3_cb sum3_0/a_34_22# Gnd CMOSN w=0.81u l=0.18u
++  ad=0.243p pd=1.44u as=0.2511p ps=1.44u
+M1161 s3 pg3_0/p3b sum3_0/x3_s1xp1 vdd CMOSP w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.4779p ps=2.16u
+M1162 sum3_0/x3_s1xp1 sum3_0/x3_cb s3 vdd CMOSP w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.4779p ps=2.16u
+M1163 sum3_0/a_16_22# sum3_0/c3 gnd Gnd CMOSN w=0.81u l=0.18u
++  ad=0.2511p pd=1.44u as=0.4374p ps=2.7u
+M1164 pg1_0/t1b b1 pg1_0/a_43_99# vdd CMOSP w=5.94u l=0.18u
++  ad=2.673p pd=12.78u as=1.8711p ps=6.57u
+M1165 pg1_0/oai1_xn1 b1 pg1_0/p1b Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.1944p ps=1.26u
+M1166 pg1_0/p1 pg1_0/t1b gnd Gnd CMOSN w=0.27u l=0.18u
++  ad=0.1539p pd=1.62u as=0.162p ps=1.26u
+M1167 pg1_0/aoi1_xp1 b1 vdd vdd CMOSP w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.3969p ps=1.89u
+M1168 vdd a1 pg1_0/g1b vdd CMOSP w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1169 gnd pg1_0/g1b pg1_0/oai1_xn1 Gnd CMOSN w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.1944p ps=1.26u
+M1170 pg1_0/a_70_24# a1 pg1_0/p1 Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.3402p ps=2.34u
+M1171 pg1_0/p1 pg1_0/t1b pg1_0/aoi1_xp1 vdd CMOSP w=1.26u l=0.18u
++  ad=0.567p pd=3.42u as=0.3969p ps=1.89u
+M1172 pg1_0/g1b b1 vdd vdd CMOSP w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1173 pg1_0/a_106_99# a1 vdd vdd CMOSP w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1174 pg1_0/a_16_10# a1 pg1_0/g1b Gnd CMOSN w=1.89u l=0.18u
++  ad=0.5913p pd=2.52u as=1.0206p ps=4.86u
+M1175 gnd a1 pg1_0/t1b Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.8262p ps=4.14u
+M1176 gnd b1 pg1_0/a_70_24# Gnd CMOSN w=0.63u l=0.18u
++  ad=0.162p pd=1.26u as=0.1944p ps=1.26u
+M1177 pg1_0/p1b b1 pg1_0/a_106_99# vdd CMOSP w=1.26u l=0.18u
++  ad=0.3402p pd=1.89u as=0.3969p ps=1.89u
+M1178 gnd b1 pg1_0/a_16_10# Gnd CMOSN w=1.89u l=0.18u
++  ad=0.8505p pd=4.68u as=0.5913p ps=2.52u
+M1179 pg1_0/t1b b1 gnd Gnd CMOSN w=1.53u l=0.18u
++  ad=0.6885p pd=3.96u as=0.4779p ps=2.16u
+M1180 pg1_0/a_43_99# a1 vdd vdd CMOSP w=5.94u l=0.18u
++  ad=1.8711p pd=6.57u as=3.2076p ps=12.96u
+M1181 pg1_0/p1b a1 pg1_0/oai1_xn1 Gnd CMOSN w=0.63u l=0.18u
++  ad=0.1944p pd=1.26u as=0.3402p ps=2.34u
+M1182 vdd pg1_0/g1b pg1_0/p1b vdd CMOSP w=0.63u l=0.18u
++  ad=0.2835p pd=2.16u as=0.3402p ps=1.89u
+M1183 vdd a1 pg1_0/aoi1_xp1 vdd CMOSP w=1.26u l=0.18u
++  ad=0.3969p pd=1.89u as=0.6804p ps=3.6u
+M1184 vdd sum1_0/c1 sum1_0/x1_s1xp1 vdd CMOSP w=3.06u l=0.18u
++  ad=1.377p pd=7.02u as=0.9639p ps=3.69u
+M1185 s1 pg1_0/p1 sum1_0/a_16_14# Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.4779p ps=2.16u
+M1186 sum1_0/x1_cb sum1_0/c1 gnd Gnd CMOSN w=0.45u l=0.18u
++  ad=0.2025p pd=1.8u as=0.3807p ps=2.16u
+M1187 vdd sum1_0/c1 sum1_0/x1_cb vdd CMOSP w=0.99u l=0.18u
++  ad=0.8667p pd=3.69u as=0.5346p ps=3.06u
+M1188 sum1_0/a_34_14# pg1_0/p1b s1 Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.4779p ps=2.16u
+M1189 sum1_0/x1_s1xp1 pg1_0/p1 vdd vdd CMOSP w=3.06u l=0.18u
++  ad=0.9639p pd=3.69u as=0.8667p ps=3.69u
+M1190 gnd sum1_0/x1_cb sum1_0/a_34_14# Gnd CMOSN w=1.53u l=0.18u
++  ad=0.3807p pd=2.16u as=0.4779p ps=2.16u
+M1191 s1 pg1_0/p1b sum1_0/x1_s1xp1 vdd CMOSP w=3.06u l=0.18u
++  ad=0.9639p pd=3.69u as=0.9639p ps=3.69u
+M1192 sum1_0/x1_s1xp1 sum1_0/x1_cb s1 vdd CMOSP w=3.06u l=0.18u
++  ad=0.9639p pd=3.69u as=0.9639p ps=3.69u
+M1193 sum1_0/a_16_14# sum1_0/c1 gnd Gnd CMOSN w=1.53u l=0.18u
++  ad=0.4779p pd=2.16u as=0.8262p ps=4.14u
+C0 vdd pg3_0/aoi3_xp1 0.58617f
+C1 c4 pg3_0/g3b 0.09771f
+C2 carry_0/t3_2 gnd 0.17473f
+C3 carry_0/c1_xn1 pg0_0/g0b 0.00405f
+C4 carry_0/t1_0 carry_0/c3_xn1 0.0196f
+C5 carry_0/g1_0b carry_0/c2_xn1 0.0247f
+C6 carry_0/a_340_144# carry_0/g3_2 0
+C7 pg2_0/a_43_99# pg2_0/t2b 0.00119f
+C8 gnd pg1_0/a_70_24# 0
+C9 vdd pg1_0/p1 0.16487f
+C10 pg3_0/oai3_xn1 pg3_0/p3b 0.77979f
+C11 a3 pg3_0/t3b 0.04892f
+C12 b3 pg3_0/g3b 0.28767f
+C13 carry_0/g1_0b pg1_0/t1b 0.00987f
+C14 pg2_0/g2b carry_0/t2 0.72623f
+C15 pg2_0/t2b carry_0/g2 0.01808f
+C16 sum2_0/c2 pg1_0/p1b 0.02463f
+C17 sum1_0/c1 sum1_0/x1_cb 0.71449f
+C18 sum3_0/c3 pg1_0/g1b 0.01601f
+C19 vdd s0 0.05326f
+C20 pg2_0/p2 sum3_0/c3 0.00472f
+C21 carry_0/t1_0 carry_0/c2_xn1 0.01921f
+C22 sum2_0/x2_cb sum2_0/c2 0.71436f
+C23 sum1_0/x1_s1xp1 s1 0.96297f
+C24 vdd b1 0.08031f
+C25 pg3_0/a_106_99# pg3_0/p3b 0.0101f
+C26 pg3_0/oai3_xn1 pg3_0/g3b 0.16057f
+C27 carry_0/g1_0 pg1_0/p1b 0
+C28 carry_0/g32_xn1 pg3_0/t3b 0.01139f
+C29 carry_0/t1_0b pg1_0/g1b 0.01944f
+C30 carry_0/t1_0 pg1_0/t1b 0.019f
+C31 carry_0/g3_0b sum3_0/c3 0.00688f
+C32 pg2_0/a_16_10# gnd 0
+C33 pg2_0/t2b vdd 0.08603f
+C34 pg2_0/p2b carry_0/t1_0 0
+C35 pg2_0/t2b carry_0/t2_0b 0.03945f
+C36 c0 pg1_0/p1b 0.00449f
+C37 sum1_0/c1 pg1_0/p1 0.584f
+C38 sum2_0/c2 pg1_0/g1b 0.15467f
+C39 pg0_0/p0b gnd 0.00929f
+C40 pg0_0/p0 sum0_0/x0_cb 0.01812f
+C41 carry_0/g30_xp1 vdd 0.13787f
+C42 carry_0/g2_0b gnd 0.13315f
+C43 carry_0/g1_0 carry_0/g10_xn1 0.31465f
+C44 pg2_0/p2 sum2_0/c2 0.58406f
+C45 pg1_0/p1b s1 0.09357f
+C46 pg3_0/aoi3_xp1 pg3_0/t3b 0.38057f
+C47 carry_0/c0b pg1_0/p1b 0
+C48 sum1_0/c1 s0 0.01378f
+C49 carry_0/g1_0 pg1_0/g1b 3.532f
+C50 carry_0/c1_xn1 sum1_0/c1 0.4392f
+C51 carry_0/g10_xn1 c0 0.26988f
+C52 a2 vdd 0.08767f
+C53 pg2_0/p2 carry_0/g1_0 0.00114f
+C54 pg2_0/g2b carry_0/t1_0 0.02714f
+C55 sum2_0/a_16_17# s2 0
+C56 c0 pg1_0/g1b 0.42735f
+C57 pg0_0/t0b pg0_0/p0b 0.00125f
+C58 pg0_0/g0b gnd 0.04921f
+C59 carry_0/g3_2 vdd 0.25594f
+C60 carry_0/g2 gnd 0.09228f
+C61 pg2_0/p2 c0 0.00506f
+C62 carry_0/c0b carry_0/g10_xn1 0.15648f
+C63 carry_0/g1_0 carry_0/g3_0b 0.02323f
+C64 carry_0/t1_0 carry_0/t3_2 1.18118f
+C65 carry_0/t2 carry_0/g2_0b 0.04165f
+C66 vdd pg1_0/a_106_99# 0
+C67 pg3_0/aoi3_xp1 a3 0.01328f
+C68 carry_0/a_466_144# pg3_0/p3 0.00725f
+C69 carry_0/c0b pg1_0/g1b 0.03749f
+C70 carry_0/t3_0b sum3_0/c3 0
+C71 carry_0/g3_0b c0 0.04124f
+C72 pg2_0/p2 carry_0/c0b 0.00113f
+C73 pg3_0/g3b pg1_0/g1b 0.01413f
+C74 vdd gnd 1.05612f
+C75 b0 pg0_0/p0 0.02793f
+C76 a0 pg0_0/p0b 0.00639f
+C77 pg0_0/g0b pg0_0/t0b 0.28586f
+C78 pg2_0/p2 pg3_0/g3b 0
+C79 carry_0/a_304_144# vdd 0
+C80 carry_0/t2_0b gnd 0.04476f
+C81 pg2_0/t2b pg3_0/t3b 0.40968f
+C82 carry_0/a_466_144# c4 0
+C83 carry_0/c0b carry_0/g3_0b 0.16568f
+C84 carry_0/g2 carry_0/t2 0.40008f
+C85 gnd sum3_0/a_16_22# 0
+C86 carry_0/g30_xp1 pg3_0/t3b 0.0086f
+C87 sum1_0/c1 sum0_0/a_16_10# 0
+C88 carry_0/g3_0b pg3_0/g3b 0.08809f
+C89 pg2_0/aoi2_xp1 vdd 0.4699f
+C90 sum3_0/a_34_22# s3 0
+C91 pg0_0/a_16_10# gnd 0
+C92 pg0_0/oai0_xn1 pg0_0/p0 0.19766f
+C93 a0 pg0_0/g0b 1.07464f
+C94 vdd pg0_0/t0b 0.09172f
+C95 carry_0/t1_0 pg0_0/p0b 0.00419f
+C96 carry_0/t2 vdd 0.59705f
+C97 pg2_0/p2b carry_0/a_412_24# 0
+C98 carry_0/t1_0 carry_0/g2_0b 0.03812f
+C99 carry_0/t2_0b carry_0/t2 0.0246f
+C100 pg1_0/p1 sum1_0/x1_cb 0.01812f
+C101 sum1_0/c1 gnd 0.00539f
+C102 c0 sum0_0/x0_cb 0.71686f
+C103 carry_0/g3_2 pg3_0/t3b 0.03637f
+C104 carry_0/t3_0b c0 0.02489f
+C105 sum2_0/x2_cb sum2_0/x2_s1xp1 0.01273f
+C106 sum3_0/x3_cb s3 0.08313f
+C107 carry_0/a_250_14# pg1_0/p1 0
+C108 carry_0/c3_xn1 pg1_0/g1b 0.01302f
+C109 vdd a0 0.08645f
+C110 pg0_0/oai0_xn1 b0 0.21859f
+C111 carry_0/g1_0 pg0_0/p0 0.02772f
+C112 carry_0/g1_0b vdd 0.17313f
+C113 carry_0/c0b carry_0/t3_0b 0.47836f
+C114 carry_0/t1_0 carry_0/g2 0.49291f
+C115 carry_0/g1_0 carry_0/g20_xp1 0.01328f
+C116 gnd pg3_0/t3b 0.27663f
+C117 c0 pg0_0/p0 0.58873f
+C118 sum1_0/c1 pg0_0/t0b 0.24049f
+C119 carry_0/t3_0b pg3_0/g3b 0.16663f
+C120 carry_0/a_169_144# sum2_0/c2 0.00119f
+C121 pg2_0/p2 sum2_0/x2_s1xp1 0.00551f
+C122 pg2_0/p2b sum2_0/x2_cb 0.26268f
+C123 pg3_0/p3 s3 0.15834f
+C124 sum3_0/c3 sum3_0/x3_s1xp1 0.00468f
+C125 carry_0/g10_xn1 pg1_0/t1b 0.01194f
+C126 pg0_0/aoi0_xp1 pg0_0/g0b 0.00805f
+C127 pg0_0/a_43_99# pg0_0/t0b 0.00157f
+C128 carry_0/c0b pg0_0/p0 0
+C129 carry_0/t1_0 vdd 0.11825f
+C130 carry_0/t1_0 carry_0/t2_0b 0.41329f
+C131 b1 pg1_0/p1 0.02793f
+C132 a1 pg1_0/p1b 0.00636f
+C133 pg1_0/g1b pg1_0/t1b 0.29503f
+C134 vdd sum3_0/x3_cb 0.17095f
+C135 gnd a3 0.00306f
+C136 pg2_0/g2b pg1_0/p1b 0.00616f
+C137 pg2_0/t2b pg1_0/p1 0.00518f
+C138 pg2_0/p2b pg1_0/g1b 0.00451f
+C139 carry_0/c4g_xn1 gnd 0.34688f
+C140 carry_0/t3_0b carry_0/a_439_24# 0
+C141 carry_0/g3_2 carry_0/g32_xn1 0.56883f
+C142 carry_0/g1_0 sum3_0/c3 0.0102f
+C143 pg2_0/p2 pg2_0/p2b 0.25517f
+C144 gnd sum1_0/a_34_14# 0
+C145 sum3_0/c3 pg3_0/p3b 0.01832f
+C146 pg0_0/aoi0_xp1 vdd 0.25397f
+C147 c0 sum3_0/c3 0.01524f
+C148 carry_0/a_70_144# vdd 0
+C149 pg2_0/p2b carry_0/g3_0b 0.00312f
+C150 carry_0/a_106_144# carry_0/t1_0 0.0015f
+C151 carry_0/g1_0 carry_0/t1_0b 0.01912f
+C152 pg1_0/oai1_xn1 pg1_0/p1 0.20146f
+C153 a1 pg1_0/g1b 1.06795f
+C154 gnd pg3_0/a_70_14# 0
+C155 vdd pg3_0/p3 0.32787f
+C156 pg2_0/g2b pg1_0/g1b 0.31353f
+C157 carry_0/g32_xn1 gnd 0.11571f
+C158 carry_0/t1_0b c0 0.02552f
+C159 carry_0/c0b sum3_0/c3 0.08435f
+C160 carry_0/g1_0 sum2_0/c2 0.0098f
+C161 b2 pg2_0/p2b 0.0248f
+C162 pg2_0/g2b pg2_0/p2 0.1561f
+C163 gnd sum1_0/x1_cb 0.04391f
+C164 pg3_0/p3b sum3_0/x3_s1xp1 0.27642f
+C165 sum3_0/c3 pg3_0/g3b 0.01882f
+C166 carry_0/t3_2 pg1_0/g1b 0.04213f
+C167 c4 vdd 0.23526f
+C168 c0 sum2_0/c2 0.01541f
+C169 sum2_0/a_16_17# gnd 0
+C170 pg2_0/p2 carry_0/t3_2 0.0042f
+C171 carry_0/c0b carry_0/t1_0b 0.47874f
+C172 pg1_0/a_70_24# pg1_0/g1b 0
+C173 pg1_0/a_106_99# pg1_0/p1 0.00252f
+C174 pg1_0/oai1_xn1 b1 0.21859f
+C175 vdd b3 0.08056f
+C176 sum0_0/a_16_10# s0 0
+C177 carry_0/t1_0 pg3_0/t3b 0.01833f
+C178 carry_0/a_250_14# gnd 0
+C179 carry_0/c0b sum2_0/c2 0.08442f
+C180 carry_0/g1_0 c0 0.04281f
+C181 carry_0/t3_2 carry_0/g3_0b 0.73609f
+C182 pg2_0/oai2_xn1 pg2_0/p2b 0.72905f
+C183 a2 pg2_0/t2b 0.04894f
+C184 b2 pg2_0/g2b 0.28556f
+C185 gnd pg1_0/p1 0.04177f
+C186 carry_0/g2_0b pg1_0/p1b 0.00162f
+C187 pg2_0/t2b carry_0/g3_2 0.49368f
+C188 carry_0/c0b carry_0/g1_0 0.12311f
+C189 pg1_0/aoi1_xp1 pg1_0/g1b 0.00167f
+C190 pg1_0/a_43_99# pg1_0/t1b 0.00187f
+C191 gnd s0 0.04131f
+C192 carry_0/c1_xn1 gnd 0.14861f
+C193 carry_0/g1_0 pg3_0/g3b 0.01852f
+C194 carry_0/c0b c0 4.79246f
+C195 carry_0/a_376_144# carry_0/t3_2 0
+C196 carry_0/g3_2 carry_0/g30_xp1 0.00742f
+C197 pg2_0/a_106_99# pg2_0/p2b 0
+C198 pg2_0/oai2_xn1 pg2_0/g2b 0.16033f
+C199 pg0_0/p0 pg1_0/t1b 0.00552f
+C200 pg0_0/p0b pg1_0/g1b 0.00114f
+C201 vdd sum1_0/x1_s1xp1 0.58598f
+C202 gnd b1 0.00735f
+C203 pg3_0/t3b pg3_0/p3 0.59867f
+C204 pg3_0/g3b pg3_0/p3b 0.08417f
+C205 carry_0/t2 pg1_0/p1 0.00122f
+C206 carry_0/g2_0b pg1_0/g1b 0.04118f
+C207 c0 pg3_0/g3b 0.01382f
+C208 carry_0/c3_xn1 sum3_0/c3 0.38512f
+C209 pg2_0/t2b gnd 0.27913f
+C210 vdd pg3_0/a_106_99# 0
+C211 carry_0/g10_xn1 pg0_0/g0b 0.02682f
+C212 carry_0/c0b pg3_0/g3b 0.01884f
+C213 carry_0/c1_xn1 pg0_0/t0b 0.21133f
+C214 carry_0/t3_0b carry_0/t3_2 0.0227f
+C215 carry_0/t2_0b carry_0/a_277_10# 0
+C216 carry_0/t1_0 carry_0/g32_xn1 0.25556f
+C217 pg2_0/aoi2_xp1 pg2_0/t2b 0.32227f
+C218 vdd pg1_0/p1b 0.16735f
+C219 gnd pg1_0/oai1_xn1 0.05785f
+C220 a3 pg3_0/p3 0.03049f
+C221 b3 pg3_0/t3b 0.88541f
+C222 pg0_0/g0b pg1_0/g1b 0.38194f
+C223 carry_0/c4g_xn1 pg3_0/p3 0.00991f
+C224 carry_0/t2_0b pg1_0/p1b 0.04459f
+C225 carry_0/g2 pg1_0/g1b 0.02091f
+C226 sum2_0/x2_cb vdd 0.20422f
+C227 a2 gnd 0.00266f
+C228 pg2_0/t2b carry_0/t2 0.04871f
+C229 sum1_0/c1 sum1_0/x1_s1xp1 0.00605f
+C230 sum0_0/x0_cb sum0_0/x0_s1xp1 0.01394f
+C231 gnd sum0_0/a_16_10# 0
+C232 carry_0/c4g_xn1 c4 0.32182f
+C233 carry_0/g3_2 gnd 0
+C234 pg2_0/p2b sum3_0/c3 0.00472f
+C235 carry_0/t1_0b carry_0/c2_xn1 0.12493f
+C236 carry_0/g1_0 carry_0/c3_xn1 0.23789f
+C237 sum2_0/x2_s1xp1 sum2_0/c2 0.00549f
+C238 pg2_0/aoi2_xp1 a2 0.01272f
+C239 sum1_0/a_16_14# s1 0
+C240 pg3_0/a_70_14# pg3_0/p3 0
+C241 a3 b3 1.923f
+C242 vdd pg1_0/g1b 0.59981f
+C243 carry_0/t1_0b pg1_0/t1b 0.00159f
+C244 carry_0/t1_0 pg1_0/p1 0
+C245 carry_0/a_412_24# pg3_0/t3b 0.00188f
+C246 carry_0/t2_0b pg1_0/g1b 0.03538f
+C247 carry_0/c2_xn1 sum2_0/c2 0.38512f
+C248 carry_0/c3_xn1 c0 0.03224f
+C249 pg2_0/a_70_17# gnd 0
+C250 pg2_0/p2 vdd 0.27399f
+C251 sum1_0/c1 pg1_0/p1b 0.01832f
+C252 pg0_0/p0 sum0_0/x0_s1xp1 0.00672f
+C253 pg0_0/p0b sum0_0/x0_cb 0.26268f
+C254 carry_0/g3_0b vdd 0.03164f
+C255 pg2_0/g2b sum3_0/c3 0.01062f
+C256 carry_0/g1_0 carry_0/c2_xn1 0.23789f
+C257 carry_0/c0b carry_0/c3_xn1 0.1685f
+C258 pg2_0/p2b sum2_0/c2 0.01832f
+C259 pg3_0/oai3_xn1 a3 0.021f
+C260 pg3_0/a_16_14# pg3_0/g3b 0
+C261 pg3_0/aoi3_xp1 pg3_0/p3 0.63772f
+C262 carry_0/g1_0 pg1_0/t1b 0.0267f
+C263 carry_0/t3_2 sum3_0/c3 0.00679f
+C264 carry_0/c2_xn1 c0 0.03258f
+C265 b2 vdd 0.08031f
+C266 pg2_0/p2b carry_0/g1_0 0
+C267 pg2_0/t2b carry_0/t1_0 0.02754f
+C268 sum2_0/a_34_17# s2 0
+C269 c0 pg1_0/t1b 0.02305f
+C270 pg0_0/p0 pg0_0/p0b 0.2539f
+C271 pg0_0/t0b gnd 0.32622f
+C272 carry_0/a_376_144# vdd 0
+C273 carry_0/t2 gnd 0.28434f
+C274 pg2_0/p2b c0 0.00494f
+C275 pg2_0/g2b sum2_0/c2 0
+C276 carry_0/c0b carry_0/c2_xn1 0.16883f
+C277 carry_0/g20_xp1 carry_0/g2_0b 1.07766f
+C278 pg3_0/aoi3_xp1 b3 0.01328f
+C279 carry_0/c0b pg1_0/t1b 0.01965f
+C280 pg2_0/p2b carry_0/c0b 0.00113f
+C281 pg2_0/g2b carry_0/g1_0 0.02745f
+C282 sum2_0/x2_cb s2 0.08465f
+C283 pg3_0/t3b pg1_0/g1b 0.02236f
+C284 vdd sum0_0/x0_cb 0.10546f
+C285 a0 gnd 0.00283f
+C286 b0 pg0_0/p0b 0.02353f
+C287 pg0_0/g0b pg0_0/p0 0.17887f
+C288 pg2_0/p2b pg3_0/g3b 0
+C289 pg2_0/p2 pg3_0/t3b 0.00497f
+C290 carry_0/g1_0b gnd 0.06717f
+C291 carry_0/t3_0b vdd 0.21426f
+C292 carry_0/t1_0 carry_0/g3_2 0.01797f
+C293 carry_0/g2 carry_0/g20_xp1 0.00604f
+C294 carry_0/g1_0 carry_0/t3_2 0.4181f
+C295 pg2_0/g2b c0 0.02237f
+C296 sum1_0/x1_cb sum1_0/x1_s1xp1 0.0133f
+C297 vdd pg1_0/a_43_99# 0.00165f
+C298 gnd sum3_0/a_34_22# 0
+C299 carry_0/g3_0b pg3_0/t3b 0.01274f
+C300 sum1_0/c1 sum0_0/a_34_10# 0
+C301 carry_0/g2_0b sum3_0/c3 0.12311f
+C302 carry_0/t3_2 c0 0.04992f
+C303 pg2_0/a_106_99# vdd 0
+C304 pg2_0/g2b carry_0/c0b 0.0276f
+C305 pg2_0/p2 s2 0.15882f
+C306 carry_0/c4g_xn1 pg1_0/g1b 0.00766f
+C307 sum3_0/c3 s3 0.02297f
+C308 pg0_0/a_70_24# gnd 0
+C309 vdd pg0_0/p0 0.16488f
+C310 pg0_0/oai0_xn1 pg0_0/p0b 0.61457f
+C311 a0 pg0_0/t0b 0.0487f
+C312 b0 pg0_0/g0b 0.28645f
+C313 carry_0/g20_xp1 vdd 0.30493f
+C314 carry_0/t1_0 gnd 0.22142f
+C315 pg2_0/g2b pg3_0/g3b 0.38194f
+C316 carry_0/c0b carry_0/t3_2 0.1748f
+C317 carry_0/t2_0b carry_0/g20_xp1 0.26731f
+C318 pg1_0/p1 sum1_0/x1_s1xp1 0.00608f
+C319 pg1_0/p1b sum1_0/x1_cb 0.26268f
+C320 gnd sum3_0/x3_cb 0.06757f
+C321 sum1_0/c1 sum0_0/x0_cb 0.00782f
+C322 c0 sum0_0/x0_s1xp1 0.0067f
+C323 carry_0/t3_2 pg3_0/g3b 0.09739f
+C324 carry_0/g3_0b carry_0/c4g_xn1 0.00447f
+C325 sum3_0/x3_s1xp1 s3 0.68197f
+C326 carry_0/g32_xn1 pg1_0/g1b 0.01273f
+C327 pg0_0/a_106_99# pg0_0/p0b 0.00416f
+C328 pg0_0/oai0_xn1 pg0_0/g0b 0.15977f
+C329 vdd b0 0.07926f
+C330 carry_0/g1_0 pg0_0/p0b 0.00114f
+C331 carry_0/a_169_144# vdd 0
+C332 carry_0/t1_0 pg0_0/t0b 0.21736f
+C333 carry_0/g1_0 carry_0/g2_0b 0.04508f
+C334 carry_0/t1_0 carry_0/t2 0.41885f
+C335 pg1_0/p1 pg1_0/p1b 0.26764f
+C336 gnd pg3_0/p3 0.06917f
+C337 sum1_0/c1 pg0_0/p0 0.00474f
+C338 c0 pg0_0/p0b 0.02349f
+C339 sum3_0/c3 vdd 0.41038f
+C340 carry_0/g2 sum2_0/c2 0.38108f
+C341 carry_0/g2_0b c0 0.04118f
+C342 pg2_0/p2b sum2_0/x2_s1xp1 0.27723f
+C343 pg3_0/p3b s3 0.09155f
+C344 sum3_0/c3 sum3_0/a_16_22# 0
+C345 pg0_0/aoi0_xp1 pg0_0/t0b 0.214f
+C346 carry_0/c0b pg0_0/p0b 0.00113f
+C347 carry_0/t1_0b vdd 0.48079f
+C348 carry_0/g1_0 pg0_0/g0b 0.01722f
+C349 pg2_0/t2b carry_0/a_277_10# 0.00564f
+C350 carry_0/c0b carry_0/g2_0b 0.55533f
+C351 carry_0/g1_0 carry_0/g2 0.01874f
+C352 carry_0/t1_0 carry_0/g1_0b 1.30382f
+C353 pg2_0/g2b carry_0/c3_xn1 0.25633f
+C354 b1 pg1_0/p1b 0.02347f
+C355 pg1_0/g1b pg1_0/p1 0.17137f
+C356 vdd sum3_0/x3_s1xp1 0.30361f
+C357 gnd b3 0.00726f
+C358 pg2_0/t2b pg1_0/p1b 0.31486f
+C359 c0 pg0_0/g0b 0.02273f
+C360 sum2_0/c2 vdd 0.41825f
+C361 carry_0/g2 c0 0.02493f
+C362 carry_0/t3_0b carry_0/c4g_xn1 0.01172f
+C363 pg0_0/a_106_99# vdd 0
+C364 pg0_0/aoi0_xp1 a0 0.01167f
+C365 carry_0/g1_0 vdd 0.41865f
+C366 carry_0/c0b pg0_0/g0b 0.39949f
+C367 carry_0/c0b carry_0/g2 0.08731f
+C368 carry_0/g1_0 carry_0/t2_0b 0.02853f
+C369 pg1_0/oai1_xn1 pg1_0/p1b 0.61367f
+C370 a1 pg1_0/t1b 0.04941f
+C371 b1 pg1_0/g1b 0.28758f
+C372 vdd pg3_0/p3b 0.33217f
+C373 gnd pg3_0/oai3_xn1 0.1405f
+C374 pg2_0/g2b pg1_0/t1b 0.00161f
+C375 carry_0/a_412_24# gnd 0
+C376 pg2_0/t2b pg1_0/g1b 1.74706f
+C377 c0 vdd 0.0733f
+C378 carry_0/t2_0b c0 0.02477f
+C379 pg2_0/t2b pg2_0/p2 0.59731f
+C380 pg2_0/g2b pg2_0/p2b 0.08463f
+C381 vdd s1 0.0117f
+C382 sum3_0/c3 pg3_0/t3b 0
+C383 carry_0/g30_xp1 pg1_0/g1b 0.01952f
+C384 carry_0/c0b vdd 0.23014f
+C385 sum2_0/a_34_17# gnd 0
+C386 pg2_0/p2b carry_0/t3_2 0.00119f
+C387 carry_0/c0b carry_0/t2_0b 0.47836f
+C388 pg1_0/a_106_99# pg1_0/p1b 0
+C389 pg1_0/oai1_xn1 pg1_0/g1b 0.15977f
+C390 sum0_0/a_34_10# s0 0
+C391 vdd pg3_0/g3b 0.50658f
+C392 pg2_0/g2b a1 0.00157f
+C393 carry_0/a_277_10# gnd 0
+C394 carry_0/g30_xp1 carry_0/g3_0b 0.91334f
+C395 carry_0/g2_0b carry_0/c3_xn1 0.00509f
+C396 a2 pg2_0/p2 0.03664f
+C397 b2 pg2_0/t2b 0.88582f
+C398 gnd pg1_0/p1b 0.00322f
+C399 pg3_0/p3 sum3_0/x3_cb 0.02217f
+C400 carry_0/g3_2 pg1_0/g1b 0.02527f
+C401 c0 sum1_0/c1 0.01584f
+C402 sum2_0/x2_cb gnd 0.09277f
+C403 pg2_0/p2 carry_0/g3_2 0.00113f
+C404 pg1_0/aoi1_xp1 pg1_0/t1b 0.214f
+C405 sum1_0/c1 s1 0.0228f
+C406 sum0_0/x0_cb s0 0.08515f
+C407 carry_0/g10_xn1 gnd 0.6029f
+C408 carry_0/g1_0 pg3_0/t3b 0.44278f
+C409 carry_0/c0b sum1_0/c1 0.09208f
+C410 carry_0/g3_2 carry_0/g3_0b 0.01108f
+C411 s2 sum2_0/c2 0.02314f
+C412 pg2_0/a_70_17# pg2_0/p2 0
+C413 a2 b2 1.92391f
+C414 pg0_0/p0b pg1_0/t1b 0.00499f
+C415 gnd pg1_0/g1b 0.05074f
+C416 carry_0/g20_xp1 pg1_0/p1 0.01251f
+C417 carry_0/t2 pg1_0/p1b 0
+C418 c0 pg3_0/t3b 0.02282f
+C419 carry_0/g32_xn1 sum3_0/c3 0.28005f
+C420 pg2_0/p2 gnd 0.06609f
+C421 pg1_0/aoi1_xp1 a1 0.01167f
+C422 c4 pg3_0/p3 0.00842f
+C423 pg0_0/p0 s0 0.15928f
+C424 pg2_0/g2b pg1_0/aoi1_xp1 0.00506f
+C425 carry_0/c0b pg3_0/t3b 0.01965f
+C426 carry_0/g3_0b gnd 0.03304f
+C427 carry_0/g10_xn1 pg0_0/t0b 0.23789f
+C428 carry_0/t3_0b carry_0/g30_xp1 0.26968f
+C429 carry_0/t2_0b carry_0/c3_xn1 0.08154f
+C430 pg2_0/oai2_xn1 a2 0.02076f
+C431 pg2_0/a_16_10# pg2_0/g2b 0
+C432 pg2_0/aoi2_xp1 pg2_0/p2 0.56781f
+C433 b3 pg3_0/p3 0.02793f
+C434 a3 pg3_0/p3b 0.00721f
+C435 pg3_0/g3b pg3_0/t3b 0.29677f
+C436 pg0_0/t0b pg1_0/g1b 0.01852f
+C437 pg0_0/g0b pg1_0/t1b 0.55427f
+C438 carry_0/t2 pg1_0/g1b 0.0349f
+C439 carry_0/c4g_xn1 c0 0.27006f
+C440 sum2_0/x2_s1xp1 vdd 0.46971f
+C441 b2 gnd 0.00695f
+C442 pg2_0/g2b carry_0/g2_0b 0.02918f
+C443 vdd pg3_0/a_43_99# 0
+C444 gnd sum0_0/a_34_10# 0
+C445 carry_0/c0b carry_0/c4g_xn1 0.08986f
+C446 pg2_0/aoi2_xp1 b2 0.01272f
+C447 sum1_0/a_34_14# s1 0
+C448 gnd pg1_0/a_16_10# 0
+C449 pg3_0/oai3_xn1 pg3_0/p3 0.23068f
+C450 a3 pg3_0/g3b 1.07765f
+C451 vdd pg1_0/t1b 0.13573f
+C452 carry_0/t1_0 pg1_0/p1b 0
+C453 carry_0/c4g_xn1 pg3_0/g3b 0
+C454 carry_0/g1_0b pg1_0/g1b 0.01874f
+C455 carry_0/g32_xn1 c0 0.03106f
+C456 pg2_0/p2b vdd 0.27643f
+C457 pg2_0/oai2_xn1 gnd 0.11571f
+C458 pg2_0/g2b carry_0/g2 0.46211f
+C459 sum2_0/c2 pg1_0/p1 0.00472f
+C460 pg0_0/p0b sum0_0/x0_s1xp1 0.27844f
+C461 gnd sum0_0/x0_cb 0.03653f
+C462 carry_0/a_466_144# vdd 0
+C463 carry_0/t3_0b gnd 0.00186f
+C464 carry_0/c0b carry_0/g32_xn1 0.15571f
+C465 pg2_0/t2b sum3_0/c3 0.01011f
+C466 sum1_0/x1_cb s1 0.08451f
+C467 pg3_0/a_70_14# pg3_0/g3b 0
+C468 vdd a1 0.08855f
+C469 pg3_0/oai3_xn1 b3 0.2194f
+C470 carry_0/g1_0 pg1_0/p1 0.00113f
+C471 carry_0/t1_0 pg1_0/g1b 0.09842f
+C472 carry_0/g32_xn1 pg3_0/g3b 0.00447f
+C473 carry_0/g30_xp1 sum3_0/c3 0.02066f
+C474 pg2_0/g2b vdd 0.61536f
+C475 pg2_0/p2 carry_0/t1_0 0
+C476 pg2_0/g2b carry_0/t2_0b 0.40992f
+C477 c0 pg1_0/p1 0.00506f
+C478 pg0_0/p0 gnd 0.03689f
+C479 carry_0/t3_2 vdd 0.27369f
+C480 carry_0/t1_0 carry_0/g3_0b 0.02841f
+C481 pg1_0/p1 s1 0.15899f
+C482 pg3_0/aoi3_xp1 pg3_0/g3b 0.00174f
+C483 pg3_0/a_43_99# pg3_0/t3b 0.00119f
+C484 carry_0/c0b pg1_0/p1 0.00114f
+C485 c0 s0 0.0228f
+C486 carry_0/g3_2 sum3_0/c3 0.00824f
+C487 carry_0/c1_xn1 c0 0.26922f
+C488 pg2_0/t2b carry_0/g1_0 0.02847f
+C489 sum2_0/x2_s1xp1 s2 0.84734f
+C490 pg3_0/p3 pg1_0/g1b 0.06937f
+C491 vdd sum0_0/x0_s1xp1 0.80134f
+C492 b0 gnd 0.00654f
+C493 pg0_0/t0b pg0_0/p0 0.56499f
+C494 pg0_0/g0b pg0_0/p0b 0.0826f
+C495 pg2_0/p2b pg3_0/t3b 0.28165f
+C496 carry_0/a_340_144# vdd 0
+C497 pg2_0/t2b c0 0.02302f
+C498 carry_0/c0b carry_0/c1_xn1 0.16708f
+C499 carry_0/g1_0 carry_0/g30_xp1 0.21952f
+C500 carry_0/t2 carry_0/g20_xp1 0.01328f
+C501 carry_0/g2 carry_0/g2_0b 0.02085f
+C502 vdd pg1_0/aoi1_xp1 0.25397f
+C503 c4 pg1_0/g1b 0.01727f
+C504 carry_0/g3_0b pg3_0/p3 0.00158f
+C505 sum3_0/c3 gnd 0.04894f
+C506 carry_0/a_304_144# sum3_0/c3 0.00119f
+C507 pg2_0/t2b carry_0/c0b 0.02859f
+C508 pg2_0/p2b s2 0.09276f
+C509 vdd pg0_0/p0b 0.16262f
+C510 pg0_0/oai0_xn1 gnd 0.05785f
+C511 a0 pg0_0/p0 0.02969f
+C512 b0 pg0_0/t0b 0.88567f
+C513 pg2_0/t2b pg3_0/g3b 0.0182f
+C514 pg2_0/g2b pg3_0/t3b 0.553f
+C515 carry_0/g2_0b vdd 0.03301f
+C516 carry_0/t1_0b gnd 0.21813f
+C517 carry_0/g3_0b c4 0.12877f
+C518 carry_0/t1_0 carry_0/t3_0b 0.02102f
+C519 carry_0/g1_0 carry_0/g3_2 0.01906f
+C520 carry_0/t2_0b carry_0/g2_0b 0.47497f
+C521 pg1_0/p1b sum1_0/x1_s1xp1 0.2778f
+C522 vdd s3 0.01101f
+C523 c0 sum0_0/a_16_10# 0
+C524 carry_0/g30_xp1 pg3_0/g3b 0.15641f
+C525 carry_0/t3_2 pg3_0/t3b 0.0191f
+C526 sum2_0/c2 gnd 0.04611f
+C527 carry_0/g3_2 c0 0.02418f
+C528 pg2_0/a_43_99# vdd 0
+C529 sum3_0/a_16_22# s3 0
+C530 pg0_0/a_70_24# pg0_0/p0 0
+C531 a0 b0 1.92283f
+C532 vdd pg0_0/g0b 0.61343f
+C533 carry_0/a_106_144# pg0_0/p0b 0.01424f
+C534 carry_0/g1_0 gnd 0.04312f
+C535 carry_0/g2 vdd 0.38083f
+C536 carry_0/c0b carry_0/g3_2 0.08692f
+C537 gnd pg3_0/p3b 0.00136f
+C538 carry_0/t3_0b pg3_0/p3 0.00167f
+C539 sum1_0/c1 pg0_0/p0b 0.00517f
+C540 carry_0/g3_2 pg3_0/g3b 0.53913f
+C541 c0 gnd 0.01276f
+C542 carry_0/t2 sum2_0/c2 0.0011f
+C543 carry_0/g3_0b carry_0/a_412_24# 0
+C544 pg0_0/oai0_xn1 a0 0.02019f
+C545 pg0_0/a_16_10# pg0_0/g0b 0
+C546 pg0_0/aoi0_xp1 pg0_0/p0 0.46848f
+C547 carry_0/a_70_144# pg0_0/p0 0
+C548 carry_0/t2_0b vdd 0.56651f
+C549 carry_0/c0b gnd 0.07492f
+C550 carry_0/g1_0 pg0_0/t0b 0.01944f
+C551 carry_0/t3_0b c4 0.00854f
+C552 carry_0/g1_0 carry_0/t2 1.08743f
+C553 carry_0/t1_0b carry_0/g1_0b 0.30772f
+C554 pg2_0/g2b carry_0/g32_xn1 0.20806f
+C555 pg1_0/t1b pg1_0/p1 0.56207f
+C556 pg1_0/g1b pg1_0/p1b 0.08796f
+C557 gnd pg3_0/g3b 0.00608f
+C558 c0 pg0_0/t0b 0.0226f
+C559 sum1_0/c1 pg0_0/g0b 0.01921f
+C560 carry_0/g1_0b sum2_0/c2 0.01889f
+C561 carry_0/t2 c0 0.03409f
+C562 carry_0/t1_0 sum3_0/c3 0.00941f
+C563 pg2_0/p2 sum2_0/x2_cb 0.01812f
+C564 sum3_0/c3 sum3_0/x3_cb 0.72071f
+C565 carry_0/g10_xn1 pg1_0/g1b 0.00502f
+C566 pg0_0/aoi0_xp1 b0 0.01167f
+C567 carry_0/c0b pg0_0/t0b 0.41755f
+C568 carry_0/a_106_144# vdd 0.00136f
+C569 carry_0/c0b carry_0/t2 0.09675f
+C570 carry_0/t1_0 carry_0/t1_0b 0.03463f
+C571 carry_0/g1_0 carry_0/g1_0b 0.03376f
+C572 a1 pg1_0/p1 0.0324f
+C573 b1 pg1_0/t1b 0.88804f
+C574 pg2_0/g2b pg1_0/p1 0.00955f
+C575 pg2_0/p2 pg1_0/g1b 0.00574f
+C576 carry_0/a_439_24# gnd 0
+C577 sum1_0/c1 vdd 0.21038f
+C578 carry_0/t1_0 sum2_0/c2 0.00934f
+C579 carry_0/g1_0b c0 0.02493f
+C580 gnd sum1_0/a_16_14# 0
+C581 sum3_0/x3_cb sum3_0/x3_s1xp1 0.01192f
+C582 sum3_0/c3 pg3_0/p3 0.59378f
+C583 carry_0/g3_0b pg1_0/g1b 0.03297f
+C584 pg0_0/a_43_99# vdd 0.0012f
+C585 carry_0/a_34_144# vdd 0
+C586 pg2_0/p2b carry_0/g30_xp1 0.02173f
+C587 carry_0/g1_0 carry_0/t1_0 0.30416f
+C588 carry_0/c0b carry_0/g1_0b 0.4769f
+C589 pg1_0/a_70_24# pg1_0/p1 0
+C590 a1 b1 1.92341f
+C591 gnd pg3_0/a_16_14# 0
+C592 vdd pg3_0/t3b 0.08819f
+C593 pg2_0/g2b b1 0.00491f
+C594 carry_0/c3_xn1 gnd 0.6029f
+C595 carry_0/t1_0 c0 3.69063f
+C596 b2 pg2_0/p2 0.02791f
+C597 pg2_0/g2b pg2_0/t2b 0.28304f
+C598 a2 pg2_0/p2b 0.00692f
+C599 pg3_0/p3 sum3_0/x3_s1xp1 0.0047f
+C600 pg3_0/p3b sum3_0/x3_cb 0.26268f
+C601 s2 vdd 0.01141f
+C602 pg2_0/p2 carry_0/a_376_144# 0.00725f
+C603 pg2_0/p2b carry_0/g3_2 0
+C604 carry_0/a_70_144# carry_0/g1_0 0.00119f
+C605 carry_0/c0b carry_0/t1_0 0.20187f
+C606 pg2_0/t2b carry_0/t3_2 0.01838f
+C607 pg1_0/oai1_xn1 a1 0.02019f
+C608 pg1_0/a_16_10# pg1_0/g1b 0
+C609 pg1_0/aoi1_xp1 pg1_0/p1 0.46037f
+C610 vdd a3 0.08847f
+C611 sum0_0/x0_s1xp1 s0 1.09517f
+C612 pg2_0/g2b pg1_0/oai1_xn1 0.01254f
+C613 carry_0/t1_0 pg3_0/g3b 0.01884f
+C614 carry_0/c2_xn1 gnd 0.6029f
+C615 carry_0/a_34_144# sum1_0/c1 0
+C616 carry_0/g2_0b carry_0/a_250_14# 0
+C617 carry_0/t3_2 carry_0/g30_xp1 0.01146f
+C618 pg2_0/oai2_xn1 pg2_0/p2 0.22655f
+C619 a2 pg2_0/g2b 1.06689f
+C620 pg3_0/p3 pg3_0/p3b 0.2539f
+C621 gnd pg1_0/t1b 0.43428f
+C622 c0 pg3_0/p3 0.00518f
+C623 carry_0/g2_0b pg1_0/p1 0.00427f
+C624 carry_0/g20_xp1 pg1_0/p1b 0
+C625 carry_0/t3_0b pg1_0/g1b 0.5127f
+C626 pg2_0/p2b gnd 0.00823f
+C627 pg2_0/g2b carry_0/g3_2 0.02523f
+C628 pg1_0/aoi1_xp1 b1 0.01167f
+C629 pg0_0/p0b s0 0.09454f
+C630 carry_0/g10_xn1 pg0_0/p0 0.0149f
+C631 carry_0/c0b pg3_0/p3 0
+C632 c0 c4 0.02936f
+C633 carry_0/t3_0b carry_0/g3_0b 0.64594f
+C634 carry_0/g3_2 carry_0/t3_2 0.40038f
+C635 pg2_0/a_106_99# pg2_0/p2 0
+C636 pg2_0/oai2_xn1 b2 0.21916f
+C637 pg0_0/p0 pg1_0/g1b 0
+C638 vdd sum1_0/x1_cb 0.12105f
+C639 gnd a1 0.00363f
+C640 b3 pg3_0/p3b 0.02618f
+C641 pg3_0/g3b pg3_0/p3 0.36714f
+C642 pg0_0/t0b pg1_0/t1b 0.83378f
+C643 carry_0/g2 pg1_0/p1 0
+C644 pg2_0/g2b gnd 0.0465f
+C645 pg2_0/t2b carry_0/g2_0b 0.99393f
+C646 s1 0 0.53431f
+C647 sum1_0/x1_s1xp1 0 0.29934f ; **FLOATING
+C648 sum1_0/x1_cb 0 1.17526f ; **FLOATING
+C649 pg1_0/p1b 0 0.70929f
+C650 pg1_0/p1 0 1.32092f
+C651 pg1_0/t1b 0 2.58048f
+C652 pg1_0/g1b 0 3.40929f
+C653 b1 0 1.25206f
+C654 a1 0 1.48937f
+C655 pg1_0/oai1_xn1 0 0.26011f ; **FLOATING
+C656 pg1_0/aoi1_xp1 0 0.12668f ; **FLOATING
+C657 s3 0 0.52004f
+C658 sum3_0/x3_s1xp1 0 0.29934f ; **FLOATING
+C659 sum3_0/x3_cb 0 1.18006f ; **FLOATING
+C660 pg3_0/p3b 0 0.95536f
+C661 pg3_0/p3 0 1.37736f
+C662 pg3_0/t3b 0 2.39399f
+C663 pg3_0/g3b 0 3.06732f
+C664 b3 0 1.26704f
+C665 a3 0 1.50536f
+C666 pg3_0/oai3_xn1 0 0.2662f ; **FLOATING
+C667 pg3_0/aoi3_xp1 0 0.12668f ; **FLOATING
+C668 s0 0 0.5345f
+C669 sum0_0/x0_s1xp1 0 0.29158f ; **FLOATING
+C670 sum0_0/x0_cb 0 1.1724f ; **FLOATING
+C671 gnd 0 11.03769f
+C672 pg0_0/p0b 0 0.93311f
+C673 pg0_0/p0 0 1.296f
+C674 pg0_0/t0b 0 2.56762f
+C675 pg0_0/g0b 0 3.02868f
+C676 b0 0 1.25073f
+C677 a0 0 1.48929f
+C678 vdd 0 0.12472p
+C679 pg0_0/oai0_xn1 0 0.26011f ; **FLOATING
+C680 pg0_0/aoi0_xp1 0 0.12668f ; **FLOATING
+C681 c4 0 1.24182f
+C682 sum3_0/c3 0 1.76273f
+C683 sum2_0/c2 0 1.57601f
+C684 sum1_0/c1 0 1.91882f
+C685 c0 0 2.82472f
+C686 carry_0/c4g_xn1 0 0.58737f ; **FLOATING
+C687 carry_0/g32_xn1 0 0.24536f ; **FLOATING
+C688 carry_0/c3_xn1 0 0.85955f ; **FLOATING
+C689 carry_0/c2_xn1 0 1.01158f ; **FLOATING
+C690 carry_0/g10_xn1 0 0.53627f ; **FLOATING
+C691 carry_0/c1_xn1 0 0.35836f ; **FLOATING
+C692 carry_0/g3_0b 0 1.26841f ; **FLOATING
+C693 carry_0/g30_xp1 0 0.33261f ; **FLOATING
+C694 carry_0/t3_2 0 2.30545f ; **FLOATING
+C695 carry_0/g3_2 0 1.42391f ; **FLOATING
+C696 carry_0/t3_0b 0 1.57201f ; **FLOATING
+C697 carry_0/g2_0b 0 2.19688f ; **FLOATING
+C698 carry_0/g20_xp1 0 0.0415f ; **FLOATING
+C699 carry_0/t2 0 2.0335f ; **FLOATING
+C700 carry_0/g2 0 1.34427f ; **FLOATING
+C701 carry_0/g1_0b 0 1.26241f ; **FLOATING
+C702 carry_0/t2_0b 0 1.91927f ; **FLOATING
+C703 carry_0/t1_0b 0 1.81239f ; **FLOATING
+C704 carry_0/t1_0 0 3.12995f ; **FLOATING
+C705 carry_0/g1_0 0 3.31646f ; **FLOATING
+C706 carry_0/c0b 0 3.54166f ; **FLOATING
+C707 s2 0 0.53065f
+C708 sum2_0/x2_s1xp1 0 0.29934f ; **FLOATING
+C709 sum2_0/x2_cb 0 1.1908f ; **FLOATING
+C710 pg2_0/p2b 0 0.91688f
+C711 pg2_0/p2 0 1.24225f
+C712 pg2_0/t2b 0 2.80128f
+C713 pg2_0/g2b 0 3.45488f
+C714 b2 0 1.26795f
+C715 a2 0 1.50765f
+C716 pg2_0/oai2_xn1 0 0.26418f ; **FLOATING
+C717 pg2_0/aoi2_xp1 0 0.12668f ; **FLOATING
+.ends
+
+.subckt post_scale_C4_aoi22_0p85_post a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 c4 vdd gnd
+X0 a0 a1 a2 a3 b0 b1 b2 b3 c0 c4 s0 s1 s2 s3 vdd gnd top_scale_C4_aoi22_0p85
+.ends
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Va0 src_a0 gnd PWL(
++ 0.00000e+00 1.800 3.64000e-07 1.800 3.64020e-07 0.000 4.82000e-07 0.000
++ )
+Xs_a0 src_a0 drv_a0 vdd gnd tb_x1
+Xd_a0 drv_a0 a0 vdd gnd tb_x2
+Va1 src_a1 gnd PWL(
++ 0.00000e+00 1.800 4.82000e-07 1.800
++ )
+Xs_a1 src_a1 drv_a1 vdd gnd tb_x1
+Xd_a1 drv_a1 a1 vdd gnd tb_x2
+Va2 src_a2 gnd PWL(
++ 0.00000e+00 1.800 3.66000e-07 1.800 3.66020e-07 0.000 3.68000e-07 0.000 3.68020e-07 1.800 3.72000e-07 1.800
++ 3.72020e-07 0.000 3.74000e-07 0.000 3.74020e-07 1.800 3.80000e-07 1.800 3.80020e-07 0.000 3.82000e-07 0.000
++ 3.82020e-07 1.800 3.86000e-07 1.800 3.86020e-07 0.000 3.88000e-07 0.000 3.88020e-07 1.800 3.96000e-07 1.800
++ 3.96020e-07 0.000 3.98000e-07 0.000 3.98020e-07 1.800 4.02000e-07 1.800 4.02020e-07 0.000 4.04000e-07 0.000
++ 4.04020e-07 1.800 4.10000e-07 1.800 4.10020e-07 0.000 4.12000e-07 0.000 4.12020e-07 1.800 4.16000e-07 1.800
++ 4.16020e-07 0.000 4.18000e-07 0.000 4.18020e-07 1.800 4.28000e-07 1.800 4.28020e-07 0.000 4.30000e-07 0.000
++ 4.30020e-07 1.800 4.34000e-07 1.800 4.34020e-07 0.000 4.36000e-07 0.000 4.36020e-07 1.800 4.42000e-07 1.800
++ 4.42020e-07 0.000 4.44000e-07 0.000 4.44020e-07 1.800 4.48000e-07 1.800 4.48020e-07 0.000 4.50000e-07 0.000
++ 4.50020e-07 1.800 4.58000e-07 1.800 4.58020e-07 0.000 4.60000e-07 0.000 4.60020e-07 1.800 4.64000e-07 1.800
++ 4.64020e-07 0.000 4.66000e-07 0.000 4.66020e-07 1.800 4.72000e-07 1.800 4.72020e-07 0.000 4.74000e-07 0.000
++ 4.74020e-07 1.800 4.78000e-07 1.800 4.78020e-07 0.000 4.80000e-07 0.000 4.80020e-07 1.800 4.82000e-07 1.800
++ )
+Xs_a2 src_a2 drv_a2 vdd gnd tb_x1
+Xd_a2 drv_a2 a2 vdd gnd tb_x2
+Va3 src_a3 gnd PWL(
++ 0.00000e+00 0.000 1.56000e-07 0.000 1.56020e-07 1.800 3.70000e-07 1.800 3.70020e-07 0.000 3.76000e-07 0.000
++ 3.76020e-07 1.800 3.84000e-07 1.800 3.84020e-07 0.000 3.90000e-07 0.000 3.90020e-07 1.800 4.00000e-07 1.800
++ 4.00020e-07 0.000 4.06000e-07 0.000 4.06020e-07 1.800 4.14000e-07 1.800 4.14020e-07 0.000 4.20000e-07 0.000
++ 4.20020e-07 1.800 4.32000e-07 1.800 4.32020e-07 0.000 4.38000e-07 0.000 4.38020e-07 1.800 4.46000e-07 1.800
++ 4.46020e-07 0.000 4.52000e-07 0.000 4.52020e-07 1.800 4.62000e-07 1.800 4.62020e-07 0.000 4.68000e-07 0.000
++ 4.68020e-07 1.800 4.76000e-07 1.800 4.76020e-07 0.000 4.82000e-07 0.000
++ )
+Xs_a3 src_a3 drv_a3 vdd gnd tb_x1
+Xd_a3 drv_a3 a3 vdd gnd tb_x2
+Vb0 src_b0 gnd PWL(
++ 0.00000e+00 1.800 7.80000e-08 1.800 7.80200e-08 0.000 2.86000e-07 0.000 2.86020e-07 1.800 3.78000e-07 1.800
++ 3.78020e-07 0.000 3.92000e-07 0.000 3.92020e-07 1.800 4.08000e-07 1.800 4.08020e-07 0.000 4.22000e-07 0.000
++ 4.22020e-07 1.800 4.40000e-07 1.800 4.40020e-07 0.000 4.54000e-07 0.000 4.54020e-07 1.800 4.70000e-07 1.800
++ 4.70020e-07 0.000 4.82000e-07 0.000
++ )
+Xs_b0 src_b0 drv_b0 vdd gnd tb_x1
+Xd_b0 drv_b0 b0 vdd gnd tb_x2
+Vb1 src_b1 gnd PWL(
++ 0.00000e+00 0.000 5.00000e-08 0.000 5.00200e-08 1.800 1.28000e-07 1.800 1.28020e-07 0.000 1.58000e-07 0.000
++ 1.58020e-07 1.800 1.60000e-07 1.800 1.60020e-07 0.000 1.64000e-07 0.000 1.64020e-07 1.800 1.66000e-07 1.800
++ 1.66020e-07 0.000 1.72000e-07 0.000 1.72020e-07 1.800 1.74000e-07 1.800 1.74020e-07 0.000 1.78000e-07 0.000
++ 1.78020e-07 1.800 1.80000e-07 1.800 1.80020e-07 0.000 1.88000e-07 0.000 1.88020e-07 1.800 1.90000e-07 1.800
++ 1.90020e-07 0.000 1.94000e-07 0.000 1.94020e-07 1.800 1.96000e-07 1.800 1.96020e-07 0.000 2.02000e-07 0.000
++ 2.02020e-07 1.800 2.04000e-07 1.800 2.04020e-07 0.000 2.08000e-07 0.000 2.08020e-07 1.800 2.58000e-07 1.800
++ 2.58020e-07 0.000 3.36000e-07 0.000 3.36020e-07 1.800 3.94000e-07 1.800 3.94020e-07 0.000 4.24000e-07 0.000
++ 4.24020e-07 1.800 4.56000e-07 1.800 4.56020e-07 0.000 4.82000e-07 0.000
++ )
+Xs_b1 src_b1 drv_b1 vdd gnd tb_x1
+Xd_b1 drv_b1 b1 vdd gnd tb_x2
+Vb2 src_b2 gnd PWL(
++ 0.00000e+00 0.000 2.00000e-09 0.000 2.02000e-09 1.800 4.00000e-09 1.800 4.02000e-09 0.000 8.00000e-09 0.000
++ 8.02000e-09 1.800 1.00000e-08 1.800 1.00200e-08 0.000 1.60000e-08 0.000 1.60200e-08 1.800 1.80000e-08 1.800
++ 1.80200e-08 0.000 2.20000e-08 0.000 2.20200e-08 1.800 4.00000e-08 1.800 4.00200e-08 0.000 6.80000e-08 0.000
++ 6.80200e-08 1.800 8.00000e-08 1.800 8.00200e-08 0.000 8.20000e-08 0.000 8.20200e-08 1.800 8.60000e-08 1.800
++ 8.60200e-08 0.000 8.80000e-08 0.000 8.80200e-08 1.800 9.40000e-08 1.800 9.40200e-08 0.000 9.60000e-08 0.000
++ 9.60200e-08 1.800 1.00000e-07 1.800 1.00020e-07 0.000 1.18000e-07 0.000 1.18020e-07 1.800 1.46000e-07 1.800
++ 1.46020e-07 0.000 1.62000e-07 0.000 1.62020e-07 1.800 1.68000e-07 1.800 1.68020e-07 0.000 1.76000e-07 0.000
++ 1.76020e-07 1.800 1.82000e-07 1.800 1.82020e-07 0.000 1.92000e-07 0.000 1.92020e-07 1.800 1.98000e-07 1.800
++ 1.98020e-07 0.000 2.06000e-07 0.000 2.06020e-07 1.800 2.10000e-07 1.800 2.10020e-07 0.000 2.12000e-07 0.000
++ 2.12020e-07 1.800 2.16000e-07 1.800 2.16020e-07 0.000 2.18000e-07 0.000 2.18020e-07 1.800 2.24000e-07 1.800
++ 2.24020e-07 0.000 2.26000e-07 0.000 2.26020e-07 1.800 2.30000e-07 1.800 2.30020e-07 0.000 2.48000e-07 0.000
++ 2.48020e-07 1.800 2.76000e-07 1.800 2.76020e-07 0.000 2.88000e-07 0.000 2.88020e-07 1.800 2.90000e-07 1.800
++ 2.90020e-07 0.000 2.94000e-07 0.000 2.94020e-07 1.800 2.96000e-07 1.800 2.96020e-07 0.000 3.02000e-07 0.000
++ 3.02020e-07 1.800 3.04000e-07 1.800 3.04020e-07 0.000 3.08000e-07 0.000 3.08020e-07 1.800 3.26000e-07 1.800
++ 3.26020e-07 0.000 3.54000e-07 0.000 3.54020e-07 1.800 4.26000e-07 1.800 4.26020e-07 0.000 4.82000e-07 0.000
++ )
+Xs_b2 src_b2 drv_b2 vdd gnd tb_x1
+Xd_b2 drv_b2 b2 vdd gnd tb_x2
+Vb3 src_b3 gnd PWL(
++ 0.00000e+00 0.000 6.00000e-09 0.000 6.02000e-09 1.800 1.20000e-08 1.800 1.20200e-08 0.000 2.00000e-08 0.000
++ 2.00200e-08 1.800 2.40000e-08 1.800 2.40200e-08 0.000 2.60000e-08 0.000 2.60200e-08 1.800 3.00000e-08 1.800
++ 3.00200e-08 0.000 3.60000e-08 0.000 3.60200e-08 1.800 4.60000e-08 1.800 4.60200e-08 0.000 5.20000e-08 0.000
++ 5.20200e-08 1.800 5.40000e-08 1.800 5.40200e-08 0.000 5.80000e-08 0.000 5.80200e-08 1.800 6.40000e-08 1.800
++ 6.40200e-08 0.000 7.40000e-08 0.000 7.40200e-08 1.800 8.40000e-08 1.800 8.40200e-08 0.000 9.00000e-08 0.000
++ 9.00200e-08 1.800 9.80000e-08 1.800 9.80200e-08 0.000 1.02000e-07 0.000 1.02020e-07 1.800 1.04000e-07 1.800
++ 1.04020e-07 0.000 1.08000e-07 0.000 1.08020e-07 1.800 1.14000e-07 1.800 1.14020e-07 0.000 1.24000e-07 0.000
++ 1.24020e-07 1.800 1.30000e-07 1.800 1.30020e-07 0.000 1.32000e-07 0.000 1.32020e-07 1.800 1.36000e-07 1.800
++ 1.36020e-07 0.000 1.42000e-07 0.000 1.42020e-07 1.800 1.52000e-07 1.800 1.52020e-07 0.000 1.70000e-07 0.000
++ 1.70020e-07 1.800 1.84000e-07 1.800 1.84020e-07 0.000 2.00000e-07 0.000 2.00020e-07 1.800 2.14000e-07 1.800
++ 2.14020e-07 0.000 2.20000e-07 0.000 2.20020e-07 1.800 2.28000e-07 1.800 2.28020e-07 0.000 2.32000e-07 0.000
++ 2.32020e-07 1.800 2.34000e-07 1.800 2.34020e-07 0.000 2.38000e-07 0.000 2.38020e-07 1.800 2.44000e-07 1.800
++ 2.44020e-07 0.000 2.54000e-07 0.000 2.54020e-07 1.800 2.60000e-07 1.800 2.60020e-07 0.000 2.62000e-07 0.000
++ 2.62020e-07 1.800 2.66000e-07 1.800 2.66020e-07 0.000 2.72000e-07 0.000 2.72020e-07 1.800 2.82000e-07 1.800
++ 2.82020e-07 0.000 2.92000e-07 0.000 2.92020e-07 1.800 2.98000e-07 1.800 2.98020e-07 0.000 3.06000e-07 0.000
++ 3.06020e-07 1.800 3.10000e-07 1.800 3.10020e-07 0.000 3.12000e-07 0.000 3.12020e-07 1.800 3.16000e-07 1.800
++ 3.16020e-07 0.000 3.22000e-07 0.000 3.22020e-07 1.800 3.32000e-07 1.800 3.32020e-07 0.000 3.38000e-07 0.000
++ 3.38020e-07 1.800 3.40000e-07 1.800 3.40020e-07 0.000 3.44000e-07 0.000 3.44020e-07 1.800 3.50000e-07 1.800
++ 3.50020e-07 0.000 3.60000e-07 0.000 3.60020e-07 1.800 4.82000e-07 1.800
++ )
+Xs_b3 src_b3 drv_b3 vdd gnd tb_x1
+Xd_b3 drv_b3 b3 vdd gnd tb_x2
+Vc0 src_c0 gnd PWL(
++ 0.00000e+00 0.000 1.40000e-08 0.000 1.40200e-08 1.800 2.80000e-08 1.800 2.80200e-08 0.000 3.20000e-08 0.000
++ 3.20200e-08 1.800 3.40000e-08 1.800 3.40200e-08 0.000 3.80000e-08 0.000 3.80200e-08 1.800 4.20000e-08 1.800
++ 4.20200e-08 0.000 4.40000e-08 0.000 4.40200e-08 1.800 4.80000e-08 1.800 4.80200e-08 0.000 5.60000e-08 0.000
++ 5.60200e-08 1.800 6.00000e-08 1.800 6.00200e-08 0.000 6.20000e-08 0.000 6.20200e-08 1.800 6.60000e-08 1.800
++ 6.60200e-08 0.000 7.00000e-08 0.000 7.00200e-08 1.800 7.20000e-08 1.800 7.20200e-08 0.000 7.60000e-08 0.000
++ 7.60200e-08 1.800 9.20000e-08 1.800 9.20200e-08 0.000 1.06000e-07 0.000 1.06020e-07 1.800 1.10000e-07 1.800
++ 1.10020e-07 0.000 1.12000e-07 0.000 1.12020e-07 1.800 1.16000e-07 1.800 1.16020e-07 0.000 1.20000e-07 0.000
++ 1.20020e-07 1.800 1.22000e-07 1.800 1.22020e-07 0.000 1.26000e-07 0.000 1.26020e-07 1.800 1.34000e-07 1.800
++ 1.34020e-07 0.000 1.38000e-07 0.000 1.38020e-07 1.800 1.40000e-07 1.800 1.40020e-07 0.000 1.44000e-07 0.000
++ 1.44020e-07 1.800 1.48000e-07 1.800 1.48020e-07 0.000 1.50000e-07 0.000 1.50020e-07 1.800 1.54000e-07 1.800
++ 1.54020e-07 0.000 1.86000e-07 0.000 1.86020e-07 1.800 2.22000e-07 1.800 2.22020e-07 0.000 2.36000e-07 0.000
++ 2.36020e-07 1.800 2.40000e-07 1.800 2.40020e-07 0.000 2.42000e-07 0.000 2.42020e-07 1.800 2.46000e-07 1.800
++ 2.46020e-07 0.000 2.50000e-07 0.000 2.50020e-07 1.800 2.52000e-07 1.800 2.52020e-07 0.000 2.56000e-07 0.000
++ 2.56020e-07 1.800 2.64000e-07 1.800 2.64020e-07 0.000 2.68000e-07 0.000 2.68020e-07 1.800 2.70000e-07 1.800
++ 2.70020e-07 0.000 2.74000e-07 0.000 2.74020e-07 1.800 2.78000e-07 1.800 2.78020e-07 0.000 2.80000e-07 0.000
++ 2.80020e-07 1.800 2.84000e-07 1.800 2.84020e-07 0.000 3.00000e-07 0.000 3.00020e-07 1.800 3.14000e-07 1.800
++ 3.14020e-07 0.000 3.18000e-07 0.000 3.18020e-07 1.800 3.20000e-07 1.800 3.20020e-07 0.000 3.24000e-07 0.000
++ 3.24020e-07 1.800 3.28000e-07 1.800 3.28020e-07 0.000 3.30000e-07 0.000 3.30020e-07 1.800 3.34000e-07 1.800
++ 3.34020e-07 0.000 3.42000e-07 0.000 3.42020e-07 1.800 3.46000e-07 1.800 3.46020e-07 0.000 3.48000e-07 0.000
++ 3.48020e-07 1.800 3.52000e-07 1.800 3.52020e-07 0.000 3.56000e-07 0.000 3.56020e-07 1.800 3.58000e-07 1.800
++ 3.58020e-07 0.000 3.62000e-07 0.000 3.62020e-07 1.800 4.82000e-07 1.800
++ )
+Xs_c0 src_c0 drv_c0 vdd gnd tb_x1
+Xd_c0 drv_c0 c0 vdd gnd tb_x2
+Xl_s0 s0 lo_s0 vdd gnd tb_x1
+Xl_s1 s1 lo_s1 vdd gnd tb_x1
+Xl_s2 s2 lo_s2 vdd gnd tb_x1
+Xl_s3 s3 lo_s3 vdd gnd tb_x1
+Xl_c4 c4 lo_c4 vdd gnd tb_x1
+X0 a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 c4 vdd gnd post_scale_C4_aoi22_0p85_post
+.tran 20p 4.82000e-07
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata seg12.txt v(a0) v(a1) v(a2) v(a3) v(b0) v(b1) v(b2) v(b3) v(c0) v(drv_a0) v(drv_a1) v(drv_a2) v(drv_a3) v(drv_b0) v(drv_b1) v(drv_b2) v(drv_b3) v(drv_c0) v(s0) v(s1) v(s2) v(s3) v(c4)
+quit
+.endc
+.end

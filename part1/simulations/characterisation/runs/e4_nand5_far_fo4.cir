@@ -1,0 +1,42 @@
+* E4 nand5 far-rail input FO4
+.include ../../../../TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vin in0 gnd PULSE(0 1.8 1n 20p 20p 2n 4n)
+.subckt gnand5 i0 i1 i2 i3 i4 out vdd gnd
+mp0 out i0 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn0 out i0 x1 gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=1.2150e-12 PS=9.5400e-06 AD=2.4300e-12 PD=1.0080e-05
+mp1 out i1 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn1 x1 i1 x2 gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=1.2150e-12 PS=9.5400e-06 AD=1.2150e-12 PD=9.5400e-06
+mp2 out i2 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn2 x2 i2 x3 gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=1.2150e-12 PS=9.5400e-06 AD=1.2150e-12 PD=9.5400e-06
+mp3 out i3 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn3 x3 i3 x4 gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=1.2150e-12 PS=9.5400e-06 AD=1.2150e-12 PD=9.5400e-06
+mp4 out i4 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+mn4 x4 i4 gnd gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=1.2150e-12 PD=9.5400e-06
+.ends
+.subckt sh in out vdd gnd
+mp out in vdd vdd CMOSP W=5.4000e-07 L=1.8000e-07 AS=2.9160e-13 PS=2.1600e-06 AD=2.9160e-13 PD=2.1600e-06
+mn out in gnd gnd CMOSN W=2.7000e-07 L=1.8000e-07 AS=1.4580e-13 PS=1.6200e-06 AD=1.4580e-13 PD=1.6200e-06
+.ends
+.subckt dr in out vdd gnd
+mp out in vdd vdd CMOSP W=1.1132e-06 L=1.8000e-07 AS=6.0115e-13 PS=3.3065e-06 AD=6.0115e-13 PD=3.3065e-06
+mn out in gnd gnd CMOSN W=5.5662e-07 L=1.8000e-07 AS=3.0057e-13 PS=2.1932e-06 AD=3.0057e-13 PD=2.1932e-06
+.ends
+.subckt lo in out vdd gnd
+mp out in vdd vdd CMOSP W=1.7812e-05 L=1.8000e-07 AS=9.6183e-12 PS=3.6703e-05 AD=9.6183e-12 PD=3.6703e-05
+mn out in gnd gnd CMOSN W=8.9059e-06 L=1.8000e-07 AS=4.8092e-12 PS=1.8892e-05 AD=4.8092e-12 PD=1.8892e-05
+.ends
+.subckt ll in out vdd gnd
+mp out in vdd vdd CMOSP W=7.1247e-05 L=1.8000e-07 AS=3.8473e-11 PS=1.4357e-04 AD=3.8473e-11 PD=1.4357e-04
+mn out in gnd gnd CMOSN W=3.5623e-05 L=1.8000e-07 AS=1.9237e-11 PS=7.2327e-05 AD=1.9237e-11 PD=7.2327e-05
+.ends
+X0 in0 n1 vdd gnd sh
+X1 n1 ndut vdd gnd dr
+X2 vdd vdd vdd vdd ndut nout vdd gnd gnand5
+X3 nout n3 vdd gnd lo
+X4 n3 n4 vdd gnd ll
+.tran 0.5p 11n
+.meas tran tphl TRIG v(ndut) VAL=0.9 RISE=2 TARG v(nout) VAL=0.9 FALL=2
+.meas tran tplh TRIG v(ndut) VAL=0.9 FALL=2 TARG v(nout) VAL=0.9 RISE=2
+.end

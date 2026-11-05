@@ -1,0 +1,311 @@
+{
+ "layout": {
+  "name": "reg_final_top",
+  "drc": 0,
+  "drc_first": [],
+  "lvs": true,
+  "lvs_message": "match: 348 merged devices, 207 nets",
+  "width_lambda": 925,
+  "height_lambda": 935,
+  "area_um2": 7005.5
+ },
+ "placements": [
+  [
+   "fia0",
+   0,
+   0,
+   99,
+   142
+  ],
+  [
+   "fib0",
+   99,
+   0,
+   99,
+   142
+  ],
+  [
+   "fia1",
+   198,
+   0,
+   99,
+   142
+  ],
+  [
+   "fib1",
+   297,
+   0,
+   99,
+   142
+  ],
+  [
+   "fia2",
+   396,
+   0,
+   99,
+   142
+  ],
+  [
+   "fib2",
+   495,
+   0,
+   99,
+   142
+  ],
+  [
+   "fia3",
+   594,
+   0,
+   99,
+   142
+  ],
+  [
+   "fib3",
+   693,
+   0,
+   99,
+   142
+  ],
+  [
+   "fic0",
+   792,
+   0,
+   99,
+   142
+  ],
+  [
+   "pg0",
+   0,
+   156,
+   137,
+   194
+  ],
+  [
+   "pg1",
+   137,
+   156,
+   137,
+   194
+  ],
+  [
+   "pg2",
+   274,
+   156,
+   137,
+   194
+  ],
+  [
+   "pg3",
+   411,
+   156,
+   137,
+   194
+  ],
+  [
+   "carry",
+   0,
+   364,
+   525,
+   223
+  ],
+  [
+   "sum0",
+   0,
+   601,
+   84,
+   166
+  ],
+  [
+   "sum1",
+   137,
+   601,
+   84,
+   166
+  ],
+  [
+   "sum2",
+   274,
+   601,
+   84,
+   166
+  ],
+  [
+   "sum3",
+   411,
+   601,
+   84,
+   166
+  ],
+  [
+   "fos0",
+   0,
+   781,
+   99,
+   142
+  ],
+  [
+   "fos1",
+   137,
+   781,
+   99,
+   142
+  ],
+  [
+   "fos2",
+   274,
+   781,
+   99,
+   142
+  ],
+  [
+   "fos3",
+   411,
+   781,
+   99,
+   142
+  ],
+  [
+   "foc4",
+   510,
+   781,
+   99,
+   142
+  ]
+ ],
+ "vectors": 264,
+ "wire_cap_ff": 624.5,
+ "schematic": {
+  "min_period_ps": 740.2,
+  "fmax_ghz": 1.3509,
+  "errors_at_limit": 0,
+  "pavg_mw_random": 5.2496,
+  "history": [
+   [
+    875.0,
+    0
+   ],
+   [
+    687.5,
+    27
+   ],
+   [
+    781.25,
+    0
+   ],
+   [
+    734.38,
+    6
+   ],
+   [
+    757.81,
+    0
+   ],
+   [
+    746.09,
+    0
+   ],
+   [
+    740.23,
+    0
+   ],
+   [
+    737.3,
+    2
+   ]
+  ]
+ },
+ "postlayout": {
+  "min_period_ps": 872.1,
+  "fmax_ghz": 1.1467,
+  "errors_at_limit": 0,
+  "pavg_mw_random": 4.9246,
+  "history": [
+   [
+    875.0,
+    0
+   ],
+   [
+    687.5,
+    210
+   ],
+   [
+    781.25,
+    44
+   ],
+   [
+    828.12,
+    21
+   ],
+   [
+    851.56,
+    16
+   ],
+   [
+    863.28,
+    15
+   ],
+   [
+    869.14,
+    3
+   ],
+   [
+    872.07,
+    0
+   ]
+  ]
+ },
+ "course": {
+  "tpd_max_ps": 589.85,
+  "tpd_single_input_ps": 579.88,
+  "tpd_multi_input_ps": 589.85,
+  "tsetup_ps": 38.0,
+  "thold_ps": 45.7,
+  "tcq_ps": 204.2,
+  "T_course_ps": 673.6,
+  "fmax_course_ghz": 1.4847,
+  "T_physical_ps": 832.0,
+  "fmax_physical_ghz": 1.2019,
+  "errors_at_course_formula": 264,
+  "note_at_course_formula": "vector 0: q_s2=0.00, wanted 1"
+ },
+ "power": {
+  "period_ps": 872.1,
+  "frequency_ghz": 1.1467,
+  "vdd": 1.8,
+  "critical_and_random": {
+   "cycles": 264,
+   "errors": 0,
+   "pavg_mw": 3.3899,
+   "energy_per_cycle_pj": 2.956,
+   "pdp_fj": 1999.51,
+   "interval_ns": [
+    2.616,
+    233.723
+   ]
+  },
+  "hint_vector_toggling": {
+   "cycles": 80,
+   "errors": 0,
+   "pavg_mw": 2.4954,
+   "energy_per_cycle_pj": 2.176,
+   "pdp_fj": 1471.94,
+   "interval_ns": [
+    2.616,
+    73.256
+   ]
+  },
+  "inputs_constant": {
+   "cycles": 40,
+   "errors": 0,
+   "pavg_mw": 0.8874,
+   "energy_per_cycle_pj": 0.774,
+   "pdp_fj": 523.45,
+   "interval_ns": [
+    2.616,
+    38.372
+   ]
+  }
+ },
+ "adp_um2_ps_adder": 1703050.0,
+ "adp_um2_ps_registered": 4062349.0
+}

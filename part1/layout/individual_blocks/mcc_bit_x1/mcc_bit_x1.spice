@@ -1,0 +1,35 @@
+* NGSPICE file created from mcc_bit_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt mcc_bit_x1 a ci co p pb vdd gnd
+M1000 co pb ci vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1001 a p co vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1002 co pb a Gnd nfet w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.486p ps=2.88u
+M1003 ci p co Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.2835p ps=1.53u
+C0 co gnd 0.04131f
+C1 ci co 0.58497f
+C2 pb gnd 0.00105f
+C3 p a 0.01217f
+C4 vdd co 0.05237f
+C5 pb ci 0.09059f
+C6 vdd pb 0.01988f
+C7 a gnd 0.04128f
+C8 ci a 0.43065f
+C9 p gnd 0.00105f
+C10 vdd a 0.05287f
+C11 p ci 0.16816f
+C12 pb co 0.13663f
+C13 vdd p 0.01988f
+C14 ci gnd 0.04126f
+C15 co a 0.56331f
+C16 p co 0.00817f
+C17 pb a 0.01235f
+C18 vdd ci 0.05342f
+C19 pb p 0.25475f
+.ends
+

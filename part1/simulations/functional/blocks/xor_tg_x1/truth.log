@@ -1,0 +1,36 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * truth table of xor_tg_x1: inputs through unit inverters, outputs load 20l/10l inverter
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+src_p                                      1.8
+p                                   2.1788e-08
+src_pb                                       0
+pb                                         1.8
+src_c                                      1.8
+c                                   7.1163e-09
+lo_s                                       1.8
+s                                  7.11607e-09
+x0.cb                                      1.8
+x0.m                                       1.8
+vc#branch                                    0
+vpb#branch                                   0
+vp#branch                                    0
+vdd#branch                        -9.90922e-11
+
+
+No. of Data Rows : 135
+ngspice-46 done
+
+--- STDERR ---

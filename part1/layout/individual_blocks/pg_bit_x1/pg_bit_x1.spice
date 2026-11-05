@@ -1,0 +1,91 @@
+* NGSPICE file created from pg_bit_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt pg_bit_x1 a b gb p pb tb vdd gnd
+M1000 p tb a_62_98# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1001 gb b vdd vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1002 a_98_10# b pb Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1003 tb b gnd Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.2835p ps=1.53u
+M1004 a_106_98# a vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1005 gnd gb a_98_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1006 a_70_10# a p Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1007 pb b a_106_98# vdd pfet w=3.6u l=0.18u
++  ad=0.972p pd=4.23u as=1.134p ps=4.23u
+M1008 p tb gnd Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1009 a_43_98# a vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1010 gnd b a_70_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1011 vdd gb pb vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.23u
+M1012 a_16_10# a gb Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1013 vdd a a_62_98# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1014 tb b a_43_98# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1015 gnd b a_16_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1016 a_62_98# b vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1017 vdd a gb vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1018 pb a a_98_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1019 gnd a tb Gnd nfet w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.486p ps=2.88u
+C0 vdd b 0.08443f
+C1 a_106_98# pb 0.00113f
+C2 a_106_98# vdd 0.00107f
+C3 a_62_98# a 0.01377f
+C4 p gnd 0.12393f
+C5 b gnd 0.00937f
+C6 gb p 0.1561f
+C7 b gb 0.28547f
+C8 vdd pb 0.38445f
+C9 a_98_10# gnd 0.24788f
+C10 a p 0.03074f
+C11 a_70_10# p 0
+C12 a b 1.92212f
+C13 vdd tb 0.0738f
+C14 a_98_10# gb 0.16082f
+C15 a_98_10# a 0.02124f
+C16 a_62_98# p 0.67525f
+C17 a_43_98# tb 0.00113f
+C18 a_62_98# b 0.01377f
+C19 a_43_98# vdd 0.00107f
+C20 pb gnd 0.04131f
+C21 tb gnd 0.2493f
+C22 gb pb 0.08364f
+C23 a pb 0.00741f
+C24 b p 0.02787f
+C25 tb gb 0.24926f
+C26 a_16_10# gnd 0
+C27 a_98_10# p 0.24705f
+C28 a tb 0.04811f
+C29 vdd gb 0.54048f
+C30 a_16_10# gb 0
+C31 vdd a 0.09267f
+C32 a_98_10# b 0.21964f
+C33 a_62_98# tb 0.43054f
+C34 a_62_98# vdd 0.76829f
+C35 gb gnd 0.04467f
+C36 a gnd 0.00468f
+C37 b pb 0.02633f
+C38 tb p 0.58847f
+C39 a gb 1.06123f
+C40 b tb 0.88271f
+C41 a_70_10# gnd 0
+C42 vdd p 0.38334f
+C43 a_98_10# pb 0.82582f
+.ends
+

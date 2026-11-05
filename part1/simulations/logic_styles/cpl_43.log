@@ -1,0 +1,100 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * cpl {'k': 3, 'm': 1, 'restore': 1}
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd_core                                   1.8
+vdd                                        1.8
+vtb                                        1.8
+g                                            0
+t                                          1.8
+gb                                         1.8
+tb                                           0
+p                                          1.8
+pb                                           0
+a                                          1.8
+ab                                           0
+s                                            0
+sb                                         1.8
+s1                                         1.8
+c0                                 1.81732e-08
+sb1                                7.05522e-09
+c0b                                        1.8
+ld0_0                                      1.8
+c1                                 4.14097e-08
+ldb0_0                             1.81583e-08
+c1b                                        1.8
+ld1_0                                      1.8
+c2                                 4.14097e-08
+ldb1_0                             1.81583e-08
+c2b                                        1.8
+ld2_0                                      1.8
+c3                                 4.14097e-08
+ldb2_0                             1.81583e-08
+c3b                                        1.8
+ld3_0                                      1.8
+c4                                 7.11608e-09
+ldb3_0                             1.81583e-08
+c4b                                        1.8
+ld3_1                                      1.8
+ldb3_1                             1.81583e-08
+ld3_2                                      1.8
+ldb3_2                             1.81583e-08
+ld3_3                                      1.8
+ldb3_3                             1.81583e-08
+x0                                   2.628e-08
+xb0                                        1.8
+x1                                 4.95164e-08
+xb1                                        1.8
+x2                                 4.95164e-08
+xb2                                        1.8
+x3                                 4.95164e-08
+xb3                                        1.8
+vsb#branch                                   0
+vs#branch                                    0
+vab#branch                         1.02279e-10
+va#branch                         -1.09479e-10
+vpb#branch                                   0
+vp#branch                                    0
+vtbar#branch                                 0
+vgb#branch                                   0
+vt#branch                                    0
+vg#branch                                    0
+vtb#branch                        -3.08653e-10
+vsense#branch                      2.78295e-10
+vdd#branch                        -2.78295e-10
+
+ Reference value :  5.35000e-09
+No. of Data Rows : 4533
+
+  Measurements for Transient Analysis
+
+tpr                 =  6.72013e-10 targ=  1.77322e-09 trig=  1.10120e-09
+pavg                =  1.56773e-04 from=  5.00000e-10 to=  8.50000e-09
+tpf                 =  7.00260e-10 targ=  3.78541e-09 trig=  3.08515e-09
+vlo                 =  7.11607e-09
+vhi                 =  1.80000e+00
+vlo2                =  7.79810e-07
+
+
+Total analysis time (seconds) = 0.375558
+
+Total elapsed time (seconds) = 0.380 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available = 2427.312 MB.
+Maximum ngspice program size =   10.766 MB.
+Current ngspice program size =   10.766 MB.
+
+
+--- STDERR ---

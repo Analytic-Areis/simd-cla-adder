@@ -1,0 +1,9 @@
+iteration,round,soft_ps,worst_working_ps,total_width_lambda,transistors,changes,critical_arc,elapsed_s
+1,0,847.66,638.97,4568,194,c3 flip=1; g10 flip=1; c2 flip=1; nor2 size=1.56,"a1 rise to s3 rise, A=0101 B=0001 C0=0",304
+2,0,839.07,619.57,4588,194,g10 flip=0; nand1 size=1.0; nor2 size=1.95,"a1 rise to s3 rise, A=0101 B=0001 C0=0",444
+3,0,836.08,617.71,4612,194,nand1 size=0.8; nor0 size=1.95,"a1 rise to s3 rise, A=0101 B=0001 C0=0",590
+4,1,835.02,615.26,4628,194,g10 flip=1; c3 flip=1; nand1 size=1.0; c2 flip=1,"a1 rise to s3 rise, A=0100 B=0011 C0=0",894
+5,1,826.83,620.98,4688,194,g10 flip=0; nand1 size=1.25; t10 size=1.95; c2 flip=1,"b1 rise to s2 rise, A=1101 B=0101 C0=0",975
+6,1,822.38,615.26,4618,194,c2 flip=1; nor0 size=1.56; nor2 size=1.56; ig2 size=1.56,"b1 fall to s3 rise, A=1001 B=0111 C0=1",1059
+7,2,846.84,642.46,4598,194,g10 flip=1; c3 flip=1; c2 flip=1; nand1 size=1.0,"a1 rise to s3 rise, A=0001 B=0101 C0=0",1356
+8,2,838.04,617.7,4542,194,g10 flip=0; t10 size=1.56; nand1 size=0.8,"a1 rise to s3 rise, A=0001 B=0101 C0=0",1441

@@ -1,0 +1,84 @@
+* gate_post
+.include ../../../part1/spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vdut vdut gnd 1.8
+* NGSPICE file created from carry_gate_n1_i2.ext - technology: scmos
+
+
+
+.subckt carry_gate_n1_i2 cin_hi cout_lo mode vdd gnd
+M1000 gn modeb vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1001 gnd gn cin_hi Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1002 gnd modeb a_34_10# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1003 gnd mode modeb Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.88u
+M1004 vdd mode modeb vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1005 vdd cout_lo gn vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1006 vdd gn cin_hi vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.944p ps=8.28u
+M1007 a_34_10# cout_lo gn Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+C0 vdd cout_lo 0.02227f
+C1 modeb gnd 0.08604f
+C2 gn cout_lo 0.43448f
+C3 modeb mode 0.35567f
+C4 gn a_34_10# 0
+C5 cout_lo gnd 0.00105f
+C6 a_34_10# gnd 0
+C7 vdd cin_hi 0.38429f
+C8 mode cout_lo 0.00894f
+C9 modeb cout_lo 0.20481f
+C10 gn cin_hi 0.30097f
+C11 gn vdd 0.54273f
+C12 cin_hi gnd 0.37153f
+C13 mode cin_hi 0.06144f
+C14 vdd mode 0.02136f
+C15 gn gnd 0.20963f
+C16 modeb vdd 0.19844f
+C17 gn mode 0.40142f
+C18 gn modeb 0.09068f
+C19 cout_lo cin_hi 0.07805f
+C20 mode gnd 0.00153f
+.ends
+
+
+.subckt gate_post cout_lo mode cin_hi vdd gnd
+X0 cin_hi cout_lo mode vdd gnd carry_gate_n1_i2
+.ends
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Vcout_lo src_cout_lo gnd PWL(
++ 0.00000e+00 0.000 2.00000e-09 0.000 2.02000e-09 1.800 4.00000e-09 1.800 4.02000e-09 0.000 6.00000e-09 0.000
++ 6.02000e-09 1.800 8.00000e-09 1.800 8.02000e-09 0.000 1.00000e-08 0.000 1.00200e-08 1.800 1.20000e-08 1.800
++ 1.20200e-08 0.000 1.40000e-08 0.000 1.40200e-08 1.800 1.60000e-08 1.800 1.60200e-08 0.000 1.80000e-08 0.000
++ )
+Xs_cout_lo src_cout_lo drv_cout_lo vdd gnd tb_x1
+Xd_cout_lo drv_cout_lo cout_lo vdd gnd tb_x2
+Vmode src_mode gnd PWL(
++ 0.00000e+00 0.000 1.00000e-08 0.000 1.00200e-08 1.800 1.80000e-08 1.800
++ )
+Xs_mode src_mode drv_mode vdd gnd tb_x1
+Xd_mode drv_mode mode vdd gnd tb_x2
+Xl_cin_hi cin_hi lo_cin_hi vdd gnd tb_x1
+X0 cout_lo mode cin_hi vdut gnd gate_post
+.tran 20p 1.80000e-08
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata gate_alone_post.txt v(cout_lo) v(mode) v(drv_cout_lo) v(drv_mode) v(cin_hi)
+quit
+.endc
+.end

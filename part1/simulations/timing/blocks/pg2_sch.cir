@@ -1,0 +1,76 @@
+* block timing pg2_sch
+.include ../../../spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* nand2_x1p25: 2-input NAND
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nand2_x1p25 i0 i1 y vdd gnd
+Mp1 y i0 vdd vdd CMOSP W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+Mp2 y i1 vdd vdd CMOSP W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+Mn1 y i0 xn1 gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=6.0750e-13 PS=5.0400e-06 AD=1.2150e-12 PD=5.5800e-06
+Mn2 xn1 i1 gnd gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=6.0750e-13 PD=5.0400e-06
+.ends nand2_x1p25
+* nor2_x1p25: 2-input NOR
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nor2_x1p25 i0 i1 y vdd gnd
+Mp1 xp1 i0 vdd vdd CMOSP W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=1.2150e-12 PD=9.5400e-06
+Mp2 y i1 xp1 vdd CMOSP W=4.5000e-06 L=1.8000e-07 AS=1.2150e-12 PS=9.5400e-06 AD=2.4300e-12 PD=1.0080e-05
+Mn1 y i0 gnd gnd CMOSN W=1.0800e-06 L=1.8000e-07 AS=5.8320e-13 PS=3.2400e-06 AD=5.8320e-13 PD=3.2400e-06
+Mn2 y i1 gnd gnd CMOSN W=1.0800e-06 L=1.8000e-07 AS=5.8320e-13 PS=3.2400e-06 AD=5.8320e-13 PD=3.2400e-06
+.ends nor2_x1p25
+* aoi21_x0p8: NOT(a b + c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt aoi21_x0p8 a b c y vdd gnd
+Mp1 xp1 a vdd vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=1.5552e-12 PS=6.8400e-06 AD=1.5552e-12 PD=6.8400e-06
+Mp2 xp1 b vdd vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=1.5552e-12 PS=6.8400e-06 AD=1.5552e-12 PD=6.8400e-06
+Mp3 y c xp1 vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=1.5552e-12 PS=6.8400e-06 AD=1.5552e-12 PD=6.8400e-06
+Mn1 y a xn1 gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=3.8880e-13 PS=3.4200e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn2 xn1 b gnd gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=3.8880e-13 PD=3.4200e-06
+Mn3 y c gnd gnd CMOSN W=7.2000e-07 L=1.8000e-07 AS=3.8880e-13 PS=2.5200e-06 AD=3.8880e-13 PD=2.5200e-06
+.ends aoi21_x0p8
+* oai21_x0p8: NOT((a + b) c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt oai21_x0p8 a b c y vdd gnd
+Mp1 xp1 a vdd vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=1.5552e-12 PS=6.8400e-06 AD=7.7760e-13 PD=6.3000e-06
+Mp2 y b xp1 vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=7.7760e-13 PS=6.3000e-06 AD=1.5552e-12 PD=6.8400e-06
+Mp3 y c vdd vdd CMOSP W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn1 y a xn1 gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn2 y b xn1 gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn3 xn1 c gnd gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+.ends oai21_x0p8
+* pg2_b: tile pg2
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt pg2_b a2 b2 g2b p2 p2b t2b vdd gnd
+Xnand2 a2 b2 g2b vdd gnd nand2_x1p25
+Xnor2 a2 b2 t2b vdd gnd nor2_x1p25
+Xaoi2 a2 b2 t2b p2 vdd gnd aoi21_x0p8
+Xoai2 a2 b2 g2b p2b vdd gnd oai21_x0p8
+.ends pg2_b
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+Va2 src_a2 gnd PWL(
++ 0.00000e+00 1.800 2.00000e-09 1.800 2.02000e-09 0.000 4.00000e-09 0.000 4.02000e-09 1.800 8.00000e-09 1.800
++ 8.02000e-09 0.000 1.40000e-08 0.000 1.40200e-08 1.800 1.80000e-08 1.800
++ )
+Xd_a2 src_a2 a2 vdd gnd tb_x1
+Vb2 src_b2 gnd PWL(
++ 0.00000e+00 1.800 6.00000e-09 1.800 6.02000e-09 0.000 1.00000e-08 0.000 1.00200e-08 1.800 1.20000e-08 1.800
++ 1.20200e-08 0.000 1.60000e-08 0.000 1.60200e-08 1.800 1.80000e-08 1.800
++ )
+Xd_b2 src_b2 b2 vdd gnd tb_x1
+Xl_g2b g2b lo_g2b vdd gnd tb_x1
+Xl_p2 p2 lo_p2 vdd gnd tb_x1
+Xl_p2b p2b lo_p2b vdd gnd tb_x1
+Xl_t2b t2b lo_t2b vdd gnd tb_x1
+X0 a2 b2 g2b p2 p2b t2b vdd gnd pg2_b
+.tran 20p 1.80000e-08
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata pg2_sch.txt v(a2) v(b2) v(g2b) v(p2) v(p2b) v(t2b)
+quit
+.endc
+.end

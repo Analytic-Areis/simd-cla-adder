@@ -1,0 +1,57 @@
+* NGSPICE file created from sum2_b.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt sum2_b c2 p2 p2b s2 vdd gnd
+M1000 x2_s1xp1 x2_cb s2 vdd pfet w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.9072p ps=3.51u
+M1001 gnd x2_cb a_34_10# Gnd nfet w=1.44u l=0.18u
++  ad=0.4212p pd=2.07u as=0.4536p ps=2.07u
+M1002 vdd c2 x2_s1xp1 vdd pfet w=2.88u l=0.18u
++  ad=1.296p pd=6.66u as=0.9072p ps=3.51u
+M1003 vdd c2 x2_cb vdd pfet w=2.25u l=0.18u
++  ad=0.8748p pd=3.51u as=1.215p ps=5.58u
+M1004 a_16_10# c2 gnd Gnd nfet w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1005 x2_s1xp1 p2 vdd vdd pfet w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.8748p ps=3.51u
+M1006 s2 p2 a_16_10# Gnd nfet w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1007 x2_cb c2 gnd Gnd nfet w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.4212p ps=2.07u
+M1008 s2 p2b x2_s1xp1 vdd pfet w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.9072p ps=3.51u
+M1009 a_34_10# p2b s2 Gnd nfet w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+C0 c2 gnd 0.00525f
+C1 p2 s2 0.15887f
+C2 p2b c2 0.01832f
+C3 a_16_10# s2 0
+C4 vdd p2b 0.02078f
+C5 x2_s1xp1 p2b 0.27763f
+C6 x2_cb c2 0.70628f
+C7 x2_cb vdd 0.23853f
+C8 x2_cb x2_s1xp1 0.01314f
+C9 s2 gnd 0.04131f
+C10 p2 gnd 0.00105f
+C11 p2b s2 0.09333f
+C12 a_34_10# s2 0
+C13 a_16_10# gnd 0
+C14 vdd c2 0.04483f
+C15 p2 p2b 0.2539f
+C16 x2_s1xp1 c2 0.00589f
+C17 x2_cb s2 0.08434f
+C18 x2_s1xp1 vdd 0.63524f
+C19 x2_cb p2 0.01812f
+C20 c2 s2 0.0228f
+C21 p2b gnd 0.00105f
+C22 vdd s2 0.05286f
+C23 p2 c2 0.584f
+C24 a_34_10# gnd 0
+C25 x2_s1xp1 s2 0.92987f
+C26 x2_cb gnd 0.10224f
+C27 vdd p2 0.02306f
+C28 x2_s1xp1 p2 0.00591f
+C29 x2_cb p2b 0.26268f
+.ends
+

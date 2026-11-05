@@ -1,0 +1,40 @@
+* E4 nor4 far-rail input FO6
+.include ../../../../TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vin in0 gnd PULSE(0 1.8 1n 20p 20p 2n 4n)
+.subckt gnor4 i0 i1 i2 i3 out vdd gnd
+mn0 out i0 gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+mp0 out i0 x1 vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=1.9440e-12 PS=1.4940e-05 AD=3.8880e-12 PD=1.5480e-05
+mn1 out i1 gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+mp1 x1 i1 x2 vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=1.9440e-12 PS=1.4940e-05 AD=1.9440e-12 PD=1.4940e-05
+mn2 out i2 gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+mp2 x2 i2 x3 vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=1.9440e-12 PS=1.4940e-05 AD=1.9440e-12 PD=1.4940e-05
+mn3 out i3 gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+mp3 x3 i3 vdd vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=3.8880e-12 PS=1.5480e-05 AD=1.9440e-12 PD=1.4940e-05
+.ends
+.subckt sh in out vdd gnd
+mp out in vdd vdd CMOSP W=5.4000e-07 L=1.8000e-07 AS=2.9160e-13 PS=2.1600e-06 AD=2.9160e-13 PD=2.1600e-06
+mn out in gnd gnd CMOSN W=2.7000e-07 L=1.8000e-07 AS=1.4580e-13 PS=1.6200e-06 AD=1.4580e-13 PD=1.6200e-06
+.ends
+.subckt dr in out vdd gnd
+mp out in vdd vdd CMOSP W=1.3026e-06 L=1.8000e-07 AS=7.0339e-13 PS=3.6852e-06 AD=7.0339e-13 PD=3.6852e-06
+mn out in gnd gnd CMOSN W=6.5129e-07 L=1.8000e-07 AS=3.5170e-13 PS=2.3826e-06 AD=3.5170e-13 PD=2.3826e-06
+.ends
+.subckt lo in out vdd gnd
+mp out in vdd vdd CMOSP W=3.1262e-05 L=1.8000e-07 AS=1.6881e-11 PS=6.3604e-05 AD=1.6881e-11 PD=6.3604e-05
+mn out in gnd gnd CMOSN W=1.5631e-05 L=1.8000e-07 AS=8.4407e-12 PS=3.2342e-05 AD=8.4407e-12 PD=3.2342e-05
+.ends
+.subckt ll in out vdd gnd
+mp out in vdd vdd CMOSP W=1.2505e-04 L=1.8000e-07 AS=6.7526e-11 PS=2.5117e-04 AD=6.7526e-11 PD=2.5117e-04
+mn out in gnd gnd CMOSN W=6.2524e-05 L=1.8000e-07 AS=3.3763e-11 PS=1.2613e-04 AD=3.3763e-11 PD=1.2613e-04
+.ends
+X0 in0 n1 vdd gnd sh
+X1 n1 ndut vdd gnd dr
+X2 gnd gnd gnd ndut nout vdd gnd gnor4
+X3 nout n3 vdd gnd lo
+X4 n3 n4 vdd gnd ll
+.tran 0.5p 11n
+.meas tran tphl TRIG v(ndut) VAL=0.9 RISE=2 TARG v(nout) VAL=0.9 FALL=2
+.meas tran tplh TRIG v(ndut) VAL=0.9 FALL=2 TARG v(nout) VAL=0.9 RISE=2
+.end

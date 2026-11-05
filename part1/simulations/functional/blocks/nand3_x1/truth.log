@@ -1,0 +1,36 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * truth table of nand3_x1: inputs through unit inverters, outputs load 20l/10l inverter
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+src_i0                                     1.8
+i0                                 7.11606e-09
+src_i1                                     1.8
+i1                                 7.11606e-09
+src_i2                                     1.8
+i2                                 7.11606e-09
+lo_y                               7.11606e-09
+y                                          1.8
+x0.xn1                               0.0522103
+x0.xn2                               0.0150936
+vi2#branch                                   0
+vi1#branch                                   0
+vi0#branch                                   0
+vdd#branch                        -4.85147e-11
+
+
+No. of Data Rows : 271
+ngspice-46 done
+
+--- STDERR ---

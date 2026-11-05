@@ -1,0 +1,117 @@
+magic
+tech scmos
+timestamp 1793419419
+<< nwell >>
+rect 0 83 75 142
+<< ntransistor >>
+rect 14 10 16 30
+rect 23 10 25 30
+rect 32 10 34 30
+<< ptransistor >>
+rect 14 89 16 129
+rect 23 89 25 129
+rect 32 89 34 109
+<< ndiffusion >>
+rect 12 10 14 30
+rect 16 10 17 30
+rect 21 10 23 30
+rect 25 10 26 30
+rect 30 10 32 30
+rect 34 10 35 30
+<< pdiffusion >>
+rect 12 89 14 129
+rect 16 89 23 129
+rect 25 89 26 129
+rect 30 89 32 109
+rect 34 89 35 109
+<< ndcontact >>
+rect 8 10 12 30
+rect 17 10 21 30
+rect 26 10 30 30
+rect 35 10 39 30
+<< pdcontact >>
+rect 8 89 12 129
+rect 26 89 30 129
+rect 35 89 39 109
+<< psubstratepcontact >>
+rect 4 1 8 5
+rect 28 1 32 5
+rect 52 1 56 5
+<< nsubstratencontact >>
+rect 4 134 8 138
+rect 28 134 32 138
+rect 52 134 56 138
+<< polysilicon >>
+rect 14 129 16 132
+rect 23 129 25 132
+rect 32 109 34 112
+rect 14 53 16 89
+rect 23 71 25 89
+rect 32 80 34 89
+rect 14 30 16 48
+rect 23 30 25 66
+rect 32 30 34 75
+rect 14 7 16 10
+rect 23 7 25 10
+rect 32 7 34 10
+<< polycontact >>
+rect 31 75 35 80
+rect 22 66 26 71
+rect 13 48 17 53
+<< metal1 >>
+rect 0 138 75 139
+rect 0 134 4 138
+rect 8 134 28 138
+rect 32 134 52 138
+rect 56 134 75 138
+rect 0 133 75 134
+rect 8 129 12 133
+rect 35 109 39 133
+rect 26 88 30 89
+rect 35 75 62 80
+rect 26 66 53 71
+rect 22 57 26 62
+rect 17 48 44 53
+rect 13 39 26 44
+rect 8 30 12 31
+rect 17 30 21 31
+rect 26 30 30 31
+rect 35 6 39 10
+rect 0 5 75 6
+rect 0 1 4 5
+rect 8 1 28 5
+rect 32 1 52 5
+rect 56 1 75 5
+rect 0 0 75 1
+<< m2contact >>
+rect 26 83 31 88
+rect 17 57 22 62
+rect 8 39 13 44
+rect 26 39 31 44
+rect 8 31 13 36
+rect 17 31 22 36
+rect 26 31 31 36
+<< metal2 >>
+rect 26 62 31 83
+rect 8 36 13 39
+rect 17 36 22 57
+rect 26 36 31 39
+<< m123contact >>
+rect 62 75 67 80
+rect 53 66 58 71
+rect 26 57 31 62
+rect 44 48 49 53
+<< labels >>
+rlabel metal1 13 48 15 53 0 a
+port 1 nsew
+rlabel metal1 22 66 24 71 0 b
+port 2 nsew
+rlabel metal1 31 75 33 80 0 c
+port 3 nsew
+rlabel m2contact 17 57 19 62 0 y
+port 4 nsew
+rlabel metal1 0 133 2 139 0 vdd
+port 5 nsew
+rlabel metal1 0 0 2 6 0 gnd
+port 6 nsew
+<< end >>

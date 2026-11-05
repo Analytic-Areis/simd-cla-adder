@@ -1,0 +1,55 @@
+* dff_tgms_x1_2 timing
+.include ../../../../spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* dff_tgms_x1_2: static transmission-gate master-slave flip-flop
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt dff_tgms_x1_2 d clk q vdd gnd
+Ms0p1 clkb clk vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms0n1 clkb clk gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms1p1 dn d vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms1n1 dn d gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms2n dn clkb x gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms2p dn clk x vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms3p1 y x vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms3n1 y x gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms4p1 f y vdd vdd CMOSP W=6.3000e-07 L=1.8000e-07 AS=3.4020e-13 PS=2.3400e-06 AD=3.4020e-13 PD=2.3400e-06
+Ms4n1 f y gnd gnd CMOSN W=3.6000e-07 L=1.8000e-07 AS=1.9440e-13 PS=1.8000e-06 AD=1.9440e-13 PD=1.8000e-06
+Ms5n f clk x gnd CMOSN W=3.6000e-07 L=1.8000e-07 AS=1.9440e-13 PS=1.8000e-06 AD=1.9440e-13 PD=1.8000e-06
+Ms5p f clkb x vdd CMOSP W=6.3000e-07 L=1.8000e-07 AS=3.4020e-13 PS=2.3400e-06 AD=3.4020e-13 PD=2.3400e-06
+Ms6n y clk z gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms6p y clkb z vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms7p1 w z vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms7n1 w z gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms8p1 g w vdd vdd CMOSP W=6.3000e-07 L=1.8000e-07 AS=3.4020e-13 PS=2.3400e-06 AD=3.4020e-13 PD=2.3400e-06
+Ms8n1 g w gnd gnd CMOSN W=3.6000e-07 L=1.8000e-07 AS=1.9440e-13 PS=1.8000e-06 AD=1.9440e-13 PD=1.8000e-06
+Ms9n g clkb z gnd CMOSN W=3.6000e-07 L=1.8000e-07 AS=1.9440e-13 PS=1.8000e-06 AD=1.9440e-13 PD=1.8000e-06
+Ms9p g clk z vdd CMOSP W=6.3000e-07 L=1.8000e-07 AS=3.4020e-13 PS=2.3400e-06 AD=3.4020e-13 PD=2.3400e-06
+Ms10p1 q w vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms10n1 q w gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+.ends dff_tgms_x1_2
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x4 a y vdd gnd
+mp y a vdd vdd CMOSP W=7.2e-06 L=1.8e-07 AS=3.888e-12 PS=1.548e-05 AD=3.888e-12 PD=1.548e-05
+mn y a gnd gnd CMOSN W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+.ends
+Vd sd gnd PWL(0.00000e+00 1.800 3.00000e-09 1.800 3.02000e-09 0.000 3.84000e-09 0.000 3.86000e-09 1.800 5.00000e-09 1.800)
+Xd sd d vdd gnd tb_x1
+Vc sc gnd PWL(0 1.8 1.0e-9 1.8 1.02e-9 0 1.99000e-09 0 2.01000e-09 1.8 3.0e-9 1.8 3.02e-9 0 3.99000e-09 0 4.01000e-09 1.8 5.00000e-09 1.8)
+Xci sc clkn vdd gnd tb_x4
+Xc clkn clk vdd gnd tb_x4
+X0 d clk q vdd gnd dff_tgms_x1_2
+Xl q ql vdd gnd tb_x1
+Cload q gnd 15.0f
+.tran 1p 5.00000e-09
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata h1_m1500.txt v(clk) v(d) v(q)
+quit
+.endc
+.end

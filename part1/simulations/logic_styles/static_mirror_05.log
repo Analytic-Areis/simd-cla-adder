@@ -1,0 +1,89 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * static cmos (mirror carry, used) {'k': 2, 'beta': 1}
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd_core                                   1.8
+vdd                                        1.8
+vtb                                        1.8
+g                                            0
+t                                          1.8
+gb                                         1.8
+tb                                           0
+p                                          1.8
+pb                                           0
+a                                          1.8
+ab                                           0
+s                                            0
+sb                                         1.8
+s1                                         1.8
+c0                                 6.63307e-09
+sb1                                7.11605e-09
+c0b                                        1.8
+ld0_0                              7.11606e-09
+c1                                         1.8
+ld1_0                                      1.8
+c2                                 1.13734e-08
+ld2_0                              7.11609e-09
+c3                                         1.8
+ld3_0                                      1.8
+c4                                 1.11364e-08
+ld3_1                                      1.8
+ld3_2                                      1.8
+ld3_3                                      1.8
+x0                                 6.93014e-09
+z0                                         1.8
+x1                                 5.68663e-09
+z1                                         1.8
+x2                                 6.40808e-09
+z2                                         1.8
+x3                                 5.56818e-09
+z3                                         1.8
+vsb#branch                                   0
+vs#branch                                    0
+vab#branch                                   0
+va#branch                                    0
+vpb#branch                                   0
+vp#branch                                    0
+vtbar#branch                                 0
+vgb#branch                                   0
+vt#branch                                    0
+vg#branch                                    0
+vtb#branch                          -1.549e-10
+vsense#branch                      1.71944e-10
+vdd#branch                        -1.71944e-10
+
+
+No. of Data Rows : 4533
+
+  Measurements for Transient Analysis
+
+tpr                 =  3.83263e-10 targ=  1.47614e-09 trig=  1.09288e-09
+pavg                =  9.87927e-05 from=  5.00000e-10 to=  8.50000e-09
+tpf                 =  3.85677e-10 targ=  3.48250e-09 trig=  3.09682e-09
+vlo                 =  1.11364e-08
+vhi                 =  1.80000e+00
+vlo2                =  1.11491e-08
+
+
+Total analysis time (seconds) = 0.2241
+
+Total elapsed time (seconds) = 0.242 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available = 2465.328 MB.
+Maximum ngspice program size =   10.625 MB.
+Current ngspice program size =   10.625 MB.
+
+
+--- STDERR ---

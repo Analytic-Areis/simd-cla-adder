@@ -1,0 +1,49 @@
+* Truth table of aoi21_x1: inputs through unit inverters, outputs load 20L/10L inverter
+.include ../../../../spice/models/TSMC_180nm.txt
+.options reltol=1e-3
+VDD vdd gnd 1.8
+* aoi21_x1: NOT(a b + c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt aoi21_x1 a b c y vdd gnd
+Mp1 xp1 a vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp2 xp1 b vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp3 y c xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn1 y a xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn2 xn1 b gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+Mn3 y c gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends aoi21_x1
+.subckt tb_inv a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+Va src_a gnd PWL(
++ 0.00000e+00 1.800 4.00000e-09 1.800 4.05000e-09 0.000 8.00000e-09 0.000 8.05000e-09 1.800 9.00000e-09 1.800
++ 9.05000e-09 0.000 1.00000e-08 0.000 1.00500e-08 1.800 1.10000e-08 1.800 1.10500e-08 0.000 1.30000e-08 0.000
++ 1.30500e-08 1.800 1.40000e-08 1.800 1.40500e-08 0.000 1.50000e-08 0.000 1.50500e-08 1.800 1.60000e-08 1.800
++ )
+Xd_a src_a a vdd gnd tb_inv
+Vb src_b gnd PWL(
++ 0.00000e+00 1.800 2.00000e-09 1.800 2.05000e-09 0.000 4.00000e-09 0.000 4.05000e-09 1.800 6.00000e-09 1.800
++ 6.05000e-09 0.000 1.00000e-08 0.000 1.00500e-08 1.800 1.20000e-08 1.800 1.20500e-08 0.000 1.30000e-08 0.000
++ 1.30500e-08 1.800 1.50000e-08 1.800 1.50500e-08 0.000 1.60000e-08 0.000
++ )
+Xd_b src_b b vdd gnd tb_inv
+Vc src_c gnd PWL(
++ 0.00000e+00 1.800 1.00000e-09 1.800 1.05000e-09 0.000 2.00000e-09 0.000 2.05000e-09 1.800 3.00000e-09 1.800
++ 3.05000e-09 0.000 4.00000e-09 0.000 4.05000e-09 1.800 5.00000e-09 1.800 5.05000e-09 0.000 6.00000e-09 0.000
++ 6.05000e-09 1.800 7.00000e-09 1.800 7.05000e-09 0.000 9.00000e-09 0.000 9.05000e-09 1.800 1.00000e-08 1.800
++ 1.00500e-08 0.000 1.30000e-08 0.000 1.30500e-08 1.800 1.60000e-08 1.800
++ )
+Xd_c src_c c vdd gnd tb_inv
+Xl_y y lo_y vdd gnd tb_inv
+X0 a b c y vdd gnd aoi21_x1
+.tran 200p 1.60000e-08
+.control
+set wr_singlescale
+set wr_vecnames
+run
+set curplottitle=Bhargav-2025102061-1.3-aoi21_x1-function
+wrdata wave.txt v(a) v(b) v(c) v(y) i(VDD)
+quit
+.endc
+.end

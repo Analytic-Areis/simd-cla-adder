@@ -1,0 +1,218 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * all-arc segment for cla_r_tg_t
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+src_a0                                       0
+drv_a0                                     1.8
+a0                                 6.49779e-09
+src_a1                                     1.8
+drv_a1                             7.05523e-09
+a1                                         1.8
+src_a2                                     1.8
+drv_a2                             7.05523e-09
+a2                                         1.8
+src_a3                                       0
+drv_a3                                     1.8
+a3                                 6.49779e-09
+src_b0                                       0
+drv_b0                                     1.8
+b0                                 6.49779e-09
+src_b1                                     1.8
+drv_b1                             7.05523e-09
+b1                                         1.8
+src_b2                                     1.8
+drv_b2                             7.05523e-09
+b2                                         1.8
+src_b3                                     1.8
+drv_b3                             7.05523e-09
+b3                                         1.8
+src_c0                                     1.8
+drv_c0                             7.05523e-09
+c0                                         1.8
+lo_s0                              7.11606e-09
+s0                                         1.8
+lo_s1                                      1.8
+s1                                 7.11609e-09
+lo_s2                              7.11606e-09
+s2                                         1.8
+lo_s3                                      1.8
+s3                                  7.4243e-09
+lo_c4                              7.11606e-09
+c4                                         1.8
+x0.g0b                                     1.8
+x0.xnand0.xn1                        0.0401625
+x0.xnor0.xp1                               1.8
+x0.t0b                                     1.8
+x0.xaoi0.xp1                               1.8
+x0.p0                               5.3498e-08
+x0.xaoi0.xn1                       2.66248e-08
+x0.xoai0.xp1                               1.8
+x0.p0b                                     1.8
+x0.xoai0.xn1                       2.90973e-08
+x0.g1b                             1.22383e-08
+x0.xnand1.xn1                      6.11917e-09
+x0.xnor1.xp1                           1.75594
+x0.t1b                             1.07912e-09
+x0.xaoi1.xp1                          0.453511
+x0.p1                              5.30594e-08
+x0.xaoi1.xn1                       2.65297e-08
+x0.xoai1.xp1                               1.8
+x0.p1b                                     1.8
+x0.xoai1.xn1                            1.4358
+x0.g2b                             1.15384e-08
+x0.xnand2.xn1                       5.7692e-09
+x0.xnor2.xp1                           1.75601
+x0.t2b                             1.12932e-09
+x0.xaoi2.xp1                          0.450995
+x0.p2                              3.83828e-08
+x0.xaoi2.xn1                       1.91914e-08
+x0.xoai2.xp1                               1.8
+x0.p2b                                     1.8
+x0.xoai2.xn1                           1.43671
+x0.g3b                                     1.8
+x0.xnand3.xn1                      1.58864e-08
+x0.xnor3.xp1                               1.8
+x0.t3b                             9.99928e-09
+x0.xaoi3.xp1                               1.8
+x0.p3                                      1.8
+x0.xaoi3.xn1                       6.41559e-09
+x0.xoai3.xp1                               1.8
+x0.p3b                             3.20845e-08
+x0.xoai3.xn1                       1.60423e-08
+x0.c0b                             6.31117e-09
+x0.c1                              2.03528e-08
+x0.xc1.xp1                            0.430402
+x0.xc1.xn1                         1.01764e-08
+x0.c2                                      1.8
+x0.xc2.xp1                                 1.8
+x0.xc2.xp2                                 1.8
+x0.xc2.xn1                         1.48742e-08
+x0.xc2.xn2                         7.43708e-09
+x0.c3                                      1.8
+x0.xc3.xp1                                 1.8
+x0.xc3.xp2                                 1.8
+x0.xc3.xp3                                 1.8
+x0.xc3.xn1                           0.0301138
+x0.xc3.xn2                         3.21888e-09
+x0.xc3.xn3                         1.60944e-09
+x0.xc4m.xp1                           0.436987
+x0.c4b                             2.09845e-08
+x0.xc4m.xp2                                1.8
+x0.xc4m.xp3                            1.75663
+x0.xc4m.xp4                             1.7705
+x0.xc4m.xn1                        2.01538e-15
+x0.xc4m.xn3                        1.61419e-08
+x0.xc4m.xn2                        1.12994e-08
+x0.xc4m.xn4                        1.45278e-08
+x0.xx0.cb                          7.12221e-09
+x0.xx0.m                           7.09397e-08
+x0.xx1.cb                                  1.8
+x0.xx1.m                                   1.8
+x0.xx2.cb                          8.67031e-09
+x0.xx2.m                           5.83996e-08
+x0.xx3.cb                          7.70584e-09
+x0.xx3.m                                   1.8
+vc0#branch                                   0
+vb3#branch                                   0
+vb2#branch                                   0
+vb1#branch                                   0
+vb0#branch                                   0
+va3#branch                                   0
+va2#branch                                   0
+va1#branch                                   0
+va0#branch                                   0
+vdd#branch                        -1.09337e-09
+
+ Reference value :  6.44932e-09
+ Reference value :  1.33050e-08
+ Reference value :  1.97936e-08
+ Reference value :  2.60625e-08
+ Reference value :  3.25064e-08
+ Reference value :  3.85322e-08
+ Reference value :  4.45929e-08
+ Reference value :  5.05583e-08
+ Reference value :  5.68415e-08
+ Reference value :  6.30573e-08
+ Reference value :  6.89196e-08
+ Reference value :  7.45461e-08
+ Reference value :  8.05228e-08
+ Reference value :  8.68877e-08
+ Reference value :  9.33916e-08
+ Reference value :  1.00000e-07
+ Reference value :  1.06282e-07
+ Reference value :  1.12314e-07
+ Reference value :  1.18415e-07
+ Reference value :  1.24893e-07
+ Reference value :  1.31373e-07
+ Reference value :  1.37509e-07
+ Reference value :  1.44001e-07
+ Reference value :  1.50395e-07
+ Reference value :  1.56548e-07
+ Reference value :  1.62900e-07
+ Reference value :  1.69052e-07
+ Reference value :  1.74917e-07
+ Reference value :  1.80992e-07
+ Reference value :  1.87251e-07
+ Reference value :  1.93108e-07
+ Reference value :  1.99008e-07
+ Reference value :  2.04824e-07
+ Reference value :  2.10621e-07
+ Reference value :  2.16641e-07
+ Reference value :  2.22722e-07
+ Reference value :  2.29071e-07
+ Reference value :  2.35213e-07
+ Reference value :  2.41437e-07
+ Reference value :  2.47575e-07
+ Reference value :  2.53789e-07
+ Reference value :  2.60003e-07
+ Reference value :  2.66208e-07
+ Reference value :  2.72271e-07
+ Reference value :  2.78258e-07
+ Reference value :  2.84052e-07
+ Reference value :  2.90060e-07
+ Reference value :  2.96300e-07
+ Reference value :  3.02539e-07
+ Reference value :  3.08592e-07
+ Reference value :  3.14460e-07
+ Reference value :  3.20697e-07
+ Reference value :  3.27145e-07
+ Reference value :  3.33591e-07
+ Reference value :  3.39320e-07
+ Reference value :  3.45025e-07
+ Reference value :  3.51653e-07
+ Reference value :  3.57957e-07
+ Reference value :  3.63851e-07
+ Reference value :  3.69578e-07
+ Reference value :  3.76000e-07
+ Reference value :  3.82270e-07
+ Reference value :  3.88738e-07
+ Reference value :  3.95170e-07
+ Reference value :  4.01778e-07
+ Reference value :  4.08067e-07
+ Reference value :  4.14400e-07
+ Reference value :  4.20912e-07
+ Reference value :  4.27195e-07
+ Reference value :  4.33596e-07
+ Reference value :  4.39951e-07
+ Reference value :  4.46139e-07
+ Reference value :  4.52383e-07
+ Reference value :  4.58701e-07
+ Reference value :  4.65140e-07
+ Reference value :  4.71394e-07
+ Reference value :  4.78006e-07
+No. of Data Rows : 29074
+ngspice-46 done
+
+--- STDERR ---

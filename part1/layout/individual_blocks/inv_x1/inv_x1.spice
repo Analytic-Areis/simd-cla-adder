@@ -1,0 +1,16 @@
+* NGSPICE file created from inv_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt inv_x1 a y vdd gnd
+M1000 vdd a y vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1001 gnd a y Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.88u
+C0 a y 0.00847f
+C1 a gnd 0.00258f
+C2 vdd a 0.02325f
+C3 y gnd 0.12393f
+C4 vdd y 0.21849f
+.ends
+

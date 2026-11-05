@@ -1,0 +1,96 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * domino (footed, keeper) {'k': 4, 'm': 4, 'foot': 1}
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd_core                                   1.8
+vdd                                        1.8
+vtb                                        1.8
+g                                            0
+t                                          1.8
+gb                                         1.8
+tb                                           0
+p                                          1.8
+pb                                           0
+a                                          1.8
+ab                                           0
+sck                                          0
+ck1                                        1.8
+s                                            0
+sb                                         1.8
+s1                                         1.8
+c0                                 6.49778e-09
+sb1                                7.05522e-09
+c0b                                        1.8
+ld0_0                                      1.8
+c1                                 9.52557e-09
+ld1_0                                      1.8
+c2                                 9.52557e-09
+ld2_0                                      1.8
+c3                                 9.52557e-09
+ld3_0                                      1.8
+c4                                 6.31021e-09
+ld3_1                                      1.8
+ld3_2                                      1.8
+ld3_3                                      1.8
+dn0                                        1.8
+clk                                6.50494e-09
+f0                                   0.0463178
+x0                                   0.0463178
+dn1                                        1.8
+f1                                   0.0463178
+x1                                   0.0463178
+dn2                                        1.8
+f2                                   0.0463178
+x2                                   0.0463178
+dn3                                        1.8
+f3                                   0.0463178
+x3                                   0.0463178
+vsb#branch                                   0
+vs#branch                                    0
+vck#branch                                   0
+vab#branch                                   0
+va#branch                                    0
+vpb#branch                                   0
+vp#branch                                    0
+vtbar#branch                                 0
+vgb#branch                                   0
+vt#branch                                    0
+vg#branch                                    0
+vtb#branch                        -1.62102e-10
+vsense#branch                      3.29153e-10
+vdd#branch                        -3.29153e-10
+
+ Reference value :  6.95800e-09
+No. of Data Rows : 4557
+
+  Measurements for Transient Analysis
+
+tpr                 =  3.82824e-10 targ=  1.47682e-09 trig=  1.09400e-09
+pavg                =  3.64436e-04 from=  5.00000e-10 to=  8.50000e-09
+vlo                 =  6.31022e-09
+vhi                 =  1.80000e+00
+tpre                =  1.53392e-10 targ=  2.87611e-09 trig=  2.72272e-09
+
+
+Total analysis time (seconds) = 0.302164
+
+Total elapsed time (seconds) = 0.309 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available = 2586.328 MB.
+Maximum ngspice program size =   10.734 MB.
+Current ngspice program size =   10.734 MB.
+
+
+--- STDERR ---

@@ -1,0 +1,37 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * dff schematic
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+sd                                         1.8
+d                                  7.05523e-09
+sc                                         1.8
+clk                                6.49779e-09
+x0.s0xp1                                   1.8
+x0.a                                       1.8
+x0.b                                       1.8
+x0.s1xn1                               1.41591
+x0.qb                                 0.418876
+x0.s2xn1                           2.79393e-09
+q                                      1.79932
+ql                                 7.22244e-09
+vc#branch                                    0
+vd#branch                                    0
+vdd#branch                        -8.70492e-07
+
+
+No. of Data Rows : 4243
+ngspice-46 done
+
+--- STDERR ---

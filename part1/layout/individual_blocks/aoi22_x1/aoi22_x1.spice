@@ -1,0 +1,53 @@
+* NGSPICE file created from aoi22_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt aoi22_x1 a b c d y vdd gnd
+M1000 a_8_98# b vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1001 y c a_34_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1002 y d a_8_98# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1003 a_8_98# c y vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1004 a_16_10# a y Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1005 gnd b a_16_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1006 vdd a a_8_98# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1007 a_34_10# d gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+C0 d gnd 0.00339f
+C1 c y 0.01802f
+C2 a y 0.02118f
+C3 b c 0.00894f
+C4 a_16_10# y 0
+C5 a b 0.62584f
+C6 vdd d 0.01968f
+C7 a_8_98# d 0.02402f
+C8 a_8_98# vdd 0.82281f
+C9 c gnd 0.00105f
+C10 a gnd 0.00105f
+C11 b y 0.01809f
+C12 d c 0.62604f
+C13 a_34_10# y 0
+C14 a_16_10# gnd 0
+C15 a d 0.00874f
+C16 vdd c 0.02098f
+C17 a_8_98# c 0.09157f
+C18 vdd a 0.02383f
+C19 a_8_98# a 0.41813f
+C20 y gnd 0.08254f
+C21 d y 0.0235f
+C22 b gnd 0.00339f
+C23 a_34_10# gnd 0
+C24 vdd y 0.05318f
+C25 a c 0.00894f
+C26 b d 0.62584f
+C27 a_8_98# y 1.49484f
+C28 vdd b 0.02364f
+C29 a_8_98# b 0.03259f
+.ends
+

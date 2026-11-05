@@ -1,0 +1,41 @@
+* DC supply current of nand2_x1
+.include ../../../../spice/models/TSMC_180nm.txt
+VDD vdd gnd 1.8
+* nand2_x1: 2-input NAND
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nand2_x1 i0 i1 y vdd gnd
+Mp1 y i0 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp2 y i1 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y i0 xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn2 xn1 i1 gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+.ends nand2_x1
+.subckt tb_inv a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+Vi0 src_i0 gnd 1.8
+Xd_i0 src_i0 i0 vdd gnd tb_inv
+Vi1 src_i1 gnd 1.8
+Xd_i1 src_i1 i1 vdd gnd tb_inv
+Xl_y y lo_y vdd gnd tb_inv
+X0 i0 i1 y vdd gnd nand2_x1
+.control
+alter Vi0 = 1.8
+alter Vi1 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Vi0 = 1.8
+alter Vi1 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Vi0 = 0.0
+alter Vi1 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Vi0 = 0.0
+alter Vi1 = 0.0
+op
+print i(VDD) >> dc_current.txt
+quit
+.endc
+.end

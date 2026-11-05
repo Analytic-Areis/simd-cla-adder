@@ -1,0 +1,20 @@
+{'name': 'reg_final_top', 'drc': 0, 'drc_first': [], 'lvs': True, 'lvs_message': 'match: 348 merged devices, 207 nets', 'width_lambda': 925, 'height_lambda': 935, 'area_um2': 7005.5}
+schematic T 875.0 ps errors 0 
+schematic T 687.5 ps errors 27 vector 13: q_s3=1.80, wanted 0
+schematic T 781.2 ps errors 0 
+schematic T 734.4 ps errors 6 vector 25: q_s3=1.71, wanted 0
+schematic T 757.8 ps errors 0 
+schematic T 746.1 ps errors 0 
+schematic T 740.2 ps errors 0 
+schematic T 737.3 ps errors 2 vector 35: q_s3=0.99, wanted 0
+schematic {'min_period_ps': 740.2, 'fmax_ghz': 1.3509, 'errors_at_limit': 0, 'pavg_mw_random': 5.2496, 'history': [(875.0, 0), (687.5, 27), (781.25, 0), (734.38, 6), (757.81, 0), (746.09, 0), (740.23, 0), (737.3, 2)]}
+postlayout T 875.0 ps errors 0 
+postlayout T 687.5 ps errors 210 vector 0: q_s2=0.00, wanted 1
+postlayout T 781.2 ps errors 44 vector 6: q_s3=1.80, wanted 0
+postlayout T 828.1 ps errors 21 vector 13: q_s3=1.80, wanted 0
+postlayout T 851.6 ps errors 16 vector 17: q_s3=1.80, wanted 0
+postlayout T 863.3 ps errors 15 vector 17: q_s3=1.80, wanted 0
+postlayout T 869.1 ps errors 3 vector 25: q_s3=1.78, wanted 0
+postlayout T 872.1 ps errors 0 
+postlayout {'min_period_ps': 872.1, 'fmax_ghz': 1.1467, 'errors_at_limit': 0, 'pavg_mw_random': 4.9246, 'history': [(875.0, 0), (687.5, 210), (781.25, 44), (828.12, 21), (851.56, 16), (863.28, 15), (869.14, 3), (872.07, 0)]}
+{"tpd_max_ps": 579.88, "tsetup_ps": 38.0, "thold_ps": 45.7, "tcq_ps": 204.2, "T_course_ps": 663.6, "fmax_course_ghz": 1.507, "T_physical_ps": 822.1, "fmax_physical_ghz": 1.2164, "errors_at_course_formula": 293, "note_at_course_formula": "vector 0: q_s2=0.00, wanted 1", "pavg_mw_at_course_formula": 6.3077} {"period_ps": 872.1, "vdd": 1.8, "random": {"cycles": 264, "pavg_mw": 4.9246, "pdp_fj": 2855.68}, "hint": {"cycles": 80, "pavg_mw": 3.9774, "errors": 0, "pdp_fj": 2306.4}, "idle_inputs": {"cycles": 40, "pavg_mw": 2.2686, "errors": 0, "note": "inputs constant; clock and flip-flop power only"}}

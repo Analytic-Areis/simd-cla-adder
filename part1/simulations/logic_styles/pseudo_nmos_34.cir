@@ -1,0 +1,62 @@
+* Pseudo-NMOS {'k': 6, 'r': 0.45}
+.include ../../spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd_core gnd 1.8
+Vsense vdd_core vdd 0
+VTB vtb gnd 1.8
+Vg g gnd 0
+Vt t gnd 1.8
+Vgb gb gnd 1.8
+Vtbar tb gnd 0
+Vp p gnd 1.8
+Vpb pb gnd 0
+Va a gnd 1.8
+Vab ab gnd 0
+Vs s gnd PWL(0 0 1n 0 1.015n 1.8 3n 1.8 3.015n 0 5n 0 5.015n 1.8 7n 1.8 7.015n 0 9n 0)
+Vsb sb gnd PWL(0 1.8 1n 1.8 1.015n 0 3n 0 3.015n 1.8 5n 1.8 5.015n 0 7n 0 7.015n 1.8 9n 1.8)
+MD0 s1 s vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD1 s1 s gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+MD2 c0 s1 vtb vtb CMOSP W=3.600u L=0.18u AS=1.6200p AD=1.6200p PS=8.100u PD=8.100u
+MD3 c0 s1 gnd gnd CMOSN W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD4 sb1 sb vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD5 sb1 sb gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+MD6 c0b sb1 vtb vtb CMOSP W=3.600u L=0.18u AS=1.6200p AD=1.6200p PS=8.100u PD=8.100u
+MD7 c0b sb1 gnd gnd CMOSN W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD8 ld0_0 c1 vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD9 ld0_0 c1 gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+MD10 ld1_0 c2 vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD11 ld1_0 c2 gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+MD12 ld2_0 c3 vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD13 ld2_0 c3 gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+MD14 ld3_0 c4 vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD15 ld3_0 c4 gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+MD16 ld3_1 c4 vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD17 ld3_1 c4 gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+MD18 ld3_2 c4 vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD19 ld3_2 c4 gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+MD20 ld3_3 c4 vtb vtb CMOSP W=1.800u L=0.18u AS=0.8100p AD=0.8100p PS=4.500u PD=4.500u
+MD21 ld3_3 c4 gnd gnd CMOSN W=0.900u L=0.18u AS=0.4050p AD=0.4050p PS=2.700u PD=2.700u
+M0 c1 g gnd gnd CMOSN W=5.400u L=0.18u AS=2.4300p AD=2.4300p PS=11.700u PD=11.700u
+M1 c1 c0 x0 gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M2 x0 t gnd gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M3 c1 gnd vdd vdd CMOSP W=4.860u L=0.18u AS=2.1870p AD=2.1870p PS=10.620u PD=10.620u
+M4 c2 c1 x1 gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M5 c2 tb x1 gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M6 x1 gb gnd gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M7 c2 gnd vdd vdd CMOSP W=4.860u L=0.18u AS=2.1870p AD=2.1870p PS=10.620u PD=10.620u
+M8 c3 g gnd gnd CMOSN W=5.400u L=0.18u AS=2.4300p AD=2.4300p PS=11.700u PD=11.700u
+M9 c3 c2 x2 gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M10 x2 t gnd gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M11 c3 gnd vdd vdd CMOSP W=4.860u L=0.18u AS=2.1870p AD=2.1870p PS=10.620u PD=10.620u
+M12 c4 c3 x3 gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M13 c4 tb x3 gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M14 x3 gb gnd gnd CMOSN W=10.800u L=0.18u AS=4.8600p AD=4.8600p PS=22.500u PD=22.500u
+M15 c4 gnd vdd vdd CMOSP W=4.860u L=0.18u AS=2.1870p AD=2.1870p PS=10.620u PD=10.620u
+.tran 2p 9n
+.meas tran tpr TRIG v(c0) VAL=0.9 RISE=1 TARG v(c4) VAL=0.9 RISE=1
+.meas tran pavg AVG i(Vsense) FROM=0.5n TO=8.5n
+.meas tran tpf TRIG v(c0) VAL=0.9 FALL=1 TARG v(c4) VAL=0.9 FALL=1
+.meas tran vlo FIND v(c4) AT=0.95n
+.meas tran vhi FIND v(c4) AT=2.95n
+.meas tran vlo2 FIND v(c4) AT=4.95n
+.end

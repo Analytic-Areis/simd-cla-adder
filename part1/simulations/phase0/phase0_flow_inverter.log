@@ -1,0 +1,43 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * phase 0 check 2: generated inverter against flow check schematic
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+in0                                          0
+b                                          1.8
+os                                 7.11606e-09
+l2                                         1.8
+vin#branch                                   0
+vdd#branch                        -4.40009e-11
+
+
+No. of Data Rows : 22038
+
+  Measurements for Transient Analysis
+
+sch_tphl            =  3.47253e-11 targ=  7.09061e-09 trig=  7.05589e-09
+sch_tplh            =  3.61503e-11 targ=  5.07088e-09 trig=  5.03473e-09
+
+
+Total analysis time (seconds) = 0.099685
+
+Total elapsed time (seconds) = 0.103 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available =  353.641 MB.
+Maximum ngspice program size =   10.750 MB.
+Current ngspice program size =   10.750 MB.
+
+
+--- STDERR ---

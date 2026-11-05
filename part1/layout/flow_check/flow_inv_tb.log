@@ -1,0 +1,47 @@
+Starting XQuartz...
+
+Note: No compatibility mode selected!
+
+
+Circuit: * flow check: extracted inverter vs schematic inverter, each driving one load inverter
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+in0                                          0
+a                                          1.8
+b                                          1.8
+oe                                 7.11606e-09
+os                                 7.11606e-09
+l1                                         1.8
+l2                                         1.8
+vin0#branch                                  0
+vdd#branch                        -8.80022e-11
+
+
+No. of Data Rows : 22038
+
+  Measurements for Transient Analysis
+
+ext_tphl            =  3.55717e-11 targ=  7.09160e-09 trig=  7.05603e-09
+ext_tplh            =  3.70708e-11 targ=  5.07192e-09 trig=  5.03485e-09
+sch_tphl            =  3.47253e-11 targ=  7.09061e-09 trig=  7.05589e-09
+sch_tplh            =  3.61503e-11 targ=  5.07088e-09 trig=  5.03473e-09
+
+
+Total analysis time (seconds) = 0.176077
+
+Total elapsed time (seconds) = 0.195 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available =  265.172 MB.
+Maximum ngspice program size =   11.125 MB.
+Current ngspice program size =   11.125 MB.
+

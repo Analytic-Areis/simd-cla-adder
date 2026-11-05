@@ -1,0 +1,13 @@
+{'design': 'C4_aoi22', 'scale': 0.7, 'total_width_lambda': 3252, 'post_pin_ps': np.float64(602.38), 'post_drv_ps': np.float64(671.06), 'area_um2': 2574.0, 'adp_um2_ns': np.float64(1550.5), 'power_mw_1ns': 0.9832, 'pdp_fj': np.float64(592.3), 'worst_arc': 'a1 rise to s3 rise, A=0101 B=0001 C0=0'}
+{'design': 'C4_aoi22', 'scale': 0.85, 'total_width_lambda': 3857, 'post_pin_ps': np.float64(601.39), 'post_drv_ps': np.float64(674.0), 'area_um2': 2743.7, 'adp_um2_ns': np.float64(1650.0), 'power_mw_1ns': 1.1156, 'pdp_fj': np.float64(670.9), 'worst_arc': 'a1 rise to s3 rise, A=0001 B=0101 C0=0'}
+{'design': 'C4_aoi22', 'scale': 1.0, 'total_width_lambda': 4536, 'post_pin_ps': np.float64(579.88), 'post_drv_ps': np.float64(657.44), 'area_um2': 2936.9, 'adp_um2_ns': np.float64(1703.0), 'power_mw_1ns': 1.2704, 'pdp_fj': np.float64(736.7), 'worst_arc': 'a1 rise to s3 rise, A=0001 B=0101 C0=0'}
+{'design': 'C4_aoi22', 'scale': 1.2, 'total_width_lambda': 5456, 'post_pin_ps': np.float64(590.99), 'post_drv_ps': np.float64(679.06), 'area_um2': 3293.8, 'adp_um2_ns': np.float64(1946.6), 'power_mw_1ns': 1.4821, 'pdp_fj': np.float64(875.9), 'worst_arc': 'a1 rise to s3 rise, A=0101 B=0001 C0=0'}
+Traceback (most recent call last):
+  File "/Users/bhargav_vemparala/Documents/Academics/Semester-3/VLSI_CP/temp_vlsi/part1/cells/final_flow.py", line 621, in <module>
+    r = run_system(ext, t_ok, seq, sim_dir, f"p_{name}")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhargav_vemparala/Documents/Academics/Semester-3/VLSI_CP/temp_vlsi/part1/cells/final_flow.py", line 565, in stage_tradeoff
+    s = layout_adder(label, sizes, best["flips"], tag)
+  File "/Users/bhargav_vemparala/Documents/Academics/Semester-3/VLSI_CP/temp_vlsi/part1/cells/final_flow.py", line 88, in layout_adder
+    raise RuntimeError(f"{tag}: DRC {res['drc']} LVS {res['lvs_message']} {res['drc_first'][:3]}")
+RuntimeError: scale_C4_aoi22_1p4: DRC 0 LVS device neighbourhoods differ, 194 unmatched devices []

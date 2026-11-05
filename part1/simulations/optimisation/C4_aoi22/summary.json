@@ -1,0 +1,88 @@
+{
+ "label": "C4_aoi22",
+ "sizes": {
+  "nand0": 1.25,
+  "nand1": 0.8,
+  "nand2": 1.0,
+  "nand3": 1.0,
+  "nor0": 1.56,
+  "nor1": 1.95,
+  "nor2": 1.95,
+  "nor3": 1.25,
+  "aoi0": 0.41,
+  "aoi1": 0.41,
+  "aoi2": 0.8,
+  "aoi3": 1.0,
+  "oai0": 0.41,
+  "oai1": 0.41,
+  "oai2": 0.8,
+  "oai3": 1.0,
+  "xor0": 1.25,
+  "xor1": 1.0,
+  "xor2": 0.8,
+  "xor3": 0.51,
+  "xinv0": 0.51,
+  "xinv1": 0.64,
+  "xinv2": 1.25,
+  "xinv3": 1.0,
+  "invc0": 1.0,
+  "g10": 1.25,
+  "t10": 1.56,
+  "g32": 1.0,
+  "t32": 0.8,
+  "ig2": 1.0,
+  "it2": 1.95,
+  "g30": 0.41,
+  "t30": 0.41,
+  "g20": 1.0,
+  "t20": 1.0,
+  "ig10": 1.0,
+  "it10": 1.0,
+  "c1": 0.51,
+  "c2": 1.0,
+  "c3": 1.0,
+  "c4g": 0.8
+ },
+ "flips": {
+  "g10": [
+   false,
+   true
+  ],
+  "g32": [
+   false,
+   false
+  ],
+  "g30": [
+   true,
+   true
+  ],
+  "g20": [
+   true,
+   true
+  ],
+  "c1": [
+   false,
+   false
+  ],
+  "c2": [
+   true,
+   true
+  ],
+  "c3": [
+   true,
+   true
+  ],
+  "c4g": [
+   true,
+   true
+  ]
+ },
+ "transistors": 194,
+ "total_width_lambda": 4460,
+ "functional_errors": 0,
+ "worst_drv_ps": 559.8859408327995,
+ "worst_pin_ps": 489.93091375488126,
+ "critical": "{'pin': 'a1', 'pin_edge': 'rise', 'state': 112, 'output': 's3', 'out_edge': 'rise', 'tpd_pin_ps': np.float64(488.81292495331286), 'tpd_drv_ps': np.float64(559.8859408327995), 'extra_crossings': 0}",
+ "elapsed_s": 4003,
+ "config": "C4_aoi22"
+}

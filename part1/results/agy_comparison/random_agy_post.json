@@ -1,0 +1,39 @@
+{
+ "design": "agy_post",
+ "sweep": "random",
+ "segments": 50,
+ "stride": 1,
+ "arcs": 15062,
+ "transitions": 5702,
+ "wrong_samples": 0,
+ "failed_runs": 0,
+ "tpd_max_from_q_ps": 668.42,
+ "worst": {
+  "pin": "b0",
+  "pin_edge": "rise",
+  "state": 139,
+  "next_state": 113,
+  "output": "s3",
+  "out_edge": "rise",
+  "inputs_changed": 6,
+  "tpd_q_ps": 668.4215314805718,
+  "tcq_ps": 162.8204573600804,
+  "clk_to_out_ps": 831.2419888406523
+ },
+ "worst_clk_to_out_ps": 831.24,
+ "worst_tcq_ps": 222.78,
+ "per_output": {
+  "s0_rise": 528.46,
+  "s0_fall": 460.11,
+  "s1_rise": 564.24,
+  "s1_fall": 510.07,
+  "s2_rise": 642.02,
+  "s2_fall": 591.78,
+  "s3_rise": 668.42,
+  "s3_fall": 625.53,
+  "c4_rise": 499.72,
+  "c4_fall": 519.83
+ },
+ "hint": {},
+ "hint_worst_ps": null
+}

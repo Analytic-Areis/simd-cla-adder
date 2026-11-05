@@ -1,0 +1,61 @@
+{
+ "label": "R_tg_refresh",
+ "config": "R_tg",
+ "sizes": {
+  "nand0": 0.74,
+  "nand1": 0.51,
+  "nand2": 0.64,
+  "nand3": 1.0,
+  "nor0": 1.95,
+  "nor1": 1.95,
+  "nor2": 1.56,
+  "nor3": 0.33,
+  "aoi0": 0.33,
+  "aoi1": 0.3,
+  "aoi2": 0.51,
+  "aoi3": 2.44,
+  "oai0": 0.3,
+  "oai1": 0.3,
+  "oai2": 0.41,
+  "oai3": 1.0,
+  "xor0": 1.0,
+  "xor1": 1.0,
+  "xor2": 0.8,
+  "xor3": 0.8,
+  "xinv0": 1.0,
+  "xinv1": 1.0,
+  "xinv2": 0.41,
+  "xinv3": 0.8,
+  "xtg0": 1.0,
+  "xtg1": 0.64,
+  "xtg2": 0.51,
+  "xtg3": 0.41,
+  "invc0": 3.81,
+  "c1": 0.8,
+  "c2": 0.64,
+  "c3": 0.51,
+  "c4m": 0.33,
+  "invc4": 0.64
+ },
+ "flips": {
+  "c1": [
+   false,
+   false
+  ],
+  "c2": [
+   false,
+   false
+  ],
+  "c3": [
+   false,
+   false
+  ]
+ },
+ "transistors": 164,
+ "total_width_lambda": 3199,
+ "functional_errors": 0,
+ "worst_drv_ps": 636.7148669605909,
+ "worst_pin_ps": 559.1165902755516,
+ "critical": "{'pin': 'a2', 'pin_edge': 'rise', 'state': 259, 'next_state': 263, 'inputs_changed': 1, 'output': 's3', 'out_edge': 'rise', 'tpd_pin_ps': np.float64(559.1165902755516), 'tpd_drv_ps': np.float64(636.7148669605909), 'extra_crossings': 0}",
+ "elapsed_s": 2730
+}

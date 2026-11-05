@@ -1,0 +1,65 @@
+{
+ "params": {
+  "s1": 0.6,
+  "s2": 1.0,
+  "s3": 1.0,
+  "q": 2.0
+ },
+ "load_ff": 47.76,
+ "pin_loads": {
+  "a0": 38.8,
+  "b0": 38.84,
+  "a1": 42.62,
+  "b1": 42.64,
+  "a2": 45.07,
+  "b2": 45.09,
+  "a3": 47.73,
+  "b3": 47.76,
+  "c0": 37.92
+ },
+ "schematic": {
+  "cell": "dff_tspc_x0p6_1_1_2",
+  "transistors": 11,
+  "total_width_lambda": 234,
+  "load_ff": 47.76,
+  "tcq_rise_ps": 134.1,
+  "tcq_fall_ps": 208.5,
+  "tsu_rise_ps": -26.0,
+  "tsu_fall_ps": 34.0,
+  "thold_rise_ps": -11.7,
+  "thold_fall_ps": 55.1,
+  "min_dq_rise_ps": 155.4,
+  "min_dq_fall_ps": 290.5,
+  "tcq_ps": 208.5,
+  "tsu_ps": 34.0,
+  "thold_ps": 55.1
+ },
+ "postlayout": {
+  "cell": "dffx_post",
+  "transistors": 11,
+  "total_width_lambda": 0,
+  "load_ff": 47.76,
+  "tcq_rise_ps": 136.1,
+  "tcq_fall_ps": 204.2,
+  "tsu_rise_ps": -8.0,
+  "tsu_fall_ps": 38.0,
+  "thold_rise_ps": -11.7,
+  "thold_fall_ps": 45.7,
+  "min_dq_rise_ps": 173.9,
+  "min_dq_fall_ps": 292.5,
+  "tcq_ps": 204.2,
+  "tsu_ps": 38.0,
+  "thold_ps": 45.7
+ },
+ "layout": {
+  "cell": "dff_tspc_x0p6_1_1_2",
+  "width_lambda": 99,
+  "height_lambda": 142,
+  "area_um2": 113.9,
+  "tracks": 5,
+  "drc": 0,
+  "lvs": true,
+  "lvs_message": "match: 11 merged devices, 11 nets",
+  "drc_first": ""
+ }
+}

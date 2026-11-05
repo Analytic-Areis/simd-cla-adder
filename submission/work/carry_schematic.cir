@@ -1,0 +1,215 @@
+* carry_schematic
+.include ../../part1/spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* inv_x1: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt inv_x1 a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y a gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends inv_x1
+* oai21_x0p51: NOT((a + b) c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt oai21_x0p51 a b c y vdd gnd
+Mp1 xp1 a vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+Mp2 y b xp1 vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp3 y c vdd vdd CMOSP W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Mn1 y a xn1 gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Mn2 y b xn1 gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Mn3 xn1 c gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends oai21_x0p51
+* oai21_fn_x1p25: NOT((a + b) c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt oai21_fn_x1p25 a b c y vdd gnd
+Mp1 xp1 a vdd vdd CMOSP W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=1.2150e-12 PD=9.5400e-06
+Mp2 y b xp1 vdd CMOSP W=4.5000e-06 L=1.8000e-07 AS=1.2150e-12 PS=9.5400e-06 AD=2.4300e-12 PD=1.0080e-05
+Mp3 y c vdd vdd CMOSP W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+Mn1 y c xn1 gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+Mn2 xn1 a gnd gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+Mn3 xn1 b gnd gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+.ends oai21_fn_x1p25
+* nor2_x1p56: 2-input NOR
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nor2_x1p56 i0 i1 y vdd gnd
+Mp1 xp1 i0 vdd vdd CMOSP W=5.5800e-06 L=1.8000e-07 AS=3.0132e-12 PS=1.2240e-05 AD=1.5066e-12 PD=1.1700e-05
+Mp2 y i1 xp1 vdd CMOSP W=5.5800e-06 L=1.8000e-07 AS=1.5066e-12 PS=1.1700e-05 AD=3.0132e-12 PD=1.2240e-05
+Mn1 y i0 gnd gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn2 y i1 gnd gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+.ends nor2_x1p56
+* inv_x1p56: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt inv_x1p56 a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=2.7900e-06 L=1.8000e-07 AS=1.5066e-12 PS=6.6600e-06 AD=1.5066e-12 PD=6.6600e-06
+Mn1 y a gnd gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+.ends inv_x1p56
+* inv_x1p25: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt inv_x1p25 a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+Mn1 y a gnd gnd CMOSN W=1.0800e-06 L=1.8000e-07 AS=5.8320e-13 PS=3.2400e-06 AD=5.8320e-13 PD=3.2400e-06
+.ends inv_x1p25
+* inv_x1p95: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt inv_x1p95 a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=3.5100e-06 L=1.8000e-07 AS=1.8954e-12 PS=8.1000e-06 AD=1.8954e-12 PD=8.1000e-06
+Mn1 y a gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+.ends inv_x1p95
+* aoi21_fnp_x1: NOT(a b + c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt aoi21_fnp_x1 a b c y vdd gnd
+Mp1 xp1 c vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp2 y a xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp3 y b xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn1 y b xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn2 xn1 a gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+Mn3 y c gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends aoi21_fnp_x1
+* nand2_x1p25: 2-input NAND
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nand2_x1p25 i0 i1 y vdd gnd
+Mp1 y i0 vdd vdd CMOSP W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+Mp2 y i1 vdd vdd CMOSP W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=1.2150e-12 PD=5.5800e-06
+Mn1 y i0 xn1 gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=6.0750e-13 PS=5.0400e-06 AD=1.2150e-12 PD=5.5800e-06
+Mn2 xn1 i1 gnd gnd CMOSN W=2.2500e-06 L=1.8000e-07 AS=1.2150e-12 PS=5.5800e-06 AD=6.0750e-13 PD=5.0400e-06
+.ends nand2_x1p25
+* oai21_x0p8: NOT((a + b) c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt oai21_x0p8 a b c y vdd gnd
+Mp1 xp1 a vdd vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=1.5552e-12 PS=6.8400e-06 AD=7.7760e-13 PD=6.3000e-06
+Mp2 y b xp1 vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=7.7760e-13 PS=6.3000e-06 AD=1.5552e-12 PD=6.8400e-06
+Mp3 y c vdd vdd CMOSP W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn1 y a xn1 gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn2 y b xn1 gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn3 xn1 c gnd gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+.ends oai21_x0p8
+* nor2_x0p8: 2-input NOR
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nor2_x0p8 i0 i1 y vdd gnd
+Mp1 xp1 i0 vdd vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=1.5552e-12 PS=6.8400e-06 AD=7.7760e-13 PD=6.3000e-06
+Mp2 y i1 xp1 vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=7.7760e-13 PS=6.3000e-06 AD=1.5552e-12 PD=6.8400e-06
+Mn1 y i0 gnd gnd CMOSN W=7.2000e-07 L=1.8000e-07 AS=3.8880e-13 PS=2.5200e-06 AD=3.8880e-13 PD=2.5200e-06
+Mn2 y i1 gnd gnd CMOSN W=7.2000e-07 L=1.8000e-07 AS=3.8880e-13 PS=2.5200e-06 AD=3.8880e-13 PD=2.5200e-06
+.ends nor2_x0p8
+* aoi21_fnp_x0p41: NOT(a b + c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt aoi21_fnp_x0p41 a b c y vdd gnd
+Mp1 xp1 c vdd vdd CMOSP W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mp2 y a xp1 vdd CMOSP W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mp3 y b xp1 vdd CMOSP W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn1 y b xn1 gnd CMOSN W=7.2000e-07 L=1.8000e-07 AS=1.9440e-13 PS=1.9800e-06 AD=3.8880e-13 PD=2.5200e-06
+Mn2 xn1 a gnd gnd CMOSN W=7.2000e-07 L=1.8000e-07 AS=3.8880e-13 PS=2.5200e-06 AD=1.9440e-13 PD=1.9800e-06
+Mn3 y c gnd gnd CMOSN W=3.6000e-07 L=1.8000e-07 AS=1.9440e-13 PS=1.8000e-06 AD=1.9440e-13 PD=1.8000e-06
+.ends aoi21_fnp_x0p41
+* nand2_x0p41: 2-input NAND
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nand2_x0p41 i0 i1 y vdd gnd
+Mp1 y i0 vdd vdd CMOSP W=7.2000e-07 L=1.8000e-07 AS=3.8880e-13 PS=2.5200e-06 AD=3.8880e-13 PD=2.5200e-06
+Mp2 y i1 vdd vdd CMOSP W=7.2000e-07 L=1.8000e-07 AS=3.8880e-13 PS=2.5200e-06 AD=3.8880e-13 PD=2.5200e-06
+Mn1 y i0 xn1 gnd CMOSN W=7.2000e-07 L=1.8000e-07 AS=1.9440e-13 PS=1.9800e-06 AD=3.8880e-13 PD=2.5200e-06
+Mn2 xn1 i1 gnd gnd CMOSN W=7.2000e-07 L=1.8000e-07 AS=3.8880e-13 PS=2.5200e-06 AD=1.9440e-13 PD=1.9800e-06
+.ends nand2_x0p41
+* oai21_fnp_x0p8: NOT((a + b) c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt oai21_fnp_x0p8 a b c y vdd gnd
+Mp1 xp1 b vdd vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=1.5552e-12 PS=6.8400e-06 AD=7.7760e-13 PD=6.3000e-06
+Mp2 y a xp1 vdd CMOSP W=2.8800e-06 L=1.8000e-07 AS=7.7760e-13 PS=6.3000e-06 AD=1.5552e-12 PD=6.8400e-06
+Mp3 y c vdd vdd CMOSP W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn1 y c xn1 gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn2 xn1 a gnd gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+Mn3 xn1 b gnd gnd CMOSN W=1.4400e-06 L=1.8000e-07 AS=7.7760e-13 PS=3.9600e-06 AD=7.7760e-13 PD=3.9600e-06
+.ends oai21_fnp_x0p8
+* carry_b: tile carry
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt carry_b c0 g0b g1b g2b g3b t0b t1b t2b t3b c1 c2 c3 c4 vdd gnd
+Xinvc0 c0 c0b vdd gnd inv_x1
+Xc1 t0b c0b g0b c1 vdd gnd oai21_x0p51
+Xg10 t1b g0b g1b g1_0 vdd gnd oai21_fn_x1p25
+Xt10 t1b t0b t1_0 vdd gnd nor2_x1p56
+Xig10 g1_0 g1_0b vdd gnd inv_x1
+Xit10 t1_0 t1_0b vdd gnd inv_x1p56
+Xc2 t1_0b c0b g1_0b c2 vdd gnd oai21_fn_x1p25
+Xig2 g2b g2 vdd gnd inv_x1p25
+Xit2 t2b t2 vdd gnd inv_x1p95
+Xg20 t2 g1_0 g2 g2_0b vdd gnd aoi21_fnp_x1
+Xt20 t2 t1_0 t2_0b vdd gnd nand2_x1p25
+Xc3 t2_0b c0b g2_0b c3 vdd gnd oai21_fn_x1p25
+Xg32 t3b g2b g3b g3_2 vdd gnd oai21_x0p8
+Xt32 t3b t2b t3_2 vdd gnd nor2_x0p8
+Xg30 t3_2 g1_0 g3_2 g3_0b vdd gnd aoi21_fnp_x0p41
+Xt30 t3_2 t1_0 t3_0b vdd gnd nand2_x0p41
+Xc4g t3_0b c0b g3_0b c4 vdd gnd oai21_fnp_x0p8
+.ends carry_b
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Vc0 src_c0 gnd PWL(
++ 0.00000e+00 0.000 1.00000e-09 0.000 1.02000e-09 1.800 2.00000e-09 1.800 2.02000e-09 0.000 4.00000e-09 0.000
++ 4.02000e-09 1.800 5.00000e-09 1.800 5.02000e-09 0.000 8.00000e-09 0.000 8.02000e-09 1.800 9.00000e-09 1.800
++ 9.02000e-09 0.000 1.10000e-08 0.000 1.10200e-08 1.800 1.20000e-08 1.800 1.20200e-08 0.000 1.60000e-08 0.000
++ 1.60200e-08 1.800 1.70000e-08 1.800 1.70200e-08 0.000 1.90000e-08 0.000 1.90200e-08 1.800 2.00000e-08 1.800
++ 2.00200e-08 0.000 2.30000e-08 0.000 2.30200e-08 1.800 2.40000e-08 1.800 2.40200e-08 0.000 2.50000e-08 0.000
++ )
+Xs_c0 src_c0 drv_c0 vdd gnd tb_x1
+Xd_c0 drv_c0 c0 vdd gnd tb_x2
+Vg0b src_g0b gnd PWL(
++ 0.00000e+00 0.000 3.00000e-09 0.000 3.02000e-09 1.800 6.00000e-09 1.800 6.02000e-09 0.000 1.00000e-08 0.000
++ 1.00200e-08 1.800 1.30000e-08 1.800 1.30200e-08 0.000 1.80000e-08 0.000 1.80200e-08 1.800 2.10000e-08 1.800
++ 2.10200e-08 0.000 2.50000e-08 0.000
++ )
+Xs_g0b src_g0b drv_g0b vdd gnd tb_x1
+Xd_g0b drv_g0b g0b vdd gnd tb_x2
+Vg1b src_g1b gnd PWL(
++ 0.00000e+00 0.000 7.00000e-09 0.000 7.02000e-09 1.800 1.40000e-08 1.800 1.40200e-08 0.000 2.20000e-08 0.000
++ 2.20200e-08 1.800 2.50000e-08 1.800
++ )
+Xs_g1b src_g1b drv_g1b vdd gnd tb_x1
+Xd_g1b drv_g1b g1b vdd gnd tb_x2
+Vg2b src_g2b gnd PWL(
++ 0.00000e+00 0.000 1.50000e-08 0.000 1.50200e-08 1.800 2.50000e-08 1.800
++ )
+Xs_g2b src_g2b drv_g2b vdd gnd tb_x1
+Xd_g2b drv_g2b g2b vdd gnd tb_x2
+Vg3b src_g3b gnd PWL(
++ 0.00000e+00 0.000 2.50000e-08 0.000
++ )
+Xs_g3b src_g3b drv_g3b vdd gnd tb_x1
+Xd_g3b drv_g3b g3b vdd gnd tb_x2
+Vt0b src_t0b gnd PWL(
++ 0.00000e+00 0.000 2.50000e-08 0.000
++ )
+Xs_t0b src_t0b drv_t0b vdd gnd tb_x1
+Xd_t0b drv_t0b t0b vdd gnd tb_x2
+Vt1b src_t1b gnd PWL(
++ 0.00000e+00 0.000 2.50000e-08 0.000
++ )
+Xs_t1b src_t1b drv_t1b vdd gnd tb_x1
+Xd_t1b drv_t1b t1b vdd gnd tb_x2
+Vt2b src_t2b gnd PWL(
++ 0.00000e+00 0.000 2.50000e-08 0.000
++ )
+Xs_t2b src_t2b drv_t2b vdd gnd tb_x1
+Xd_t2b drv_t2b t2b vdd gnd tb_x2
+Vt3b src_t3b gnd PWL(
++ 0.00000e+00 0.000 2.50000e-08 0.000
++ )
+Xs_t3b src_t3b drv_t3b vdd gnd tb_x1
+Xd_t3b drv_t3b t3b vdd gnd tb_x2
+Xl_c1 c1 lo_c1 vdd gnd tb_x1
+Xl_c2 c2 lo_c2 vdd gnd tb_x1
+Xl_c3 c3 lo_c3 vdd gnd tb_x1
+Xl_c4 c4 lo_c4 vdd gnd tb_x1
+X0 c0 g0b g1b g2b g3b t0b t1b t2b t3b c1 c2 c3 c4 vdd gnd carry_b
+.tran 5p 2.50000e-08
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata carry_schematic.txt v(c0) v(g0b) v(g1b) v(g2b) v(g3b) v(t0b) v(t1b) v(t2b) v(t3b) v(c1) v(c2) v(c3) v(c4)
+quit
+.endc
+.end

@@ -1,0 +1,40 @@
+* NGSPICE file created from oai21_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt oai21_x1 a b c y vdd gnd
+M1000 a_16_89# a vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1001 y a a_8_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1002 y b a_16_89# vdd pfet w=3.6u l=0.18u
++  ad=0.972p pd=4.23u as=1.134p ps=4.23u
+M1003 a_8_10# b y Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1004 vdd c y vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.23u
+M1005 gnd c a_8_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+C0 c gnd 0.00339f
+C1 a gnd 0.00105f
+C2 b c 0.49473f
+C3 vdd y 0.38445f
+C4 a_8_10# c 0.00491f
+C5 a b 0.22477f
+C6 a_8_10# a 0.19843f
+C7 b gnd 0.00105f
+C8 y c 0.00693f
+C9 a_8_10# gnd 0.24788f
+C10 a y 0.15918f
+C11 vdd c 0.02244f
+C12 vdd a 0.02383f
+C13 a_8_10# b 0.01215f
+C14 a_16_89# y 0.00113f
+C15 a_16_89# vdd 0.00107f
+C16 y gnd 0.04131f
+C17 a c 0.00958f
+C18 b y 0.11964f
+C19 a_8_10# y 0.5957f
+C20 vdd b 0.01975f
+.ends
+

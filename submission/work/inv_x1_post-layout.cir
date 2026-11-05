@@ -1,0 +1,49 @@
+* inv_x1_post-layout
+.include ../../part1/spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* NGSPICE file created from inv_x1.ext - technology: scmos
+
+
+
+.subckt inv_x1 a y vdd gnd
+M1000 vdd a y vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1001 gnd a y Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.88u
+C0 a y 0.00847f
+C1 a gnd 0.00258f
+C2 vdd a 0.02325f
+C3 y gnd 0.12393f
+C4 vdd y 0.21849f
+.ends
+
+
+.subckt inv_x1x_post a y vdd gnd
+X0 a y vdd gnd inv_x1
+.ends
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Va src_a gnd PWL(
++ 0.00000e+00 0.000 1.00000e-09 0.000 1.02000e-09 1.800 2.00000e-09 1.800 2.02000e-09 0.000 3.00000e-09 0.000
++ 3.02000e-09 1.800 4.00000e-09 1.800 4.02000e-09 0.000 5.00000e-09 0.000
++ )
+Xs_a src_a drv_a vdd gnd tb_x1
+Xd_a drv_a a vdd gnd tb_x2
+Xl_y y lo_y vdd gnd tb_x1
+X0 a y vdd gnd inv_x1x_post
+.tran 5p 5.00000e-09
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata inv_x1_post-layout.txt v(a) v(y)
+quit
+.endc
+.end

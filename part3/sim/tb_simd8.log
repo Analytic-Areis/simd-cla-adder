@@ -1,0 +1,32 @@
+VCD info: dumpfile tb_simd8.vcd opened for output.
+
+--- TEST 1: 8-bit mode, all 131072 combinations ---
+  >> 131072 vectors checked so far, 0 errors
+
+--- TEST 2: dual 4-bit mode, all 131072 combinations ---
+  >> 262144 vectors checked so far, 0 errors
+
+--- TEST 3: worst carry path, A=FF B=00, Cin toggling ---
+  8-bit, Cin=0: FF                         mode=0 A=ff B=00 Cin=0 | CoutLo=0 CinHi=0 Cout=0 S=ff
+  8-bit, Cin rises: carry reaches Cout     mode=0 A=ff B=00 Cin=1 | CoutLo=1 CinHi=1 Cout=1 S=00
+  8-bit, Cin falls                         mode=0 A=ff B=00 Cin=0 | CoutLo=0 CinHi=0 Cout=0 S=ff
+  dual, Cin=0: F and F                     mode=1 A=ff B=00 Cin=0 | CoutLo=0 CinHi=0 Cout=0 S=ff
+  dual, Cin rises: carry stops at bit 4    mode=1 A=ff B=00 Cin=1 | CoutLo=1 CinHi=0 Cout=0 S=f0
+  dual, Cin falls                          mode=1 A=ff B=00 Cin=0 | CoutLo=0 CinHi=0 Cout=0 S=ff
+
+--- TEST 4: same operands, mode switched ---
+  8-bit: 0x0F + 0x01 = 0x10                mode=0 A=0f B=01 Cin=0 | CoutLo=1 CinHi=1 Cout=0 S=10
+  dual: F+1 = 0 carry 1, 0+0 = 0           mode=1 A=0f B=01 Cin=0 | CoutLo=1 CinHi=0 Cout=0 S=00
+  8-bit: 0x37 + 0x59 + 1 = 0x91            mode=0 A=37 B=59 Cin=1 | CoutLo=1 CinHi=1 Cout=0 S=91
+  dual: 7+9+1 = 0x1, 3+5 = 0x8             mode=1 A=37 B=59 Cin=1 | CoutLo=1 CinHi=0 Cout=0 S=81
+  8-bit: 0xF8 + 0x18, Cout = 1             mode=0 A=f8 B=18 Cin=0 | CoutLo=1 CinHi=1 Cout=1 S=10
+  dual: 8+8 = 0 carry 1, F+1 = 0 carry 1   mode=1 A=f8 B=18 Cin=0 | CoutLo=1 CinHi=0 Cout=1 S=00
+
+--- TEST 5: carry-gating cell ---
+  lower carry 0, mode 0: CinHi = 0         mode=0 A=0f B=00 Cin=0 | CoutLo=0 CinHi=0 Cout=0 S=0f
+  lower carry 1, mode 0: CinHi = 1         mode=0 A=0f B=00 Cin=1 | CoutLo=1 CinHi=1 Cout=0 S=10
+  lower carry 0, mode 1: CinHi = 0         mode=1 A=0f B=00 Cin=0 | CoutLo=0 CinHi=0 Cout=0 S=0f
+  lower carry 1, mode 1: CinHi = 0         mode=1 A=0f B=00 Cin=1 | CoutLo=1 CinHi=0 Cout=0 S=00
+
+--- RESULT: 262160 checks, 0 errors: PASS ---
+/Users/bhargav_vemparala/Documents/Academics/Semester-3/VLSI_CP/part3/tb/tb_simd8.v:107: $finish called at 262288000 (1ps)

@@ -1,0 +1,5816 @@
+* DC supply current of cla_c2
+.include ../../../../spice/models/TSMC_180nm.txt
+VDD vdd gnd 1.8
+* nand2_x1: 2-input NAND
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nand2_x1 i0 i1 y vdd gnd
+Mp1 y i0 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp2 y i1 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y i0 xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn2 xn1 i1 gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+.ends nand2_x1
+* nor2_x1: 2-input NOR
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nor2_x1 i0 i1 y vdd gnd
+Mp1 xp1 i0 vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=9.7200e-13 PD=7.7400e-06
+Mp2 y i1 xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=9.7200e-13 PS=7.7400e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn1 y i0 gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Mn2 y i1 gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends nor2_x1
+* aoi21_x1: NOT(a b + c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt aoi21_x1 a b c y vdd gnd
+Mp1 xp1 a vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp2 xp1 b vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp3 y c xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn1 y a xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn2 xn1 b gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+Mn3 y c gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends aoi21_x1
+* oai21_x1: NOT((a + b) c)
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt oai21_x1 a b c y vdd gnd
+Mp1 xp1 a vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=9.7200e-13 PD=7.7400e-06
+Mp2 y b xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=9.7200e-13 PS=7.7400e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp3 y c vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y a xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn2 y b xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn3 xn1 c gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+.ends oai21_x1
+* inv_x1: inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt inv_x1 a y vdd gnd
+Mp1 y a vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y a gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends inv_x1
+* c1_x1: C1 complex gate, stack 2
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt c1_x1 g0b t0b c0b c1 vdd gnd
+Mp1 c1 g0b vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp2 xp1 t0b vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=9.7200e-13 PD=7.7400e-06
+Mp3 c1 c0b xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=9.7200e-13 PS=7.7400e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn1 c1 g0b xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn2 xn1 t0b gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn3 xn1 c0b gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+.ends c1_x1
+* c2_x1: C2 complex gate, stack 3
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt c2_x1 g0b t0b g1b t1b c0b c2 vdd gnd
+Mp1 c2 g1b vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp2 xp1 t1b vdd vdd CMOSP W=5.4000e-06 L=1.8000e-07 AS=2.9160e-12 PS=1.1880e-05 AD=2.9160e-12 PD=1.1880e-05
+Mp3 c2 g0b xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp4 xp2 t0b xp1 vdd CMOSP W=5.4000e-06 L=1.8000e-07 AS=2.9160e-12 PS=1.1880e-05 AD=1.4580e-12 PD=1.1340e-05
+Mp5 c2 c0b xp2 vdd CMOSP W=5.4000e-06 L=1.8000e-07 AS=1.4580e-12 PS=1.1340e-05 AD=2.9160e-12 PD=1.1880e-05
+Mn1 c2 g1b xn1 gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=1.4580e-12 PD=6.4800e-06
+Mn2 xn1 t1b gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn3 xn1 g0b xn2 gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=1.4580e-12 PD=6.4800e-06
+Mn4 xn2 t0b gnd gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=1.4580e-12 PD=6.4800e-06
+Mn5 xn2 c0b gnd gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=1.4580e-12 PD=6.4800e-06
+.ends c2_x1
+* c3_x1: C3 complex gate, stack 4
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt c3_x1 g0b t0b g1b t1b g2b t2b c0b c3 vdd gnd
+Mp1 c3 g2b vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp2 xp1 t2b vdd vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=3.8880e-12 PS=1.5480e-05 AD=3.8880e-12 PD=1.5480e-05
+Mp3 c3 g1b xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp4 xp2 t1b xp1 vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=3.8880e-12 PS=1.5480e-05 AD=3.8880e-12 PD=1.5480e-05
+Mp5 c3 g0b xp2 vdd CMOSP W=5.4000e-06 L=1.8000e-07 AS=2.9160e-12 PS=1.1880e-05 AD=2.9160e-12 PD=1.1880e-05
+Mp6 xp3 t0b xp2 vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=3.8880e-12 PS=1.5480e-05 AD=1.9440e-12 PD=1.4940e-05
+Mp7 c3 c0b xp3 vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=1.9440e-12 PS=1.4940e-05 AD=3.8880e-12 PD=1.5480e-05
+Mn1 c3 g2b xn1 gnd CMOSN W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn2 xn1 t2b gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn3 xn1 g1b xn2 gnd CMOSN W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn4 xn2 t1b gnd gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=1.4580e-12 PD=6.4800e-06
+Mn5 xn2 g0b xn3 gnd CMOSN W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn6 xn3 t0b gnd gnd CMOSN W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn7 xn3 c0b gnd gnd CMOSN W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+.ends c3_x1
+* c4_x1: C4 complex gate, stack 5
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt c4_x1 g0b t0b g1b t1b g2b t2b g3b t3b c0b c4 vdd gnd
+Mp1 c4 g3b vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp2 xp1 t3b vdd vdd CMOSP W=9.0000e-06 L=1.8000e-07 AS=4.8600e-12 PS=1.9080e-05 AD=4.8600e-12 PD=1.9080e-05
+Mp3 c4 g2b xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mp4 xp2 t2b xp1 vdd CMOSP W=9.0000e-06 L=1.8000e-07 AS=4.8600e-12 PS=1.9080e-05 AD=4.8600e-12 PD=1.9080e-05
+Mp5 c4 g1b xp2 vdd CMOSP W=5.4000e-06 L=1.8000e-07 AS=2.9160e-12 PS=1.1880e-05 AD=2.9160e-12 PD=1.1880e-05
+Mp6 xp3 t1b xp2 vdd CMOSP W=9.0000e-06 L=1.8000e-07 AS=4.8600e-12 PS=1.9080e-05 AD=4.8600e-12 PD=1.9080e-05
+Mp7 c4 g0b xp3 vdd CMOSP W=7.2000e-06 L=1.8000e-07 AS=3.8880e-12 PS=1.5480e-05 AD=3.8880e-12 PD=1.5480e-05
+Mp8 xp4 t0b xp3 vdd CMOSP W=9.0000e-06 L=1.8000e-07 AS=4.8600e-12 PS=1.9080e-05 AD=2.4300e-12 PD=1.8540e-05
+Mp9 c4 c0b xp4 vdd CMOSP W=9.0000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.8540e-05 AD=4.8600e-12 PD=1.9080e-05
+Mn1 c4 g3b xn1 gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Mn2 xn1 t3b gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn3 xn1 g2b xn2 gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Mn4 xn2 t2b gnd gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=1.4580e-12 PD=6.4800e-06
+Mn5 xn2 g1b xn3 gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Mn6 xn3 t1b gnd gnd CMOSN W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn7 xn3 g0b xn4 gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Mn8 xn4 t0b gnd gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+Mn9 xn4 c0b gnd gnd CMOSN W=4.5000e-06 L=1.8000e-07 AS=2.4300e-12 PS=1.0080e-05 AD=2.4300e-12 PD=1.0080e-05
+.ends c4_x1
+* xor_aoi22_x1: dual-rail XOR, AOI22 with c-bar inverter
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt xor_aoi22_x1 p pb c s vdd gnd
+Ms0p1 cb c vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms0n1 cb c gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Ms1p1 s1xp1 p vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms1p2 s1xp1 c vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms1p3 s pb s1xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms1p4 s cb s1xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=1.9440e-12 PD=8.2800e-06
+Ms1n1 s p s1xn1 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms1n2 s1xn1 c gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+Ms1n3 s pb s1xn2 gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=4.8600e-13 PS=4.1400e-06 AD=9.7200e-13 PD=4.6800e-06
+Ms1n4 s1xn2 cb gnd gnd CMOSN W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=4.8600e-13 PD=4.1400e-06
+.ends xor_aoi22_x1
+* cla_c2: Candidate C2: one complex gate per carry, stack up to 5
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt cla_c2 a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 c4 vdd gnd
+Xnand0 a0 b0 g0b vdd gnd nand2_x1
+Xnor0 a0 b0 t0b vdd gnd nor2_x1
+Xaoi0 a0 b0 t0b p0 vdd gnd aoi21_x1
+Xoai0 a0 b0 g0b p0b vdd gnd oai21_x1
+Xnand1 a1 b1 g1b vdd gnd nand2_x1
+Xnor1 a1 b1 t1b vdd gnd nor2_x1
+Xaoi1 a1 b1 t1b p1 vdd gnd aoi21_x1
+Xoai1 a1 b1 g1b p1b vdd gnd oai21_x1
+Xnand2 a2 b2 g2b vdd gnd nand2_x1
+Xnor2 a2 b2 t2b vdd gnd nor2_x1
+Xaoi2 a2 b2 t2b p2 vdd gnd aoi21_x1
+Xoai2 a2 b2 g2b p2b vdd gnd oai21_x1
+Xnand3 a3 b3 g3b vdd gnd nand2_x1
+Xnor3 a3 b3 t3b vdd gnd nor2_x1
+Xaoi3 a3 b3 t3b p3 vdd gnd aoi21_x1
+Xoai3 a3 b3 g3b p3b vdd gnd oai21_x1
+Xinvc0 c0 c0b vdd gnd inv_x1
+Xc1 g0b t0b c0b c1 vdd gnd c1_x1
+Xc2 g0b t0b g1b t1b c0b c2 vdd gnd c2_x1
+Xc3 g0b t0b g1b t1b g2b t2b c0b c3 vdd gnd c3_x1
+Xc4 g0b t0b g1b t1b g2b t2b g3b t3b c0b c4 vdd gnd c4_x1
+Xx0 p0 p0b c0 s0 vdd gnd xor_aoi22_x1
+Xx1 p1 p1b c1 s1 vdd gnd xor_aoi22_x1
+Xx2 p2 p2b c2 s2 vdd gnd xor_aoi22_x1
+Xx3 p3 p3b c3 s3 vdd gnd xor_aoi22_x1
+.ends cla_c2
+.subckt tb_inv a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+Va0 src_a0 gnd 1.8
+Xd_a0 src_a0 a0 vdd gnd tb_inv
+Va1 src_a1 gnd 1.8
+Xd_a1 src_a1 a1 vdd gnd tb_inv
+Va2 src_a2 gnd 1.8
+Xd_a2 src_a2 a2 vdd gnd tb_inv
+Va3 src_a3 gnd 1.8
+Xd_a3 src_a3 a3 vdd gnd tb_inv
+Vb0 src_b0 gnd 1.8
+Xd_b0 src_b0 b0 vdd gnd tb_inv
+Vb1 src_b1 gnd 1.8
+Xd_b1 src_b1 b1 vdd gnd tb_inv
+Vb2 src_b2 gnd 1.8
+Xd_b2 src_b2 b2 vdd gnd tb_inv
+Vb3 src_b3 gnd 1.8
+Xd_b3 src_b3 b3 vdd gnd tb_inv
+Vc0 src_c0 gnd 1.8
+Xd_c0 src_c0 c0 vdd gnd tb_inv
+Xl_s0 s0 lo_s0 vdd gnd tb_inv
+Xl_s1 s1 lo_s1 vdd gnd tb_inv
+Xl_s2 s2 lo_s2 vdd gnd tb_inv
+Xl_s3 s3 lo_s3 vdd gnd tb_inv
+Xl_c4 c4 lo_c4 vdd gnd tb_inv
+X0 a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 c4 vdd gnd cla_c2
+.control
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 1.8
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 1.8
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 1.8
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 1.8
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 1.8
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 1.8
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 1.8
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 1.8
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 1.8
+op
+print i(VDD) >> dc_current.txt
+alter Va0 = 0.0
+alter Va1 = 0.0
+alter Va2 = 0.0
+alter Va3 = 0.0
+alter Vb0 = 0.0
+alter Vb1 = 0.0
+alter Vb2 = 0.0
+alter Vb3 = 0.0
+alter Vc0 = 0.0
+op
+print i(VDD) >> dc_current.txt
+quit
+.endc
+.end

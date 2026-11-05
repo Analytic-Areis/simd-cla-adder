@@ -1,0 +1,46 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * e4 nand2 near-rail input fo1
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+in0                                          0
+n1                                         1.8
+ndut                                8.8862e-09
+nout                                       1.8
+x2.x1                              6.66767e-09
+n3                                 6.77573e-09
+n4                                         1.8
+vin#branch                                   0
+vdd#branch                         -9.6309e-11
+
+ Reference value :  1.02963e-08
+No. of Data Rows : 22038
+
+  Measurements for Transient Analysis
+
+tphl                =  5.66123e-11 targ=  5.16181e-09 trig=  5.10520e-09
+tplh                =  6.96948e-11 targ=  7.19490e-09 trig=  7.12520e-09
+
+
+Total analysis time (seconds) = 0.262519
+
+Total elapsed time (seconds) = 0.267 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available =  114.172 MB.
+Maximum ngspice program size =   10.750 MB.
+Current ngspice program size =   10.750 MB.
+
+
+--- STDERR ---

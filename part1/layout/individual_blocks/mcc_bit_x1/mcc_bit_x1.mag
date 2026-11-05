@@ -1,0 +1,114 @@
+magic
+tech scmos
+timestamp 1793419463
+<< nwell >>
+rect 0 82 66 121
+<< ntransistor >>
+rect 14 10 16 20
+rect 23 10 25 20
+<< ptransistor >>
+rect 14 88 16 108
+rect 23 88 25 108
+<< ndiffusion >>
+rect 12 10 14 20
+rect 16 10 17 20
+rect 21 10 23 20
+rect 25 10 26 20
+<< pdiffusion >>
+rect 12 88 14 108
+rect 16 88 17 108
+rect 21 88 23 108
+rect 25 88 26 108
+<< ndcontact >>
+rect 8 10 12 20
+rect 17 10 21 20
+rect 26 10 30 20
+<< pdcontact >>
+rect 8 88 12 108
+rect 17 88 21 108
+rect 26 88 30 108
+<< psubstratepcontact >>
+rect 4 1 8 5
+rect 28 1 32 5
+rect 52 1 56 5
+<< nsubstratencontact >>
+rect 4 113 8 117
+rect 28 113 32 117
+rect 52 113 56 117
+<< polysilicon >>
+rect 14 108 16 111
+rect 23 108 25 111
+rect 14 34 16 88
+rect 23 52 25 88
+rect 14 20 16 29
+rect 23 20 25 47
+rect 14 7 16 10
+rect 23 7 25 10
+<< polycontact >>
+rect 22 47 26 52
+rect 13 29 17 34
+<< metal1 >>
+rect 0 117 66 118
+rect 0 113 4 117
+rect 8 113 28 117
+rect 32 113 52 117
+rect 56 113 66 117
+rect 0 112 66 113
+rect 8 87 12 88
+rect 17 87 21 88
+rect 26 87 30 88
+rect 13 74 35 79
+rect 13 65 26 70
+rect 31 56 35 61
+rect 26 47 44 52
+rect 17 29 53 34
+rect 8 20 12 21
+rect 17 20 21 21
+rect 26 20 30 21
+rect 0 5 66 6
+rect 0 1 4 5
+rect 8 1 28 5
+rect 32 1 52 5
+rect 56 1 66 5
+rect 0 0 66 1
+<< m2contact >>
+rect 8 82 13 87
+rect 17 82 22 87
+rect 26 82 31 87
+rect 35 74 40 79
+rect 8 65 13 70
+rect 26 56 31 61
+rect 35 56 40 61
+rect 8 21 13 26
+rect 17 21 22 26
+rect 26 21 31 26
+<< metal2 >>
+rect 8 79 13 82
+rect 8 26 13 65
+rect 17 43 22 82
+rect 26 70 31 82
+rect 35 61 40 74
+rect 17 26 22 38
+rect 26 26 31 56
+<< m123contact >>
+rect 8 74 13 79
+rect 26 65 31 70
+rect 17 38 22 43
+rect 44 47 49 52
+rect 53 29 58 34
+<< labels >>
+rlabel m2contact 8 65 10 70 0 a
+port 1 nsew
+rlabel metal1 8 74 10 79 0 ci
+port 2 nsew
+rlabel metal1 17 38 19 43 0 co
+port 3 nsew
+rlabel metal1 22 47 24 52 0 p
+port 4 nsew
+rlabel metal1 13 29 15 34 0 pb
+port 5 nsew
+rlabel metal1 0 112 2 118 0 vdd
+port 6 nsew
+rlabel metal1 0 0 2 6 0 gnd
+port 7 nsew
+<< end >>

@@ -1,0 +1,57 @@
+{
+ "label": "R_aoi22",
+ "sizes": {
+  "nand0": 0.3,
+  "nand1": 0.8,
+  "nand2": 0.8,
+  "nand3": 1.0,
+  "nor0": 2.44,
+  "nor1": 1.95,
+  "nor2": 1.56,
+  "nor3": 0.33,
+  "aoi0": 0.8,
+  "aoi1": 0.8,
+  "aoi2": 0.8,
+  "aoi3": 1.0,
+  "oai0": 0.8,
+  "oai1": 0.8,
+  "oai2": 0.8,
+  "oai3": 1.0,
+  "xor0": 0.8,
+  "xor1": 0.8,
+  "xor2": 0.33,
+  "xor3": 0.41,
+  "xinv0": 1.0,
+  "xinv1": 1.25,
+  "xinv2": 0.41,
+  "xinv3": 0.8,
+  "invc0": 4.76,
+  "c1": 0.41,
+  "c2": 1.0,
+  "c3": 0.8,
+  "c4m": 0.33,
+  "invc4": 0.64
+ },
+ "flips": {
+  "c1": [
+   false,
+   false
+  ],
+  "c2": [
+   false,
+   false
+  ],
+  "c3": [
+   false,
+   false
+  ]
+ },
+ "transistors": 172,
+ "total_width_lambda": 4053,
+ "functional_errors": 0,
+ "worst_drv_ps": 781.9064915701346,
+ "worst_pin_ps": 712.1067917366785,
+ "critical": "{'pin': 'b0', 'pin_edge': 'fall', 'state': 61, 'output': 'c4', 'out_edge': 'fall', 'tpd_pin_ps': np.float64(712.0983517957569), 'tpd_drv_ps': np.float64(781.9064915701346), 'extra_crossings': 0}",
+ "elapsed_s": 2694,
+ "config": "R_aoi22"
+}

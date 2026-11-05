@@ -1,0 +1,56 @@
+
+Magic 8.3 revision 668 - Compiled on Tue Jun 30 13:36:03 IST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+Using NULL graphics device.
+Input style lambda=0.09(p): scaleFactor=9, multiplier=1
+SCN6M_DEEP.09.tech27: line 13178: section drc:
+	OK types "space" in more than one plane.
+	Assuming same plane (active) as edge.
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p m4p m5p m6p comment bb 
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Loading "rx.tcl" from command line.
+Cell top_final_C4_aoi22_1 read from current working directory
+Cell sum3 read from current working directory
+Cell sum2 read from current working directory
+Cell sum1 read from current working directory
+Cell sum0 read from current working directory
+Cell pg3 read from current working directory
+Cell pg2 read from current working directory
+Cell pg1 read from current working directory
+Cell pg0 read from current working directory
+Cell carry read from current working directory
+Extracting sum3 into sum3.ext:
+Processing sum3
+Extracting sum2 into sum2.ext:
+Processing sum2
+Extracting sum1 into sum1.ext:
+Processing sum1
+Extracting sum0 into sum0.ext:
+Processing sum0
+Extracting pg3 into pg3.ext:
+Processing pg3
+Extracting pg2 into pg2.ext:
+Processing pg2
+Extracting pg1 into pg1.ext:
+Processing pg1
+Extracting pg0 into pg0.ext:
+Processing pg0
+Extracting carry into carry.ext:
+Processing carry
+Extracting top_final_C4_aoi22_1 into top_final_C4_aoi22_1.ext:
+Processing top_final_C4_aoi22_1
+Processing cell sum3 for resistance extraction.
+Extracting c3

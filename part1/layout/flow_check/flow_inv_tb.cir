@@ -1,0 +1,26 @@
+* flow check: extracted inverter vs schematic inverter, each driving one load inverter
+.include ../../../TSMC_180nm.txt
+.include flow_inv_mapped.spice
+.options reltol=1e-4
+VDD vdd 0 1.8
+Vin0 in0 0 PULSE(0 1.8 1n 20p 20p 2n 4n)
+.subckt schem in out vdd gnd
+mp out in vdd vdd CMOSP W=1.8u L=0.18u AS=0.972p PS=4.68u AD=0.972p PD=4.68u
+mn out in gnd gnd CMOSN W=0.9u L=0.18u AS=0.486p PS=2.88u AD=0.486p PD=2.88u
+.ends
+.subckt drv in out vdd gnd
+mp out in vdd vdd CMOSP W=3.6u L=0.18u AS=1.944p PS=8.28u AD=1.944p PD=8.28u
+mn out in gnd gnd CMOSN W=1.8u L=0.18u AS=0.972p PS=4.68u AD=0.972p PD=4.68u
+.ends
+XD1 in0 a vdd 0 drv
+XD2 in0 b vdd 0 drv
+XEXT a oe vdd 0 flow_inv
+XSCH b os vdd 0 schem
+XL1 oe l1 vdd 0 schem
+XL2 os l2 vdd 0 schem
+.tran 0.5p 11n
+.meas tran ext_tphl TRIG v(a) VAL=0.9 RISE=2 TARG v(oe) VAL=0.9 FALL=2
+.meas tran ext_tplh TRIG v(a) VAL=0.9 FALL=2 TARG v(oe) VAL=0.9 RISE=2
+.meas tran sch_tphl TRIG v(b) VAL=0.9 RISE=2 TARG v(os) VAL=0.9 FALL=2
+.meas tran sch_tplh TRIG v(b) VAL=0.9 FALL=2 TARG v(os) VAL=0.9 RISE=2
+.end

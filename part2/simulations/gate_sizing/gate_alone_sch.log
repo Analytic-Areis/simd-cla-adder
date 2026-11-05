@@ -1,0 +1,38 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * carry_gate_n1_i2
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+vdut                                       1.8
+src_cout_lo                                  0
+drv_cout_lo                                1.8
+cout_lo                            6.49779e-09
+src_mode                                     0
+drv_mode                                   1.8
+mode                               6.49779e-09
+lo_cin_hi                                  1.8
+cin_hi                             6.49779e-09
+x0.modeb                                   1.8
+x0.gn                                      1.8
+x0.xnandg.xn1                      6.66767e-09
+vmode#branch                                 0
+vcout_lo#branch                              0
+vdut#branch                       -5.11556e-11
+vdd#branch                         -7.0872e-11
+
+
+No. of Data Rows : 1059
+ngspice-46 done
+
+--- STDERR ---

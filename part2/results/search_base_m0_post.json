@@ -1,0 +1,31 @@
+{
+ "design": "base",
+ "mode": 0,
+ "view": "post",
+ "transitions": 13312,
+ "arcs": 31616,
+ "errors": 0,
+ "tpd_max_ps": 1030.86,
+ "worst": {
+  "pin": "a3",
+  "pin_edge": "rise",
+  "output": "s5",
+  "out_edge": "fall",
+  "state": "A=F7 B=04 C0=0",
+  "next_state": "A=FF B=04 C0=0",
+  "tpd_pin_ps": 1030.85713278491,
+  "tpd_drv_ps": 1115.695262236014
+ },
+ "tpd_max_drv_ps": 1115.7,
+ "per_output": {
+  "s0": 391.18,
+  "s1": 519.61,
+  "s2": 549.47,
+  "s3": 566.08,
+  "s4": 650.64,
+  "s5": 1030.86,
+  "s6": 1002.11,
+  "s7": 988.43,
+  "c8": 897.2
+ }
+}

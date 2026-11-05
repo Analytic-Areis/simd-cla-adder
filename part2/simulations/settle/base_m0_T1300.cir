@@ -1,0 +1,2889 @@
+* base8_post
+.include ../../../part1/spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+Vdut vdut gnd 1.8
+* NGSPICE file created from base8_flat.ext - technology: scmos
+
+.subckt base8_flat a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 a4 a5 a6 a7 b4 b5 b6 b7
++ c8 s4 s5 s6 s7 vdd gnd
+M1000 vdd a_125_233# a_178_356# vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=1.215p ps=5.13u
+M1001 a_106_103# a0 vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1002 c4lo a_431_235# a_466_356# vdd CMOSP w=2.88u l=0.18u
++  ad=0.7776p pd=3.51u as=0.9072p ps=3.51u
+M1003 a_395_239# a_368_235# a_403_356# vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1004 a_881_103# a5 vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1005 a_818_103# a5 vdd vdd CMOSP w=7.02u l=0.18u
++  ad=2.2113p pd=7.65u as=3.7908p ps=15.12u
+M1006 a_233_233# a_79_356# a_250_223# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1007 vdd a_313_356# a_419_548# vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1008 a_159_507# a_67_288# a_199_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1009 a_934_507# a_858_324# a_974_103# vdd CMOSP w=2.88u l=0.18u
++  ad=1.296p pd=6.66u as=0.9072p ps=3.51u
+M1010 a_840_288# b6 vdd vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1011 vdd a2 a_336_103# vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1012 a_79_356# a_85_315# a_62_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1013 a_1147_15# b7 a_1080_534# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1014 a_337_297# b3 a_454_103# vdd CMOSP w=4.5u l=0.18u
++  ad=2.025p pd=9.9u as=1.4175p ps=5.13u
+M1015 gnd a_337_297# a_368_235# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1016 gnd a_840_288# a_1010_19# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1017 a_978_356# a_975_297# vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1018 vdd a_853_223# a_907_218# vdd CMOSP w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1019 vdd a_646_10# a_672_233# vdd CMOSP w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1020 a_368_235# a_220_324# a_376_356# vdd CMOSP w=2.88u l=0.18u
++  ad=1.296p pd=6.66u as=0.9072p ps=3.51u
+M1021 vdd a_233_233# a_313_356# vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=1.215p ps=5.13u
+M1022 s7 a_1080_534# a_1074_548# vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1023 vdd a5 a_723_315# vdd CMOSP w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1024 gnd a_143_227# a_161_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1025 a_943_534# b6 a_1018_103# vdd CMOSP w=2.88u l=0.18u
++  ad=0.7776p pd=3.51u as=0.9072p ps=3.51u
+M1026 a_654_455# c4lo gnd Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1027 gnd b1 a_153_10# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1028 gnd b3 a_481_15# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1029 a_1033_239# a_717_356# a_1050_235# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1030 a_705_288# b5 gnd Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1031 a_1071_507# a_975_297# gnd Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1032 a_871_233# a_853_223# a_879_356# vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1033 vdd a_763_233# a_816_356# vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=1.215p ps=5.13u
+M1034 a_928_10# a6 a_840_288# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1035 gnd b2 a_290_10# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1036 gnd b5 a_845_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.1944p pd=1.35u as=0.2268p ps=1.35u
+M1037 gnd a_355_342# a_509_15# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1038 a_951_356# a_871_233# a_934_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1039 gnd a_269_218# a_296_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1040 a_427_15# a3 a_355_342# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1041 a_43_103# a0 vdd vdd CMOSP w=5.58u l=0.18u
++  ad=1.7577p pd=6.21u as=3.0132p ps=12.24u
+M1042 gnd a_736_227# a_781_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.7776p ps=3.96u
+M1043 vdd c4lo a_646_548# vdd CMOSP w=0.9u l=0.18u
++  ad=1.2555p pd=5.13u as=0.486p ps=2.88u
+M1044 c4lo a_395_239# a_458_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1045 gnd b6 a_982_19# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.3888p pd=2.07u as=0.4536p ps=2.07u
+M1046 gnd a_145_548# a_171_460# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.4536p pd=2.43u as=0.567p ps=2.43u
+M1047 s7 a_1071_507# a_1065_470# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.2835p ps=1.53u
+M1048 a_700_103# b4 vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1049 vdd a_178_356# a_299_548# vdd CMOSP w=2.88u l=0.18u
++  ad=1.296p pd=6.66u as=0.9072p ps=3.51u
+M1050 a_946_464# a_943_534# s6 Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1051 vdd a_8_10# a_31_534# vdd CMOSP w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.3888p ps=2.07u
+M1052 a_98_27# b0 a_31_534# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.2268p ps=1.35u
+M1053 s3 a_442_534# a_436_548# vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1054 vdd a_723_315# a_806_534# vdd CMOSP w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.3888p ps=2.07u
+M1055 gnd a_781_227# a_799_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1056 a_243_103# a1 vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1057 a_277_218# a_215_223# a_269_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1058 gnd a_646_233# a_1096_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1059 a_970_227# a_840_288# a_978_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1060 a_955_103# a6 vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1061 gnd c0 a_8_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.88u
+M1062 a_296_507# a_220_324# a_336_103# vdd CMOSP w=2.88u l=0.18u
++  ad=1.296p pd=6.66u as=0.9072p ps=3.51u
+M1063 a_162_548# a_145_548# s1 vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1064 a_395_239# a_79_356# a_412_235# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1065 s0 a_22_507# a_16_455# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1066 a_669_534# a4 a_736_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1067 a_669_279# b4 a_681_103# vdd CMOSP w=5.58u l=0.18u
++  ad=2.511p pd=12.06u as=1.7577p ps=6.21u
+M1068 c8 a_1069_235# a_1104_356# vdd CMOSP w=2.88u l=0.18u
++  ad=0.7776p pd=3.51u as=0.9072p ps=3.51u
+M1069 a_299_548# a_296_507# vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.8748p ps=3.51u
+M1070 vdd a_993_342# a_978_227# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.7776p ps=3.51u
+M1071 gnd b7 a_1119_15# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1072 a_344_19# a2 a_296_507# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1073 a_700_218# a_646_10# gnd Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1074 vdd a1 a_85_315# vdd CMOSP w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1075 a_178_356# a_125_233# a_161_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1076 a_672_455# a_669_534# s4 Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1077 gnd a2 a_220_324# Gnd CMOSN w=1.08u l=0.18u
++  ad=0.3402p pd=1.71u as=0.5832p ps=3.24u
+M1078 gnd a_783_548# a_809_460# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.4536p pd=2.43u as=0.567p ps=2.43u
+M1079 a_1080_534# b7 a_1155_103# vdd CMOSP w=3.6u l=0.18u
++  ad=0.972p pd=4.23u as=1.134p ps=4.23u
+M1080 a_806_534# a5 a_873_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1081 vdd a3 a_473_103# vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1082 a_1077_235# a_1006_235# a_1069_235# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1083 gnd a_975_297# a_1006_235# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1084 a_25_548# a_22_507# vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=1.2555p ps=5.13u
+M1085 a_1069_235# a_736_227# vdd vdd CMOSP w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1086 a_1006_235# a_858_324# a_1014_356# vdd CMOSP w=2.88u l=0.18u
++  ad=1.296p pd=6.66u as=0.9072p ps=3.51u
+M1087 vdd a_840_288# a_835_231# vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=1.215p ps=5.58u
+M1088 a_340_356# a_337_297# vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1089 s3 a_433_507# a_427_470# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.2835p ps=1.53u
+M1090 vdd a_951_356# a_1074_548# vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1091 a_915_218# a_853_223# a_907_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1092 a_313_356# a_233_233# a_296_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1093 gnd a_705_288# a_736_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1094 a_791_460# a_672_233# gnd Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1095 s4 a_669_534# a_663_548# vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=1.4175p ps=5.13u
+M1096 a_800_548# a_783_548# s5 vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1097 a_993_342# b7 vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1098 gnd a_993_342# a_1147_15# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1099 a_8_548# c0 gnd Gnd CMOSN w=0.45u l=0.18u
++  ad=0.2025p pd=1.8u as=0.5427p ps=2.88u
+M1100 a_1065_15# a7 a_993_342# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1101 a_937_548# a_934_507# vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.8748p ps=3.51u
+M1102 gnd a_1057_548# a_1083_470# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.2835p ps=1.53u
+M1103 a_736_227# a_669_279# a_744_356# vdd CMOSP w=5.58u l=0.18u
++  ad=2.511p pd=12.06u as=1.7577p ps=6.21u
+M1104 a_233_233# a_215_223# a_241_356# vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1105 gnd a0 a_31_279# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1106 a_888_223# a_853_223# gnd Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.5265p ps=2.43u
+M1107 vdd a_313_356# a_436_548# vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1108 a_837_103# b5 vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1109 a_816_356# a_763_233# a_799_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1110 a_79_356# a_8_10# a_70_356# vdd CMOSP w=4.5u l=0.18u
++  ad=1.215p pd=5.13u as=1.4175p ps=5.13u
+M1111 vdd c0 a_8_233# vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1112 c8 a_1033_239# a_1096_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1113 gnd a_98_227# a_143_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.7776p ps=3.96u
+M1114 a_34_233# a_31_279# a_26_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.486p ps=2.88u
+M1115 vdd a_672_233# a_783_548# vdd CMOSP w=1.17u l=0.18u
++  ad=1.0206p pd=4.23u as=0.6318p ps=3.42u
+M1116 a_442_534# b3 a_517_103# vdd CMOSP w=3.6u l=0.18u
++  ad=0.972p pd=4.23u as=1.134p ps=4.23u
+M1117 a_439_235# a_368_235# a_431_235# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1118 gnd a_8_548# a_34_455# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.5427p pd=2.88u as=0.7047p ps=2.88u
+M1119 gnd a_978_227# a_1033_239# Gnd CMOSN w=0.36u l=0.18u
++  ad=0.2106p pd=1.35u as=0.1944p ps=1.8u
+M1120 a_431_235# a_98_227# vdd vdd CMOSP w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1121 a_308_464# a_305_534# s2 Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1122 gnd b6 a_928_10# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1123 gnd a_717_356# a_763_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.88u
+M1124 a_708_27# a4 a_660_507# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1125 vdd a_85_315# a_168_534# vdd CMOSP w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.3888p ps=2.07u
+M1126 gnd b3 a_427_15# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1127 a_332_227# a_202_288# a_340_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1128 a_380_103# a2 vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1129 a_317_103# a2 vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1130 a_355_342# b3 vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1131 a_433_507# a_337_297# a_473_103# vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1132 a_25_548# a_8_548# s0 vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=1.4175p ps=5.13u
+M1133 a_934_507# a_858_324# gnd Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.3888p ps=2.07u
+M1134 a_951_356# a_646_233# a_942_356# vdd CMOSP w=4.5u l=0.18u
++  ad=1.215p pd=5.13u as=1.4175p ps=5.13u
+M1135 vdd a_355_342# a_340_227# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.7776p ps=3.51u
+M1136 gnd a_419_548# a_445_470# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.2835p ps=1.53u
+M1137 a_664_233# a_646_233# a_672_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.2835p ps=1.53u
+M1138 gnd a_340_227# a_395_239# Gnd CMOSN w=0.36u l=0.18u
++  ad=0.2106p pd=1.35u as=0.1944p ps=1.8u
+M1139 gnd a_8_10# a_98_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1140 vdd a2 a_202_288# vdd CMOSP w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1141 vdd a7 a_1111_103# vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1142 a_153_460# a_34_233# gnd Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1143 a_1092_103# a7 vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1144 gnd a_85_315# a_235_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1145 a_70_27# a0 a_22_507# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1146 a_736_27# b4 a_669_534# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.2268p ps=1.35u
+M1147 a_1041_356# a_978_227# vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1148 vdd a_858_324# a_853_223# vdd CMOSP w=3.51u l=0.18u
++  ad=1.5795p pd=7.92u as=1.8954p ps=8.1u
+M1149 a_937_548# a_920_548# s6 vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.9072p ps=3.51u
+M1150 a_669_534# b4 a_744_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.3888p pd=2.07u as=0.4536p ps=2.07u
+M1151 vdd a_202_288# a_197_231# vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=1.215p ps=5.58u
+M1152 gnd a_835_231# a_871_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.5265p pd=2.43u as=0.486p ps=2.88u
+M1153 gnd b2 a_344_19# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.3888p pd=2.07u as=0.4536p ps=2.07u
+M1154 a_660_507# a_669_279# gnd Gnd CMOSN w=0.36u l=0.18u
++  ad=0.162p pd=1.62u as=0.1944p ps=1.35u
+M1155 a_62_103# b0 vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1156 vdd a0 a_8_10# vdd CMOSP w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1157 a_34_356# a_31_279# vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1158 vdd c4lo a_663_548# vdd CMOSP w=4.5u l=0.18u
++  ad=2.025p pd=9.9u as=1.4175p ps=5.13u
+M1159 a_220_324# b2 gnd Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.3402p ps=1.71u
+M1160 gnd a_67_288# a_98_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1161 gnd a_840_288# a_835_231# Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.5832p ps=3.24u
+M1162 gnd a_8_10# a_26_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.2835p ps=1.53u
+M1163 a_873_27# b5 a_806_534# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.2268p ps=1.35u
+M1164 vdd a_34_233# a_145_548# vdd CMOSP w=1.17u l=0.18u
++  ad=1.0206p pd=4.23u as=0.6318p ps=3.42u
+M1165 a_982_19# a6 a_934_507# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1166 vdd a_717_356# a_763_233# vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1167 a_708_356# a_705_288# vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1168 a_646_10# b4 vdd vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1169 a_403_356# a_340_227# vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1170 a_178_356# a_8_233# a_169_356# vdd CMOSP w=4.5u l=0.18u
++  ad=1.215p pd=5.13u as=1.4175p ps=5.13u
+M1171 a_98_227# a_31_279# a_106_356# vdd CMOSP w=5.58u l=0.18u
++  ad=2.511p pd=12.06u as=1.7577p ps=6.21u
+M1172 a_466_356# a_8_233# vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1173 a_250_223# a_215_223# gnd Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.5265p ps=2.43u
+M1174 gnd a_79_356# a_125_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.88u
+M1175 gnd a6 a_858_324# Gnd CMOSN w=1.08u l=0.18u
++  ad=0.3402p pd=1.71u as=0.5832p ps=3.24u
+M1176 a_199_103# b1 vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1177 a_974_103# b6 vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.9072p ps=3.51u
+M1178 vdd a6 a_840_288# vdd CMOSP w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1179 vdd a_202_288# a_305_534# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.7776p ps=3.51u
+M1180 a_62_218# a_8_10# gnd Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1181 gnd b7 a_1065_15# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1182 a_454_103# a3 vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1183 a_22_507# a_31_279# gnd Gnd CMOSN w=0.36u l=0.18u
++  ad=0.162p pd=1.62u as=0.1944p ps=1.35u
+M1184 a_672_233# a_646_233# a_672_356# vdd CMOSP w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1185 a_31_279# b0 gnd Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1186 a_376_356# a_337_297# vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1187 a_313_356# a_8_233# a_304_356# vdd CMOSP w=4.5u l=0.18u
++  ad=1.215p pd=5.13u as=1.4175p ps=5.13u
+M1188 s2 a_296_507# a_290_464# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1189 a_1074_548# a_1071_507# vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1190 a_168_534# a1 a_235_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1191 a_67_288# b1 a_180_103# vdd CMOSP w=7.02u l=0.18u
++  ad=3.159p pd=14.94u as=2.2113p ps=7.65u
+M1192 a_1018_103# a6 vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1193 a_305_534# a2 a_372_19# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1194 a_1071_507# a_975_297# a_1111_103# vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1195 a_1050_235# a_1006_235# gnd Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.2106p ps=1.35u
+M1196 a_1041_356# a_717_356# a_1033_239# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1197 a_879_356# a_835_231# vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1198 a_816_356# a_646_233# a_807_356# vdd CMOSP w=4.5u l=0.18u
++  ad=1.215p pd=5.13u as=1.4175p ps=5.13u
+M1199 a_269_218# a_98_227# vdd vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1200 vdd a_220_324# a_215_223# vdd CMOSP w=3.51u l=0.18u
++  ad=1.5795p pd=7.92u as=1.8954p ps=8.1u
+M1201 gnd b4 a_708_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.1944p pd=1.35u as=0.2268p ps=1.35u
+M1202 a_934_218# a_646_233# gnd Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1203 a_654_10# a4 a_646_10# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1204 vdd a_8_10# a_34_233# vdd CMOSP w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1205 a_458_227# a_431_235# gnd Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1206 a_171_460# a_168_534# s1 Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1207 a_412_235# a_368_235# gnd Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.2106p ps=1.35u
+M1208 a_1065_470# a_951_356# gnd Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.486p ps=2.88u
+M1209 vdd a_736_227# a_781_227# vdd CMOSP w=2.79u l=0.18u
++  ad=1.2555p pd=6.48u as=1.5066p ps=6.66u
+M1210 vdd a_723_315# a_717_356# vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=1.215p ps=5.13u
+M1211 a_299_548# a_282_548# s2 vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.9072p ps=3.51u
+M1212 vdd a4 a_700_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1213 s6 a_934_507# a_928_464# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1214 a_791_10# a5 a_723_315# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1215 vdd a_79_356# a_125_233# vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1216 a_16_10# a0 a_8_10# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1217 a_31_534# b0 a_106_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.3888p pd=2.07u as=0.4536p ps=2.07u
+M1218 vdd a_395_239# c4lo vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.7776p ps=3.51u
+M1219 gnd a_858_324# a_853_223# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1220 gnd a_197_231# a_233_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.5265p pd=2.43u as=0.486p ps=2.88u
+M1221 a_436_548# a_433_507# vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1222 a_806_534# b5 a_881_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.3888p pd=2.07u as=0.4536p ps=2.07u
+M1223 a_705_288# b5 a_818_103# vdd CMOSP w=7.02u l=0.18u
++  ad=3.159p pd=14.94u as=2.2113p ps=7.65u
+M1224 a_978_227# a_975_297# a_970_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1225 a_975_297# b7 gnd Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.3402p ps=1.71u
+M1226 gnd a_202_288# a_197_231# Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.5832p ps=3.24u
+M1227 a_336_103# b2 vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.9072p ps=3.51u
+M1228 s1 a_168_534# a_162_548# vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1229 a_16_455# c0 gnd Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1230 gnd a_646_10# a_736_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1231 gnd b0 a_70_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.1944p pd=1.35u as=0.2268p ps=1.35u
+M1232 a_368_235# a_220_324# gnd Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1233 a_1104_356# a_646_233# vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1234 vdd a_178_356# a_282_548# vdd CMOSP w=2.25u l=0.18u
++  ad=0.8748p pd=3.51u as=1.215p ps=5.58u
+M1235 a_681_103# a4 vdd vdd CMOSP w=5.58u l=0.18u
++  ad=1.7577p pd=6.21u as=3.0132p ps=12.24u
+M1236 a_978_227# a_840_288# a_978_356# vdd CMOSP w=2.88u l=0.18u
++  ad=0.7776p pd=3.51u as=0.9072p ps=3.51u
+M1237 a_907_218# a_736_227# vdd vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1238 a_403_356# a_79_356# a_395_239# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1239 a_943_534# a6 a_1010_19# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1240 gnd c4lo a_646_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.88u
+M1241 a_1074_548# a_1057_548# s7 vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1242 a_723_315# b5 vdd vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1243 gnd a_705_288# a_700_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1244 a_920_548# a_816_356# gnd Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.4212p ps=2.07u
+M1245 a_296_507# a_220_324# gnd Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.3888p ps=2.07u
+M1246 a_161_218# a_8_233# gnd Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1247 vdd a_840_288# a_943_534# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.7776p ps=3.51u
+M1248 s4 a_660_507# a_654_455# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1249 a_809_460# a_806_534# s5 Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1250 a_207_27# a1 a_159_507# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1251 gnd a_723_315# a_873_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1252 a_1155_103# a7 vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1253 vdd c0 a_8_548# vdd CMOSP w=0.9u l=0.18u
++  ad=1.2555p pd=5.13u as=0.486p ps=2.88u
+M1254 vdd a_1006_235# a_1069_235# vdd CMOSP w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1255 a_1014_356# a_975_297# vdd vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1256 a_879_356# a_717_356# a_871_233# vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1257 a_427_470# a_313_356# gnd Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.486p ps=2.88u
+M1258 gnd a1 a_67_288# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1259 a_858_324# b6 gnd Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.3402p ps=1.71u
+M1260 a_296_218# a_8_233# gnd Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1261 a_442_534# a3 a_509_15# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1262 a_31_279# b0 a_43_103# vdd CMOSP w=5.58u l=0.18u
++  ad=2.511p pd=12.06u as=1.7577p ps=6.21u
+M1263 a_663_548# a_660_507# vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=1.2555p ps=5.13u
+M1264 s5 a_806_534# a_800_548# vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1265 vdd a7 a_993_342# vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1266 vdd a_816_356# a_920_548# vdd CMOSP w=2.25u l=0.18u
++  ad=0.8748p pd=3.51u as=1.215p ps=5.58u
+M1267 a_744_356# a_705_288# vdd vdd CMOSP w=5.58u l=0.18u
++  ad=1.7577p pd=6.21u as=3.0132p ps=12.24u
+M1268 a_1083_470# a_1080_534# s7 Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.2835p ps=1.53u
+M1269 a_660_507# a_669_279# a_700_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1270 a_241_356# a_197_231# vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1271 gnd a_920_548# a_946_464# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4212p pd=2.07u as=0.4536p ps=2.07u
+M1272 a_235_27# b1 a_168_534# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.2268p ps=1.35u
+M1273 gnd a4 a_669_279# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1274 vdd a5 a_837_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1275 gnd a_220_324# a_215_223# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1276 a_436_548# a_419_548# s3 vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1277 a_799_218# a_646_233# gnd Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1278 a_168_534# b1 a_243_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.3888p pd=2.07u as=0.4536p ps=2.07u
+M1279 a_70_356# a_67_288# vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1280 gnd a_98_227# a_277_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1281 a_1096_227# a_1069_235# gnd Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1282 a_159_507# a_67_288# gnd Gnd CMOSN w=0.36u l=0.18u
++  ad=0.162p pd=1.62u as=0.1944p ps=1.35u
+M1283 gnd a_993_342# a_970_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1284 a_372_19# b2 a_305_534# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1285 a_858_324# b6 a_955_103# vdd CMOSP w=4.5u l=0.18u
++  ad=2.025p pd=9.9u as=1.4175p ps=5.13u
+M1286 vdd a_34_233# a_162_548# vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1287 a_517_103# a3 vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1288 a_145_548# a_34_233# gnd Gnd CMOSN w=0.54u l=0.18u
++  ad=0.243p pd=1.98u as=0.4536p ps=2.43u
+M1289 a_34_455# a_31_534# s0 Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=0.7047p ps=2.88u
+M1290 vdd c4lo a_646_233# vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.68u
+M1291 vdd a_1033_239# c8 vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.7776p ps=3.51u
+M1292 a_942_356# a_907_218# vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1293 vdd a_98_227# a_143_227# vdd CMOSP w=2.79u l=0.18u
++  ad=1.2555p pd=6.48u as=1.5066p ps=6.66u
+M1294 vdd a_368_235# a_431_235# vdd CMOSP w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1295 a_672_233# a_669_279# a_664_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.486p ps=2.88u
+M1296 gnd b4 a_654_10# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1297 a_717_356# a_723_315# a_700_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1298 a_646_548# c4lo gnd Gnd CMOSN w=0.45u l=0.18u
++  ad=0.2025p pd=1.8u as=0.5427p ps=2.88u
+M1299 a_85_315# b1 vdd vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1300 a_340_227# a_337_297# a_332_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1301 gnd a3 a_337_297# Gnd CMOSN w=1.08u l=0.18u
++  ad=0.3402p pd=1.71u as=0.5832p ps=3.24u
+M1302 vdd a_993_342# a_1080_534# vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.23u
+M1303 gnd a_736_227# a_1077_235# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1304 a_1006_235# a_858_324# gnd Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1305 a_473_103# b3 vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1306 vdd a3 a_355_342# vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1307 s0 a_31_534# a_25_548# vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=1.4175p ps=5.13u
+M1308 gnd b0 a_16_10# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1309 gnd b5 a_791_10# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1310 a_340_227# a_202_288# a_340_356# vdd CMOSP w=2.88u l=0.18u
++  ad=0.7776p pd=3.51u as=0.9072p ps=3.51u
+M1311 a_445_470# a_442_534# s3 Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.2835p ps=1.53u
+M1312 gnd a_736_227# a_915_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1313 a_282_548# a_178_356# gnd Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.4212p ps=2.07u
+M1314 gnd a_646_548# a_672_455# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.5427p pd=2.88u as=0.7047p ps=2.88u
+M1315 a_736_227# a_669_279# gnd Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1316 s5 a_797_507# a_791_460# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1317 vdd a_672_233# a_800_548# vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1318 a_783_548# a_672_233# gnd Gnd CMOSN w=0.54u l=0.18u
++  ad=0.243p pd=1.98u as=0.4536p ps=2.43u
+M1319 a_1080_534# a7 a_1147_15# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1320 s6 a_943_534# a_937_548# vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.9072p ps=3.51u
+M1321 a_1010_19# b6 a_943_534# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1322 a_744_103# a4 vdd vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1323 a_241_356# a_79_356# a_233_233# vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1324 a_871_233# a_717_356# a_888_223# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1325 a_797_507# a_705_288# a_837_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1326 vdd a_85_315# a_79_356# vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=1.215p ps=5.13u
+M1327 vdd a0 a_62_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1328 a_663_548# a_646_548# s4 vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=1.4175p ps=5.13u
+M1329 gnd b1 a_207_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.1944p pd=1.35u as=0.2268p ps=1.35u
+M1330 vdd a6 a_974_103# vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=1.5552p ps=6.84u
+M1331 a_26_233# a_8_233# a_34_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.2835p pd=1.53u as=0.2835p ps=1.53u
+M1332 a_153_10# a1 a_85_315# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1333 a_481_15# a3 a_433_507# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1334 a_800_548# a_797_507# vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.0206p ps=4.23u
+M1335 vdd a_355_342# a_442_534# vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.972p ps=4.23u
+M1336 gnd a_98_227# a_439_235# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.2268p ps=1.35u
+M1337 a_1057_548# a_951_356# gnd Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.2835p ps=1.53u
+M1338 gnd a5 a_705_288# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1339 vdd a4 a_646_10# vdd CMOSP w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1340 a_672_356# a_669_279# vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1341 a_169_356# a_143_227# vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1342 a_106_356# a_67_288# vdd vdd CMOSP w=5.58u l=0.18u
++  ad=1.7577p pd=6.21u as=3.0132p ps=12.24u
+M1343 a_67_288# b1 gnd Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1344 gnd a_282_548# a_308_464# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4212p pd=2.07u as=0.4536p ps=2.07u
+M1345 a_845_27# a5 a_797_507# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1346 vdd a1 a_199_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1347 a_290_10# a2 a_202_288# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1348 a_509_15# b3 a_442_534# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1349 gnd a_355_342# a_332_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1350 a_305_534# b2 a_380_103# vdd CMOSP w=2.88u l=0.18u
++  ad=0.7776p pd=3.51u as=0.9072p ps=3.51u
+M1351 a_220_324# b2 a_317_103# vdd CMOSP w=4.5u l=0.18u
++  ad=2.025p pd=9.9u as=1.4175p ps=5.13u
+M1352 gnd a_67_288# a_62_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1353 vdd c0 a_25_548# vdd CMOSP w=4.5u l=0.18u
++  ad=2.025p pd=9.9u as=1.4175p ps=5.13u
+M1354 gnd a7 a_975_297# Gnd CMOSN w=1.08u l=0.18u
++  ad=0.3402p pd=1.71u as=0.5832p ps=3.24u
+M1355 vdd a_871_233# a_951_356# vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=1.215p ps=5.13u
+M1356 a_669_279# b4 gnd Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1357 a_304_356# a_269_218# vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1358 a_419_548# a_313_356# gnd Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.2835p ps=1.53u
+M1359 a_290_464# a_178_356# gnd Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1360 gnd a_646_10# a_664_233# Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.2835p ps=1.53u
+M1361 vdd a_951_356# a_1057_548# vdd CMOSP w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1362 a_31_534# a0 a_98_27# Gnd CMOSN w=0.72u l=0.18u
++  ad=0.2268p pd=1.35u as=0.3888p ps=2.52u
+M1363 a_180_103# a1 vdd vdd CMOSP w=7.02u l=0.18u
++  ad=2.2113p pd=7.65u as=3.7908p ps=15.12u
+M1364 gnd a_907_218# a_934_218# Gnd CMOSN w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1365 gnd a_202_288# a_372_19# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1366 a_202_288# b2 vdd vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1367 s1 a_159_507# a_153_460# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1368 a_1111_103# b7 vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1369 a_1033_239# a_1006_235# a_1041_356# vdd CMOSP w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.4536p ps=2.07u
+M1370 a_807_356# a_781_227# vdd vdd CMOSP w=4.5u l=0.18u
++  ad=1.4175p pd=5.13u as=2.43p ps=10.08u
+M1371 vdd a_816_356# a_937_548# vdd CMOSP w=2.88u l=0.18u
++  ad=1.296p pd=6.66u as=0.9072p ps=3.51u
+M1372 vdd a_215_223# a_269_218# vdd CMOSP w=2.25u l=0.18u
++  ad=0.7047p pd=2.88u as=1.215p ps=5.58u
+M1373 vdd a_646_10# a_669_534# vdd CMOSP w=0.72u l=0.18u
++  ad=0.324p pd=2.34u as=0.3888p ps=2.07u
+M1374 a_1119_15# a7 a_1071_507# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1375 a_797_507# a_705_288# gnd Gnd CMOSN w=0.36u l=0.18u
++  ad=0.162p pd=1.62u as=0.1944p ps=1.35u
+M1376 a_34_233# a_8_233# a_34_356# vdd CMOSP w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1377 a_22_507# a_31_279# a_62_103# vdd CMOSP w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1378 a_8_10# b0 vdd vdd CMOSP w=2.25u l=0.18u
++  ad=1.0125p pd=5.4u as=0.7047p ps=2.88u
+M1379 a_337_297# b3 gnd Gnd CMOSN w=1.08u l=0.18u
++  ad=0.486p pd=3.06u as=0.3402p ps=1.71u
+M1380 a_433_507# a_337_297# gnd Gnd CMOSN w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1381 gnd a_8_233# a_458_227# Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+M1382 a_98_227# a_31_279# gnd Gnd CMOSN w=1.44u l=0.18u
++  ad=0.648p pd=3.78u as=0.4536p ps=2.07u
+M1383 a_975_297# b7 a_1092_103# vdd CMOSP w=4.5u l=0.18u
++  ad=2.025p pd=9.9u as=1.4175p ps=5.13u
+M1384 a_162_548# a_159_507# vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.0206p ps=4.23u
+M1385 a_717_356# a_646_10# a_708_356# vdd CMOSP w=4.5u l=0.18u
++  ad=1.215p pd=5.13u as=1.4175p ps=5.13u
+M1386 s2 a_305_534# a_299_548# vdd CMOSP w=2.88u l=0.18u
++  ad=0.9072p pd=3.51u as=0.9072p ps=3.51u
+M1387 a_928_464# a_816_356# gnd Gnd CMOSN w=1.44u l=0.18u
++  ad=0.4536p pd=2.07u as=0.7776p ps=3.96u
+C0 a_305_534# a_202_288# 0.08407f
+C1 a_178_356# a_197_231# 0.38923f
+C2 c4lo a_355_342# 0.17734f
+C3 gnd a7 0.00266f
+C4 a_744_356# a_736_227# 0.00176f
+C5 a_723_315# a_781_227# 0.02785f
+C6 a_646_233# a_858_324# 0.02762f
+C7 a_717_356# a_907_218# 0.02853f
+C8 a_153_10# gnd 0
+C9 a_458_227# c0 0.27014f
+C10 a_806_534# a_723_315# 0.08773f
+C11 a_67_288# a_79_356# 0.02712f
+C12 a_305_534# s2 0.09334f
+C13 a_934_507# a_646_233# 0.00113f
+C14 a_313_356# vdd 0.47834f
+C15 c4lo a_458_227# 0.33968f
+C16 a_34_233# a_162_548# 0.00654f
+C17 a_290_464# s2 0
+C18 a_816_356# a_799_218# 0.41817f
+C19 vdd b3 0.08128f
+C20 c4lo a_445_470# 0
+C21 a_664_233# gnd 0.16512f
+C22 a_705_288# a_736_227# 0.02227f
+C23 a_993_342# a7 1.0619f
+C24 a_202_288# a_233_233# 0.02918f
+C25 a_313_356# gnd 0.04966f
+C26 a_797_507# a_705_288# 0.57863f
+C27 a_433_507# a_473_103# 0.6776f
+C28 a_840_288# b6 0.28588f
+C29 a_431_235# c0 0.0252f
+C30 a_975_297# a_1111_103# 0.43054f
+C31 a_340_356# vdd 0
+C32 a_654_455# gnd 0
+C33 a_220_324# a_332_227# 0.00111f
+C34 a_67_288# a_180_103# 0.00221f
+C35 a_168_534# a_233_233# 0.00164f
+C36 a_178_356# a_125_233# 0.01968f
+C37 c4lo a_431_235# 0.0139f
+C38 a0 b0 1.92212f
+C39 gnd b3 0.00735f
+C40 a_16_10# gnd 0
+C41 a_646_233# a_907_218# 0.47836f
+C42 a_332_227# c0 0.0314f
+C43 a_705_288# a_669_279# 0.84223f
+C44 a_31_279# a_8_10# 0.28742f
+C45 a_67_288# a_8_233# 0.01979f
+C46 a_282_548# vdd 0.23749f
+C47 a_162_548# s1 1.06215f
+C48 a_305_534# c0 0.00528f
+C49 a_159_507# a_162_548# 0.00656f
+C50 a_168_534# a_34_233# 0.01832f
+C51 a_907_218# a_934_218# 0.08187f
+C52 a_153_460# s1 0
+C53 a_1010_19# a6 0.02092f
+C54 vdd a2 0.08944f
+C55 a_1092_103# vdd 0.00113f
+C56 a_215_223# a_202_288# 0.72735f
+C57 a_412_235# gnd 0
+C58 a_197_231# a_241_356# 0.00652f
+C59 a_220_324# a_233_233# 0.9934f
+C60 a_98_227# a_355_342# 0.01901f
+C61 a_85_315# a_368_235# 0.0355f
+C62 a_79_356# a_403_356# 0.21968f
+C63 a_705_288# a_717_356# 0.02712f
+C64 a_282_548# gnd 0.1012f
+C65 a_22_507# a_98_27# 0.19864f
+C66 a_858_324# b6 0.88431f
+C67 a_304_356# vdd 0.00113f
+C68 a_233_233# c0 0.04166f
+C69 a_308_464# gnd 0
+C70 a_943_534# a6 0.00708f
+C71 a_934_507# b6 0.02789f
+C72 a_433_507# a_85_315# 0.00541f
+C73 a_159_507# a_202_288# 0.00933f
+C74 a_168_534# a_215_223# 0
+C75 gnd a2 0.00274f
+C76 vdd s5 0.01194f
+C77 a_700_103# a4 0.01183f
+C78 a_837_103# b5 0.01183f
+C79 a_708_356# a_717_356# 0.00142f
+C80 a_168_534# s1 0.09459f
+C81 a_34_233# c0 0.1256f
+C82 a_162_548# vdd 0.68564f
+C83 c4lo s4 0.02948f
+C84 a_646_10# b4 0.28673f
+C85 a_202_288# b1 0.00397f
+C86 a_159_507# a_168_534# 0.26666f
+C87 a_337_297# a_473_103# 0.43054f
+C88 a_937_548# s6 0.92999f
+C89 a_16_455# s0 0
+C90 vdd b0 0.07975f
+C91 a_955_103# vdd 0.00113f
+C92 a_277_218# gnd 0
+C93 a_220_324# a_215_223# 0.04942f
+C94 a_79_356# a_355_342# 0.01852f
+C95 a_85_315# a_340_227# 0.02578f
+C96 a_98_227# a_431_235# 0.0211f
+C97 a_705_288# a_646_233# 0.01979f
+C98 a_669_534# a4 0.00647f
+C99 a_660_507# b4 0.02787f
+C100 a_168_534# b1 0.02342f
+C101 a_672_233# a_672_455# 0
+C102 a_1057_548# a_1074_548# 0.01217f
+C103 a_215_223# c0 0.03455f
+C104 a_202_288# vdd 0.71682f
+C105 a_153_460# gnd 0
+C106 a_269_218# a_277_218# 0
+C107 a_98_227# a_332_227# 0.25556f
+C108 a_125_233# a_161_218# 0.02502f
+C109 a_305_534# a_98_227# 0.00113f
+C110 a_178_356# a_85_315# 0.21236f
+C111 a_159_507# a_220_324# 0.00528f
+C112 gnd b0 0.00719f
+C113 vdd s2 0.01161f
+C114 a_336_103# b2 0.01312f
+C115 a_26_233# c0 0.25595f
+C116 a_168_534# vdd 0.18655f
+C117 a_660_507# s4 0.15972f
+C118 a_25_548# s0 1.2274f
+C119 a_159_507# c0 0.0054f
+C120 a_202_288# gnd 0.04643f
+C121 a_943_534# s6 0.09334f
+C122 a_1074_548# vdd 0.35344f
+C123 a_1069_235# a_1033_239# 0.65418f
+C124 c4lo a_1069_235# 0.0252f
+C125 vdd a5 0.09017f
+C126 a_818_103# vdd 0.00193f
+C127 a_98_227# a_233_233# 0.03812f
+C128 a_269_218# a_202_288# 0.40992f
+C129 a_85_315# a_337_297# 0.01817f
+C130 a_8_233# a_355_342# 0.01901f
+C131 a_62_218# gnd 0.70201f
+C132 a_168_534# gnd 0.00307f
+C133 a_296_507# a_336_103# 0.60913f
+C134 a_1071_507# a_1057_548# 0.01812f
+C135 a_951_356# a_1074_548# 0.00492f
+C136 a_1069_235# c8 0.0139f
+C137 a_220_324# vdd 0.08349f
+C138 a_1057_548# c8 0
+C139 a_705_288# a_799_218# 0.01336f
+C140 a_669_279# a_700_218# 0.25561f
+C141 a_8_233# a_458_227# 0.09002f
+C142 a_143_227# a_161_218# 0.12525f
+C143 a_934_507# a_1018_103# 0
+C144 a_168_534# a_269_218# 0.04737f
+C145 a_305_534# a_79_356# 0
+C146 a_296_507# a_85_315# 0.0054f
+C147 gnd a5 0.00371f
+C148 vdd c0 0.08375f
+C149 a_1033_239# vdd 0.03188f
+C150 a_433_507# a_509_15# 0.24705f
+C151 c4lo vdd 0.38508f
+C152 a_1041_356# a_1033_239# 0.9464f
+C153 a_942_356# vdd 0.00113f
+C154 a_220_324# gnd 0.30411f
+C155 a_646_548# c4lo 0.70741f
+C156 a_22_507# a_34_233# 0.00451f
+C157 a_975_297# a_1006_235# 0.01933f
+C158 a_800_548# s5 1.06215f
+C159 a_8_10# a_16_10# 0
+C160 a_1080_534# a_1147_15# 0.82599f
+C161 a_717_356# a_700_218# 0.3477f
+C162 a_1071_507# vdd 0.4006f
+C163 c4lo a_871_233# 0.04166f
+C164 a_951_356# a_1033_239# 0.00692f
+C165 c4lo a_951_356# 0.01541f
+C166 vdd c8 0.30133f
+C167 c0 gnd 0.00783f
+C168 a_681_103# vdd 0.00141f
+C169 a_98_227# a_215_223# 0.41885f
+C170 a_8_233# a_431_235# 0.47836f
+C171 a_79_356# a_233_233# 0.04581f
+C172 a_269_218# a_220_324# 0.04132f
+C173 a_951_356# a_942_356# 0.00142f
+C174 a_1033_239# gnd 0.03306f
+C175 c4lo gnd 0.0092f
+C176 a_22_507# a0 0.0298f
+C177 a_660_507# a_744_103# 0
+C178 a_951_356# a_1071_507# 0.59374f
+C179 a_269_218# c0 0.02508f
+C180 a_646_10# vdd 0.72385f
+C181 a_951_356# c8 0.00109f
+C182 a_1071_507# gnd 0.08539f
+C183 a_1080_534# s7 0.09188f
+C184 a_8_233# a_332_227# 0.15571f
+C185 a_305_534# a_8_233# 0.00113f
+C186 a_159_507# a_98_227# 0.00113f
+C187 gnd c8 0.00137f
+C188 a_1014_356# vdd 0
+C189 a_660_507# vdd 0.20592f
+C190 a_31_534# s0 0.09552f
+C191 a_8_548# c0 0.70741f
+C192 a_993_342# a_1033_239# 0.08867f
+C193 c4lo a_993_342# 0.01381f
+C194 a_840_288# vdd 0.71682f
+C195 a_646_10# gnd 0.04961f
+C196 a_660_507# a_646_548# 0.01812f
+C197 a_31_534# a_25_548# 0.27909f
+C198 a_646_233# a_700_218# 0.15648f
+C199 a_816_356# vdd 0.48744f
+C200 a_975_297# a_978_227# 0.03667f
+C201 a_806_534# s5 0.09459f
+C202 c4lo a_853_223# 0.03455f
+C203 a_1071_507# a_993_342# 0.16151f
+C204 a_736_27# a4 0.02027f
+C205 a_1119_15# gnd 0
+C206 a_873_27# b5 0.21867f
+C207 a_840_288# a_871_233# 0.02918f
+C208 a_454_103# vdd 0.00113f
+C209 a_143_227# a_125_233# 0.30772f
+C210 a_85_315# a_197_231# 0.02529f
+C211 a_993_342# c8 0.17734f
+C212 a_951_356# a_840_288# 0.01062f
+C213 a_943_534# a_975_297# 0.29272f
+C214 a_79_356# a_215_223# 1.08743f
+C215 a_8_233# a_233_233# 0.55533f
+C216 a_660_507# gnd 0.03686f
+C217 a_168_534# a_243_103# 0
+C218 a_442_534# a_436_548# 0.27667f
+C219 a_840_288# gnd 0.04643f
+C220 a_98_227# vdd 0.11961f
+C221 a_816_356# gnd 0.04635f
+C222 a_178_356# a_67_288# 0.00638f
+C223 a_159_507# a_79_356# 0.00113f
+C224 a_34_233# a_8_233# 0.09326f
+C225 a_368_235# a_403_356# 0.01162f
+C226 a_978_356# vdd 0
+C227 a_22_507# vdd 0.20592f
+C228 a_978_227# a_1006_235# 0.40038f
+C229 a_858_324# vdd 0.08349f
+C230 a_669_279# a4 0.04862f
+C231 a_98_227# gnd 0.27166f
+C232 a_8_10# b0 0.28673f
+C233 a_85_315# a1 1.06233f
+C234 a_934_507# vdd 0.31804f
+C235 a_840_288# a_993_342# 0.38194f
+C236 a_313_356# a_395_239# 0.00692f
+C237 a_943_534# a_1006_235# 0.00119f
+C238 a_835_231# a_879_356# 0.00652f
+C239 a_853_223# a_840_288# 0.72735f
+C240 a_858_324# a_871_233# 0.9934f
+C241 a_372_19# b2 0.21932f
+C242 a_982_19# gnd 0
+C243 a_317_103# vdd 0.00113f
+C244 a_8_233# a_215_223# 0.09675f
+C245 a_85_315# a_125_233# 0.02265f
+C246 a_98_227# a_269_218# 0.41362f
+C247 a_951_356# a_858_324# 0.01687f
+C248 a_816_356# a_853_223# 0.00114f
+C249 a_22_507# gnd 0.03686f
+C250 a_934_507# a_951_356# 0.00472f
+C251 a_920_548# a_816_356# 0.71352f
+C252 a_943_534# a_937_548# 0.27763f
+C253 a_433_507# a_442_534# 0.2539f
+C254 a_313_356# a_419_548# 0.72378f
+C255 a_858_324# gnd 0.30411f
+C256 a_79_356# vdd 0.48536f
+C257 a_934_507# gnd 0.07523f
+C258 a_797_507# b5 0.0279f
+C259 a_806_534# a5 0.00644f
+C260 a_797_507# a_837_103# 0.4769f
+C261 a_8_233# a_26_233# 0.16716f
+C262 a_8_10# a_62_218# 0.01227f
+C263 a_159_507# a_8_233# 0.00113f
+C264 a_199_103# a1 0.01183f
+C265 a_340_227# a_403_356# 0.00758f
+C266 a_355_342# a_368_235# 0.0976f
+C267 a_296_507# a_372_19# 0.23155f
+C268 a_840_288# a_928_10# 0
+C269 a_907_218# vdd 0.66659f
+C270 a_22_507# a_8_548# 0.01812f
+C271 a_79_356# gnd 0.04312f
+C272 a_31_279# b0 0.88516f
+C273 a_395_239# a_412_235# 0
+C274 a_943_534# a_1010_19# 0.7597f
+C275 a_858_324# a_993_342# 0.0182f
+C276 a_783_548# vdd 0.13768f
+C277 a_433_507# a_355_342# 0.16151f
+C278 c4lo a_781_227# 0.02566f
+C279 a6 b6 1.92224f
+C280 a_934_507# a_993_342# 0
+C281 a_943_534# a_978_227# 0
+C282 a_845_27# gnd 0
+C283 a_669_534# a_672_233# 0.00506f
+C284 a_858_324# a_853_223# 0.04942f
+C285 a_907_218# a_871_233# 0.49971f
+C286 a_736_227# a_975_297# 0.019f
+C287 c4lo a_806_534# 0.00473f
+C288 a_180_103# vdd 0.00193f
+C289 a_816_356# a_807_356# 0.00142f
+C290 a_106_356# a_98_227# 0.00176f
+C291 a_85_315# a_143_227# 0.02785f
+C292 a_79_356# a_269_218# 0.02853f
+C293 a_433_507# a_458_227# 0
+C294 a_934_507# a_920_548# 0.01812f
+C295 a_907_218# gnd 0.04508f
+C296 a_723_315# a5 1.06233f
+C297 a_946_464# s6 0
+C298 a_8_10# c0 0.01801f
+C299 a_8_233# vdd 0.2555f
+C300 a_783_548# gnd 0.05225f
+C301 a_67_288# a_161_218# 0.01336f
+C302 a_31_279# a_62_218# 0.25561f
+C303 a_22_507# a_106_356# 0
+C304 a_31_534# a_85_315# 0.00114f
+C305 a_337_297# a_403_356# 0.00599f
+C306 a_340_227# a_355_342# 0.53929f
+C307 a_431_235# a_368_235# 0.02286f
+C308 a_433_507# a3 0.03077f
+C309 a_669_534# a_736_27# 0.6277f
+C310 a_744_356# vdd 0.00156f
+C311 a_8_233# gnd 0.09225f
+C312 a_669_279# a_700_103# 0.23914f
+C313 a_355_342# a_439_235# 0
+C314 a_736_227# a_1006_235# 1.18118f
+C315 a_723_315# a_1033_239# 0.02552f
+C316 a_669_534# a_736_227# 0.00394f
+C317 c4lo a_723_315# 0.01586f
+C318 a_305_534# a_368_235# 0.00119f
+C319 a_708_27# gnd 0
+C320 a_907_218# a_853_223# 0.02524f
+C321 a_717_356# a_975_297# 0.44209f
+C322 a_43_103# vdd 0.00141f
+C323 a_67_288# a_197_231# 0.01092f
+C324 a_8_233# a_269_218# 0.47836f
+C325 a_1071_507# a_723_315# 0.00541f
+C326 a_806_534# a_840_288# 0.0064f
+C327 a_797_507# a_879_356# 0.01383f
+C328 a_1033_239# a_1096_227# 0.00464f
+C329 c4lo a_1096_227# 0.27014f
+C330 a_806_534# a_816_356# 0.00472f
+C331 a_723_315# c8 0.02256f
+C332 a_178_356# a_299_548# 0.00589f
+C333 a_809_460# s5 0
+C334 a_31_279# c0 0.01806f
+C335 a_202_288# a_290_10# 0
+C336 a_646_10# a_654_10# 0
+C337 a_705_288# vdd 0.14103f
+C338 a_1071_507# a_1096_227# 0
+C339 a_669_534# a_669_279# 0
+C340 a_337_297# a_355_342# 0.33851f
+C341 a_1096_227# c8 0.33968f
+C342 a_646_10# a_723_315# 0.38198f
+C343 a_708_356# vdd 0.00113f
+C344 a_705_288# gnd 0.51013f
+C345 a_67_288# a1 0.05107f
+C346 a_340_227# a_332_227# 0.60189f
+C347 a_717_356# a_1006_235# 0.4181f
+C348 a_736_227# a_978_227# 0.01797f
+C349 a_431_235# a_439_235# 0
+C350 a_313_356# a_304_356# 0.00142f
+C351 a_296_507# a_355_342# 0
+C352 a_305_534# a_340_227# 0
+C353 a_669_534# a_717_356# 0.00114f
+C354 a_660_507# a_723_315# 0.00114f
+C355 a_481_15# gnd 0
+C356 a_723_315# a_840_288# 0.02977f
+C357 a_717_356# a_879_356# 0.01377f
+C358 a_736_227# a_835_231# 0.49291f
+C359 a_646_233# a_975_297# 0.01965f
+C360 a_974_103# b6 0.01312f
+C361 a_442_534# s3 0.09188f
+C362 a_806_534# a_858_324# 0.00461f
+C363 a_797_507# a_835_231# 0
+C364 a_70_356# a_79_356# 0.00142f
+C365 a_67_288# a_125_233# 0.01742f
+C366 a_943_534# a_736_227# 0.00113f
+C367 a_816_356# a_723_315# 0.21236f
+C368 a_22_507# a_106_103# 0
+C369 c4lo a_970_227# 0.0314f
+C370 a_783_548# a_800_548# 0.01378f
+C371 a_337_297# a3 0.04915f
+C372 a_296_507# a_299_548# 0.00591f
+C373 a_305_534# a_178_356# 0.01832f
+C374 a_672_455# s4 0
+C375 a_22_507# a_8_10# 0.1561f
+C376 a_1050_235# gnd 0
+C377 a_705_288# a_853_223# 0
+C378 a_305_534# b2 0.02536f
+C379 a_159_507# a_207_27# 0
+C380 a_395_239# c0 0.04172f
+C381 a_466_356# vdd 0
+C382 a_1065_470# c8 0
+C383 a_1083_470# gnd 0
+C384 a_337_297# a_332_227# 0.01155f
+C385 a_717_356# a_978_227# 0.01906f
+C386 a_646_233# a_1006_235# 0.1748f
+C387 a_797_507# a_873_27# 0.19846f
+C388 a_313_356# a_202_288# 0.01062f
+C389 a_305_534# a_337_297# 0.29272f
+C390 a_669_534# a_646_233# 0.00113f
+C391 c4lo a_395_239# 0.13061f
+C392 a_344_19# gnd 0
+C393 a_235_27# a1 0.02027f
+C394 a_736_227# a_763_233# 1.34505f
+C395 a_723_315# a_858_324# 1.94182f
+C396 a_717_356# a_835_231# 0.01874f
+C397 a_8_10# a_79_356# 0.01786f
+C398 a_31_279# a_98_227# 0.21833f
+C399 a_67_288# a_143_227# 0.00701f
+C400 a_943_534# a_717_356# 0
+C401 a_934_507# a_723_315# 0.0054f
+C402 a_436_548# vdd 0.35344f
+C403 a_806_534# a_907_218# 0.04737f
+C404 a_797_507# a_672_233# 0.58401f
+C405 a_806_534# a_783_548# 0.26268f
+C406 a_296_507# a_305_534# 0.25546f
+C407 a_669_534# a_663_548# 0.27909f
+C408 c4lo a_419_548# 0
+C409 a_445_470# s3 0
+C410 a_840_288# a_970_227# 0.20822f
+C411 vdd b7 0.08128f
+C412 a_31_534# a_67_288# 0.00511f
+C413 a_22_507# a_31_279# 0.58199f
+C414 a_915_218# gnd 0
+C415 a_672_233# a_669_279# 0.19664f
+C416 a_368_235# vdd 0.31536f
+C417 a_928_464# gnd 0
+C418 a_1071_507# a7 0.03077f
+C419 a_233_233# a_296_218# 0.00541f
+C420 a_646_233# a_978_227# 0.08692f
+C421 a_178_356# a_215_223# 0.00114f
+C422 a_313_356# a_220_324# 0.01687f
+C423 a4 b4 1.92212f
+C424 gnd b7 0.00735f
+C425 a_717_356# a_763_233# 0.03416f
+C426 a_646_233# a_835_231# 0.08731f
+C427 a_723_315# a_907_218# 0.04132f
+C428 a_207_27# gnd 0
+C429 a_313_356# c0 0.01541f
+C430 a_8_10# a_8_233# 0.39994f
+C431 a_67_288# a_85_315# 0.27266f
+C432 a_31_279# a_79_356# 0.01944f
+C433 a_282_548# s2 0.08563f
+C434 a_943_534# a_646_233# 0.00113f
+C435 a_433_507# vdd 0.4006f
+C436 a_797_507# a_736_227# 0.00113f
+C437 c4lo a_664_233# 0.25595f
+C438 a_202_288# a2 1.06243f
+C439 a_368_235# gnd 0.19959f
+C440 a_159_507# a_178_356# 0.07332f
+C441 c4lo a_313_356# 0.00109f
+C442 a_858_324# a_970_227# 0.00111f
+C443 a_308_464# s2 0
+C444 vdd a6 0.08944f
+C445 a_993_342# b7 0.28599f
+C446 a_241_356# a_233_233# 1.17684f
+C447 a_700_218# gnd 0.70201f
+C448 a_98_227# a_395_239# 0.02841f
+C449 a_669_279# a_736_227# 0.21833f
+C450 a_705_288# a_781_227# 0.00701f
+C451 a_433_507# gnd 0.08539f
+C452 a_340_227# vdd 0.29764f
+C453 a_672_455# gnd 0
+C454 a_646_10# a_664_233# 0.00506f
+C455 a_8_10# a_43_103# 0
+C456 a_67_288# a_199_103# 0.23233f
+C457 a_1080_534# a_1155_103# 0.01188f
+C458 a_178_356# a_169_356# 0.00142f
+C459 gnd a6 0.00274f
+C460 a_70_27# gnd 0
+C461 a_717_356# a_736_227# 0.3289f
+C462 a_646_233# a_763_233# 0.4769f
+C463 a_672_233# a_646_233# 0.09326f
+C464 a_178_356# vdd 0.48744f
+C465 a_797_507# a_717_356# 0.00113f
+C466 a_31_279# a_8_233# 0.41754f
+C467 a_145_548# a_34_233# 0.71458f
+C468 a_168_534# a_162_548# 0.27828f
+C469 a_168_534# a_277_218# 0
+C470 a_340_227# gnd 0.00105f
+C471 a_220_324# a2 0.05415f
+C472 a_85_315# a_235_27# 0.15985f
+C473 a_171_460# s1 0
+C474 a_34_233# a_16_455# 0
+C475 vdd b2 0.08104f
+C476 a_1010_19# b6 0.21932f
+C477 a_1111_103# vdd 0.68583f
+C478 a_215_223# a_241_356# 0.01377f
+C479 a_439_235# gnd 0
+C480 a_85_315# a_403_356# 0.03248f
+C481 a_197_231# a_233_233# 0.02101f
+C482 a_79_356# a_395_239# 0.02348f
+C483 a_705_288# a_723_315# 0.27266f
+C484 a_669_279# a_717_356# 0.01944f
+C485 a_178_356# gnd 0.04635f
+C486 a_31_534# a_98_27# 0.6277f
+C487 a_337_297# vdd 0.0912f
+C488 a_427_470# gnd 0
+C489 a_943_534# b6 0.02536f
+C490 a_31_279# a_43_103# 0.00176f
+C491 a_313_356# a_98_227# 0.00941f
+C492 a_168_534# a_202_288# 0.0064f
+C493 a_159_507# a_241_356# 0.01383f
+C494 gnd b2 0.00751f
+C495 vdd s6 0.01161f
+C496 a_473_103# a3 0.01377f
+C497 a_700_103# b4 0.01183f
+C498 a_646_233# a_736_227# 0.20187f
+C499 a_145_548# s1 0.085f
+C500 a_296_507# vdd 0.31804f
+C501 a_34_233# s0 0.01569f
+C502 a_797_507# a_646_233# 0.00113f
+C503 a_159_507# a_145_548# 0.01812f
+C504 a_337_297# gnd 0.30166f
+C505 a_34_455# s0 0
+C506 a_736_227# a_934_218# 0.0196f
+C507 a_763_233# a_799_218# 0.02502f
+C508 a_806_534# a_915_218# 0
+C509 vdd a4 0.08783f
+C510 a_974_103# vdd 0.55295f
+C511 a_197_231# a_215_223# 0.40008f
+C512 a_669_279# a_646_233# 0.41754f
+C513 a_220_324# a_202_288# 0.26722f
+C514 a_85_315# a_355_342# 0.0137f
+C515 a_8_233# a_395_239# 0.16568f
+C516 a_296_218# gnd 0.70201f
+C517 a_669_534# b4 0.02346f
+C518 a_296_507# gnd 0.07523f
+C519 a_241_356# vdd 0.35503f
+C520 a_202_288# c0 0.02278f
+C521 a_171_460# gnd 0
+C522 a_269_218# a_296_218# 0.08187f
+C523 a_313_356# a_79_356# 0.01035f
+C524 a_168_534# a_220_324# 0.00461f
+C525 a_159_507# a_197_231# 0
+C526 gnd a4 0.00307f
+C527 vdd s3 0.01113f
+C528 a_646_233# a_717_356# 0.12311f
+C529 a_62_218# c0 0.25717f
+C530 a_145_548# vdd 0.13768f
+C531 a_669_534# s4 0.09552f
+C532 a_168_534# c0 0.00473f
+C533 a_920_548# s6 0.08563f
+C534 a_736_227# a_799_218# 0.01921f
+C535 a_717_356# a_934_218# 0.23789f
+C536 vdd b5 0.0808f
+C537 a_837_103# vdd 0.28719f
+C538 a_269_218# a_241_356# 0.3003f
+C539 a_85_315# a_431_235# 0.51814f
+C540 a_161_218# gnd 0.70201f
+C541 a_145_548# gnd 0.05225f
+C542 a_159_507# a1 0.0326f
+C543 a_296_507# a_380_103# 0
+C544 a_1080_534# a_1057_548# 0.26268f
+C545 a_1071_507# a_1074_548# 0.00494f
+C546 a_220_324# c0 0.0231f
+C547 a_197_231# vdd 0.44752f
+C548 a_16_455# gnd 0
+C549 a_1074_548# c8 0.01106f
+C550 a_313_356# a_8_233# 0.085f
+C551 a_943_534# a_1018_103# 0
+C552 a_305_534# a_85_315# 0.00473f
+C553 gnd b5 0.00783f
+C554 a1 b1 1.92216f
+C555 vdd s0 0.05358f
+C556 a_442_534# a_509_15# 0.82599f
+C557 c4lo c0 0.0295f
+C558 a_1104_356# vdd 0
+C559 a_25_548# vdd 0.93422f
+C560 c4lo a_1033_239# 0.04172f
+C561 a_975_297# vdd 0.0912f
+C562 a_31_534# a_34_233# 0.00506f
+C563 a_197_231# gnd 0.10071f
+C564 a_975_297# a_1041_356# 0.00599f
+C565 a_1069_235# a_1006_235# 0.02286f
+C566 a_717_356# a_799_218# 0.23789f
+C567 a_723_315# a_700_218# 0.00534f
+C568 a_646_233# a_934_218# 0.16883f
+C569 a_1080_534# vdd 0.38422f
+C570 a_1071_507# a_1033_239# 0
+C571 c4lo a_1071_507# 0.00496f
+C572 s0 gnd 0.04131f
+C573 vdd a1 0.09017f
+C574 a_700_103# vdd 0.28719f
+C575 c4lo c8 0.0295f
+C576 a_31_534# a0 0.00647f
+C577 a_22_507# b0 0.02787f
+C578 a_98_227# a_202_288# 0.02716f
+C579 a_85_315# a_233_233# 0.04132f
+C580 a_1033_239# c8 0.13061f
+C581 a_951_356# a_975_297# 0
+C582 a_669_534# a_744_103# 0.00475f
+C583 a_951_356# a_1080_534# 0.01832f
+C584 a_840_288# a5 0.00136f
+C585 a_975_297# gnd 0.30166f
+C586 a_125_233# vdd 0.19837f
+C587 a_858_324# a_955_103# 0.00142f
+C588 a_355_342# a_509_15# 0.16082f
+C589 a_1071_507# c8 0.0204f
+C590 a_1080_534# gnd 0.00136f
+C591 a_1057_548# s7 0.08338f
+C592 a_168_534# a_98_227# 0
+C593 c4lo a_646_10# 0.01801f
+C594 gnd a1 0.00371f
+C595 a_8_548# s0 0.0858f
+C596 a_1006_235# vdd 0.31536f
+C597 a_669_534# vdd 0.1806f
+C598 a_1006_235# a_1041_356# 0.01162f
+C599 a_669_534# a_646_548# 0.26268f
+C600 a_660_507# c4lo 0.93689f
+C601 a_8_548# a_25_548# 0.01459f
+C602 a_879_356# vdd 0.35503f
+C603 a_125_233# gnd 0.08369f
+C604 a_1071_507# a_1119_15# 0
+C605 a_646_233# a_799_218# 0.16915f
+C606 a_937_548# vdd 0.55276f
+C607 a_672_233# s4 0.01569f
+C608 a_975_297# a_993_342# 0.33851f
+C609 a_783_548# s5 0.085f
+C610 a_646_10# a_681_103# 0
+C611 c4lo a_840_288# 0.02278f
+C612 c4lo a_816_356# 0.01541f
+C613 a_951_356# a_1006_235# 0.00693f
+C614 a_1080_534# a_993_342# 0.08454f
+C615 a_1147_15# gnd 0.16529f
+C616 vdd s7 0.01113f
+C617 a_879_356# a_871_233# 1.17684f
+C618 a_509_15# a3 0.02124f
+C619 a_736_27# b4 0.21867f
+C620 a_473_103# vdd 0.68583f
+C621 a_98_227# a_220_324# 0.02718f
+C622 a_1006_235# gnd 0.19959f
+C623 a_669_534# gnd 0.01016f
+C624 a_79_356# a_202_288# 0.02745f
+C625 a_85_315# a_215_223# 0.03493f
+C626 a_419_548# a_436_548# 0.01217f
+C627 a_98_227# c0 3.69057f
+C628 a_143_227# vdd 0.54765f
+C629 a_951_356# s7 0.02365f
+C630 a_79_356# a_62_218# 0.3477f
+C631 a_168_534# a_79_356# 0
+C632 a_159_507# a_85_315# 0.16138f
+C633 a_34_233# a_34_356# 0
+C634 a_660_507# a_646_10# 0.1561f
+C635 c4lo a_98_227# 0
+C636 a_368_235# a_395_239# 0.73625f
+C637 a_22_507# c0 0.93689f
+C638 a_31_534# vdd 0.1806f
+C639 a_993_342# a_1147_15# 0.16082f
+C640 a_978_227# vdd 0.29764f
+C641 a_978_227# a_1041_356# 0.00758f
+C642 a_993_342# a_1006_235# 0.0976f
+C643 a_835_231# vdd 0.44752f
+C644 a_143_227# gnd 0.26799f
+C645 a_85_315# b1 0.28588f
+C646 a_669_279# b4 0.88516f
+C647 a_220_324# a_317_103# 0.00142f
+C648 a_943_534# vdd 0.32078f
+C649 c4lo a_858_324# 0.0231f
+C650 a_433_507# a_395_239# 0
+C651 a_951_356# a_978_227# 0.00918f
+C652 a_943_534# a_1041_356# 0.02148f
+C653 a7 b7 1.92216f
+C654 a_835_231# a_871_233# 0.02101f
+C655 a_853_223# a_879_356# 0.01377f
+C656 c4lo a_934_507# 0.0054f
+C657 a_1010_19# gnd 0.13223f
+C658 a_8_233# a_202_288# 0.0276f
+C659 a_79_356# a_220_324# 0.02751f
+C660 a_816_356# a_840_288# 0
+C661 a_336_103# vdd 0.55295f
+C662 a_31_534# gnd 0.01016f
+C663 a_978_227# gnd 0.00105f
+C664 a_943_534# a_951_356# 0.00472f
+C665 a_920_548# a_937_548# 0.01314f
+C666 a_159_507# a_199_103# 0.4769f
+C667 a_433_507# a_419_548# 0.01812f
+C668 a_313_356# a_436_548# 0.00492f
+C669 a_835_231# gnd 0.10071f
+C670 a_85_315# vdd 0.70046f
+C671 a_79_356# c0 0.06299f
+C672 a_943_534# gnd 0.00911f
+C673 a_806_534# b5 0.02342f
+C674 a_797_507# a_881_103# 0.00288f
+C675 a_8_233# a_62_218# 0.15648f
+C676 a_168_534# a_8_233# 0
+C677 a_355_342# a_403_356# 0.15735f
+C678 a_376_356# a_368_235# 0
+C679 a_340_227# a_395_239# 0.01092f
+C680 a_62_103# a0 0.01183f
+C681 a_199_103# b1 0.01183f
+C682 a_305_534# a_372_19# 0.7597f
+C683 a_978_227# a_993_342# 0.53929f
+C684 a_763_233# vdd 0.19837f
+C685 a_31_534# a_8_548# 0.26268f
+C686 a_85_315# gnd 0.05144f
+C687 a_672_233# vdd 0.23795f
+C688 a_313_356# a_368_235# 0.00693f
+C689 a_442_534# a_355_342# 0.08454f
+C690 c4lo a_907_218# 0.02508f
+C691 a_934_507# a_1014_356# 0.0086f
+C692 a_943_534# a_993_342# 0
+C693 a_873_27# gnd 0.06612f
+C694 a_646_548# a_672_233# 0.00793f
+C695 a_835_231# a_853_223# 0.40008f
+C696 a_858_324# a_840_288# 0.26722f
+C697 a_736_227# a_1069_235# 0.0211f
+C698 a_199_103# vdd 0.28719f
+C699 a_934_507# a_840_288# 0.1561f
+C700 a_8_233# a_220_324# 0.02762f
+C701 a_85_315# a_269_218# 0.04132f
+C702 a_943_534# a_920_548# 0.26268f
+C703 a_934_507# a_816_356# 0.58464f
+C704 a_763_233# gnd 0.08369f
+C705 a_723_315# b5 0.28588f
+C706 a_313_356# a_433_507# 0.59374f
+C707 a_8_233# c0 4.75172f
+C708 a_34_356# vdd 0
+C709 a_672_233# gnd 0.00545f
+C710 c4lo a_8_233# 0
+C711 a_31_534# a_106_356# 0.01666f
+C712 a_22_507# a_98_227# 0.01378f
+C713 a_337_297# a_395_239# 0.01248f
+C714 a_431_235# a_403_356# 0.27792f
+C715 a_433_507# b3 0.02799f
+C716 a_442_534# a3 0.00745f
+C717 a_736_227# vdd 0.11961f
+C718 a_705_288# a5 0.05107f
+C719 a_934_507# a_982_19# 0
+C720 a_797_507# vdd 0.1839f
+C721 a_705_288# a_818_103# 0.00221f
+C722 a_313_356# a_340_227# 0.00918f
+C723 a_305_534# a_403_356# 0.02148f
+C724 a_736_27# gnd 0.06612f
+C725 a_1111_103# a7 0.01377f
+C726 a_736_227# a_871_233# 0.03812f
+C727 a_907_218# a_840_288# 0.40992f
+C728 a_723_315# a_975_297# 0.01817f
+C729 a_62_103# vdd 0.28719f
+C730 a_67_288# a_215_223# 0
+C731 a_79_356# a_98_227# 0.3289f
+C732 a_951_356# a_736_227# 0.00941f
+C733 a_663_548# s4 1.2274f
+C734 a_934_507# a_858_324# 0.6143f
+C735 a_797_507# a_871_233# 0.00428f
+C736 a_806_534# a_879_356# 0
+C737 a_355_342# a3 1.0619f
+C738 a_736_227# gnd 0.27166f
+C739 a_669_279# vdd 0.08596f
+C740 a_1069_235# a_1077_235# 0
+C741 a_797_507# gnd 0.0425f
+C742 a_22_507# a_79_356# 0.00234f
+C743 a_313_356# a_427_470# 0
+C744 a_159_507# a_67_288# 0.57863f
+C745 c4lo a_705_288# 0.04784f
+C746 a_340_356# a_340_227# 0
+C747 a_431_235# a_355_342# 0.21638f
+C748 a_660_507# a_708_27# 0
+C749 a_717_356# vdd 0.48536f
+C750 a_669_279# gnd 0.40095f
+C751 a_67_288# b1 0.88714f
+C752 a_736_227# a_993_342# 0.01901f
+C753 a_723_315# a_1006_235# 0.0355f
+C754 a_717_356# a_1041_356# 0.21968f
+C755 a_431_235# a_458_227# 0.01188f
+C756 a_355_342# a_332_227# 0.00463f
+C757 a_313_356# a_337_297# 0
+C758 a_296_507# a_376_356# 0.0086f
+C759 a_305_534# a_355_342# 0
+C760 a_660_507# a_744_356# 0
+C761 a_669_534# a_723_315# 0.00114f
+C762 a_736_227# a_853_223# 0.41885f
+C763 a_646_233# a_1069_235# 0.47836f
+C764 a_717_356# a_871_233# 0.04581f
+C765 a_907_218# a_858_324# 0.04132f
+C766 a_509_15# gnd 0.16529f
+C767 a_797_507# a_853_223# 0.00122f
+C768 a_705_288# a_646_10# 0.55393f
+C769 a_8_233# a_98_227# 0.20187f
+C770 a_951_356# a_717_356# 0.01035f
+C771 a_419_548# s3 0.08338f
+C772 a_1033_239# a_1050_235# 0
+C773 a_313_356# a_296_218# 0.41817f
+C774 a_672_233# a_800_548# 0.00654f
+C775 a_31_534# a_106_103# 0.00475f
+C776 a_337_297# b3 0.88476f
+C777 a_296_507# a_313_356# 0.00472f
+C778 a_282_548# a_178_356# 0.71352f
+C779 a_305_534# a_299_548# 0.27763f
+C780 a_717_356# gnd 0.04312f
+C781 a_67_288# vdd 0.14103f
+C782 a_975_297# a_970_227# 0.01155f
+C783 a_660_507# a_705_288# 0.00572f
+C784 a_22_507# a_8_233# 0
+C785 a_31_534# a_8_10# 0.08267f
+C786 a_1077_235# gnd 0
+C787 a_705_288# a_840_288# 0.27327f
+C788 a_159_507# a_235_27# 0.19846f
+C789 a_816_356# a_705_288# 0.00638f
+C790 a_646_233# vdd 0.2555f
+C791 a_1083_470# c8 0
+C792 a_67_288# gnd 0.51013f
+C793 a_337_297# a_412_235# 0.00215f
+C794 a_717_356# a_993_342# 0.01852f
+C795 a_723_315# a_978_227# 0.02578f
+C796 a_806_534# a_873_27# 0.62751f
+C797 c4lo a_466_356# 0
+C798 a2 b2 1.92224f
+C799 a_372_19# gnd 0.13223f
+C800 a_98_27# a0 0.02027f
+C801 a_235_27# b1 0.21867f
+C802 a_717_356# a_853_223# 1.08743f
+C803 a_781_227# a_763_233# 0.30772f
+C804 a_723_315# a_835_231# 0.02529f
+C805 a_646_233# a_871_233# 0.55533f
+C806 a_951_356# a_646_233# 0.085f
+C807 a_663_548# vdd 0.93422f
+C808 a_943_534# a_723_315# 0.00473f
+C809 a_313_356# s3 0.02365f
+C810 a_8_10# a_85_315# 0.38198f
+C811 a_8_233# a_79_356# 0.12311f
+C812 a_993_342# a_1077_235# 0
+C813 a_797_507# a_800_548# 0.00656f
+C814 a_806_534# a_672_233# 0.01832f
+C815 a_296_507# a_282_548# 0.01812f
+C816 a_646_548# a_663_548# 0.01459f
+C817 a_646_233# gnd 0.09225f
+C818 c4lo a_436_548# 0.01106f
+C819 a_871_233# a_934_218# 0.00541f
+C820 a_951_356# a_934_218# 0.41817f
+C821 a_31_534# a_31_279# 0
+C822 a_202_288# a_340_227# 0.0258f
+C823 a_934_218# gnd 0.70201f
+C824 a_220_324# a_368_235# 0.01886f
+C825 a_296_507# a2 0.03709f
+C826 a_975_297# a7 0.04915f
+C827 a_403_356# vdd 0.15458f
+C828 a_368_235# c0 0.05054f
+C829 a_723_315# a_873_27# 0.15985f
+C830 a_1065_470# s7 0
+C831 a_946_464# gnd 0
+C832 a_1071_507# b7 0.02799f
+C833 a_1080_534# a7 0.00745f
+C834 a_646_233# a_993_342# 0.01901f
+C835 c4lo a_368_235# 0.00115f
+C836 a_178_356# a_202_288# 0
+C837 a_235_27# gnd 0.06612f
+C838 a_736_227# a_781_227# 0.03519f
+C839 a_723_315# a_763_233# 0.02265f
+C840 a_646_233# a_853_223# 0.09675f
+C841 a_433_507# c0 0.00496f
+C842 a_31_279# a_85_315# 0.01852f
+C843 a_178_356# s2 0.02396f
+C844 a_442_534# vdd 0.38422f
+C845 a_806_534# a_736_227# 0
+C846 a_978_227# a_970_227# 0.60189f
+C847 c4lo a_700_218# 0.25717f
+C848 a_797_507# a_806_534# 0.26666f
+C849 a_202_288# b2 0.28588f
+C850 a_168_534# a_178_356# 0.00472f
+C851 c4lo a_433_507# 0.0204f
+C852 a_1147_15# a7 0.02124f
+C853 vdd b6 0.08104f
+C854 a_202_288# a_337_297# 0.55301f
+C855 a_799_218# gnd 0.70201f
+C856 a_220_324# a_340_227# 0.53053f
+C857 a_442_534# gnd 0.00136f
+C858 a_442_534# a_517_103# 0.01188f
+C859 a_340_227# c0 0.02449f
+C860 a_355_342# vdd 0.5826f
+C861 a_791_460# gnd 0
+C862 a_233_233# a_250_223# 0
+C863 a_202_288# a_296_218# 0.25633f
+C864 a_646_10# a_700_218# 0.01227f
+C865 a_296_507# a_202_288# 0.1561f
+C866 gnd b6 0.00751f
+C867 a_98_27# gnd 0.06612f
+C868 a_723_315# a_736_227# 0.03902f
+C869 a_717_356# a_781_227# 0.01912f
+C870 a_672_233# a_672_356# 0
+C871 a_299_548# vdd 0.55276f
+C872 a_806_534# a_717_356# 0
+C873 a_797_507# a_723_315# 0.16138f
+C874 a_178_356# c0 0.01541f
+C875 a_296_507# s2 0.15917f
+C876 a_355_342# gnd 0.00606f
+C877 a_145_548# a_162_548# 0.01378f
+C878 a_220_324# b2 0.88431f
+C879 a_34_233# a_34_455# 0
+C880 vdd a3 0.09033f
+C881 c4lo a_427_470# 0
+C882 a_1155_103# vdd 0
+C883 a_458_227# gnd 0.39643f
+C884 a_220_324# a_337_297# 0.41035f
+C885 a_98_227# a_368_235# 1.18118f
+C886 a_85_315# a_395_239# 0.02552f
+C887 a_669_279# a_723_315# 0.01852f
+C888 a_215_223# a_233_233# 0.04213f
+C889 a_840_288# a6 1.06243f
+C890 a_975_297# a_1092_103# 0.00142f
+C891 a_337_297# c0 0.02345f
+C892 a_431_235# vdd 0.23912f
+C893 a_445_470# gnd 0
+C894 a_1071_507# a_1111_103# 0.6776f
+C895 a_31_279# a_62_103# 0.23914f
+C896 a_159_507# a_233_233# 0.00428f
+C897 a_168_534# a_241_356# 0
+C898 a_296_507# a_220_324# 0.6143f
+C899 gnd a3 0.00266f
+C900 a_717_356# a_723_315# 3.54044f
+C901 a_646_233# a_781_227# 0.47874f
+C902 a_473_103# b3 0.01377f
+C903 a_296_218# c0 0.03258f
+C904 a_296_507# c0 0.0054f
+C905 a_67_288# a_8_10# 0.55393f
+C906 a_305_534# vdd 0.32078f
+C907 a_806_534# a_646_233# 0
+C908 a_34_233# s1 0.02334f
+C909 a_159_507# a_250_223# 0
+C910 a_34_233# a_26_233# 0.45573f
+C911 a_431_235# gnd 0.00202f
+C912 a_168_534# a_145_548# 0.26268f
+C913 a_159_507# a_34_233# 0.58401f
+C914 a_85_315# a_153_10# 0
+C915 a_907_218# a_915_218# 0
+C916 a_736_227# a_970_227# 0.25556f
+C917 vdd b4 0.07975f
+C918 a_1018_103# vdd 0
+C919 a_79_356# a_368_235# 0.4181f
+C920 a_197_231# a_202_288# 0.4627f
+C921 a_98_227# a_340_227# 0.01797f
+C922 a_332_227# gnd 0.13223f
+C923 a_305_534# gnd 0.00911f
+C924 a_22_507# a_70_27# 0
+C925 a_858_324# a6 0.05415f
+C926 a_233_233# vdd 0.03358f
+C927 a_290_464# gnd 0
+C928 a_934_507# a6 0.03709f
+C929 a_313_356# a_85_315# 0.01641f
+C930 a_159_507# a_215_223# 0.00122f
+C931 a_178_356# a_98_227# 0.00934f
+C932 a5 b5 1.92216f
+C933 gnd b4 0.00719f
+C934 vdd s4 0.05358f
+C935 a_646_233# a_723_315# 0.03788f
+C936 a_837_103# a5 0.01183f
+C937 a_161_218# c0 0.03258f
+C938 a_646_548# s4 0.0858f
+C939 c4lo s3 0.01521f
+C940 a_159_507# s1 0.1594f
+C941 a_67_288# a_31_279# 0.84223f
+C942 a_34_233# vdd 0.23795f
+C943 a_646_10# a4 1.06257f
+C944 a_233_233# gnd 0.16617f
+C945 a_202_288# a1 0.00136f
+C946 a_781_227# a_799_218# 0.12525f
+C947 a_646_233# a_1096_227# 0.09002f
+C948 a_337_297# a_454_103# 0.00142f
+C949 a_816_356# s6 0.02396f
+C950 a_797_507# a_888_223# 0
+C951 a_672_233# a_664_233# 0.45573f
+C952 s4 gnd 0.04131f
+C953 vdd a0 0.08783f
+C954 a_881_103# vdd 0
+C955 a_250_223# gnd 0
+C956 a_220_324# a_197_231# 0.01822f
+C957 a_269_218# a_233_233# 0.49971f
+C958 a_98_227# a_337_297# 0.019f
+C959 a_79_356# a_340_227# 0.01906f
+C960 a_8_233# a_368_235# 0.1748f
+C961 a_660_507# a4 0.0298f
+C962 a_34_233# gnd 0.00545f
+C963 a_159_507# b1 0.0279f
+C964 a_168_534# a1 0.00644f
+C965 a_305_534# a_380_103# 0
+C966 a_672_233# a_654_455# 0
+C967 a_1080_534# a_1074_548# 0.27667f
+C968 a_197_231# c0 0.02508f
+C969 a_215_223# vdd 0.69668f
+C970 a_34_455# gnd 0
+C971 a_98_227# a_296_218# 0.0196f
+C972 a_296_507# a_98_227# 0.00113f
+C973 a_178_356# a_79_356# 0.0098f
+C974 gnd a0 0.00307f
+C975 vdd s1 0.01194f
+C976 c0 s0 0.02948f
+C977 a_336_103# a2 0.01312f
+C978 a_25_548# c0 0.00735f
+C979 a_159_507# vdd 0.1839f
+C980 a_1069_235# vdd 0.23912f
+C981 a_215_223# gnd 0.33396f
+C982 a_8_548# a_34_233# 0.00793f
+C983 a_8_10# a_98_27# 0.15985f
+C984 a_934_507# s6 0.15917f
+C985 a_646_233# a_970_227# 0.15571f
+C986 a_1057_548# vdd 0.1959f
+C987 a_975_297# a_1033_239# 0.01248f
+C988 a_1069_235# a_1041_356# 0.27792f
+C989 c4lo a_975_297# 0.02345f
+C990 vdd b1 0.0808f
+C991 c4lo a_1080_534# 0.34566f
+C992 a_744_103# vdd 0
+C993 a_269_218# a_215_223# 0.02524f
+C994 a_79_356# a_337_297# 0.44209f
+C995 a_8_233# a_340_227# 0.08692f
+C996 a_26_233# gnd 0.16512f
+C997 a_1104_356# c8 0
+C998 a_951_356# a_1069_235# 0
+C999 a_1071_507# a_975_297# 0.60628f
+C1000 a_31_534# b0 0.02346f
+C1001 a_159_507# gnd 0.0425f
+C1002 a_1071_507# a_1080_534# 0.2539f
+C1003 a_951_356# a_1057_548# 0.72378f
+C1004 a_1069_235# gnd 0.00202f
+C1005 a_840_288# b5 0.00397f
+C1006 a_169_356# vdd 0.00113f
+C1007 a_840_288# a_837_103# 0.00539f
+C1008 a_858_324# a_974_103# 0.36849f
+C1009 a_125_233# c0 0.02508f
+C1010 a_1080_534# c8 0
+C1011 a_1074_548# s7 0.73156f
+C1012 a_1057_548# gnd 0.08418f
+C1013 a_669_279# a_664_233# 0.21053f
+C1014 a_705_288# a_700_218# 0.01355f
+C1015 a_98_227# a_161_218# 0.01921f
+C1016 a_79_356# a_296_218# 0.23789f
+C1017 a_934_507# a_974_103# 0.60913f
+C1018 a_296_507# a_79_356# 0.00114f
+C1019 a_178_356# a_8_233# 0.08507f
+C1020 gnd b1 0.00783f
+C1021 a_1041_356# vdd 0.15458f
+C1022 a_433_507# a_481_15# 0
+C1023 a_646_548# vdd 0.11378f
+C1024 a_1006_235# a_1033_239# 0.73625f
+C1025 c4lo a_1006_235# 0.05054f
+C1026 a_871_233# vdd 0.03358f
+C1027 a_669_534# c4lo 0.02403f
+C1028 a_951_356# vdd 0.47834f
+C1029 a_1069_235# a_993_342# 0.21638f
+C1030 a_672_233# s5 0.02334f
+C1031 a_1071_507# a_1147_15# 0.24705f
+C1032 a_951_356# a_1041_356# 0.02176f
+C1033 vdd gnd 2.40844f
+C1034 a_840_288# a_975_297# 0.55301f
+C1035 a_509_15# b3 0.21964f
+C1036 a_517_103# vdd 0
+C1037 a_85_315# a_202_288# 0.02977f
+C1038 a_79_356# a_241_356# 0.01377f
+C1039 a_8_233# a_337_297# 0.01965f
+C1040 a_98_227# a_197_231# 0.49291f
+C1041 a_1006_235# c8 0.00115f
+C1042 a_951_356# a_871_233# 0.124f
+C1043 a_646_548# gnd 0.04512f
+C1044 a_660_507# a_700_103# 0.4769f
+C1045 a_871_233# gnd 0.16617f
+C1046 a_143_227# c0 0.02566f
+C1047 a_355_342# a_427_15# 0
+C1048 a_269_218# vdd 0.66659f
+C1049 a_1071_507# s7 0.15857f
+C1050 a_951_356# gnd 0.04966f
+C1051 a_79_356# a_161_218# 0.23789f
+C1052 a_85_315# a_62_218# 0.00534f
+C1053 a_8_233# a_296_218# 0.16883f
+C1054 a_296_507# a_8_233# 0.00113f
+C1055 a_168_534# a_85_315# 0.08773f
+C1056 a_669_534# a_646_10# 0.08267f
+C1057 s7 c8 0.01521f
+C1058 a_403_356# a_395_239# 0.9464f
+C1059 a_993_342# vdd 0.5826f
+C1060 a_22_507# s0 0.15972f
+C1061 a_8_548# vdd 0.11378f
+C1062 a_31_534# c0 0.02403f
+C1063 a_993_342# a_1041_356# 0.15735f
+C1064 a_1014_356# a_1006_235# 0
+C1065 a_978_227# a_1033_239# 0.01092f
+C1066 a_853_223# vdd 0.69668f
+C1067 c4lo a_978_227# 0.02449f
+C1068 a_269_218# gnd 0.04508f
+C1069 a_660_507# a_669_534# 0.79725f
+C1070 a_22_507# a_25_548# 0.00737f
+C1071 a_797_507# s5 0.1594f
+C1072 a_220_324# a_336_103# 0.36849f
+C1073 a_646_233# a_664_233# 0.16716f
+C1074 a_920_548# vdd 0.23749f
+C1075 a_202_288# a_199_103# 0.00539f
+C1076 c4lo a_835_231# 0.02508f
+C1077 a_951_356# a_993_342# 0.03441f
+C1078 a_943_534# a_1033_239# 0.0032f
+C1079 a_1065_15# gnd 0
+C1080 a_873_27# a5 0.02027f
+C1081 c4lo a_943_534# 0.00528f
+C1082 a_858_324# a_975_297# 0.41035f
+C1083 a_853_223# a_871_233# 0.04213f
+C1084 a_380_103# vdd 0
+C1085 a_98_227# a_125_233# 1.34505f
+C1086 a_85_315# a_220_324# 1.94182f
+C1087 a_79_356# a_197_231# 0.01874f
+C1088 a_993_342# gnd 0.00606f
+C1089 a_934_507# a_975_297# 0.00504f
+C1090 a_8_548# gnd 0.04512f
+C1091 a_816_356# a_937_548# 0.00589f
+C1092 a_159_507# a_243_103# 0.00288f
+C1093 a_442_534# a_419_548# 0.26268f
+C1094 a_433_507# a_436_548# 0.00494f
+C1095 a_853_223# gnd 0.33396f
+C1096 a_85_315# c0 0.01586f
+C1097 a_106_356# vdd 0.00156f
+C1098 a_920_548# gnd 0.1012f
+C1099 a_8_233# a_161_218# 0.16915f
+C1100 a_806_534# a_881_103# 0
+C1101 c4lo a_85_315# 0.02256f
+C1102 a_34_233# a_8_10# 0.11073f
+C1103 a_62_103# b0 0.01183f
+C1104 a_355_342# a_395_239# 0.08867f
+C1105 a_993_342# a_1065_15# 0
+C1106 a_840_288# a_1010_19# 0.16049f
+C1107 a_807_356# vdd 0.00113f
+C1108 a_8_10# a0 1.06257f
+C1109 a_840_288# a_978_227# 0.0258f
+C1110 a_858_324# a_1006_235# 0.01886f
+C1111 a_800_548# vdd 0.68564f
+C1112 a_395_239# a_458_227# 0.00464f
+C1113 a_313_356# a_403_356# 0.02176f
+C1114 c4lo a_763_233# 0.02508f
+C1115 a_934_507# a_1006_235# 0.00431f
+C1116 c4lo a_672_233# 0.1256f
+C1117 a_835_231# a_840_288# 0.4627f
+C1118 a_372_19# a2 0.02092f
+C1119 a_928_10# gnd 0
+C1120 a_243_103# vdd 0
+C1121 a_79_356# a_125_233# 0.03416f
+C1122 a_98_227# a_143_227# 0.03519f
+C1123 a_8_233# a_197_231# 0.08731f
+C1124 a_816_356# a_835_231# 0.38923f
+C1125 a_943_534# a_840_288# 0.08407f
+C1126 a_934_507# a_937_548# 0.00591f
+C1127 a_943_534# a_816_356# 0.01832f
+C1128 a_313_356# a_442_534# 0.01832f
+C1129 a_70_356# vdd 0.00113f
+C1130 a_797_507# a5 0.0326f
+C1131 a_8_10# a_26_233# 0.00506f
+C1132 a_34_233# a_31_279# 0.19664f
+C1133 a_31_534# a_98_227# 0.00394f
+C1134 a_340_227# a_368_235# 0.40038f
+C1135 a_431_235# a_395_239# 0.65418f
+C1136 a_442_534# b3 0.02645f
+C1137 a_296_507# a_344_19# 0
+C1138 a_672_233# a_646_10# 0.11073f
+C1139 a_978_356# a_978_227# 0
+C1140 a_840_288# a_873_27# 0.01296f
+C1141 a_781_227# vdd 0.54765f
+C1142 a_31_279# a0 0.04862f
+C1143 a_705_288# b5 0.88714f
+C1144 a_22_507# a_31_534# 0.79725f
+C1145 a_934_507# a_1010_19# 0.23155f
+C1146 a_705_288# a_837_103# 0.23233f
+C1147 a_858_324# a_978_227# 0.53053f
+C1148 a_736_227# a_1033_239# 0.02841f
+C1149 a_806_534# vdd 0.18655f
+C1150 a_313_356# a_355_342# 0.03441f
+C1151 a_305_534# a_395_239# 0.0032f
+C1152 c4lo a_736_227# 3.69057f
+C1153 a_934_507# a_978_227# 0.00113f
+C1154 a_791_10# gnd 0
+C1155 a_1111_103# b7 0.01377f
+C1156 a_660_507# a_672_233# 0.00451f
+C1157 a_907_218# a_879_356# 0.3003f
+C1158 a_858_324# a_835_231# 0.01822f
+C1159 a_723_315# a_1069_235# 0.51814f
+C1160 c4lo a_797_507# 0.0054f
+C1161 a_106_103# vdd 0
+C1162 a_85_315# a_98_227# 0.03902f
+C1163 a_79_356# a_143_227# 0.01912f
+C1164 a_8_233# a_125_233# 0.4769f
+C1165 a_816_356# a_763_233# 0.01968f
+C1166 a_806_534# a_871_233# 0.00164f
+C1167 a_67_288# a_202_288# 0.27327f
+C1168 a_934_507# a_943_534# 0.25546f
+C1169 a_736_227# c8 0
+C1170 a_781_227# gnd 0.26799f
+C1171 a_355_342# b3 0.28599f
+C1172 a_928_464# s6 0
+C1173 a_202_288# a_372_19# 0.16049f
+C1174 a_646_10# a_736_27# 0.15985f
+C1175 a_8_10# vdd 0.72385f
+C1176 a_1069_235# a_1096_227# 0.01188f
+C1177 a_806_534# gnd 0.00307f
+C1178 a_31_279# a_26_233# 0.21053f
+C1179 a_67_288# a_62_218# 0.01355f
+C1180 c4lo a_669_279# 0.01806f
+C1181 a_31_534# a_79_356# 0.00114f
+C1182 a_22_507# a_85_315# 0.00114f
+C1183 a_337_297# a_368_235# 0.01933f
+C1184 a_660_507# a_736_27# 0.19864f
+C1185 a_723_315# vdd 0.70046f
+C1186 a_8_10# gnd 0.04961f
+C1187 a_669_279# a_681_103# 0.00176f
+C1188 a_723_315# a_1041_356# 0.03248f
+C1189 a_717_356# a_1033_239# 0.02348f
+C1190 a_296_507# a_368_235# 0.00431f
+C1191 a_669_534# a_744_356# 0.01666f
+C1192 a_660_507# a_736_227# 0.01378f
+C1193 c4lo a_717_356# 0.06299f
+C1194 a_313_356# a_431_235# 0
+C1195 a_433_507# a_337_297# 0.60628f
+C1196 a3 b3 1.92216f
+C1197 a_736_227# a_840_288# 0.02716f
+C1198 a_723_315# a_871_233# 0.04132f
+C1199 a_654_10# gnd 0
+C1200 a_79_356# a_85_315# 3.54044f
+C1201 a_8_233# a_143_227# 0.47874f
+C1202 a_669_279# a_646_10# 0.28742f
+C1203 a_951_356# a_723_315# 0.01641f
+C1204 a_816_356# a_736_227# 0.00934f
+C1205 a_436_548# s3 0.73156f
+C1206 a_797_507# a_840_288# 0.00933f
+C1207 a_806_534# a_853_223# 0
+C1208 a_313_356# a_332_227# 0.29654f
+C1209 a_797_507# a_816_356# 0.07332f
+C1210 a_305_534# a_313_356# 0.00472f
+C1211 a_282_548# a_299_548# 0.01314f
+C1212 a_723_315# gnd 0.05144f
+C1213 a_31_279# vdd 0.08596f
+C1214 a_791_460# s5 0
+C1215 a_975_297# a_1050_235# 0.00215f
+C1216 a_67_288# c0 0.04784f
+C1217 a_202_288# a_235_27# 0.01296f
+C1218 a_669_534# a_705_288# 0.00511f
+C1219 a_660_507# a_669_279# 0.58199f
+C1220 a_31_534# a_8_233# 0.00113f
+C1221 a_337_297# a_340_227# 0.03667f
+C1222 a_1096_227# gnd 0.39643f
+C1223 a_646_10# a_717_356# 0.01786f
+C1224 a_168_534# a_235_27# 0.62751f
+C1225 a_672_356# vdd 0
+C1226 a_31_279# gnd 0.40095f
+C1227 a_723_315# a_993_342# 0.0137f
+C1228 a_646_233# a_1033_239# 0.16568f
+C1229 a_313_356# a_233_233# 0.124f
+C1230 a_296_507# a_340_227# 0.00113f
+C1231 a_660_507# a_717_356# 0.00234f
+C1232 c4lo a_646_233# 4.75172f
+C1233 a_427_15# gnd 0
+C1234 a_98_27# b0 0.21867f
+C1235 a_717_356# a_840_288# 0.02745f
+C1236 a_736_227# a_858_324# 0.02718f
+C1237 a_723_315# a_853_223# 0.03493f
+C1238 a_974_103# a6 0.01312f
+C1239 a_934_507# a_736_227# 0.00113f
+C1240 a_816_356# a_717_356# 0.0098f
+C1241 a_433_507# s3 0.15857f
+C1242 a_797_507# a_858_324# 0.00528f
+C1243 a_8_233# a_85_315# 0.03788f
+C1244 a_783_548# a_672_233# 0.71458f
+C1245 a_806_534# a_800_548# 0.27828f
+C1246 a_22_507# a_62_103# 0.4769f
+C1247 a_305_534# a_412_235# 0
+C1248 c4lo a_934_218# 0.03258f
+C1249 a_646_233# c8 0
+C1250 a_305_534# a_282_548# 0.26268f
+C1251 a_296_507# a_178_356# 0.58464f
+C1252 c4lo a_663_548# 0.00735f
+C1253 a_654_455# s4 0
+C1254 a_951_356# a_970_227# 0.29654f
+C1255 a_202_288# a_355_342# 0.38194f
+C1256 a_970_227# gnd 0.13223f
+C1257 a_705_288# a_835_231# 0.01092f
+C1258 a_646_10# a_646_233# 0.39994f
+C1259 a_296_507# b2 0.02789f
+C1260 a_305_534# a2 0.00708f
+C1261 a_951_356# a_1065_470# 0
+C1262 a_975_297# b7 0.88476f
+C1263 a_395_239# vdd 0.03188f
+C1264 a_1083_470# s7 0
+C1265 a_1065_470# gnd 0
+C1266 a_1080_534# b7 0.02645f
+C1267 a_797_507# a_845_27# 0
+C1268 a_660_507# a_646_233# 0
+C1269 a_296_507# a_337_297# 0.00504f
+C1270 a_290_10# gnd 0
+C1271 a_646_233# a_840_288# 0.0276f
+C1272 a_717_356# a_858_324# 0.02751f
+C1273 a_736_227# a_907_218# 0.41362f
+C1274 a_442_534# c0 0.34566f
+C1275 a_67_288# a_98_227# 0.02227f
+C1276 a_299_548# s2 0.92999f
+C1277 a_934_507# a_717_356# 0.00114f
+C1278 a_816_356# a_646_233# 0.08507f
+C1279 a_419_548# vdd 0.1959f
+C1280 a_993_342# a_970_227# 0.00463f
+C1281 a_178_356# a_161_218# 0.41817f
+C1282 c4lo a_799_218# 0.03258f
+C1283 a_797_507# a_783_548# 0.01812f
+C1284 a_660_507# a_663_548# 0.00737f
+C1285 a_395_239# gnd 0.03306f
+C1286 c4lo a_442_534# 0
+C1287 a_427_470# s3 0
+C1288 a_871_233# a_888_223# 0
+C1289 a_840_288# a_934_218# 0.25633f
+C1290 a_943_534# a_1050_235# 0
+C1291 a_22_507# a_67_288# 0.00572f
+C1292 a_1147_15# b7 0.21964f
+C1293 vdd a7 0.09033f
+C1294 a_888_223# gnd 0
+C1295 a_220_324# a_355_342# 0.0182f
+C1296 a_705_288# a_763_233# 0.01742f
+C1297 a_419_548# gnd 0.08418f
+C1298 a_723_315# a_791_10# 0
+C1299 a_376_356# vdd 0
+C1300 a_355_342# c0 0.01381f
+C1301 a_809_460# gnd 0
+C1302 a_202_288# a_332_227# 0.20822f
+C1303 b7 0 1.26221f
+C1304 a7 0 1.50215f
+C1305 b6 0 1.26313f
+C1306 a6 0 1.50306f
+C1307 b3 0 1.26221f
+C1308 a3 0 1.50215f
+C1309 b2 0 1.26313f
+C1310 a2 0 1.50306f
+C1311 b4 0 1.26176f
+C1312 a4 0 1.50169f
+C1313 b0 0 1.26176f
+C1314 a0 0 1.50169f
+C1315 b5 0 1.26267f
+C1316 a5 0 1.50261f
+C1317 b1 0 1.26267f
+C1318 a1 0 1.50261f
+C1319 c8 0 1.56908f
+C1320 gnd 0 26.0887f
+C1321 s7 0 0.52634f
+C1322 s6 0 0.5389f
+C1323 s5 0 0.54566f
+C1324 s4 0 0.5462f
+C1325 s3 0 0.52634f
+C1326 s2 0 0.5389f
+C1327 s1 0 0.54566f
+C1328 s0 0 0.5462f
+C1329 c0 0 3.05959f
+C1330 vdd 0 0.29763p
+C1331 a_1147_15# 0 0.26725f ; **FLOATING
+C1332 a_1010_19# 0 0.2652f ; **FLOATING
+C1333 a_873_27# 0 0.26111f ; **FLOATING
+C1334 a_736_27# 0 0.26111f ; **FLOATING
+C1335 a_509_15# 0 0.26725f ; **FLOATING
+C1336 a_372_19# 0 0.2652f ; **FLOATING
+C1337 a_235_27# 0 0.26111f ; **FLOATING
+C1338 a_98_27# 0 0.26111f ; **FLOATING
+C1339 a_1111_103# 0 0.12668f ; **FLOATING
+C1340 a_974_103# 0 0.12668f ; **FLOATING
+C1341 a_837_103# 0 0.12668f ; **FLOATING
+C1342 a_700_103# 0 0.12668f ; **FLOATING
+C1343 a_473_103# 0 0.12668f ; **FLOATING
+C1344 a_336_103# 0 0.12668f ; **FLOATING
+C1345 a_199_103# 0 0.12668f ; **FLOATING
+C1346 a_62_103# 0 0.12668f ; **FLOATING
+C1347 a_1096_227# 0 0.58741f ; **FLOATING
+C1348 a_970_227# 0 0.2454f ; **FLOATING
+C1349 a_934_218# 0 0.85963f ; **FLOATING
+C1350 a_799_218# 0 1.01166f ; **FLOATING
+C1351 a_700_218# 0 0.53635f ; **FLOATING
+C1352 a_664_233# 0 0.35838f ; **FLOATING
+C1353 a_458_227# 0 0.58741f ; **FLOATING
+C1354 a_332_227# 0 0.2454f ; **FLOATING
+C1355 a_296_218# 0 0.85963f ; **FLOATING
+C1356 a_161_218# 0 1.01166f ; **FLOATING
+C1357 a_62_218# 0 0.53635f ; **FLOATING
+C1358 a_26_233# 0 0.35838f ; **FLOATING
+C1359 a_1033_239# 0 1.26937f ; **FLOATING
+C1360 a_1041_356# 0 0.33358f ; **FLOATING
+C1361 a_1006_235# 0 2.33437f ; **FLOATING
+C1362 a_993_342# 0 3.27389f ; **FLOATING
+C1363 a_978_227# 0 1.42885f ; **FLOATING
+C1364 a_1069_235# 0 1.573f ; **FLOATING
+C1365 a_975_297# 0 2.52231f ; **FLOATING
+C1366 a_871_233# 0 2.19989f ; **FLOATING
+C1367 a_879_356# 0 0.04344f ; **FLOATING
+C1368 a_840_288# 0 3.48885f ; **FLOATING
+C1369 a_853_223# 0 2.03356f ; **FLOATING
+C1370 a_835_231# 0 1.34429f ; **FLOATING
+C1371 a_858_324# 0 2.99438f ; **FLOATING
+C1372 a_763_233# 0 1.26245f ; **FLOATING
+C1373 a_907_218# 0 1.92421f ; **FLOATING
+C1374 a_781_227# 0 1.81245f ; **FLOATING
+C1375 a_736_227# 0 3.16093f ; **FLOATING
+C1376 a_723_315# 0 3.7983f ; **FLOATING
+C1377 a_717_356# 0 3.33299f ; **FLOATING
+C1378 a_646_233# 0 3.54657f ; **FLOATING
+C1379 a_395_239# 0 1.26937f ; **FLOATING
+C1380 a_403_356# 0 0.33358f ; **FLOATING
+C1381 a_368_235# 0 2.33437f ; **FLOATING
+C1382 a_355_342# 0 3.27389f ; **FLOATING
+C1383 a_340_227# 0 1.42885f ; **FLOATING
+C1384 a_431_235# 0 1.573f ; **FLOATING
+C1385 a_337_297# 0 2.52231f ; **FLOATING
+C1386 a_233_233# 0 2.19989f ; **FLOATING
+C1387 a_241_356# 0 0.04344f ; **FLOATING
+C1388 a_202_288# 0 3.48885f ; **FLOATING
+C1389 a_215_223# 0 2.03356f ; **FLOATING
+C1390 a_197_231# 0 1.34429f ; **FLOATING
+C1391 a_220_324# 0 2.99438f ; **FLOATING
+C1392 a_125_233# 0 1.26245f ; **FLOATING
+C1393 a_646_10# 0 3.17213f ; **FLOATING
+C1394 a_269_218# 0 1.92421f ; **FLOATING
+C1395 a_143_227# 0 1.81245f ; **FLOATING
+C1396 a_98_227# 0 3.16093f ; **FLOATING
+C1397 a_85_315# 0 3.7983f ; **FLOATING
+C1398 a_79_356# 0 3.33299f ; **FLOATING
+C1399 a_8_233# 0 3.54657f ; **FLOATING
+C1400 a_8_10# 0 3.17213f ; **FLOATING
+C1401 a_669_279# 0 2.66824f ; **FLOATING
+C1402 a_705_288# 0 2.61674f ; **FLOATING
+C1403 a_31_279# 0 2.66824f ; **FLOATING
+C1404 a_67_288# 0 2.61674f ; **FLOATING
+C1405 a_1074_548# 0 0.29934f ; **FLOATING
+C1406 a_1057_548# 0 1.18305f ; **FLOATING
+C1407 a_1080_534# 0 1.20831f ; **FLOATING
+C1408 a_1071_507# 0 1.5531f ; **FLOATING
+C1409 a_951_356# 0 1.86472f ; **FLOATING
+C1410 a_937_548# 0 0.29934f ; **FLOATING
+C1411 a_816_356# 0 1.69078f ; **FLOATING
+C1412 a_920_548# 0 1.19568f ; **FLOATING
+C1413 a_943_534# 0 1.21929f ; **FLOATING
+C1414 a_934_507# 0 1.57566f ; **FLOATING
+C1415 a_800_548# 0 0.29934f ; **FLOATING
+C1416 a_672_233# 0 2.06251f ; **FLOATING
+C1417 a_783_548# 0 1.17812f ; **FLOATING
+C1418 a_806_534# 0 1.28253f ; **FLOATING
+C1419 a_797_507# 0 1.55502f ; **FLOATING
+C1420 a_663_548# 0 0.29158f ; **FLOATING
+C1421 a_436_548# 0 0.29934f ; **FLOATING
+C1422 a_419_548# 0 1.18305f ; **FLOATING
+C1423 a_442_534# 0 1.20831f ; **FLOATING
+C1424 a_433_507# 0 1.5531f ; **FLOATING
+C1425 a_313_356# 0 1.86472f ; **FLOATING
+C1426 a_299_548# 0 0.29934f ; **FLOATING
+C1427 a_178_356# 0 1.69078f ; **FLOATING
+C1428 a_282_548# 0 1.19568f ; **FLOATING
+C1429 a_305_534# 0 1.21929f ; **FLOATING
+C1430 a_296_507# 0 1.57566f ; **FLOATING
+C1431 a_162_548# 0 0.29934f ; **FLOATING
+C1432 a_34_233# 0 2.06251f ; **FLOATING
+C1433 a_145_548# 0 1.17812f ; **FLOATING
+C1434 a_168_534# 0 1.28253f ; **FLOATING
+C1435 a_159_507# 0 1.55502f ; **FLOATING
+C1436 a_25_548# 0 0.29158f ; **FLOATING
+C1437 c4lo 0 8.0614f ; **FLOATING
+C1438 a_646_548# 0 1.17429f ; **FLOATING
+C1439 a_669_534# 0 1.11226f ; **FLOATING
+C1440 a_660_507# 0 1.30987f ; **FLOATING
+C1441 a_8_548# 0 1.17429f ; **FLOATING
+C1442 a_31_534# 0 1.11226f ; **FLOATING
+C1443 a_22_507# 0 1.30987f ; **FLOATING
+.ends
+
+.subckt base8_post a0 a1 a2 a3 a4 a5 a6 a7 b0 b1 b2 b3 b4 b5 b6 b7 c0 s0 s1 s2 s3 s4 s5 s6 s7 c8 vdd gnd
+X0 a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 a4 a5 a6 a7 b4 b5 b6 b7 c8 s4 s5 s6 s7 vdd gnd base8_flat
+.ends
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Va0 src_a0 gnd PWL(
++ 0.00000e+00 1.800 1.30000e-09 1.800 1.32000e-09 0.000 2.60000e-09 0.000 2.62000e-09 1.800 5.20000e-09 1.800
++ 5.22000e-09 0.000 7.80000e-09 0.000 7.82000e-09 1.800 1.17000e-08 1.800 1.17200e-08 0.000 1.30000e-08 0.000
++ 1.30200e-08 1.800 1.43000e-08 1.800 1.43200e-08 0.000 1.95000e-08 0.000 1.95200e-08 1.800 2.08000e-08 1.800
++ 2.08200e-08 0.000 2.21000e-08 0.000 2.21200e-08 1.800 2.47000e-08 1.800 2.47200e-08 0.000 2.60000e-08 0.000
++ 2.60200e-08 1.800 2.73000e-08 1.800 2.73200e-08 0.000 2.99000e-08 0.000 2.99200e-08 1.800 3.12000e-08 1.800
++ 3.12200e-08 0.000 3.25000e-08 0.000 3.25200e-08 1.800 3.64000e-08 1.800 3.64200e-08 0.000 4.16000e-08 0.000
++ 4.16200e-08 1.800 4.29000e-08 1.800 4.29200e-08 0.000 5.59000e-08 0.000 5.59200e-08 1.800 5.85000e-08 1.800
++ 5.85200e-08 0.000 5.98000e-08 0.000 5.98200e-08 1.800 6.11000e-08 1.800 6.11200e-08 0.000 6.24000e-08 0.000
++ 6.24200e-08 1.800 6.50000e-08 1.800 6.50200e-08 0.000 6.63000e-08 0.000 6.63200e-08 1.800 6.76000e-08 1.800
++ 6.76200e-08 0.000 7.02000e-08 0.000 7.02200e-08 1.800 7.15000e-08 1.800 7.15200e-08 0.000 7.28000e-08 0.000
++ 7.28200e-08 1.800 7.80000e-08 1.800 7.80200e-08 0.000 8.06000e-08 0.000 8.06200e-08 1.800 8.19000e-08 1.800
++ 8.19200e-08 0.000 8.71000e-08 0.000 8.71200e-08 1.800 8.84000e-08 1.800 8.84200e-08 0.000 9.23000e-08 0.000
++ 9.23200e-08 1.800 9.36000e-08 1.800 9.36200e-08 0.000 9.75000e-08 0.000 9.75200e-08 1.800 1.00100e-07 1.800
++ 1.00120e-07 0.000 1.01400e-07 0.000 1.01420e-07 1.800 1.02700e-07 1.800 1.02720e-07 0.000 1.04000e-07 0.000
++ 1.04020e-07 1.800 1.05300e-07 1.800 1.05320e-07 0.000 1.09200e-07 0.000 1.09220e-07 1.800 1.10500e-07 1.800
++ 1.10520e-07 0.000 1.11800e-07 0.000 1.11820e-07 1.800 1.14400e-07 1.800 1.14420e-07 0.000 1.15700e-07 0.000
++ 1.15720e-07 1.800 1.20900e-07 1.800 1.20920e-07 0.000 1.23500e-07 0.000 1.23520e-07 1.800 1.24800e-07 1.800
++ 1.24820e-07 0.000 1.28700e-07 0.000 1.28720e-07 1.800 1.31300e-07 1.800 1.31320e-07 0.000 1.32600e-07 0.000
++ 1.32620e-07 1.800 1.36500e-07 1.800 1.36520e-07 0.000 1.40400e-07 0.000 1.40420e-07 1.800 1.48200e-07 1.800
++ 1.48220e-07 0.000 1.52100e-07 0.000 1.52120e-07 1.800 1.57300e-07 1.800 1.57320e-07 0.000 1.59900e-07 0.000
++ 1.59920e-07 1.800 1.61200e-07 1.800 1.61220e-07 0.000 1.67700e-07 0.000 1.67720e-07 1.800 1.69000e-07 1.800
++ 1.69020e-07 0.000 1.70300e-07 0.000 1.70320e-07 1.800 1.71600e-07 1.800 1.71620e-07 0.000 1.72900e-07 0.000
++ 1.72920e-07 1.800 1.74200e-07 1.800 1.74220e-07 0.000 1.75500e-07 0.000 1.75520e-07 1.800 1.79400e-07 1.800
++ 1.79420e-07 0.000 1.80700e-07 0.000 1.80720e-07 1.800 1.82000e-07 1.800 1.82020e-07 0.000 1.83300e-07 0.000
++ 1.83320e-07 1.800 1.85900e-07 1.800 1.85920e-07 0.000 1.87200e-07 0.000 1.87220e-07 1.800 1.88500e-07 1.800
++ 1.88520e-07 0.000 1.89800e-07 0.000 1.89820e-07 1.800 1.92400e-07 1.800 1.92420e-07 0.000 1.95000e-07 0.000
++ 1.95020e-07 1.800 2.00200e-07 1.800 2.00220e-07 0.000 2.01500e-07 0.000 2.01520e-07 1.800 2.09300e-07 1.800
++ 2.09320e-07 0.000 2.10600e-07 0.000 2.10620e-07 1.800 2.13200e-07 1.800 2.13220e-07 0.000 2.14500e-07 0.000
++ 2.14520e-07 1.800 2.15800e-07 1.800 2.15820e-07 0.000 2.17100e-07 0.000 2.17120e-07 1.800 2.21000e-07 1.800
++ 2.21020e-07 0.000 2.22300e-07 0.000 2.22320e-07 1.800 2.23600e-07 1.800 2.23620e-07 0.000 2.31400e-07 0.000
++ 2.31420e-07 1.800 2.34000e-07 1.800 2.34020e-07 0.000 2.35300e-07 0.000 2.35320e-07 1.800 2.36600e-07 1.800
++ 2.36620e-07 0.000 2.39200e-07 0.000 2.39220e-07 1.800 2.40500e-07 1.800 2.40520e-07 0.000 2.44400e-07 0.000
++ 2.44420e-07 1.800 2.47000e-07 1.800 2.47020e-07 0.000 2.48300e-07 0.000 2.48320e-07 1.800 2.50900e-07 1.800
++ 2.50920e-07 0.000 2.54800e-07 0.000 2.54820e-07 1.800 2.58700e-07 1.800 2.58720e-07 0.000 2.61300e-07 0.000
++ )
+Xs_a0 src_a0 drv_a0 vdd gnd tb_x1
+Xd_a0 drv_a0 a0 vdd gnd tb_x2
+Va1 src_a1 gnd PWL(
++ 0.00000e+00 0.000 2.60000e-09 0.000 2.62000e-09 1.800 1.30000e-08 1.800 1.30200e-08 0.000 1.69000e-08 0.000
++ 1.69200e-08 1.800 1.95000e-08 1.800 1.95200e-08 0.000 2.34000e-08 0.000 2.34200e-08 1.800 2.60000e-08 1.800
++ 2.60200e-08 0.000 2.86000e-08 0.000 2.86200e-08 1.800 2.99000e-08 1.800 2.99200e-08 0.000 3.12000e-08 0.000
++ 3.12200e-08 1.800 3.38000e-08 1.800 3.38200e-08 0.000 3.51000e-08 0.000 3.51200e-08 1.800 4.03000e-08 1.800
++ 4.03200e-08 0.000 4.29000e-08 0.000 4.29200e-08 1.800 4.94000e-08 1.800 4.94200e-08 0.000 5.20000e-08 0.000
++ 5.20200e-08 1.800 5.33000e-08 1.800 5.33200e-08 0.000 5.85000e-08 0.000 5.85200e-08 1.800 6.24000e-08 1.800
++ 6.24200e-08 0.000 6.76000e-08 0.000 6.76200e-08 1.800 7.15000e-08 1.800 7.15200e-08 0.000 7.80000e-08 0.000
++ 7.80200e-08 1.800 8.06000e-08 1.800 8.06200e-08 0.000 8.32000e-08 0.000 8.32200e-08 1.800 8.45000e-08 1.800
++ 8.45200e-08 0.000 9.23000e-08 0.000 9.23200e-08 1.800 9.88000e-08 1.800 9.88200e-08 0.000 1.00100e-07 0.000
++ 1.00120e-07 1.800 1.05300e-07 1.800 1.05320e-07 0.000 1.07900e-07 0.000 1.07920e-07 1.800 1.11800e-07 1.800
++ 1.11820e-07 0.000 1.17000e-07 0.000 1.17020e-07 1.800 1.19600e-07 1.800 1.19620e-07 0.000 1.20900e-07 0.000
++ 1.20920e-07 1.800 1.24800e-07 1.800 1.24820e-07 0.000 1.26100e-07 0.000 1.26120e-07 1.800 1.27400e-07 1.800
++ 1.27420e-07 0.000 1.31300e-07 0.000 1.31320e-07 1.800 1.32600e-07 1.800 1.32620e-07 0.000 1.33900e-07 0.000
++ 1.33920e-07 1.800 1.39100e-07 1.800 1.39120e-07 0.000 1.40400e-07 0.000 1.40420e-07 1.800 1.41700e-07 1.800
++ 1.41720e-07 0.000 1.44300e-07 0.000 1.44320e-07 1.800 1.45600e-07 1.800 1.45620e-07 0.000 1.46900e-07 0.000
++ 1.46920e-07 1.800 1.48200e-07 1.800 1.48220e-07 0.000 1.57300e-07 0.000 1.57320e-07 1.800 1.58600e-07 1.800
++ 1.58620e-07 0.000 1.61200e-07 0.000 1.61220e-07 1.800 1.63800e-07 1.800 1.63820e-07 0.000 1.69000e-07 0.000
++ 1.69020e-07 1.800 1.70300e-07 1.800 1.70320e-07 0.000 1.74200e-07 0.000 1.74220e-07 1.800 1.75500e-07 1.800
++ 1.75520e-07 0.000 1.78100e-07 0.000 1.78120e-07 1.800 1.79400e-07 1.800 1.79420e-07 0.000 1.80700e-07 0.000
++ 1.80720e-07 1.800 1.82000e-07 1.800 1.82020e-07 0.000 1.83300e-07 0.000 1.83320e-07 1.800 1.84600e-07 1.800
++ 1.84620e-07 0.000 1.85900e-07 0.000 1.85920e-07 1.800 1.87200e-07 1.800 1.87220e-07 0.000 1.88500e-07 0.000
++ 1.88520e-07 1.800 1.89800e-07 1.800 1.89820e-07 0.000 1.91100e-07 0.000 1.91120e-07 1.800 1.95000e-07 1.800
++ 1.95020e-07 0.000 1.98900e-07 0.000 1.98920e-07 1.800 2.01500e-07 1.800 2.01520e-07 0.000 2.02800e-07 0.000
++ 2.02820e-07 1.800 2.04100e-07 1.800 2.04120e-07 0.000 2.09300e-07 0.000 2.09320e-07 1.800 2.10600e-07 1.800
++ 2.10620e-07 0.000 2.13200e-07 0.000 2.13220e-07 1.800 2.14500e-07 1.800 2.14520e-07 0.000 2.22300e-07 0.000
++ 2.22320e-07 1.800 2.24900e-07 1.800 2.24920e-07 0.000 2.26200e-07 0.000 2.26220e-07 1.800 2.31400e-07 1.800
++ 2.31420e-07 0.000 2.32700e-07 0.000 2.32720e-07 1.800 2.34000e-07 1.800 2.34020e-07 0.000 2.35300e-07 0.000
++ 2.35320e-07 1.800 2.37900e-07 1.800 2.37920e-07 0.000 2.40500e-07 0.000 2.40520e-07 1.800 2.41800e-07 1.800
++ 2.41820e-07 0.000 2.53500e-07 0.000 2.53520e-07 1.800 2.56100e-07 1.800 2.56120e-07 0.000 2.57400e-07 0.000
++ 2.57420e-07 1.800 2.58700e-07 1.800 2.58720e-07 0.000 2.60000e-07 0.000 2.60020e-07 1.800 2.61300e-07 1.800
++ )
+Xs_a1 src_a1 drv_a1 vdd gnd tb_x1
+Xd_a1 drv_a1 a1 vdd gnd tb_x2
+Va2 src_a2 gnd PWL(
++ 0.00000e+00 1.800 1.30000e-09 1.800 1.32000e-09 0.000 5.20000e-09 0.000 5.22000e-09 1.800 9.10000e-09 1.800
++ 9.12000e-09 0.000 1.04000e-08 0.000 1.04200e-08 1.800 1.43000e-08 1.800 1.43200e-08 0.000 1.69000e-08 0.000
++ 1.69200e-08 1.800 1.95000e-08 1.800 1.95200e-08 0.000 2.08000e-08 0.000 2.08200e-08 1.800 2.34000e-08 1.800
++ 2.34200e-08 0.000 2.47000e-08 0.000 2.47200e-08 1.800 2.99000e-08 1.800 2.99200e-08 0.000 3.25000e-08 0.000
++ 3.25200e-08 1.800 3.38000e-08 1.800 3.38200e-08 0.000 3.64000e-08 0.000 3.64200e-08 1.800 3.90000e-08 1.800
++ 3.90200e-08 0.000 4.16000e-08 0.000 4.16200e-08 1.800 4.55000e-08 1.800 4.55200e-08 0.000 4.81000e-08 0.000
++ 4.81200e-08 1.800 4.94000e-08 1.800 4.94200e-08 0.000 5.20000e-08 0.000 5.20200e-08 1.800 5.33000e-08 1.800
++ 5.33200e-08 0.000 5.72000e-08 0.000 5.72200e-08 1.800 5.85000e-08 1.800 5.85200e-08 0.000 6.24000e-08 0.000
++ 6.24200e-08 1.800 6.50000e-08 1.800 6.50200e-08 0.000 6.76000e-08 0.000 6.76200e-08 1.800 7.41000e-08 1.800
++ 7.41200e-08 0.000 7.54000e-08 0.000 7.54200e-08 1.800 7.93000e-08 1.800 7.93200e-08 0.000 8.06000e-08 0.000
++ 8.06200e-08 1.800 8.71000e-08 1.800 8.71200e-08 0.000 8.84000e-08 0.000 8.84200e-08 1.800 9.10000e-08 1.800
++ 9.10200e-08 0.000 9.36000e-08 0.000 9.36200e-08 1.800 9.62000e-08 1.800 9.62200e-08 0.000 1.00100e-07 0.000
++ 1.00120e-07 1.800 1.01400e-07 1.800 1.01420e-07 0.000 1.04000e-07 0.000 1.04020e-07 1.800 1.09200e-07 1.800
++ 1.09220e-07 0.000 1.11800e-07 0.000 1.11820e-07 1.800 1.14400e-07 1.800 1.14420e-07 0.000 1.15700e-07 0.000
++ 1.15720e-07 1.800 1.27400e-07 1.800 1.27420e-07 0.000 1.28700e-07 0.000 1.28720e-07 1.800 1.32600e-07 1.800
++ 1.32620e-07 0.000 1.33900e-07 0.000 1.33920e-07 1.800 1.35200e-07 1.800 1.35220e-07 0.000 1.37800e-07 0.000
++ 1.37820e-07 1.800 1.43000e-07 1.800 1.43020e-07 0.000 1.44300e-07 0.000 1.44320e-07 1.800 1.49500e-07 1.800
++ 1.49520e-07 0.000 1.50800e-07 0.000 1.50820e-07 1.800 1.54700e-07 1.800 1.54720e-07 0.000 1.56000e-07 0.000
++ 1.56020e-07 1.800 1.57300e-07 1.800 1.57320e-07 0.000 1.59900e-07 0.000 1.59920e-07 1.800 1.62500e-07 1.800
++ 1.62520e-07 0.000 1.63800e-07 0.000 1.63820e-07 1.800 1.67700e-07 1.800 1.67720e-07 0.000 1.71600e-07 0.000
++ 1.71620e-07 1.800 1.76800e-07 1.800 1.76820e-07 0.000 1.78100e-07 0.000 1.78120e-07 1.800 1.80700e-07 1.800
++ 1.80720e-07 0.000 1.82000e-07 0.000 1.82020e-07 1.800 1.83300e-07 1.800 1.83320e-07 0.000 1.85900e-07 0.000
++ 1.85920e-07 1.800 1.91100e-07 1.800 1.91120e-07 0.000 1.92400e-07 0.000 1.92420e-07 1.800 1.93700e-07 1.800
++ 1.93720e-07 0.000 1.95000e-07 0.000 1.95020e-07 1.800 1.97600e-07 1.800 1.97620e-07 0.000 2.00200e-07 0.000
++ 2.00220e-07 1.800 2.01500e-07 1.800 2.01520e-07 0.000 2.04100e-07 0.000 2.04120e-07 1.800 2.08000e-07 1.800
++ 2.08020e-07 0.000 2.13200e-07 0.000 2.13220e-07 1.800 2.14500e-07 1.800 2.14520e-07 0.000 2.15800e-07 0.000
++ 2.15820e-07 1.800 2.19700e-07 1.800 2.19720e-07 0.000 2.21000e-07 0.000 2.21020e-07 1.800 2.23600e-07 1.800
++ 2.23620e-07 0.000 2.24900e-07 0.000 2.24920e-07 1.800 2.28800e-07 1.800 2.28820e-07 0.000 2.40500e-07 0.000
++ 2.40520e-07 1.800 2.41800e-07 1.800 2.41820e-07 0.000 2.45700e-07 0.000 2.45720e-07 1.800 2.48300e-07 1.800
++ 2.48320e-07 0.000 2.54800e-07 0.000 2.54820e-07 1.800 2.56100e-07 1.800 2.56120e-07 0.000 2.61300e-07 0.000
++ )
+Xs_a2 src_a2 drv_a2 vdd gnd tb_x1
+Xd_a2 drv_a2 a2 vdd gnd tb_x2
+Va3 src_a3 gnd PWL(
++ 0.00000e+00 0.000 1.30000e-09 0.000 1.32000e-09 1.800 3.90000e-09 1.800 3.92000e-09 0.000 6.50000e-09 0.000
++ 6.52000e-09 1.800 1.04000e-08 1.800 1.04200e-08 0.000 1.30000e-08 0.000 1.30200e-08 1.800 1.43000e-08 1.800
++ 1.43200e-08 0.000 1.69000e-08 0.000 1.69200e-08 1.800 2.34000e-08 1.800 2.34200e-08 0.000 2.60000e-08 0.000
++ 2.60200e-08 1.800 2.73000e-08 1.800 2.73200e-08 0.000 2.86000e-08 0.000 2.86200e-08 1.800 3.38000e-08 1.800
++ 3.38200e-08 0.000 3.51000e-08 0.000 3.51200e-08 1.800 3.64000e-08 1.800 3.64200e-08 0.000 3.77000e-08 0.000
++ 3.77200e-08 1.800 3.90000e-08 1.800 3.90200e-08 0.000 4.03000e-08 0.000 4.03200e-08 1.800 4.16000e-08 1.800
++ 4.16200e-08 0.000 4.29000e-08 0.000 4.29200e-08 1.800 4.55000e-08 1.800 4.55200e-08 0.000 4.68000e-08 0.000
++ 4.68200e-08 1.800 4.81000e-08 1.800 4.81200e-08 0.000 4.94000e-08 0.000 4.94200e-08 1.800 5.07000e-08 1.800
++ 5.07200e-08 0.000 5.46000e-08 0.000 5.46200e-08 1.800 5.85000e-08 1.800 5.85200e-08 0.000 6.11000e-08 0.000
++ 6.11200e-08 1.800 6.50000e-08 1.800 6.50200e-08 0.000 6.76000e-08 0.000 6.76200e-08 1.800 7.15000e-08 1.800
++ 7.15200e-08 0.000 7.41000e-08 0.000 7.41200e-08 1.800 7.67000e-08 1.800 7.67200e-08 0.000 8.06000e-08 0.000
++ 8.06200e-08 1.800 8.45000e-08 1.800 8.45200e-08 0.000 8.71000e-08 0.000 8.71200e-08 1.800 8.84000e-08 1.800
++ 8.84200e-08 0.000 8.97000e-08 0.000 8.97200e-08 1.800 9.10000e-08 1.800 9.10200e-08 0.000 9.23000e-08 0.000
++ 9.23200e-08 1.800 9.36000e-08 1.800 9.36200e-08 0.000 9.49000e-08 0.000 9.49200e-08 1.800 9.88000e-08 1.800
++ 9.88200e-08 0.000 1.00100e-07 0.000 1.00120e-07 1.800 1.01400e-07 1.800 1.01420e-07 0.000 1.02700e-07 0.000
++ 1.02720e-07 1.800 1.04000e-07 1.800 1.04020e-07 0.000 1.05300e-07 0.000 1.05320e-07 1.800 1.07900e-07 1.800
++ 1.07920e-07 0.000 1.10500e-07 0.000 1.10520e-07 1.800 1.17000e-07 1.800 1.17020e-07 0.000 1.18300e-07 0.000
++ 1.18320e-07 1.800 1.19600e-07 1.800 1.19620e-07 0.000 1.20900e-07 0.000 1.20920e-07 1.800 1.22200e-07 1.800
++ 1.22220e-07 0.000 1.27400e-07 0.000 1.27420e-07 1.800 1.28700e-07 1.800 1.28720e-07 0.000 1.31300e-07 0.000
++ 1.31320e-07 1.800 1.36500e-07 1.800 1.36520e-07 0.000 1.37800e-07 0.000 1.37820e-07 1.800 1.39100e-07 1.800
++ 1.39120e-07 0.000 1.40400e-07 0.000 1.40420e-07 1.800 1.44300e-07 1.800 1.44320e-07 0.000 1.48200e-07 0.000
++ 1.48220e-07 1.800 1.56000e-07 1.800 1.56020e-07 0.000 1.58600e-07 0.000 1.58620e-07 1.800 1.59900e-07 1.800
++ 1.59920e-07 0.000 1.63800e-07 0.000 1.63820e-07 1.800 1.66400e-07 1.800 1.66420e-07 0.000 1.72900e-07 0.000
++ 1.72920e-07 1.800 1.75500e-07 1.800 1.75520e-07 0.000 1.79400e-07 0.000 1.79420e-07 1.800 1.85900e-07 1.800
++ 1.85920e-07 0.000 1.88500e-07 0.000 1.88520e-07 1.800 1.91100e-07 1.800 1.91120e-07 0.000 1.92400e-07 0.000
++ 1.92420e-07 1.800 1.93700e-07 1.800 1.93720e-07 0.000 1.95000e-07 0.000 1.95020e-07 1.800 1.96300e-07 1.800
++ 1.96320e-07 0.000 1.97600e-07 0.000 1.97620e-07 1.800 2.00200e-07 1.800 2.00220e-07 0.000 2.02800e-07 0.000
++ 2.02820e-07 1.800 2.04100e-07 1.800 2.04120e-07 0.000 2.08000e-07 0.000 2.08020e-07 1.800 2.11900e-07 1.800
++ 2.11920e-07 0.000 2.14500e-07 0.000 2.14520e-07 1.800 2.17100e-07 1.800 2.17120e-07 0.000 2.19700e-07 0.000
++ 2.19720e-07 1.800 2.21000e-07 1.800 2.21020e-07 0.000 2.22300e-07 0.000 2.22320e-07 1.800 2.23600e-07 1.800
++ 2.23620e-07 0.000 2.26200e-07 0.000 2.26220e-07 1.800 2.27500e-07 1.800 2.27520e-07 0.000 2.30100e-07 0.000
++ 2.30120e-07 1.800 2.35300e-07 1.800 2.35320e-07 0.000 2.36600e-07 0.000 2.36620e-07 1.800 2.39200e-07 1.800
++ 2.39220e-07 0.000 2.41800e-07 0.000 2.41820e-07 1.800 2.43100e-07 1.800 2.43120e-07 0.000 2.44400e-07 0.000
++ 2.44420e-07 1.800 2.47000e-07 1.800 2.47020e-07 0.000 2.49600e-07 0.000 2.49620e-07 1.800 2.56100e-07 1.800
++ 2.56120e-07 0.000 2.57400e-07 0.000 2.57420e-07 1.800 2.60000e-07 1.800 2.60020e-07 0.000 2.61300e-07 0.000
++ )
+Xs_a3 src_a3 drv_a3 vdd gnd tb_x1
+Xd_a3 drv_a3 a3 vdd gnd tb_x2
+Va4 src_a4 gnd PWL(
++ 0.00000e+00 0.000 1.30000e-09 0.000 1.32000e-09 1.800 6.50000e-09 1.800 6.52000e-09 0.000 7.80000e-09 0.000
++ 7.82000e-09 1.800 9.10000e-09 1.800 9.12000e-09 0.000 1.04000e-08 0.000 1.04200e-08 1.800 1.43000e-08 1.800
++ 1.43200e-08 0.000 1.69000e-08 0.000 1.69200e-08 1.800 1.82000e-08 1.800 1.82200e-08 0.000 1.95000e-08 0.000
++ 1.95200e-08 1.800 2.60000e-08 1.800 2.60200e-08 0.000 2.73000e-08 0.000 2.73200e-08 1.800 2.86000e-08 1.800
++ 2.86200e-08 0.000 3.25000e-08 0.000 3.25200e-08 1.800 3.51000e-08 1.800 3.51200e-08 0.000 3.64000e-08 0.000
++ 3.64200e-08 1.800 3.90000e-08 1.800 3.90200e-08 0.000 4.16000e-08 0.000 4.16200e-08 1.800 4.29000e-08 1.800
++ 4.29200e-08 0.000 4.81000e-08 0.000 4.81200e-08 1.800 5.33000e-08 1.800 5.33200e-08 0.000 5.98000e-08 0.000
++ 5.98200e-08 1.800 6.24000e-08 1.800 6.24200e-08 0.000 6.63000e-08 0.000 6.63200e-08 1.800 6.89000e-08 1.800
++ 6.89200e-08 0.000 7.02000e-08 0.000 7.02200e-08 1.800 7.41000e-08 1.800 7.41200e-08 0.000 7.80000e-08 0.000
++ 7.80200e-08 1.800 8.06000e-08 1.800 8.06200e-08 0.000 8.19000e-08 0.000 8.19200e-08 1.800 8.32000e-08 1.800
++ 8.32200e-08 0.000 8.84000e-08 0.000 8.84200e-08 1.800 8.97000e-08 1.800 8.97200e-08 0.000 9.49000e-08 0.000
++ 9.49200e-08 1.800 9.62000e-08 1.800 9.62200e-08 0.000 1.01400e-07 0.000 1.01420e-07 1.800 1.02700e-07 1.800
++ 1.02720e-07 0.000 1.13100e-07 0.000 1.13120e-07 1.800 1.20900e-07 1.800 1.20920e-07 0.000 1.31300e-07 0.000
++ 1.31320e-07 1.800 1.32600e-07 1.800 1.32620e-07 0.000 1.36500e-07 0.000 1.36520e-07 1.800 1.37800e-07 1.800
++ 1.37820e-07 0.000 1.44300e-07 0.000 1.44320e-07 1.800 1.46900e-07 1.800 1.46920e-07 0.000 1.48200e-07 0.000
++ 1.48220e-07 1.800 1.50800e-07 1.800 1.50820e-07 0.000 1.53400e-07 0.000 1.53420e-07 1.800 1.54700e-07 1.800
++ 1.54720e-07 0.000 1.59900e-07 0.000 1.59920e-07 1.800 1.66400e-07 1.800 1.66420e-07 0.000 1.67700e-07 0.000
++ 1.67720e-07 1.800 1.70300e-07 1.800 1.70320e-07 0.000 1.72900e-07 0.000 1.72920e-07 1.800 1.74200e-07 1.800
++ 1.74220e-07 0.000 1.76800e-07 0.000 1.76820e-07 1.800 1.78100e-07 1.800 1.78120e-07 0.000 1.79400e-07 0.000
++ 1.79420e-07 1.800 1.80700e-07 1.800 1.80720e-07 0.000 1.82000e-07 0.000 1.82020e-07 1.800 1.83300e-07 1.800
++ 1.83320e-07 0.000 1.88500e-07 0.000 1.88520e-07 1.800 1.91100e-07 1.800 1.91120e-07 0.000 1.96300e-07 0.000
++ 1.96320e-07 1.800 1.98900e-07 1.800 1.98920e-07 0.000 2.01500e-07 0.000 2.01520e-07 1.800 2.10600e-07 1.800
++ 2.10620e-07 0.000 2.15800e-07 0.000 2.15820e-07 1.800 2.18400e-07 1.800 2.18420e-07 0.000 2.22300e-07 0.000
++ 2.22320e-07 1.800 2.26200e-07 1.800 2.26220e-07 0.000 2.28800e-07 0.000 2.28820e-07 1.800 2.30100e-07 1.800
++ 2.30120e-07 0.000 2.36600e-07 0.000 2.36620e-07 1.800 2.40500e-07 1.800 2.40520e-07 0.000 2.50900e-07 0.000
++ 2.50920e-07 1.800 2.56100e-07 1.800 2.56120e-07 0.000 2.57400e-07 0.000 2.57420e-07 1.800 2.58700e-07 1.800
++ 2.58720e-07 0.000 2.60000e-07 0.000 2.60020e-07 1.800 2.61300e-07 1.800
++ )
+Xs_a4 src_a4 drv_a4 vdd gnd tb_x1
+Xd_a4 drv_a4 a4 vdd gnd tb_x2
+Va5 src_a5 gnd PWL(
++ 0.00000e+00 1.800 1.30000e-09 1.800 1.32000e-09 0.000 2.60000e-09 0.000 2.62000e-09 1.800 3.90000e-09 1.800
++ 3.92000e-09 0.000 6.50000e-09 0.000 6.52000e-09 1.800 9.10000e-09 1.800 9.12000e-09 0.000 1.43000e-08 0.000
++ 1.43200e-08 1.800 1.95000e-08 1.800 1.95200e-08 0.000 2.08000e-08 0.000 2.08200e-08 1.800 2.34000e-08 1.800
++ 2.34200e-08 0.000 2.86000e-08 0.000 2.86200e-08 1.800 3.12000e-08 1.800 3.12200e-08 0.000 4.68000e-08 0.000
++ 4.68200e-08 1.800 5.07000e-08 1.800 5.07200e-08 0.000 5.85000e-08 0.000 5.85200e-08 1.800 5.98000e-08 1.800
++ 5.98200e-08 0.000 6.63000e-08 0.000 6.63200e-08 1.800 7.02000e-08 1.800 7.02200e-08 0.000 7.15000e-08 0.000
++ 7.15200e-08 1.800 7.54000e-08 1.800 7.54200e-08 0.000 7.80000e-08 0.000 7.80200e-08 1.800 8.06000e-08 1.800
++ 8.06200e-08 0.000 8.19000e-08 0.000 8.19200e-08 1.800 8.32000e-08 1.800 8.32200e-08 0.000 8.58000e-08 0.000
++ 8.58200e-08 1.800 9.10000e-08 1.800 9.10200e-08 0.000 9.23000e-08 0.000 9.23200e-08 1.800 9.49000e-08 1.800
++ 9.49200e-08 0.000 9.75000e-08 0.000 9.75200e-08 1.800 9.88000e-08 1.800 9.88200e-08 0.000 1.00100e-07 0.000
++ 1.00120e-07 1.800 1.02700e-07 1.800 1.02720e-07 0.000 1.05300e-07 0.000 1.05320e-07 1.800 1.09200e-07 1.800
++ 1.09220e-07 0.000 1.10500e-07 0.000 1.10520e-07 1.800 1.11800e-07 1.800 1.11820e-07 0.000 1.15700e-07 0.000
++ 1.15720e-07 1.800 1.19600e-07 1.800 1.19620e-07 0.000 1.22200e-07 0.000 1.22220e-07 1.800 1.24800e-07 1.800
++ 1.24820e-07 0.000 1.28700e-07 0.000 1.28720e-07 1.800 1.32600e-07 1.800 1.32620e-07 0.000 1.33900e-07 0.000
++ 1.33920e-07 1.800 1.35200e-07 1.800 1.35220e-07 0.000 1.36500e-07 0.000 1.36520e-07 1.800 1.37800e-07 1.800
++ 1.37820e-07 0.000 1.39100e-07 0.000 1.39120e-07 1.800 1.43000e-07 1.800 1.43020e-07 0.000 1.45600e-07 0.000
++ 1.45620e-07 1.800 1.46900e-07 1.800 1.46920e-07 0.000 1.52100e-07 0.000 1.52120e-07 1.800 1.53400e-07 1.800
++ 1.53420e-07 0.000 1.57300e-07 0.000 1.57320e-07 1.800 1.59900e-07 1.800 1.59920e-07 0.000 1.66400e-07 0.000
++ 1.66420e-07 1.800 1.69000e-07 1.800 1.69020e-07 0.000 1.70300e-07 0.000 1.70320e-07 1.800 1.78100e-07 1.800
++ 1.78120e-07 0.000 1.80700e-07 0.000 1.80720e-07 1.800 1.84600e-07 1.800 1.84620e-07 0.000 1.87200e-07 0.000
++ 1.87220e-07 1.800 1.88500e-07 1.800 1.88520e-07 0.000 1.95000e-07 0.000 1.95020e-07 1.800 1.96300e-07 1.800
++ 1.96320e-07 0.000 1.98900e-07 0.000 1.98920e-07 1.800 2.01500e-07 1.800 2.01520e-07 0.000 2.04100e-07 0.000
++ 2.04120e-07 1.800 2.05400e-07 1.800 2.05420e-07 0.000 2.06700e-07 0.000 2.06720e-07 1.800 2.08000e-07 1.800
++ 2.08020e-07 0.000 2.09300e-07 0.000 2.09320e-07 1.800 2.21000e-07 1.800 2.21020e-07 0.000 2.23600e-07 0.000
++ 2.23620e-07 1.800 2.24900e-07 1.800 2.24920e-07 0.000 2.26200e-07 0.000 2.26220e-07 1.800 2.31400e-07 1.800
++ 2.31420e-07 0.000 2.32700e-07 0.000 2.32720e-07 1.800 2.34000e-07 1.800 2.34020e-07 0.000 2.36600e-07 0.000
++ 2.36620e-07 1.800 2.39200e-07 1.800 2.39220e-07 0.000 2.40500e-07 0.000 2.40520e-07 1.800 2.41800e-07 1.800
++ 2.41820e-07 0.000 2.44400e-07 0.000 2.44420e-07 1.800 2.48300e-07 1.800 2.48320e-07 0.000 2.50900e-07 0.000
++ 2.50920e-07 1.800 2.52200e-07 1.800 2.52220e-07 0.000 2.54800e-07 0.000 2.54820e-07 1.800 2.57400e-07 1.800
++ 2.57420e-07 0.000 2.58700e-07 0.000 2.58720e-07 1.800 2.60000e-07 1.800 2.60020e-07 0.000 2.61300e-07 0.000
++ )
+Xs_a5 src_a5 drv_a5 vdd gnd tb_x1
+Xd_a5 drv_a5 a5 vdd gnd tb_x2
+Va6 src_a6 gnd PWL(
++ 0.00000e+00 0.000 5.20000e-09 0.000 5.22000e-09 1.800 6.50000e-09 1.800 6.52000e-09 0.000 9.10000e-09 0.000
++ 9.12000e-09 1.800 1.04000e-08 1.800 1.04200e-08 0.000 1.17000e-08 0.000 1.17200e-08 1.800 1.30000e-08 1.800
++ 1.30200e-08 0.000 1.43000e-08 0.000 1.43200e-08 1.800 1.56000e-08 1.800 1.56200e-08 0.000 1.69000e-08 0.000
++ 1.69200e-08 1.800 1.95000e-08 1.800 1.95200e-08 0.000 2.08000e-08 0.000 2.08200e-08 1.800 2.34000e-08 1.800
++ 2.34200e-08 0.000 2.47000e-08 0.000 2.47200e-08 1.800 2.73000e-08 1.800 2.73200e-08 0.000 2.99000e-08 0.000
++ 2.99200e-08 1.800 3.12000e-08 1.800 3.12200e-08 0.000 3.64000e-08 0.000 3.64200e-08 1.800 3.77000e-08 1.800
++ 3.77200e-08 0.000 3.90000e-08 0.000 3.90200e-08 1.800 4.29000e-08 1.800 4.29200e-08 0.000 4.55000e-08 0.000
++ 4.55200e-08 1.800 4.68000e-08 1.800 4.68200e-08 0.000 4.81000e-08 0.000 4.81200e-08 1.800 5.07000e-08 1.800
++ 5.07200e-08 0.000 5.20000e-08 0.000 5.20200e-08 1.800 5.85000e-08 1.800 5.85200e-08 0.000 5.98000e-08 0.000
++ 5.98200e-08 1.800 6.11000e-08 1.800 6.11200e-08 0.000 6.24000e-08 0.000 6.24200e-08 1.800 6.37000e-08 1.800
++ 6.37200e-08 0.000 6.50000e-08 0.000 6.50200e-08 1.800 6.63000e-08 1.800 6.63200e-08 0.000 6.89000e-08 0.000
++ 6.89200e-08 1.800 7.02000e-08 1.800 7.02200e-08 0.000 7.28000e-08 0.000 7.28200e-08 1.800 7.54000e-08 1.800
++ 7.54200e-08 0.000 7.93000e-08 0.000 7.93200e-08 1.800 8.32000e-08 1.800 8.32200e-08 0.000 8.58000e-08 0.000
++ 8.58200e-08 1.800 8.71000e-08 1.800 8.71200e-08 0.000 8.84000e-08 0.000 8.84200e-08 1.800 8.97000e-08 1.800
++ 8.97200e-08 0.000 9.36000e-08 0.000 9.36200e-08 1.800 9.75000e-08 1.800 9.75200e-08 0.000 9.88000e-08 0.000
++ 9.88200e-08 1.800 1.01400e-07 1.800 1.01420e-07 0.000 1.04000e-07 0.000 1.04020e-07 1.800 1.07900e-07 1.800
++ 1.07920e-07 0.000 1.09200e-07 0.000 1.09220e-07 1.800 1.15700e-07 1.800 1.15720e-07 0.000 1.17000e-07 0.000
++ 1.17020e-07 1.800 1.19600e-07 1.800 1.19620e-07 0.000 1.23500e-07 0.000 1.23520e-07 1.800 1.24800e-07 1.800
++ 1.24820e-07 0.000 1.26100e-07 0.000 1.26120e-07 1.800 1.28700e-07 1.800 1.28720e-07 0.000 1.32600e-07 0.000
++ 1.32620e-07 1.800 1.40400e-07 1.800 1.40420e-07 0.000 1.45600e-07 0.000 1.45620e-07 1.800 1.46900e-07 1.800
++ 1.46920e-07 0.000 1.48200e-07 0.000 1.48220e-07 1.800 1.52100e-07 1.800 1.52120e-07 0.000 1.53400e-07 0.000
++ 1.53420e-07 1.800 1.54700e-07 1.800 1.54720e-07 0.000 1.58600e-07 0.000 1.58620e-07 1.800 1.61200e-07 1.800
++ 1.61220e-07 0.000 1.62500e-07 0.000 1.62520e-07 1.800 1.65100e-07 1.800 1.65120e-07 0.000 1.66400e-07 0.000
++ 1.66420e-07 1.800 1.67700e-07 1.800 1.67720e-07 0.000 1.70300e-07 0.000 1.70320e-07 1.800 1.76800e-07 1.800
++ 1.76820e-07 0.000 1.79400e-07 0.000 1.79420e-07 1.800 1.80700e-07 1.800 1.80720e-07 0.000 1.82000e-07 0.000
++ 1.82020e-07 1.800 1.84600e-07 1.800 1.84620e-07 0.000 1.89800e-07 0.000 1.89820e-07 1.800 1.92400e-07 1.800
++ 1.92420e-07 0.000 2.02800e-07 0.000 2.02820e-07 1.800 2.05400e-07 1.800 2.05420e-07 0.000 2.09300e-07 0.000
++ 2.09320e-07 1.800 2.11900e-07 1.800 2.11920e-07 0.000 2.14500e-07 0.000 2.14520e-07 1.800 2.19700e-07 1.800
++ 2.19720e-07 0.000 2.21000e-07 0.000 2.21020e-07 1.800 2.22300e-07 1.800 2.22320e-07 0.000 2.26200e-07 0.000
++ 2.26220e-07 1.800 2.31400e-07 1.800 2.31420e-07 0.000 2.32700e-07 0.000 2.32720e-07 1.800 2.36600e-07 1.800
++ 2.36620e-07 0.000 2.37900e-07 0.000 2.37920e-07 1.800 2.44400e-07 1.800 2.44420e-07 0.000 2.47000e-07 0.000
++ 2.47020e-07 1.800 2.48300e-07 1.800 2.48320e-07 0.000 2.49600e-07 0.000 2.49620e-07 1.800 2.50900e-07 1.800
++ 2.50920e-07 0.000 2.54800e-07 0.000 2.54820e-07 1.800 2.56100e-07 1.800 2.56120e-07 0.000 2.57400e-07 0.000
++ 2.57420e-07 1.800 2.61300e-07 1.800
++ )
+Xs_a6 src_a6 drv_a6 vdd gnd tb_x1
+Xd_a6 drv_a6 a6 vdd gnd tb_x2
+Va7 src_a7 gnd PWL(
++ 0.00000e+00 1.800 1.30000e-09 1.800 1.32000e-09 0.000 2.60000e-09 0.000 2.62000e-09 1.800 3.90000e-09 1.800
++ 3.92000e-09 0.000 5.20000e-09 0.000 5.22000e-09 1.800 6.50000e-09 1.800 6.52000e-09 0.000 9.10000e-09 0.000
++ 9.12000e-09 1.800 1.04000e-08 1.800 1.04200e-08 0.000 1.17000e-08 0.000 1.17200e-08 1.800 1.43000e-08 1.800
++ 1.43200e-08 0.000 1.69000e-08 0.000 1.69200e-08 1.800 2.08000e-08 1.800 2.08200e-08 0.000 2.21000e-08 0.000
++ 2.21200e-08 1.800 2.60000e-08 1.800 2.60200e-08 0.000 2.86000e-08 0.000 2.86200e-08 1.800 3.25000e-08 1.800
++ 3.25200e-08 0.000 3.38000e-08 0.000 3.38200e-08 1.800 3.51000e-08 1.800 3.51200e-08 0.000 4.03000e-08 0.000
++ 4.03200e-08 1.800 4.16000e-08 1.800 4.16200e-08 0.000 4.29000e-08 0.000 4.29200e-08 1.800 4.68000e-08 1.800
++ 4.68200e-08 0.000 4.94000e-08 0.000 4.94200e-08 1.800 5.33000e-08 1.800 5.33200e-08 0.000 5.46000e-08 0.000
++ 5.46200e-08 1.800 5.85000e-08 1.800 5.85200e-08 0.000 6.50000e-08 0.000 6.50200e-08 1.800 6.76000e-08 1.800
++ 6.76200e-08 0.000 6.89000e-08 0.000 6.89200e-08 1.800 7.15000e-08 1.800 7.15200e-08 0.000 7.28000e-08 0.000
++ 7.28200e-08 1.800 7.41000e-08 1.800 7.41200e-08 0.000 7.67000e-08 0.000 7.67200e-08 1.800 7.93000e-08 1.800
++ 7.93200e-08 0.000 8.06000e-08 0.000 8.06200e-08 1.800 8.32000e-08 1.800 8.32200e-08 0.000 8.45000e-08 0.000
++ 8.45200e-08 1.800 8.71000e-08 1.800 8.71200e-08 0.000 8.97000e-08 0.000 8.97200e-08 1.800 9.10000e-08 1.800
++ 9.10200e-08 0.000 9.49000e-08 0.000 9.49200e-08 1.800 9.75000e-08 1.800 9.75200e-08 0.000 1.00100e-07 0.000
++ 1.00120e-07 1.800 1.02700e-07 1.800 1.02720e-07 0.000 1.07900e-07 0.000 1.07920e-07 1.800 1.09200e-07 1.800
++ 1.09220e-07 0.000 1.10500e-07 0.000 1.10520e-07 1.800 1.11800e-07 1.800 1.11820e-07 0.000 1.17000e-07 0.000
++ 1.17020e-07 1.800 1.18300e-07 1.800 1.18320e-07 0.000 1.22200e-07 0.000 1.22220e-07 1.800 1.26100e-07 1.800
++ 1.26120e-07 0.000 1.27400e-07 0.000 1.27420e-07 1.800 1.28700e-07 1.800 1.28720e-07 0.000 1.33900e-07 0.000
++ 1.33920e-07 1.800 1.36500e-07 1.800 1.36520e-07 0.000 1.37800e-07 0.000 1.37820e-07 1.800 1.39100e-07 1.800
++ 1.39120e-07 0.000 1.41700e-07 0.000 1.41720e-07 1.800 1.43000e-07 1.800 1.43020e-07 0.000 1.44300e-07 0.000
++ 1.44320e-07 1.800 1.45600e-07 1.800 1.45620e-07 0.000 1.46900e-07 0.000 1.46920e-07 1.800 1.48200e-07 1.800
++ 1.48220e-07 0.000 1.49500e-07 0.000 1.49520e-07 1.800 1.50800e-07 1.800 1.50820e-07 0.000 1.54700e-07 0.000
++ 1.54720e-07 1.800 1.57300e-07 1.800 1.57320e-07 0.000 1.58600e-07 0.000 1.58620e-07 1.800 1.61200e-07 1.800
++ 1.61220e-07 0.000 1.65100e-07 0.000 1.65120e-07 1.800 1.69000e-07 1.800 1.69020e-07 0.000 1.71600e-07 0.000
++ 1.71620e-07 1.800 1.74200e-07 1.800 1.74220e-07 0.000 1.76800e-07 0.000 1.76820e-07 1.800 1.78100e-07 1.800
++ 1.78120e-07 0.000 1.79400e-07 0.000 1.79420e-07 1.800 1.80700e-07 1.800 1.80720e-07 0.000 1.83300e-07 0.000
++ 1.83320e-07 1.800 1.89800e-07 1.800 1.89820e-07 0.000 1.91100e-07 0.000 1.91120e-07 1.800 1.93700e-07 1.800
++ 1.93720e-07 0.000 1.97600e-07 0.000 1.97620e-07 1.800 1.98900e-07 1.800 1.98920e-07 0.000 2.00200e-07 0.000
++ 2.00220e-07 1.800 2.04100e-07 1.800 2.04120e-07 0.000 2.09300e-07 0.000 2.09320e-07 1.800 2.11900e-07 1.800
++ 2.11920e-07 0.000 2.15800e-07 0.000 2.15820e-07 1.800 2.18400e-07 1.800 2.18420e-07 0.000 2.19700e-07 0.000
++ 2.19720e-07 1.800 2.21000e-07 1.800 2.21020e-07 0.000 2.24900e-07 0.000 2.24920e-07 1.800 2.27500e-07 1.800
++ 2.27520e-07 0.000 2.28800e-07 0.000 2.28820e-07 1.800 2.32700e-07 1.800 2.32720e-07 0.000 2.36600e-07 0.000
++ 2.36620e-07 1.800 2.39200e-07 1.800 2.39220e-07 0.000 2.40500e-07 0.000 2.40520e-07 1.800 2.41800e-07 1.800
++ 2.41820e-07 0.000 2.43100e-07 0.000 2.43120e-07 1.800 2.47000e-07 1.800 2.47020e-07 0.000 2.48300e-07 0.000
++ 2.48320e-07 1.800 2.52200e-07 1.800 2.52220e-07 0.000 2.56100e-07 0.000 2.56120e-07 1.800 2.58700e-07 1.800
++ 2.58720e-07 0.000 2.60000e-07 0.000 2.60020e-07 1.800 2.61300e-07 1.800
++ )
+Xs_a7 src_a7 drv_a7 vdd gnd tb_x1
+Xd_a7 drv_a7 a7 vdd gnd tb_x2
+Vb0 src_b0 gnd PWL(
++ 0.00000e+00 1.800 3.90000e-09 1.800 3.92000e-09 0.000 5.20000e-09 0.000 5.22000e-09 1.800 7.80000e-09 1.800
++ 7.82000e-09 0.000 9.10000e-09 0.000 9.12000e-09 1.800 1.04000e-08 1.800 1.04200e-08 0.000 1.17000e-08 0.000
++ 1.17200e-08 1.800 1.30000e-08 1.800 1.30200e-08 0.000 1.95000e-08 0.000 1.95200e-08 1.800 2.47000e-08 1.800
++ 2.47200e-08 0.000 2.73000e-08 0.000 2.73200e-08 1.800 3.12000e-08 1.800 3.12200e-08 0.000 3.38000e-08 0.000
++ 3.38200e-08 1.800 3.51000e-08 1.800 3.51200e-08 0.000 3.64000e-08 0.000 3.64200e-08 1.800 3.90000e-08 1.800
++ 3.90200e-08 0.000 4.16000e-08 0.000 4.16200e-08 1.800 4.29000e-08 1.800 4.29200e-08 0.000 4.81000e-08 0.000
++ 4.81200e-08 1.800 5.07000e-08 1.800 5.07200e-08 0.000 5.20000e-08 0.000 5.20200e-08 1.800 5.85000e-08 1.800
++ 5.85200e-08 0.000 6.24000e-08 0.000 6.24200e-08 1.800 6.37000e-08 1.800 6.37200e-08 0.000 6.76000e-08 0.000
++ 6.76200e-08 1.800 7.28000e-08 1.800 7.28200e-08 0.000 7.41000e-08 0.000 7.41200e-08 1.800 7.54000e-08 1.800
++ 7.54200e-08 0.000 7.67000e-08 0.000 7.67200e-08 1.800 7.80000e-08 1.800 7.80200e-08 0.000 7.93000e-08 0.000
++ 7.93200e-08 1.800 8.06000e-08 1.800 8.06200e-08 0.000 8.32000e-08 0.000 8.32200e-08 1.800 8.58000e-08 1.800
++ 8.58200e-08 0.000 9.10000e-08 0.000 9.10200e-08 1.800 9.36000e-08 1.800 9.36200e-08 0.000 9.62000e-08 0.000
++ 9.62200e-08 1.800 9.88000e-08 1.800 9.88200e-08 0.000 1.01400e-07 0.000 1.01420e-07 1.800 1.04000e-07 1.800
++ 1.04020e-07 0.000 1.06600e-07 0.000 1.06620e-07 1.800 1.07900e-07 1.800 1.07920e-07 0.000 1.09200e-07 0.000
++ 1.09220e-07 1.800 1.13100e-07 1.800 1.13120e-07 0.000 1.15700e-07 0.000 1.15720e-07 1.800 1.17000e-07 1.800
++ 1.17020e-07 0.000 1.18300e-07 0.000 1.18320e-07 1.800 1.19600e-07 1.800 1.19620e-07 0.000 1.24800e-07 0.000
++ 1.24820e-07 1.800 1.27400e-07 1.800 1.27420e-07 0.000 1.28700e-07 0.000 1.28720e-07 1.800 1.30000e-07 1.800
++ 1.30020e-07 0.000 1.31300e-07 0.000 1.31320e-07 1.800 1.33900e-07 1.800 1.33920e-07 0.000 1.35200e-07 0.000
++ 1.35220e-07 1.800 1.36500e-07 1.800 1.36520e-07 0.000 1.37800e-07 0.000 1.37820e-07 1.800 1.39100e-07 1.800
++ 1.39120e-07 0.000 1.40400e-07 0.000 1.40420e-07 1.800 1.41700e-07 1.800 1.41720e-07 0.000 1.45600e-07 0.000
++ 1.45620e-07 1.800 1.48200e-07 1.800 1.48220e-07 0.000 1.50800e-07 0.000 1.50820e-07 1.800 1.52100e-07 1.800
++ 1.52120e-07 0.000 1.53400e-07 0.000 1.53420e-07 1.800 1.54700e-07 1.800 1.54720e-07 0.000 1.57300e-07 0.000
++ 1.57320e-07 1.800 1.61200e-07 1.800 1.61220e-07 0.000 1.63800e-07 0.000 1.63820e-07 1.800 1.71600e-07 1.800
++ 1.71620e-07 0.000 1.72900e-07 0.000 1.72920e-07 1.800 1.78100e-07 1.800 1.78120e-07 0.000 1.79400e-07 0.000
++ 1.79420e-07 1.800 1.82000e-07 1.800 1.82020e-07 0.000 1.87200e-07 0.000 1.87220e-07 1.800 1.89800e-07 1.800
++ 1.89820e-07 0.000 1.95000e-07 0.000 1.95020e-07 1.800 2.01500e-07 1.800 2.01520e-07 0.000 2.02800e-07 0.000
++ 2.02820e-07 1.800 2.05400e-07 1.800 2.05420e-07 0.000 2.08000e-07 0.000 2.08020e-07 1.800 2.11900e-07 1.800
++ 2.11920e-07 0.000 2.13200e-07 0.000 2.13220e-07 1.800 2.14500e-07 1.800 2.14520e-07 0.000 2.15800e-07 0.000
++ 2.15820e-07 1.800 2.19700e-07 1.800 2.19720e-07 0.000 2.23600e-07 0.000 2.23620e-07 1.800 2.24900e-07 1.800
++ 2.24920e-07 0.000 2.27500e-07 0.000 2.27520e-07 1.800 2.28800e-07 1.800 2.28820e-07 0.000 2.30100e-07 0.000
++ 2.30120e-07 1.800 2.31400e-07 1.800 2.31420e-07 0.000 2.35300e-07 0.000 2.35320e-07 1.800 2.36600e-07 1.800
++ 2.36620e-07 0.000 2.37900e-07 0.000 2.37920e-07 1.800 2.44400e-07 1.800 2.44420e-07 0.000 2.45700e-07 0.000
++ 2.45720e-07 1.800 2.47000e-07 1.800 2.47020e-07 0.000 2.49600e-07 0.000 2.49620e-07 1.800 2.53500e-07 1.800
++ 2.53520e-07 0.000 2.56100e-07 0.000 2.56120e-07 1.800 2.57400e-07 1.800 2.57420e-07 0.000 2.58700e-07 0.000
++ 2.58720e-07 1.800 2.60000e-07 1.800 2.60020e-07 0.000 2.61300e-07 0.000
++ )
+Xs_b0 src_b0 drv_b0 vdd gnd tb_x1
+Xd_b0 drv_b0 b0 vdd gnd tb_x2
+Vb1 src_b1 gnd PWL(
++ 0.00000e+00 0.000 5.20000e-09 0.000 5.22000e-09 1.800 6.50000e-09 1.800 6.52000e-09 0.000 7.80000e-09 0.000
++ 7.82000e-09 1.800 9.10000e-09 1.800 9.12000e-09 0.000 1.43000e-08 0.000 1.43200e-08 1.800 1.82000e-08 1.800
++ 1.82200e-08 0.000 1.95000e-08 0.000 1.95200e-08 1.800 2.08000e-08 1.800 2.08200e-08 0.000 2.21000e-08 0.000
++ 2.21200e-08 1.800 2.34000e-08 1.800 2.34200e-08 0.000 2.60000e-08 0.000 2.60200e-08 1.800 3.38000e-08 1.800
++ 3.38200e-08 0.000 3.64000e-08 0.000 3.64200e-08 1.800 4.16000e-08 1.800 4.16200e-08 0.000 4.29000e-08 0.000
++ 4.29200e-08 1.800 4.42000e-08 1.800 4.42200e-08 0.000 4.55000e-08 0.000 4.55200e-08 1.800 4.94000e-08 1.800
++ 4.94200e-08 0.000 5.07000e-08 0.000 5.07200e-08 1.800 5.20000e-08 1.800 5.20200e-08 0.000 5.33000e-08 0.000
++ 5.33200e-08 1.800 5.59000e-08 1.800 5.59200e-08 0.000 5.72000e-08 0.000 5.72200e-08 1.800 5.98000e-08 1.800
++ 5.98200e-08 0.000 6.24000e-08 0.000 6.24200e-08 1.800 6.37000e-08 1.800 6.37200e-08 0.000 6.63000e-08 0.000
++ 6.63200e-08 1.800 6.89000e-08 1.800 6.89200e-08 0.000 7.02000e-08 0.000 7.02200e-08 1.800 7.41000e-08 1.800
++ 7.41200e-08 0.000 7.67000e-08 0.000 7.67200e-08 1.800 8.06000e-08 1.800 8.06200e-08 0.000 8.19000e-08 0.000
++ 8.19200e-08 1.800 8.71000e-08 1.800 8.71200e-08 0.000 9.49000e-08 0.000 9.49200e-08 1.800 9.62000e-08 1.800
++ 9.62200e-08 0.000 9.88000e-08 0.000 9.88200e-08 1.800 1.06600e-07 1.800 1.06620e-07 0.000 1.09200e-07 0.000
++ 1.09220e-07 1.800 1.11800e-07 1.800 1.11820e-07 0.000 1.13100e-07 0.000 1.13120e-07 1.800 1.14400e-07 1.800
++ 1.14420e-07 0.000 1.15700e-07 0.000 1.15720e-07 1.800 1.18300e-07 1.800 1.18320e-07 0.000 1.19600e-07 0.000
++ 1.19620e-07 1.800 1.20900e-07 1.800 1.20920e-07 0.000 1.22200e-07 0.000 1.22220e-07 1.800 1.23500e-07 1.800
++ 1.23520e-07 0.000 1.24800e-07 0.000 1.24820e-07 1.800 1.26100e-07 1.800 1.26120e-07 0.000 1.27400e-07 0.000
++ 1.27420e-07 1.800 1.30000e-07 1.800 1.30020e-07 0.000 1.31300e-07 0.000 1.31320e-07 1.800 1.32600e-07 1.800
++ 1.32620e-07 0.000 1.36500e-07 0.000 1.36520e-07 1.800 1.37800e-07 1.800 1.37820e-07 0.000 1.39100e-07 0.000
++ 1.39120e-07 1.800 1.43000e-07 1.800 1.43020e-07 0.000 1.46900e-07 0.000 1.46920e-07 1.800 1.49500e-07 1.800
++ 1.49520e-07 0.000 1.52100e-07 0.000 1.52120e-07 1.800 1.53400e-07 1.800 1.53420e-07 0.000 1.56000e-07 0.000
++ 1.56020e-07 1.800 1.58600e-07 1.800 1.58620e-07 0.000 1.61200e-07 0.000 1.61220e-07 1.800 1.65100e-07 1.800
++ 1.65120e-07 0.000 1.66400e-07 0.000 1.66420e-07 1.800 1.67700e-07 1.800 1.67720e-07 0.000 1.69000e-07 0.000
++ 1.69020e-07 1.800 1.72900e-07 1.800 1.72920e-07 0.000 1.75500e-07 0.000 1.75520e-07 1.800 1.78100e-07 1.800
++ 1.78120e-07 0.000 1.79400e-07 0.000 1.79420e-07 1.800 1.84600e-07 1.800 1.84620e-07 0.000 1.85900e-07 0.000
++ 1.85920e-07 1.800 1.87200e-07 1.800 1.87220e-07 0.000 1.88500e-07 0.000 1.88520e-07 1.800 1.89800e-07 1.800
++ 1.89820e-07 0.000 1.91100e-07 0.000 1.91120e-07 1.800 1.95000e-07 1.800 1.95020e-07 0.000 1.97600e-07 0.000
++ 1.97620e-07 1.800 2.00200e-07 1.800 2.00220e-07 0.000 2.01500e-07 0.000 2.01520e-07 1.800 2.05400e-07 1.800
++ 2.05420e-07 0.000 2.09300e-07 0.000 2.09320e-07 1.800 2.22300e-07 1.800 2.22320e-07 0.000 2.23600e-07 0.000
++ 2.23620e-07 1.800 2.28800e-07 1.800 2.28820e-07 0.000 2.30100e-07 0.000 2.30120e-07 1.800 2.37900e-07 1.800
++ 2.37920e-07 0.000 2.40500e-07 0.000 2.40520e-07 1.800 2.41800e-07 1.800 2.41820e-07 0.000 2.45700e-07 0.000
++ 2.45720e-07 1.800 2.54800e-07 1.800 2.54820e-07 0.000 2.57400e-07 0.000 2.57420e-07 1.800 2.58700e-07 1.800
++ 2.58720e-07 0.000 2.60000e-07 0.000 2.60020e-07 1.800 2.61300e-07 1.800
++ )
+Xs_b1 src_b1 drv_b1 vdd gnd tb_x1
+Xd_b1 drv_b1 b1 vdd gnd tb_x2
+Vb2 src_b2 gnd PWL(
++ 0.00000e+00 1.800 5.20000e-09 1.800 5.22000e-09 0.000 1.04000e-08 0.000 1.04200e-08 1.800 1.17000e-08 1.800
++ 1.17200e-08 0.000 1.30000e-08 0.000 1.30200e-08 1.800 1.69000e-08 1.800 1.69200e-08 0.000 1.95000e-08 0.000
++ 1.95200e-08 1.800 2.08000e-08 1.800 2.08200e-08 0.000 2.21000e-08 0.000 2.21200e-08 1.800 2.60000e-08 1.800
++ 2.60200e-08 0.000 2.73000e-08 0.000 2.73200e-08 1.800 2.86000e-08 1.800 2.86200e-08 0.000 3.25000e-08 0.000
++ 3.25200e-08 1.800 3.64000e-08 1.800 3.64200e-08 0.000 3.77000e-08 0.000 3.77200e-08 1.800 4.68000e-08 1.800
++ 4.68200e-08 0.000 4.81000e-08 0.000 4.81200e-08 1.800 5.07000e-08 1.800 5.07200e-08 0.000 5.20000e-08 0.000
++ 5.20200e-08 1.800 5.33000e-08 1.800 5.33200e-08 0.000 5.59000e-08 0.000 5.59200e-08 1.800 5.85000e-08 1.800
++ 5.85200e-08 0.000 6.11000e-08 0.000 6.11200e-08 1.800 6.24000e-08 1.800 6.24200e-08 0.000 6.37000e-08 0.000
++ 6.37200e-08 1.800 6.63000e-08 1.800 6.63200e-08 0.000 6.89000e-08 0.000 6.89200e-08 1.800 7.02000e-08 1.800
++ 7.02200e-08 0.000 7.15000e-08 0.000 7.15200e-08 1.800 7.28000e-08 1.800 7.28200e-08 0.000 8.06000e-08 0.000
++ 8.06200e-08 1.800 8.45000e-08 1.800 8.45200e-08 0.000 9.10000e-08 0.000 9.10200e-08 1.800 9.49000e-08 1.800
++ 9.49200e-08 0.000 9.62000e-08 0.000 9.62200e-08 1.800 9.75000e-08 1.800 9.75200e-08 0.000 9.88000e-08 0.000
++ 9.88200e-08 1.800 1.00100e-07 1.800 1.00120e-07 0.000 1.01400e-07 0.000 1.01420e-07 1.800 1.11800e-07 1.800
++ 1.11820e-07 0.000 1.15700e-07 0.000 1.15720e-07 1.800 1.18300e-07 1.800 1.18320e-07 0.000 1.22200e-07 0.000
++ 1.22220e-07 1.800 1.27400e-07 1.800 1.27420e-07 0.000 1.30000e-07 0.000 1.30020e-07 1.800 1.32600e-07 1.800
++ 1.32620e-07 0.000 1.37800e-07 0.000 1.37820e-07 1.800 1.40400e-07 1.800 1.40420e-07 0.000 1.43000e-07 0.000
++ 1.43020e-07 1.800 1.44300e-07 1.800 1.44320e-07 0.000 1.45600e-07 0.000 1.45620e-07 1.800 1.46900e-07 1.800
++ 1.46920e-07 0.000 1.49500e-07 0.000 1.49520e-07 1.800 1.53400e-07 1.800 1.53420e-07 0.000 1.57300e-07 0.000
++ 1.57320e-07 1.800 1.59900e-07 1.800 1.59920e-07 0.000 1.62500e-07 0.000 1.62520e-07 1.800 1.65100e-07 1.800
++ 1.65120e-07 0.000 1.69000e-07 0.000 1.69020e-07 1.800 1.70300e-07 1.800 1.70320e-07 0.000 1.71600e-07 0.000
++ 1.71620e-07 1.800 1.72900e-07 1.800 1.72920e-07 0.000 1.74200e-07 0.000 1.74220e-07 1.800 1.76800e-07 1.800
++ 1.76820e-07 0.000 1.78100e-07 0.000 1.78120e-07 1.800 1.79400e-07 1.800 1.79420e-07 0.000 1.82000e-07 0.000
++ 1.82020e-07 1.800 1.85900e-07 1.800 1.85920e-07 0.000 1.87200e-07 0.000 1.87220e-07 1.800 1.89800e-07 1.800
++ 1.89820e-07 0.000 1.92400e-07 0.000 1.92420e-07 1.800 1.95000e-07 1.800 1.95020e-07 0.000 1.98900e-07 0.000
++ 1.98920e-07 1.800 2.01500e-07 1.800 2.01520e-07 0.000 2.02800e-07 0.000 2.02820e-07 1.800 2.04100e-07 1.800
++ 2.04120e-07 0.000 2.05400e-07 0.000 2.05420e-07 1.800 2.06700e-07 1.800 2.06720e-07 0.000 2.09300e-07 0.000
++ 2.09320e-07 1.800 2.10600e-07 1.800 2.10620e-07 0.000 2.13200e-07 0.000 2.13220e-07 1.800 2.15800e-07 1.800
++ 2.15820e-07 0.000 2.18400e-07 0.000 2.18420e-07 1.800 2.19700e-07 1.800 2.19720e-07 0.000 2.21000e-07 0.000
++ 2.21020e-07 1.800 2.22300e-07 1.800 2.22320e-07 0.000 2.23600e-07 0.000 2.23620e-07 1.800 2.24900e-07 1.800
++ 2.24920e-07 0.000 2.26200e-07 0.000 2.26220e-07 1.800 2.28800e-07 1.800 2.28820e-07 0.000 2.30100e-07 0.000
++ 2.30120e-07 1.800 2.37900e-07 1.800 2.37920e-07 0.000 2.40500e-07 0.000 2.40520e-07 1.800 2.43100e-07 1.800
++ 2.43120e-07 0.000 2.47000e-07 0.000 2.47020e-07 1.800 2.50900e-07 1.800 2.50920e-07 0.000 2.52200e-07 0.000
++ 2.52220e-07 1.800 2.53500e-07 1.800 2.53520e-07 0.000 2.57400e-07 0.000 2.57420e-07 1.800 2.58700e-07 1.800
++ 2.58720e-07 0.000 2.60000e-07 0.000 2.60020e-07 1.800 2.61300e-07 1.800
++ )
+Xs_b2 src_b2 drv_b2 vdd gnd tb_x1
+Xd_b2 drv_b2 b2 vdd gnd tb_x2
+Vb3 src_b3 gnd PWL(
++ 0.00000e+00 1.800 1.30000e-09 1.800 1.32000e-09 0.000 2.60000e-09 0.000 2.62000e-09 1.800 5.20000e-09 1.800
++ 5.22000e-09 0.000 6.50000e-09 0.000 6.52000e-09 1.800 7.80000e-09 1.800 7.82000e-09 0.000 9.10000e-09 0.000
++ 9.12000e-09 1.800 1.04000e-08 1.800 1.04200e-08 0.000 1.17000e-08 0.000 1.17200e-08 1.800 2.34000e-08 1.800
++ 2.34200e-08 0.000 2.60000e-08 0.000 2.60200e-08 1.800 2.73000e-08 1.800 2.73200e-08 0.000 3.25000e-08 0.000
++ 3.25200e-08 1.800 3.38000e-08 1.800 3.38200e-08 0.000 3.51000e-08 0.000 3.51200e-08 1.800 4.16000e-08 1.800
++ 4.16200e-08 0.000 4.68000e-08 0.000 4.68200e-08 1.800 4.81000e-08 1.800 4.81200e-08 0.000 4.94000e-08 0.000
++ 4.94200e-08 1.800 5.07000e-08 1.800 5.07200e-08 0.000 5.20000e-08 0.000 5.20200e-08 1.800 5.59000e-08 1.800
++ 5.59200e-08 0.000 5.72000e-08 0.000 5.72200e-08 1.800 6.11000e-08 1.800 6.11200e-08 0.000 6.50000e-08 0.000
++ 6.50200e-08 1.800 6.89000e-08 1.800 6.89200e-08 0.000 7.02000e-08 0.000 7.02200e-08 1.800 7.28000e-08 1.800
++ 7.28200e-08 0.000 7.41000e-08 0.000 7.41200e-08 1.800 7.80000e-08 1.800 7.80200e-08 0.000 8.32000e-08 0.000
++ 8.32200e-08 1.800 8.45000e-08 1.800 8.45200e-08 0.000 8.97000e-08 0.000 8.97200e-08 1.800 9.10000e-08 1.800
++ 9.10200e-08 0.000 9.23000e-08 0.000 9.23200e-08 1.800 9.36000e-08 1.800 9.36200e-08 0.000 9.49000e-08 0.000
++ 9.49200e-08 1.800 9.75000e-08 1.800 9.75200e-08 0.000 9.88000e-08 0.000 9.88200e-08 1.800 1.02700e-07 1.800
++ 1.02720e-07 0.000 1.04000e-07 0.000 1.04020e-07 1.800 1.06600e-07 1.800 1.06620e-07 0.000 1.09200e-07 0.000
++ 1.09220e-07 1.800 1.10500e-07 1.800 1.10520e-07 0.000 1.11800e-07 0.000 1.11820e-07 1.800 1.13100e-07 1.800
++ 1.13120e-07 0.000 1.14400e-07 0.000 1.14420e-07 1.800 1.17000e-07 1.800 1.17020e-07 0.000 1.28700e-07 0.000
++ 1.28720e-07 1.800 1.32600e-07 1.800 1.32620e-07 0.000 1.35200e-07 0.000 1.35220e-07 1.800 1.36500e-07 1.800
++ 1.36520e-07 0.000 1.37800e-07 0.000 1.37820e-07 1.800 1.39100e-07 1.800 1.39120e-07 0.000 1.40400e-07 0.000
++ 1.40420e-07 1.800 1.43000e-07 1.800 1.43020e-07 0.000 1.46900e-07 0.000 1.46920e-07 1.800 1.49500e-07 1.800
++ 1.49520e-07 0.000 1.50800e-07 0.000 1.50820e-07 1.800 1.57300e-07 1.800 1.57320e-07 0.000 1.59900e-07 0.000
++ 1.59920e-07 1.800 1.62500e-07 1.800 1.62520e-07 0.000 1.65100e-07 0.000 1.65120e-07 1.800 1.69000e-07 1.800
++ 1.69020e-07 0.000 1.72900e-07 0.000 1.72920e-07 1.800 1.74200e-07 1.800 1.74220e-07 0.000 1.76800e-07 0.000
++ 1.76820e-07 1.800 1.78100e-07 1.800 1.78120e-07 0.000 1.83300e-07 0.000 1.83320e-07 1.800 1.84600e-07 1.800
++ 1.84620e-07 0.000 1.85900e-07 0.000 1.85920e-07 1.800 1.89800e-07 1.800 1.89820e-07 0.000 1.91100e-07 0.000
++ 1.91120e-07 1.800 1.92400e-07 1.800 1.92420e-07 0.000 1.93700e-07 0.000 1.93720e-07 1.800 2.02800e-07 1.800
++ 2.02820e-07 0.000 2.04100e-07 0.000 2.04120e-07 1.800 2.05400e-07 1.800 2.05420e-07 0.000 2.08000e-07 0.000
++ 2.08020e-07 1.800 2.09300e-07 1.800 2.09320e-07 0.000 2.22300e-07 0.000 2.22320e-07 1.800 2.24900e-07 1.800
++ 2.24920e-07 0.000 2.26200e-07 0.000 2.26220e-07 1.800 2.30100e-07 1.800 2.30120e-07 0.000 2.35300e-07 0.000
++ 2.35320e-07 1.800 2.36600e-07 1.800 2.36620e-07 0.000 2.37900e-07 0.000 2.37920e-07 1.800 2.39200e-07 1.800
++ 2.39220e-07 0.000 2.40500e-07 0.000 2.40520e-07 1.800 2.41800e-07 1.800 2.41820e-07 0.000 2.45700e-07 0.000
++ 2.45720e-07 1.800 2.47000e-07 1.800 2.47020e-07 0.000 2.48300e-07 0.000 2.48320e-07 1.800 2.49600e-07 1.800
++ 2.49620e-07 0.000 2.50900e-07 0.000 2.50920e-07 1.800 2.53500e-07 1.800 2.53520e-07 0.000 2.54800e-07 0.000
++ 2.54820e-07 1.800 2.56100e-07 1.800 2.56120e-07 0.000 2.57400e-07 0.000 2.57420e-07 1.800 2.60000e-07 1.800
++ 2.60020e-07 0.000 2.61300e-07 0.000
++ )
+Xs_b3 src_b3 drv_b3 vdd gnd tb_x1
+Xd_b3 drv_b3 b3 vdd gnd tb_x2
+Vb4 src_b4 gnd PWL(
++ 0.00000e+00 0.000 2.60000e-09 0.000 2.62000e-09 1.800 3.90000e-09 1.800 3.92000e-09 0.000 6.50000e-09 0.000
++ 6.52000e-09 1.800 1.04000e-08 1.800 1.04200e-08 0.000 1.30000e-08 0.000 1.30200e-08 1.800 1.82000e-08 1.800
++ 1.82200e-08 0.000 1.95000e-08 0.000 1.95200e-08 1.800 2.08000e-08 1.800 2.08200e-08 0.000 2.47000e-08 0.000
++ 2.47200e-08 1.800 2.73000e-08 1.800 2.73200e-08 0.000 2.86000e-08 0.000 2.86200e-08 1.800 2.99000e-08 1.800
++ 2.99200e-08 0.000 3.12000e-08 0.000 3.12200e-08 1.800 3.38000e-08 1.800 3.38200e-08 0.000 3.64000e-08 0.000
++ 3.64200e-08 1.800 3.77000e-08 1.800 3.77200e-08 0.000 3.90000e-08 0.000 3.90200e-08 1.800 4.16000e-08 1.800
++ 4.16200e-08 0.000 4.42000e-08 0.000 4.42200e-08 1.800 5.07000e-08 1.800 5.07200e-08 0.000 5.20000e-08 0.000
++ 5.20200e-08 1.800 5.46000e-08 1.800 5.46200e-08 0.000 5.59000e-08 0.000 5.59200e-08 1.800 5.85000e-08 1.800
++ 5.85200e-08 0.000 5.98000e-08 0.000 5.98200e-08 1.800 6.37000e-08 1.800 6.37200e-08 0.000 6.63000e-08 0.000
++ 6.63200e-08 1.800 7.02000e-08 1.800 7.02200e-08 0.000 7.28000e-08 0.000 7.28200e-08 1.800 7.93000e-08 1.800
++ 7.93200e-08 0.000 8.06000e-08 0.000 8.06200e-08 1.800 8.32000e-08 1.800 8.32200e-08 0.000 8.58000e-08 0.000
++ 8.58200e-08 1.800 8.97000e-08 1.800 8.97200e-08 0.000 9.10000e-08 0.000 9.10200e-08 1.800 9.49000e-08 1.800
++ 9.49200e-08 0.000 9.75000e-08 0.000 9.75200e-08 1.800 9.88000e-08 1.800 9.88200e-08 0.000 1.04000e-07 0.000
++ 1.04020e-07 1.800 1.05300e-07 1.800 1.05320e-07 0.000 1.06600e-07 0.000 1.06620e-07 1.800 1.07900e-07 1.800
++ 1.07920e-07 0.000 1.09200e-07 0.000 1.09220e-07 1.800 1.11800e-07 1.800 1.11820e-07 0.000 1.15700e-07 0.000
++ 1.15720e-07 1.800 1.18300e-07 1.800 1.18320e-07 0.000 1.19600e-07 0.000 1.19620e-07 1.800 1.20900e-07 1.800
++ 1.20920e-07 0.000 1.23500e-07 0.000 1.23520e-07 1.800 1.24800e-07 1.800 1.24820e-07 0.000 1.26100e-07 0.000
++ 1.26120e-07 1.800 1.27400e-07 1.800 1.27420e-07 0.000 1.28700e-07 0.000 1.28720e-07 1.800 1.30000e-07 1.800
++ 1.30020e-07 0.000 1.33900e-07 0.000 1.33920e-07 1.800 1.37800e-07 1.800 1.37820e-07 0.000 1.39100e-07 0.000
++ 1.39120e-07 1.800 1.41700e-07 1.800 1.41720e-07 0.000 1.45600e-07 0.000 1.45620e-07 1.800 1.46900e-07 1.800
++ 1.46920e-07 0.000 1.50800e-07 0.000 1.50820e-07 1.800 1.52100e-07 1.800 1.52120e-07 0.000 1.53400e-07 0.000
++ 1.53420e-07 1.800 1.54700e-07 1.800 1.54720e-07 0.000 1.61200e-07 0.000 1.61220e-07 1.800 1.62500e-07 1.800
++ 1.62520e-07 0.000 1.66400e-07 0.000 1.66420e-07 1.800 1.67700e-07 1.800 1.67720e-07 0.000 1.70300e-07 0.000
++ 1.70320e-07 1.800 1.72900e-07 1.800 1.72920e-07 0.000 1.74200e-07 0.000 1.74220e-07 1.800 1.75500e-07 1.800
++ 1.75520e-07 0.000 1.76800e-07 0.000 1.76820e-07 1.800 1.78100e-07 1.800 1.78120e-07 0.000 1.79400e-07 0.000
++ 1.79420e-07 1.800 1.80700e-07 1.800 1.80720e-07 0.000 1.82000e-07 0.000 1.82020e-07 1.800 1.84600e-07 1.800
++ 1.84620e-07 0.000 1.85900e-07 0.000 1.85920e-07 1.800 1.88500e-07 1.800 1.88520e-07 0.000 1.97600e-07 0.000
++ 1.97620e-07 1.800 1.98900e-07 1.800 1.98920e-07 0.000 2.00200e-07 0.000 2.00220e-07 1.800 2.01500e-07 1.800
++ 2.01520e-07 0.000 2.11900e-07 0.000 2.11920e-07 1.800 2.13200e-07 1.800 2.13220e-07 0.000 2.14500e-07 0.000
++ 2.14520e-07 1.800 2.15800e-07 1.800 2.15820e-07 0.000 2.17100e-07 0.000 2.17120e-07 1.800 2.18400e-07 1.800
++ 2.18420e-07 0.000 2.22300e-07 0.000 2.22320e-07 1.800 2.23600e-07 1.800 2.23620e-07 0.000 2.24900e-07 0.000
++ 2.24920e-07 1.800 2.26200e-07 1.800 2.26220e-07 0.000 2.27500e-07 0.000 2.27520e-07 1.800 2.28800e-07 1.800
++ 2.28820e-07 0.000 2.36600e-07 0.000 2.36620e-07 1.800 2.37900e-07 1.800 2.37920e-07 0.000 2.41800e-07 0.000
++ 2.41820e-07 1.800 2.43100e-07 1.800 2.43120e-07 0.000 2.48300e-07 0.000 2.48320e-07 1.800 2.49600e-07 1.800
++ 2.49620e-07 0.000 2.50900e-07 0.000 2.50920e-07 1.800 2.52200e-07 1.800 2.52220e-07 0.000 2.53500e-07 0.000
++ 2.53520e-07 1.800 2.54800e-07 1.800 2.54820e-07 0.000 2.61300e-07 0.000
++ )
+Xs_b4 src_b4 drv_b4 vdd gnd tb_x1
+Xd_b4 drv_b4 b4 vdd gnd tb_x2
+Vb5 src_b5 gnd PWL(
++ 0.00000e+00 0.000 1.30000e-09 0.000 1.32000e-09 1.800 2.60000e-09 1.800 2.62000e-09 0.000 3.90000e-09 0.000
++ 3.92000e-09 1.800 6.50000e-09 1.800 6.52000e-09 0.000 7.80000e-09 0.000 7.82000e-09 1.800 9.10000e-09 1.800
++ 9.12000e-09 0.000 1.43000e-08 0.000 1.43200e-08 1.800 1.56000e-08 1.800 1.56200e-08 0.000 1.82000e-08 0.000
++ 1.82200e-08 1.800 2.47000e-08 1.800 2.47200e-08 0.000 2.60000e-08 0.000 2.60200e-08 1.800 3.25000e-08 1.800
++ 3.25200e-08 0.000 3.51000e-08 0.000 3.51200e-08 1.800 4.29000e-08 1.800 4.29200e-08 0.000 4.55000e-08 0.000
++ 4.55200e-08 1.800 4.68000e-08 1.800 4.68200e-08 0.000 4.81000e-08 0.000 4.81200e-08 1.800 4.94000e-08 1.800
++ 4.94200e-08 0.000 5.20000e-08 0.000 5.20200e-08 1.800 5.33000e-08 1.800 5.33200e-08 0.000 5.59000e-08 0.000
++ 5.59200e-08 1.800 5.72000e-08 1.800 5.72200e-08 0.000 5.85000e-08 0.000 5.85200e-08 1.800 6.50000e-08 1.800
++ 6.50200e-08 0.000 6.63000e-08 0.000 6.63200e-08 1.800 7.28000e-08 1.800 7.28200e-08 0.000 7.41000e-08 0.000
++ 7.41200e-08 1.800 7.54000e-08 1.800 7.54200e-08 0.000 7.67000e-08 0.000 7.67200e-08 1.800 8.32000e-08 1.800
++ 8.32200e-08 0.000 8.45000e-08 0.000 8.45200e-08 1.800 9.75000e-08 1.800 9.75200e-08 0.000 1.17000e-07 0.000
++ 1.17020e-07 1.800 1.26100e-07 1.800 1.26120e-07 0.000 1.27400e-07 0.000 1.27420e-07 1.800 1.31300e-07 1.800
++ 1.31320e-07 0.000 1.33900e-07 0.000 1.33920e-07 1.800 1.36500e-07 1.800 1.36520e-07 0.000 1.37800e-07 0.000
++ 1.37820e-07 1.800 1.43000e-07 1.800 1.43020e-07 0.000 1.44300e-07 0.000 1.44320e-07 1.800 1.46900e-07 1.800
++ 1.46920e-07 0.000 1.50800e-07 0.000 1.50820e-07 1.800 1.52100e-07 1.800 1.52120e-07 0.000 1.56000e-07 0.000
++ 1.56020e-07 1.800 1.57300e-07 1.800 1.57320e-07 0.000 1.61200e-07 0.000 1.61220e-07 1.800 1.62500e-07 1.800
++ 1.62520e-07 0.000 1.63800e-07 0.000 1.63820e-07 1.800 1.66400e-07 1.800 1.66420e-07 0.000 1.70300e-07 0.000
++ 1.70320e-07 1.800 1.72900e-07 1.800 1.72920e-07 0.000 1.74200e-07 0.000 1.74220e-07 1.800 1.75500e-07 1.800
++ 1.75520e-07 0.000 1.78100e-07 0.000 1.78120e-07 1.800 1.79400e-07 1.800 1.79420e-07 0.000 1.84600e-07 0.000
++ 1.84620e-07 1.800 1.89800e-07 1.800 1.89820e-07 0.000 1.91100e-07 0.000 1.91120e-07 1.800 1.95000e-07 1.800
++ 1.95020e-07 0.000 2.00200e-07 0.000 2.00220e-07 1.800 2.01500e-07 1.800 2.01520e-07 0.000 2.04100e-07 0.000
++ 2.04120e-07 1.800 2.05400e-07 1.800 2.05420e-07 0.000 2.10600e-07 0.000 2.10620e-07 1.800 2.13200e-07 1.800
++ 2.13220e-07 0.000 2.14500e-07 0.000 2.14520e-07 1.800 2.15800e-07 1.800 2.15820e-07 0.000 2.18400e-07 0.000
++ 2.18420e-07 1.800 2.19700e-07 1.800 2.19720e-07 0.000 2.22300e-07 0.000 2.22320e-07 1.800 2.24900e-07 1.800
++ 2.24920e-07 0.000 2.26200e-07 0.000 2.26220e-07 1.800 2.27500e-07 1.800 2.27520e-07 0.000 2.30100e-07 0.000
++ 2.30120e-07 1.800 2.31400e-07 1.800 2.31420e-07 0.000 2.32700e-07 0.000 2.32720e-07 1.800 2.34000e-07 1.800
++ 2.34020e-07 0.000 2.36600e-07 0.000 2.36620e-07 1.800 2.37900e-07 1.800 2.37920e-07 0.000 2.43100e-07 0.000
++ 2.43120e-07 1.800 2.44400e-07 1.800 2.44420e-07 0.000 2.48300e-07 0.000 2.48320e-07 1.800 2.49600e-07 1.800
++ 2.49620e-07 0.000 2.56100e-07 0.000 2.56120e-07 1.800 2.57400e-07 1.800 2.57420e-07 0.000 2.58700e-07 0.000
++ 2.58720e-07 1.800 2.61300e-07 1.800
++ )
+Xs_b5 src_b5 drv_b5 vdd gnd tb_x1
+Xd_b5 drv_b5 b5 vdd gnd tb_x2
+Vb6 src_b6 gnd PWL(
++ 0.00000e+00 1.800 1.30000e-09 1.800 1.32000e-09 0.000 6.50000e-09 0.000 6.52000e-09 1.800 9.10000e-09 1.800
++ 9.12000e-09 0.000 1.04000e-08 0.000 1.04200e-08 1.800 1.43000e-08 1.800 1.43200e-08 0.000 1.69000e-08 0.000
++ 1.69200e-08 1.800 2.08000e-08 1.800 2.08200e-08 0.000 2.47000e-08 0.000 2.47200e-08 1.800 2.73000e-08 1.800
++ 2.73200e-08 0.000 3.12000e-08 0.000 3.12200e-08 1.800 3.25000e-08 1.800 3.25200e-08 0.000 3.38000e-08 0.000
++ 3.38200e-08 1.800 3.64000e-08 1.800 3.64200e-08 0.000 3.77000e-08 0.000 3.77200e-08 1.800 5.07000e-08 1.800
++ 5.07200e-08 0.000 5.46000e-08 0.000 5.46200e-08 1.800 5.59000e-08 1.800 5.59200e-08 0.000 5.85000e-08 0.000
++ 5.85200e-08 1.800 5.98000e-08 1.800 5.98200e-08 0.000 6.50000e-08 0.000 6.50200e-08 1.800 6.63000e-08 1.800
++ 6.63200e-08 0.000 6.89000e-08 0.000 6.89200e-08 1.800 7.02000e-08 1.800 7.02200e-08 0.000 7.28000e-08 0.000
++ 7.28200e-08 1.800 7.41000e-08 1.800 7.41200e-08 0.000 7.80000e-08 0.000 7.80200e-08 1.800 8.19000e-08 1.800
++ 8.19200e-08 0.000 8.45000e-08 0.000 8.45200e-08 1.800 8.58000e-08 1.800 8.58200e-08 0.000 8.71000e-08 0.000
++ 8.71200e-08 1.800 9.23000e-08 1.800 9.23200e-08 0.000 9.36000e-08 0.000 9.36200e-08 1.800 9.49000e-08 1.800
++ 9.49200e-08 0.000 9.62000e-08 0.000 9.62200e-08 1.800 9.88000e-08 1.800 9.88200e-08 0.000 1.00100e-07 0.000
++ 1.00120e-07 1.800 1.02700e-07 1.800 1.02720e-07 0.000 1.04000e-07 0.000 1.04020e-07 1.800 1.05300e-07 1.800
++ 1.05320e-07 0.000 1.10500e-07 0.000 1.10520e-07 1.800 1.11800e-07 1.800 1.11820e-07 0.000 1.14400e-07 0.000
++ 1.14420e-07 1.800 1.15700e-07 1.800 1.15720e-07 0.000 1.18300e-07 0.000 1.18320e-07 1.800 1.19600e-07 1.800
++ 1.19620e-07 0.000 1.22200e-07 0.000 1.22220e-07 1.800 1.32600e-07 1.800 1.32620e-07 0.000 1.33900e-07 0.000
++ 1.33920e-07 1.800 1.37800e-07 1.800 1.37820e-07 0.000 1.41700e-07 0.000 1.41720e-07 1.800 1.44300e-07 1.800
++ 1.44320e-07 0.000 1.50800e-07 0.000 1.50820e-07 1.800 1.52100e-07 1.800 1.52120e-07 0.000 1.53400e-07 0.000
++ 1.53420e-07 1.800 1.54700e-07 1.800 1.54720e-07 0.000 1.61200e-07 0.000 1.61220e-07 1.800 1.62500e-07 1.800
++ 1.62520e-07 0.000 1.63800e-07 0.000 1.63820e-07 1.800 1.67700e-07 1.800 1.67720e-07 0.000 1.70300e-07 0.000
++ 1.70320e-07 1.800 1.71600e-07 1.800 1.71620e-07 0.000 1.72900e-07 0.000 1.72920e-07 1.800 1.76800e-07 1.800
++ 1.76820e-07 0.000 1.79400e-07 0.000 1.79420e-07 1.800 1.82000e-07 1.800 1.82020e-07 0.000 1.83300e-07 0.000
++ 1.83320e-07 1.800 1.85900e-07 1.800 1.85920e-07 0.000 1.87200e-07 0.000 1.87220e-07 1.800 1.89800e-07 1.800
++ 1.89820e-07 0.000 1.92400e-07 0.000 1.92420e-07 1.800 1.93700e-07 1.800 1.93720e-07 0.000 1.95000e-07 0.000
++ 1.95020e-07 1.800 1.97600e-07 1.800 1.97620e-07 0.000 1.98900e-07 0.000 1.98920e-07 1.800 2.04100e-07 1.800
++ 2.04120e-07 0.000 2.05400e-07 0.000 2.05420e-07 1.800 2.08000e-07 1.800 2.08020e-07 0.000 2.11900e-07 0.000
++ 2.11920e-07 1.800 2.13200e-07 1.800 2.13220e-07 0.000 2.14500e-07 0.000 2.14520e-07 1.800 2.17100e-07 1.800
++ 2.17120e-07 0.000 2.22300e-07 0.000 2.22320e-07 1.800 2.24900e-07 1.800 2.24920e-07 0.000 2.26200e-07 0.000
++ 2.26220e-07 1.800 2.27500e-07 1.800 2.27520e-07 0.000 2.31400e-07 0.000 2.31420e-07 1.800 2.32700e-07 1.800
++ 2.32720e-07 0.000 2.36600e-07 0.000 2.36620e-07 1.800 2.39200e-07 1.800 2.39220e-07 0.000 2.40500e-07 0.000
++ 2.40520e-07 1.800 2.43100e-07 1.800 2.43120e-07 0.000 2.45700e-07 0.000 2.45720e-07 1.800 2.47000e-07 1.800
++ 2.47020e-07 0.000 2.49600e-07 0.000 2.49620e-07 1.800 2.52200e-07 1.800 2.52220e-07 0.000 2.56100e-07 0.000
++ 2.56120e-07 1.800 2.57400e-07 1.800 2.57420e-07 0.000 2.60000e-07 0.000 2.60020e-07 1.800 2.61300e-07 1.800
++ )
+Xs_b6 src_b6 drv_b6 vdd gnd tb_x1
+Xd_b6 drv_b6 b6 vdd gnd tb_x2
+Vb7 src_b7 gnd PWL(
++ 0.00000e+00 0.000 6.50000e-09 0.000 6.52000e-09 1.800 7.80000e-09 1.800 7.82000e-09 0.000 1.43000e-08 0.000
++ 1.43200e-08 1.800 1.56000e-08 1.800 1.56200e-08 0.000 1.69000e-08 0.000 1.69200e-08 1.800 1.95000e-08 1.800
++ 1.95200e-08 0.000 2.21000e-08 0.000 2.21200e-08 1.800 2.34000e-08 1.800 2.34200e-08 0.000 2.60000e-08 0.000
++ 2.60200e-08 1.800 2.73000e-08 1.800 2.73200e-08 0.000 2.86000e-08 0.000 2.86200e-08 1.800 2.99000e-08 1.800
++ 2.99200e-08 0.000 3.12000e-08 0.000 3.12200e-08 1.800 3.64000e-08 1.800 3.64200e-08 0.000 4.03000e-08 0.000
++ 4.03200e-08 1.800 4.29000e-08 1.800 4.29200e-08 0.000 4.42000e-08 0.000 4.42200e-08 1.800 4.55000e-08 1.800
++ 4.55200e-08 0.000 5.20000e-08 0.000 5.20200e-08 1.800 5.33000e-08 1.800 5.33200e-08 0.000 5.46000e-08 0.000
++ 5.46200e-08 1.800 5.59000e-08 1.800 5.59200e-08 0.000 6.63000e-08 0.000 6.63200e-08 1.800 6.76000e-08 1.800
++ 6.76200e-08 0.000 6.89000e-08 0.000 6.89200e-08 1.800 7.02000e-08 1.800 7.02200e-08 0.000 7.15000e-08 0.000
++ 7.15200e-08 1.800 7.28000e-08 1.800 7.28200e-08 0.000 7.41000e-08 0.000 7.41200e-08 1.800 7.80000e-08 1.800
++ 7.80200e-08 0.000 8.19000e-08 0.000 8.19200e-08 1.800 8.45000e-08 1.800 8.45200e-08 0.000 8.58000e-08 0.000
++ 8.58200e-08 1.800 8.71000e-08 1.800 8.71200e-08 0.000 8.84000e-08 0.000 8.84200e-08 1.800 8.97000e-08 1.800
++ 8.97200e-08 0.000 9.10000e-08 0.000 9.10200e-08 1.800 9.23000e-08 1.800 9.23200e-08 0.000 9.36000e-08 0.000
++ 9.36200e-08 1.800 9.75000e-08 1.800 9.75200e-08 0.000 1.04000e-07 0.000 1.04020e-07 1.800 1.05300e-07 1.800
++ 1.05320e-07 0.000 1.06600e-07 0.000 1.06620e-07 1.800 1.09200e-07 1.800 1.09220e-07 0.000 1.10500e-07 0.000
++ 1.10520e-07 1.800 1.11800e-07 1.800 1.11820e-07 0.000 1.23500e-07 0.000 1.23520e-07 1.800 1.24800e-07 1.800
++ 1.24820e-07 0.000 1.26100e-07 0.000 1.26120e-07 1.800 1.28700e-07 1.800 1.28720e-07 0.000 1.32600e-07 0.000
++ 1.32620e-07 1.800 1.33900e-07 1.800 1.33920e-07 0.000 1.35200e-07 0.000 1.35220e-07 1.800 1.36500e-07 1.800
++ 1.36520e-07 0.000 1.37800e-07 0.000 1.37820e-07 1.800 1.44300e-07 1.800 1.44320e-07 0.000 1.46900e-07 0.000
++ 1.46920e-07 1.800 1.54700e-07 1.800 1.54720e-07 0.000 1.57300e-07 0.000 1.57320e-07 1.800 1.58600e-07 1.800
++ 1.58620e-07 0.000 1.59900e-07 0.000 1.59920e-07 1.800 1.61200e-07 1.800 1.61220e-07 0.000 1.62500e-07 0.000
++ 1.62520e-07 1.800 1.63800e-07 1.800 1.63820e-07 0.000 1.70300e-07 0.000 1.70320e-07 1.800 1.71600e-07 1.800
++ 1.71620e-07 0.000 1.72900e-07 0.000 1.72920e-07 1.800 1.74200e-07 1.800 1.74220e-07 0.000 1.80700e-07 0.000
++ 1.80720e-07 1.800 1.83300e-07 1.800 1.83320e-07 0.000 1.84600e-07 0.000 1.84620e-07 1.800 1.87200e-07 1.800
++ 1.87220e-07 0.000 1.96300e-07 0.000 1.96320e-07 1.800 1.98900e-07 1.800 1.98920e-07 0.000 2.00200e-07 0.000
++ 2.00220e-07 1.800 2.01500e-07 1.800 2.01520e-07 0.000 2.06700e-07 0.000 2.06720e-07 1.800 2.08000e-07 1.800
++ 2.08020e-07 0.000 2.09300e-07 0.000 2.09320e-07 1.800 2.10600e-07 1.800 2.10620e-07 0.000 2.11900e-07 0.000
++ 2.11920e-07 1.800 2.14500e-07 1.800 2.14520e-07 0.000 2.15800e-07 0.000 2.15820e-07 1.800 2.18400e-07 1.800
++ 2.18420e-07 0.000 2.19700e-07 0.000 2.19720e-07 1.800 2.21000e-07 1.800 2.21020e-07 0.000 2.22300e-07 0.000
++ 2.22320e-07 1.800 2.23600e-07 1.800 2.23620e-07 0.000 2.24900e-07 0.000 2.24920e-07 1.800 2.28800e-07 1.800
++ 2.28820e-07 0.000 2.31400e-07 0.000 2.31420e-07 1.800 2.32700e-07 1.800 2.32720e-07 0.000 2.34000e-07 0.000
++ 2.34020e-07 1.800 2.36600e-07 1.800 2.36620e-07 0.000 2.37900e-07 0.000 2.37920e-07 1.800 2.39200e-07 1.800
++ 2.39220e-07 0.000 2.40500e-07 0.000 2.40520e-07 1.800 2.44400e-07 1.800 2.44420e-07 0.000 2.45700e-07 0.000
++ 2.45720e-07 1.800 2.47000e-07 1.800 2.47020e-07 0.000 2.48300e-07 0.000 2.48320e-07 1.800 2.56100e-07 1.800
++ 2.56120e-07 0.000 2.60000e-07 0.000 2.60020e-07 1.800 2.61300e-07 1.800
++ )
+Xs_b7 src_b7 drv_b7 vdd gnd tb_x1
+Xd_b7 drv_b7 b7 vdd gnd tb_x2
+Vc0 src_c0 gnd PWL(
++ 0.00000e+00 1.800 1.30000e-09 1.800 1.32000e-09 0.000 3.90000e-09 0.000 3.92000e-09 1.800 5.20000e-09 1.800
++ 5.22000e-09 0.000 1.04000e-08 0.000 1.04200e-08 1.800 1.17000e-08 1.800 1.17200e-08 0.000 1.69000e-08 0.000
++ 1.69200e-08 1.800 1.95000e-08 1.800 1.95200e-08 0.000 2.08000e-08 0.000 2.08200e-08 1.800 2.34000e-08 1.800
++ 2.34200e-08 0.000 2.47000e-08 0.000 2.47200e-08 1.800 2.99000e-08 1.800 2.99200e-08 0.000 3.25000e-08 0.000
++ 3.25200e-08 1.800 4.03000e-08 1.800 4.03200e-08 0.000 4.16000e-08 0.000 4.16200e-08 1.800 4.55000e-08 1.800
++ 4.55200e-08 0.000 4.94000e-08 0.000 4.94200e-08 1.800 5.07000e-08 1.800 5.07200e-08 0.000 5.20000e-08 0.000
++ 5.20200e-08 1.800 5.72000e-08 1.800 5.72200e-08 0.000 5.85000e-08 0.000 5.85200e-08 1.800 6.11000e-08 1.800
++ 6.11200e-08 0.000 6.24000e-08 0.000 6.24200e-08 1.800 6.37000e-08 1.800 6.37200e-08 0.000 6.50000e-08 0.000
++ 6.50200e-08 1.800 7.02000e-08 1.800 7.02200e-08 0.000 7.15000e-08 0.000 7.15200e-08 1.800 7.28000e-08 1.800
++ 7.28200e-08 0.000 7.80000e-08 0.000 7.80200e-08 1.800 7.93000e-08 1.800 7.93200e-08 0.000 8.32000e-08 0.000
++ 8.32200e-08 1.800 8.71000e-08 1.800 8.71200e-08 0.000 8.97000e-08 0.000 8.97200e-08 1.800 9.36000e-08 1.800
++ 9.36200e-08 0.000 9.62000e-08 0.000 9.62200e-08 1.800 9.75000e-08 1.800 9.75200e-08 0.000 1.00100e-07 0.000
++ 1.00120e-07 1.800 1.01400e-07 1.800 1.01420e-07 0.000 1.05300e-07 0.000 1.05320e-07 1.800 1.06600e-07 1.800
++ 1.06620e-07 0.000 1.07900e-07 0.000 1.07920e-07 1.800 1.10500e-07 1.800 1.10520e-07 0.000 1.11800e-07 0.000
++ 1.11820e-07 1.800 1.13100e-07 1.800 1.13120e-07 0.000 1.14400e-07 0.000 1.14420e-07 1.800 1.17000e-07 1.800
++ 1.17020e-07 0.000 1.18300e-07 0.000 1.18320e-07 1.800 1.23500e-07 1.800 1.23520e-07 0.000 1.24800e-07 0.000
++ 1.24820e-07 1.800 1.26100e-07 1.800 1.26120e-07 0.000 1.27400e-07 0.000 1.27420e-07 1.800 1.32600e-07 1.800
++ 1.32620e-07 0.000 1.36500e-07 0.000 1.36520e-07 1.800 1.40400e-07 1.800 1.40420e-07 0.000 1.41700e-07 0.000
++ 1.41720e-07 1.800 1.44300e-07 1.800 1.44320e-07 0.000 1.49500e-07 0.000 1.49520e-07 1.800 1.52100e-07 1.800
++ 1.52120e-07 0.000 1.58600e-07 0.000 1.58620e-07 1.800 1.59900e-07 1.800 1.59920e-07 0.000 1.63800e-07 0.000
++ 1.63820e-07 1.800 1.69000e-07 1.800 1.69020e-07 0.000 1.71600e-07 0.000 1.71620e-07 1.800 1.76800e-07 1.800
++ 1.76820e-07 0.000 1.78100e-07 0.000 1.78120e-07 1.800 1.79400e-07 1.800 1.79420e-07 0.000 1.80700e-07 0.000
++ 1.80720e-07 1.800 1.82000e-07 1.800 1.82020e-07 0.000 1.85900e-07 0.000 1.85920e-07 1.800 1.87200e-07 1.800
++ 1.87220e-07 0.000 1.88500e-07 0.000 1.88520e-07 1.800 1.92400e-07 1.800 1.92420e-07 0.000 1.93700e-07 0.000
++ 1.93720e-07 1.800 1.96300e-07 1.800 1.96320e-07 0.000 1.98900e-07 0.000 1.98920e-07 1.800 2.00200e-07 1.800
++ 2.00220e-07 0.000 2.05400e-07 0.000 2.05420e-07 1.800 2.08000e-07 1.800 2.08020e-07 0.000 2.11900e-07 0.000
++ 2.11920e-07 1.800 2.13200e-07 1.800 2.13220e-07 0.000 2.14500e-07 0.000 2.14520e-07 1.800 2.15800e-07 1.800
++ 2.15820e-07 0.000 2.19700e-07 0.000 2.19720e-07 1.800 2.26200e-07 1.800 2.26220e-07 0.000 2.28800e-07 0.000
++ 2.28820e-07 1.800 2.31400e-07 1.800 2.31420e-07 0.000 2.34000e-07 0.000 2.34020e-07 1.800 2.35300e-07 1.800
++ 2.35320e-07 0.000 2.36600e-07 0.000 2.36620e-07 1.800 2.37900e-07 1.800 2.37920e-07 0.000 2.39200e-07 0.000
++ 2.39220e-07 1.800 2.43100e-07 1.800 2.43120e-07 0.000 2.44400e-07 0.000 2.44420e-07 1.800 2.45700e-07 1.800
++ 2.45720e-07 0.000 2.47000e-07 0.000 2.47020e-07 1.800 2.48300e-07 1.800 2.48320e-07 0.000 2.50900e-07 0.000
++ 2.50920e-07 1.800 2.52200e-07 1.800 2.52220e-07 0.000 2.54800e-07 0.000 2.54820e-07 1.800 2.58700e-07 1.800
++ 2.58720e-07 0.000 2.61300e-07 0.000
++ )
+Xs_c0 src_c0 drv_c0 vdd gnd tb_x1
+Xd_c0 drv_c0 c0 vdd gnd tb_x2
+Xl_s0 s0 lo_s0 vdd gnd tb_x1
+Xl_s1 s1 lo_s1 vdd gnd tb_x1
+Xl_s2 s2 lo_s2 vdd gnd tb_x1
+Xl_s3 s3 lo_s3 vdd gnd tb_x1
+Xl_s4 s4 lo_s4 vdd gnd tb_x1
+Xl_s5 s5 lo_s5 vdd gnd tb_x1
+Xl_s6 s6 lo_s6 vdd gnd tb_x1
+Xl_s7 s7 lo_s7 vdd gnd tb_x1
+Xl_c8 c8 lo_c8 vdd gnd tb_x1
+X0 a0 a1 a2 a3 a4 a5 a6 a7 b0 b1 b2 b3 b4 b5 b6 b7 c0 s0 s1 s2 s3 s4 s5 s6 s7 c8 vdut gnd base8_post
+.tran 20p 2.61300e-07
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata base_m0_T1300.txt v(a0) v(a1) v(a2) v(a3) v(a4) v(a5) v(a6) v(a7) v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) v(b7) v(c0) v(drv_a0) v(drv_a1) v(drv_a2) v(drv_a3) v(drv_a4) v(drv_a5) v(drv_a6) v(drv_a7) v(drv_b0) v(drv_b1) v(drv_b2) v(drv_b3) v(drv_b4) v(drv_b5) v(drv_b6) v(drv_b7) v(drv_c0) v(s0) v(s1) v(s2) v(s3) v(s4) v(s5) v(s6) v(s7) v(c8)
+quit
+.endc
+.end

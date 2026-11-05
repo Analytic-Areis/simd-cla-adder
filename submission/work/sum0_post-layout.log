@@ -1,0 +1,39 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * sum0_post-layout
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+src_c0                                       0
+drv_c0                                     1.8
+c0                                 6.49779e-09
+src_p0                                       0
+drv_p0                                     1.8
+p0                                 6.49779e-09
+src_p0b                                    1.8
+drv_p0b                            7.05523e-09
+p0b                                        1.8
+lo_s0                                      1.8
+s0                                 2.70573e-08
+x0.x0.x0_s1xp1                             1.8
+x0.x0.x0_cb                                1.8
+vp0b#branch                                  0
+vp0#branch                                   0
+vc0#branch                                   0
+vdd#branch                        -1.60768e-10
+
+
+No. of Data Rows : 1859
+ngspice-46 done
+
+--- STDERR ---

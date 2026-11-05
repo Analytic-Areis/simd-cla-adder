@@ -1,0 +1,39 @@
+{
+ "design": "mine_post",
+ "sweep": "random",
+ "segments": 50,
+ "stride": 1,
+ "arcs": 15062,
+ "transitions": 5702,
+ "wrong_samples": 0,
+ "failed_runs": 0,
+ "tpd_max_from_q_ps": 673.42,
+ "worst": {
+  "pin": "b0",
+  "pin_edge": "rise",
+  "state": 487,
+  "next_state": 345,
+  "output": "s3",
+  "out_edge": "rise",
+  "inputs_changed": 6,
+  "tpd_q_ps": 673.418532956548,
+  "tcq_ps": 141.98656819174354,
+  "clk_to_out_ps": 815.4051011482916
+ },
+ "worst_clk_to_out_ps": 815.41,
+ "worst_tcq_ps": 221.98,
+ "per_output": {
+  "s0_rise": 459.71,
+  "s0_fall": 414.94,
+  "s1_rise": 558.92,
+  "s1_fall": 582.51,
+  "s2_rise": 605.02,
+  "s2_fall": 620.07,
+  "s3_rise": 673.42,
+  "s3_fall": 663.58,
+  "c4_rise": 521.22,
+  "c4_fall": 557.97
+ },
+ "hint": {},
+ "hint_worst_ps": null
+}

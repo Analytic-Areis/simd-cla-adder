@@ -1,0 +1,54 @@
+timestamp 1793886798
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+use gtile gtile_0 1 0 0 0 1 0
+port "mode" 3 82 48 83 53 m3
+port "cin_hi" 1 55 39 56 44 m3
+port "cout_lo" 2 73 66 74 71 m3
+port "gnd" 5 -16 133 -10 139 m2
+port "vdd" 4 -28 133 -22 139 m2
+node "mode" 0 11.2065 82 48 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 45 28 0 0 0 0 0 0
+node "cin_hi" 4 119.822 55 39 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 192 120 413 276 0 0 0 0
+node "cout_lo" 5 120.384 73 66 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 285 182 332 222 0 0 0 0
+node "gnd" 3 1387.35 -16 133 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 654 230 870 302 0 0 0 0 0 0 0 0
+node "vdd" 4 1260.27 -28 133 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 726 254 870 302 0 0 0 0 0 0 0 0
+node "w_0_78#" 1571 5137.51 0 78 nw 0 0 0 0 5115 296 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "w_0_78#" "vdd" 180.392
+cap "cout_lo" "cin_hi" 148.809
+cap "vdd" "cin_hi" 1.36941
+cap "w_0_78#" "cin_hi" 7.20734
+cap "vdd" "cout_lo" 1.36941
+cap "w_0_78#" "cout_lo" 7.20839
+cap "vdd" "gnd" 266.779
+cap "gtile_0/cout_lo" "gtile_0/vdd" 0.0182033
+cap "gtile_0/vdd" "gtile_0/cin_hi" 3.09545
+cap "gtile_0/cout_lo" "gtile_0/modeb" 0.434808
+cap "gtile_0/gn" "gtile_0/cin_hi" 3.7028
+cap "gtile_0/modeb" "gtile_0/cin_hi" 2.05958
+cap "w_0_78#" "gtile_0/cout_lo" -2.32473
+cap "gtile_0/cin_hi" "gtile_0/a_34_10#" 0.0162082
+cap "gtile_0/cout_lo" "gtile_0/cin_hi" 7.7449
+cap "gtile_0/cin_hi" "gtile_0/gnd" 0.113172
+cap "gtile_0/mode" "gtile_0/cin_hi" 1.12991
+cap "gtile_0/cout_lo" "gtile_0/vdd" 0.00572638
+cap "w_0_78#" "gtile_0/cin_hi" -1.48126
+cap "gtile_0/cout_lo" "gtile_0/gn" 25.0212
+cap "gtile_0/cout_lo" "w_0_78#" -0.000835175
+cap "gtile_0/gn" "cout_lo" 1.33011
+cap "gtile_0/modeb" "cin_hi" 0.00378133
+cap "gtile_0/cout_lo" "cin_hi" 0.00378138
+cap "gtile_0/cout_lo" "cout_lo" 0.00567198
+cap "gtile_0/vdd" "cin_hi" 2.22449
+cap "gtile_0/gn" "cin_hi" 0.00765504
+cap "gtile_0/vdd" "cout_lo" -0.79965
+cap "gtile_0/gn" "cin_hi" 0.00750909
+cap "gtile_0/vdd" "gnd" 1.42109e-14
+merge "gtile_0/cout_lo" "cout_lo" -37.3821 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25 -20 -144 -99 0 0 0 0
+merge "gtile_0/mode" "mode" -7.2525 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25 -20 0 0 0 0 0 0
+merge "gtile_0/vdd" "vdd" -7199.97 0 0 0 0 -6975 -429 0 0 0 0 0 0 0 0 -558 -198 0 0 0 0 0 0 0 0 0 0
+merge "vdd" "w_0_78#"
+merge "gtile_0/gnd" "gnd" -678.803 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -558 -198 -270 -96 0 0 0 0 0 0 0 0
+merge "gtile_0/cin_hi" "cin_hi" -34.9451 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25 -20 -144 -99 0 0 0 0

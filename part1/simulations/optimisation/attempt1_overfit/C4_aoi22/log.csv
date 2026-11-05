@@ -1,0 +1,14 @@
+iteration,round,soft_ps,worst_working_ps,total_width_lambda,transistors,changes,critical_arc,elapsed_s
+1,0,861.62,688.03,4954,194,c3 flip=0; nor1 size=1.25; g20 flip=1; c2 flip=0,"a1 rise to s3 rise, A=1101 B=1001 C0=0",370
+2,0,838.61,677.44,4952,194,nor1 size=1.56; aoi1 size=0.8; g10 flip=1; c3 flip=1,"a0 rise to s2 rise, A=0110 B=1100 C0=1",522
+3,0,823.27,670.49,4934,194,oai1 size=0.8; c2 flip=1; nor1 size=1.95; aoi1 size=0.64,"b0 fall to s3 fall, A=1101 B=1011 C0=0",705
+4,0,807.22,659.41,4819,194,aoi1 size=0.51; oai1 size=0.64; aoi0 size=0.8; oai0 size=0.8,"b0 fall to s3 fall, A=1101 B=1011 C0=0",877
+5,0,793.82,630.53,4853,194,aoi0 size=0.64; g20 flip=0; g10 size=1.25; nand0 size=1.25,"a0 rise to s2 rise, A=0110 B=1100 C0=1",1042
+6,0,788.79,631.98,4811,194,xinv0 size=0.8; xinv1 size=0.8; oai0 size=0.64; xinv2 size=0.8,"a0 rise to s2 rise, A=0110 B=1100 C0=1",1218
+7,0,773.25,616.13,4705,194,xor3 size=0.8; xinv0 size=0.64; xinv1 size=0.64; xor2 size=0.8,"a0 rise to s2 rise, A=0110 B=1100 C0=1",1371
+8,0,759.82,600.03,4604,194,xor3 size=0.64; aoi1 size=0.41; c1 size=0.8; t30 size=0.8,"a0 rise to s2 rise, A=0110 B=1100 C0=1",1522
+9,0,756.84,600.03,4570,194,g30 size=0.8,"a0 rise to s2 rise, A=0110 B=1100 C0=1",1680
+10,0,754.26,601.17,4566,194,xinv0 size=0.51,"a0 rise to s2 rise, A=0110 B=1100 C0=1",1868
+11,0,750.01,600.9,4626,194,xor0 size=1.25,"a0 rise to s2 rise, A=0110 B=1100 C0=1",2038
+12,0,740.31,592.28,4743,194,xinv0 size=0.41; c3 size=1.25; c4g size=1.25; c2 size=1.25,"a0 rise to s2 rise, A=0110 B=1100 C0=1",2252
+13,0,724.41,581.0,4681,194,xinv0 size=0.33; t30 size=0.64; oai1 size=0.51; c1 size=0.64,"a0 rise to s2 rise, A=0110 B=1100 C0=1",2450

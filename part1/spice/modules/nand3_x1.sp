@@ -1,0 +1,10 @@
+* nand3_x1: 3-input NAND
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nand3_x1 i0 i1 i2 y vdd gnd
+Mp1 y i0 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp2 y i1 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mp3 y i2 vdd vdd CMOSP W=1.8000e-06 L=1.8000e-07 AS=9.7200e-13 PS=4.6800e-06 AD=9.7200e-13 PD=4.6800e-06
+Mn1 y i0 xn1 gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=7.2900e-13 PS=5.9400e-06 AD=1.4580e-12 PD=6.4800e-06
+Mn2 xn1 i1 xn2 gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=7.2900e-13 PS=5.9400e-06 AD=7.2900e-13 PD=5.9400e-06
+Mn3 xn2 i2 gnd gnd CMOSN W=2.7000e-06 L=1.8000e-07 AS=1.4580e-12 PS=6.4800e-06 AD=7.2900e-13 PD=5.9400e-06
+.ends nand3_x1

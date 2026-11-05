@@ -1,0 +1,6 @@
+{"design": "base", "mode": 0, "view": "sch", "transitions": 13312, "arcs": 31616, "errors": 0, "tpd_max_ps": 855.22, "worst": {"pin": "a3", "pin_edge": "rise", "output": "s5", "out_edge": "fall", "state": "A=F7 B=04 C0=0", "next_state": "A=FF B=04 C0=0", "tpd_pin_ps": 855.224962899883, "tpd_drv_ps": 934.5178240284288}, "tpd_max_drv_ps": 934.52}
+python3 simd.py search base 0 sch  1986.35s user 14.94s system 772% cpu 4:19.11 total
+{"design": "simd", "mode": 0, "view": "sch", "transitions": 13312, "arcs": 33600, "errors": 0, "tpd_max_ps": 920.09, "worst": {"pin": "a3", "pin_edge": "fall", "output": "s5", "out_edge": "rise", "state": "A=FD B=07 C0=1 M=0", "next_state": "A=F5 B=07 C0=1 M=0", "tpd_pin_ps": 920.0865438093981, "tpd_drv_ps": 990.9524934589983}, "tpd_max_drv_ps": 991.01}
+python3 simd.py search simd 0 sch  2366.69s user 14.76s system 778% cpu 5:05.81 total
+{"design": "simd", "mode": 1, "view": "sch", "transitions": 13312, "arcs": 23680, "errors": 0, "tpd_max_ps": 516.31, "worst": {"pin": "a5", "pin_edge": "rise", "output": "s7", "out_edge": "rise", "state": "A=1F B=51 C0=0 M=1", "next_state": "A=3F B=51 C0=0 M=1", "tpd_pin_ps": 516.3100339972182, "tpd_drv_ps": 590.2318133666945}, "tpd_max_drv_ps": 590.23}
+python3 simd.py search simd 1 sch  2604.55s user 21.35s system 575% cpu 7:35.97 total

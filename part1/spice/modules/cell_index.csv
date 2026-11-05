@@ -1,0 +1,31 @@
+cell,description,transistors,total_width_lambda
+inv_x1,inverter,2,30
+nand2_x1,2-input NAND,4,80
+nand3_x1,3-input NAND,6,150
+nand4_x1,4-input NAND,8,240
+nand5_x1,5-input NAND,10,350
+nor2_x1,2-input NOR,4,100
+nor3_x1,3-input NOR,6,210
+nor4_x1,4-input NOR,8,360
+nor5_x1,5-input NOR,10,550
+aoi21_x1,NOT(a b + c),6,170
+oai21_x1,NOT((a + b) c),6,160
+aoi22_x1,NOT(a b + c d),8,240
+c1_x1,"C1 complex gate, stack 2",6,160
+c2_x1,"C2 complex gate, stack 3",10,380
+c3_x1,"C3 complex gate, stack 4",14,690
+c4_x1,"C4 complex gate, stack 5",18,1090
+c3b_mirror_x1,"C3-bar mirror gate, stack 2",10,300
+c4b_mirror_x1,"C4-bar mirror gate, stack 3",18,750
+mcc_bit_x1,"Manchester carry stage, transmission-gate mux",4,60
+xor_aoi22_x1,"dual-rail XOR, AOI22 with c-bar inverter",10,270
+xor_tg_x1,transmission-gate mux XOR with output inverter,8,120
+xor_static12_x1,"static XOR, AOI22 with two inverters",12,300
+xor_nand4_x1,four-NAND XOR baseline,16,320
+pg_bit_x1,"P/G bit: NAND2, NOR2, compound AOI21 and OAI21",20,510
+pg_block_x1,4-bit propagate and generate block,80,2040
+carry_r_x1,candidate R carry generator,52,2040
+sum_xor_aoi22_x1,4-bit sum block using xor_aoi22,40,1080
+sum_xor_tg_x1,4-bit sum block using xor_tg,32,480
+sum_xor_static12_x1,4-bit sum block using xor_static12,48,1200
+sum_xor_nand4_x1,4-bit sum block using xor_nand4,64,1280

@@ -1,0 +1,101 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * carry_schematic
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+src_c0                                       0
+drv_c0                                     1.8
+c0                                 6.49779e-09
+src_g0b                                      0
+drv_g0b                                    1.8
+g0b                                6.49779e-09
+src_g1b                                      0
+drv_g1b                                    1.8
+g1b                                6.49779e-09
+src_g2b                                      0
+drv_g2b                                    1.8
+g2b                                6.49779e-09
+src_g3b                                      0
+drv_g3b                                    1.8
+g3b                                6.49779e-09
+src_t0b                                      0
+drv_t0b                                    1.8
+t0b                                6.49779e-09
+src_t1b                                      0
+drv_t1b                                    1.8
+t1b                                6.49779e-09
+src_t2b                                      0
+drv_t2b                                    1.8
+t2b                                6.49779e-09
+src_t3b                                      0
+drv_t3b                                    1.8
+t3b                                6.49779e-09
+lo_c1                              7.11606e-09
+c1                                         1.8
+lo_c2                              7.11606e-09
+c2                                         1.8
+lo_c3                              7.11606e-09
+c3                                         1.8
+lo_c4                              7.11606e-09
+c4                                         1.8
+x0.c0b                                     1.8
+x0.xc1.xp1                                 1.8
+x0.xc1.xn1                             1.41099
+x0.xg10.xp1                                1.8
+x0.g1_0                                    1.8
+x0.xg10.xn1                          0.0249251
+x0.xt10.xp1                                1.8
+x0.t1_0                                    1.8
+x0.g1_0b                             7.265e-09
+x0.t1_0b                           6.32451e-09
+x0.xc2.xp1                                 1.8
+x0.xc2.xn1                         7.46422e-09
+x0.g2                                      1.8
+x0.t2                                      1.8
+x0.xg20.xp1                            1.74031
+x0.g2_0b                           2.53423e-09
+x0.xg20.xn1                        1.26711e-09
+x0.t2_0b                           1.39953e-08
+x0.xt20.xn1                        6.99763e-09
+x0.xc3.xp1                                 1.8
+x0.xc3.xn1                         6.53132e-09
+x0.xg32.xp1                                1.8
+x0.g3_2                                    1.8
+x0.xg32.xn1                          0.0556237
+x0.xt32.xp1                                1.8
+x0.t3_2                                    1.8
+x0.xg30.xp1                             1.7413
+x0.g3_0b                           3.88261e-09
+x0.xg30.xn1                         1.9413e-09
+x0.t3_0b                           2.14986e-08
+x0.xt30.xn1                        1.07493e-08
+x0.xc4g.xp1                                1.8
+x0.xc4g.xn1                        6.86578e-09
+vt3b#branch                                  0
+vt2b#branch                                  0
+vt1b#branch                                  0
+vt0b#branch                                  0
+vg3b#branch                                  0
+vg2b#branch                                  0
+vg1b#branch                                  0
+vg0b#branch                                  0
+vc0#branch                                   0
+vdd#branch                        -6.10287e-10
+
+ Reference value :  1.07575e-08
+ Reference value :  2.18112e-08
+No. of Data Rows : 5152
+ngspice-46 done
+
+--- STDERR ---

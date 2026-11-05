@@ -1,0 +1,118 @@
+* NGSPICE file created from c3_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt c3_x1 c0b c3 g0b g1b g2b t0b t1b t2b vdd gnd
+M1000 a_8_172# g1b c3 vdd pfet w=3.6u l=0.18u
++  ad=2.106p pd=7.83u as=1.053p ps=4.23u
+M1001 gnd t0b a_53_10# Gnd nfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.944p ps=8.28u
+M1002 c3 g2b a_8_30# Gnd nfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1003 a_53_10# c0b gnd Gnd nfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1004 c3 c0b a_61_172# vdd pfet w=7.2u l=0.18u
++  ad=2.106p pd=7.83u as=2.268p ps=7.83u
+M1005 c3 g2b vdd vdd pfet w=1.8u l=0.18u
++  ad=1.053p pd=4.23u as=1.782p ps=7.83u
+M1006 a_25_20# t1b gnd Gnd nfet w=2.7u l=0.18u
++  ad=1.0935p pd=4.23u as=0.81p ps=3.33u
+M1007 a_25_20# g0b a_53_10# Gnd nfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1008 a_43_172# t1b a_8_172# vdd pfet w=7.2u l=0.18u
++  ad=5.184p pd=8.64u as=2.106p ps=7.83u
+M1009 a_61_172# t0b a_43_172# vdd pfet w=7.2u l=0.18u
++  ad=2.268p pd=7.83u as=5.184p ps=8.64u
+M1010 vdd t2b a_8_172# vdd pfet w=7.2u l=0.18u
++  ad=1.782p pd=7.83u as=3.888p ps=15.48u
+M1011 a_43_172# g0b c3 vdd pfet w=5.4u l=0.18u
++  ad=2.43p pd=11.7u as=2.106p ps=7.83u
+M1012 gnd t2b a_8_30# Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=3.33u as=0.972p ps=4.68u
+M1013 a_8_30# g1b a_25_20# Gnd nfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.0935p ps=4.23u
+C0 g0b gnd 0.00105f
+C1 g1b gnd 0.00105f
+C2 g2b g0b 0.00894f
+C3 c0b c3 0.02621f
+C4 t1b gnd 0.00315f
+C5 t0b g0b 0.00926f
+C6 g1b g2b 0.43769f
+C7 a_53_10# gnd 0.74376f
+C8 vdd g0b 0.01999f
+C9 t2b c3 0.0098f
+C10 t0b g1b 0.00894f
+C11 t1b g2b 0.784f
+C12 t2b c0b 0.00874f
+C13 t1b t0b 0.01787f
+C14 a_25_20# c3 0.53876f
+C15 vdd g1b 0.01876f
+C16 a_25_20# c0b 0.00874f
+C17 a_53_10# t0b 0.20004f
+C18 a_8_30# g1b 0.01377f
+C19 vdd t1b 0.01994f
+C20 a_43_172# c3 0.646f
+C21 a_8_172# g1b 0.02422f
+C22 a_25_20# t2b 0.01921f
+C23 a_8_30# t1b 0.00906f
+C24 a_43_172# c0b 0.20404f
+C25 a_61_172# vdd 0
+C26 a_8_172# t1b 0.02727f
+C27 g2b gnd 0.00105f
+C28 c3 g0b 0.00982f
+C29 t0b gnd 0.00501f
+C30 c0b g0b 0.69837f
+C31 g1b c3 0.48912f
+C32 t2b g0b 0.00894f
+C33 t1b c3 0.01921f
+C34 c0b g1b 0.00874f
+C35 t0b g2b 0.00894f
+C36 a_8_30# gnd 0.2066f
+C37 a_25_20# g0b 0.01387f
+C38 a_53_10# c3 0.42401f
+C39 t2b g1b 0.00874f
+C40 vdd g2b 0.0211f
+C41 t1b c0b 0.01747f
+C42 a_43_172# g0b 0.09316f
+C43 a_25_20# g1b 0.01372f
+C44 a_53_10# c0b 0.01377f
+C45 a_8_30# g2b 0.00652f
+C46 t2b t1b 0.89006f
+C47 vdd t0b 0.01988f
+C48 a_61_172# c3 0.00227f
+C49 a_8_172# g2b 0.01071f
+C50 a_25_20# t1b 0.08375f
+C51 a_43_172# t1b 0.38017f
+C52 a_25_20# a_53_10# 0.42469f
+C53 a_8_172# vdd 0.77402f
+C54 a_8_172# a_8_30# 0.356f
+C55 c3 gnd 0.04126f
+C56 c0b gnd 0.00501f
+C57 g1b g0b 0.00926f
+C58 g2b c3 0.02025f
+C59 c0b g2b 0.00874f
+C60 t0b c3 0.00894f
+C61 t2b gnd 0.00234f
+C62 t1b g0b 0.01787f
+C63 a_25_20# gnd 0.41296f
+C64 a_53_10# g0b 0.00652f
+C65 vdd c3 0.39873f
+C66 t1b g1b 1.12618f
+C67 t2b g2b 0.26164f
+C68 t0b c0b 0.42872f
+C69 a_8_30# c3 0.42469f
+C70 t2b t0b 0.84481f
+C71 vdd c0b 0.01975f
+C72 a_25_20# g2b 0.629f
+C73 a_25_20# t0b 0.01912f
+C74 vdd t2b 0.02713f
+C75 a_8_172# c3 0.68201f
+C76 a_43_172# t0b 0.01693f
+C77 a_8_30# t2b 0.01215f
+C78 a_8_30# a_25_20# 0.50236f
+C79 a_43_172# vdd 0.07129f
+C80 a_8_172# t2b 0.30598f
+C81 a_8_172# a_25_20# 0.12546f
+C82 a_8_172# a_43_172# 0.00181f
+.ends
+

@@ -1,0 +1,271 @@
+* NGSPICE file created from sum_xor_aoi22_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt sum_xor_aoi22_x1 c0 c1 c2 c3 p0 p0b p1 p1b p2 p2b p3 p3b s0 s1 s2 s3 vdd gnd
+M1000 a_178_10# c3 gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1001 a_25_152# p0 vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.053p ps=4.23u
+M1002 s1 p1b a_79_152# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1003 a_8_152# c0 gnd Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1004 vdd c1 a_79_152# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1005 vdd c3 a_187_152# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1006 gnd a_8_152# a_34_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1007 a_25_152# a_8_152# s0 vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1008 s3 p3 a_178_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1009 vdd c2 a_116_152# vdd pfet w=1.8u l=0.18u
++  ad=1.053p pd=4.23u as=0.972p ps=4.68u
+M1010 a_187_152# p3 vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.053p ps=4.23u
+M1011 a_124_10# c2 gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1012 a_116_152# c2 gnd Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1013 a_70_10# c1 gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1014 s2 p2b a_133_152# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1015 gnd a_116_152# a_142_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1016 a_196_10# p3b s3 Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1017 s2 p2 a_124_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1018 vdd c0 a_8_152# vdd pfet w=1.8u l=0.18u
++  ad=1.053p pd=4.23u as=0.972p ps=4.68u
+M1019 a_79_152# p1 vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.053p ps=4.23u
+M1020 s1 p1 a_70_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1021 a_62_152# c1 gnd Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1022 a_170_152# c3 gnd Gnd nfet w=0.9u l=0.18u
++  ad=0.405p pd=2.7u as=0.486p ps=2.43u
+M1023 vdd c2 a_133_152# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1024 a_16_10# c0 gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1025 a_187_152# a_170_152# s3 vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1026 gnd a_170_152# a_196_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1027 s0 p0b a_25_152# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1028 a_79_152# a_62_152# s1 vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1029 vdd c3 a_170_152# vdd pfet w=1.8u l=0.18u
++  ad=1.053p pd=4.23u as=0.972p ps=4.68u
+M1030 a_142_10# p2b s2 Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1031 a_88_10# p1b s1 Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1032 vdd c0 a_25_152# vdd pfet w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1033 s0 p0 a_16_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1034 a_133_152# p2 vdd vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.053p ps=4.23u
+M1035 s3 p3b a_187_152# vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1036 vdd c1 a_62_152# vdd pfet w=1.8u l=0.18u
++  ad=1.053p pd=4.23u as=0.972p ps=4.68u
+M1037 gnd a_62_152# a_88_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.486p pd=2.43u as=0.567p ps=2.43u
+M1038 a_133_152# a_116_152# s2 vdd pfet w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1039 a_34_10# p0b s0 Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+C0 vdd s3 0.05318f
+C1 p0 s2 0.0098f
+C2 c0 s0 0.0228f
+C3 p0b s1 0.15461f
+C4 p1 c3 0.01787f
+C5 p2 c2 0.42795f
+C6 p1b p3b 0.00874f
+C7 a_196_10# gnd 0
+C8 p0b p3b 0.00874f
+C9 p1b p2b 0.00874f
+C10 a_124_10# gnd 0
+C11 vdd s0 0.05318f
+C12 p0 c3 0.01787f
+C13 p1 c2 0.0182f
+C14 a_116_152# a_133_152# 0.01353f
+C15 p0 c2 0.44168f
+C16 p1 c1 0.4286f
+C17 vdd p3 0.0237f
+C18 a_34_10# gnd 0
+C19 p0b p2b 0.00874f
+C20 p0b p1b 0.00874f
+C21 a_187_152# s3 0.90463f
+C22 p0 c1 0.0182f
+C23 vdd p2 0.0237f
+C24 p0 c0 0.75883f
+C25 vdd p1 0.0237f
+C26 a_170_152# gnd 0.08604f
+C27 a_187_152# p3 0.00656f
+C28 a_8_152# gnd 0.16851f
+C29 a_25_152# s0 1.34399f
+C30 a_116_152# s2 0.08508f
+C31 vdd p0 0.0237f
+C32 a_133_152# p2b 0.2101f
+C33 a_170_152# p3b 0.43718f
+C34 s2 gnd 0.04131f
+C35 a_116_152# c2 0.88067f
+C36 a_133_152# p1b 0.23789f
+C37 a_79_152# c1 0.00668f
+C38 a_170_152# p2b 0.01963f
+C39 c3 gnd 0.00492f
+C40 a_170_152# p1b 0.01963f
+C41 c2 gnd 0.00492f
+C42 p3 s3 0.01447f
+C43 a_62_152# p1 0.01779f
+C44 a_79_152# vdd 0.76812f
+C45 a_25_152# p0 0.00678f
+C46 a_170_152# p0b 0.01892f
+C47 p2b s2 0.02618f
+C48 p3b c3 0.01864f
+C49 p2 s3 0.0098f
+C50 c1 gnd 0.00492f
+C51 a_62_152# p0 0.5351f
+C52 a_8_152# p0b 0.4375f
+C53 a_116_152# vdd 0.36166f
+C54 p1 s3 0.0098f
+C55 c0 gnd 0.00492f
+C56 c1 s1 0.09144f
+C57 p1b s2 0.15461f
+C58 p2b c3 0.01916f
+C59 p0b s2 0.15461f
+C60 p2 p3 0.00874f
+C61 p1b c3 0.01884f
+C62 p2b c2 0.01832f
+C63 p0 s3 0.0098f
+C64 vdd s1 0.05318f
+C65 p0 s0 0.1592f
+C66 p1 p3 0.00874f
+C67 p0b c3 0.0182f
+C68 p1b c2 0.01916f
+C69 a_178_10# s3 0
+C70 a_142_10# gnd 0
+C71 p0 p3 0.00874f
+C72 p1 p2 1.21575f
+C73 p0b c2 0.01884f
+C74 p1b c1 0.01864f
+C75 vdd p3b 0.02187f
+C76 a_70_10# gnd 0
+C77 a_124_10# s2 0
+C78 a_62_152# a_79_152# 0.0136f
+C79 p0 p2 0.00874f
+C80 p0b c1 0.01916f
+C81 vdd p2b 0.01968f
+C82 a_70_10# s1 0
+C83 a_62_152# a_116_152# 0.03731f
+C84 p0 p1 1.58689f
+C85 p0b c0 0.01832f
+C86 vdd p1b 0.01968f
+C87 a_16_10# s0 0
+C88 a_133_152# s2 0.99859f
+C89 a_62_152# gnd 0.16851f
+C90 a_187_152# p3b 0.27828f
+C91 vdd p0b 0.01968f
+C92 a_170_152# c3 0.88251f
+C93 a_62_152# s1 0.01651f
+C94 a_187_152# p2b 0.23789f
+C95 a_133_152# c2 0.00661f
+C96 s3 gnd 0.04131f
+C97 s0 gnd 0.04131f
+C98 a_79_152# p1 0.0067f
+C99 a_116_152# p2 0.01779f
+C100 p3 gnd 0.00105f
+C101 p3b s3 0.09439f
+C102 a_116_152# p1 0.01892f
+C103 a_133_152# vdd 0.76812f
+C104 a_62_152# p1b 0.43718f
+C105 a_25_152# p0b 0.21024f
+C106 c2 s2 0.0228f
+C107 p2b s3 0.15461f
+C108 p2 gnd 0.00105f
+C109 a_170_152# vdd 0.36166f
+C110 a_8_152# c0 0.88075f
+C111 a_116_152# p0 0.01892f
+C112 a_62_152# p0b 0.01963f
+C113 p1b s3 0.15461f
+C114 p1 gnd 0.00105f
+C115 p3 p3b 0.42872f
+C116 a_8_152# vdd 0.19695f
+C117 p2 p3b 0.00874f
+C118 p2b p3 0.00938f
+C119 p0b s3 0.0098f
+C120 p0 gnd 0.00105f
+C121 p1 s1 0.15921f
+C122 vdd s2 0.05318f
+C123 p0 s1 0.0098f
+C124 p0b s0 0.02626f
+C125 p1 p3b 0.00874f
+C126 p1b p3 0.75214f
+C127 p2 p2b 0.42872f
+C128 a_196_10# s3 0
+C129 a_178_10# gnd 0
+C130 a_170_152# a_187_152# 0.01346f
+C131 vdd c3 0.04507f
+C132 p0 p3b 0.00874f
+C133 p0b p3 0.56625f
+C134 p1 p2b 0.00874f
+C135 p1b p2 0.00938f
+C136 a_88_10# gnd 0
+C137 a_142_10# s2 0
+C138 vdd c2 0.04507f
+C139 a_16_10# gnd 0
+C140 p0 p2b 0.00874f
+C141 p0b p2 1.12328f
+C142 p1 p1b 0.42872f
+C143 a_88_10# s1 0
+C144 a_8_152# a_25_152# 0.014f
+C145 vdd c1 0.04507f
+C146 p0 p1b 0.00874f
+C147 p0b p1 0.00938f
+C148 a_34_10# s0 0
+C149 a_79_152# s1 1.09255f
+C150 a_187_152# c3 0.00654f
+C151 a_170_152# s3 0.01637f
+C152 a_116_152# gnd 0.16851f
+C153 vdd c0 0.04507f
+C154 p0 p0b 0.42872f
+C155 a_133_152# p2 0.00663f
+C156 a_8_152# s0 0.0852f
+C157 a_170_152# p3 0.01747f
+C158 s1 gnd 0.04131f
+C159 a_170_152# p2 0.01853f
+C160 a_116_152# p2b 0.4375f
+C161 a_79_152# p1b 0.21017f
+C162 p3b gnd 0.00105f
+C163 c3 s3 0.09144f
+C164 a_187_152# vdd 0.76812f
+C165 a_62_152# c1 0.88259f
+C166 a_79_152# p0b 0.23789f
+C167 a_25_152# c0 0.00675f
+C168 a_170_152# p1 0.01853f
+C169 a_116_152# p1b 0.01963f
+C170 p2b gnd 0.00105f
+C171 a_170_152# p0 0.53472f
+C172 a_116_152# p0b 0.01963f
+C173 a_25_152# vdd 0.76812f
+C174 p1b gnd 0.00105f
+C175 p2 s2 0.01443f
+C176 p3 c3 0.42828f
+C177 a_62_152# vdd 0.36166f
+C178 a_8_152# p0 0.01812f
+C179 p2b p3b 0.00874f
+C180 p1 s2 0.0098f
+C181 p0b gnd 0.00105f
+C182 p1b s1 0.02622f
+C183 p2 c3 0.01787f
+.ends
+

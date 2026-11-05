@@ -1,0 +1,93 @@
+* dffx_post timing
+.include ../../../../spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* NGSPICE file created from dff_tspc_x0p6_1_1_2.ext - technology: scmos
+
+
+
+.subckt dff_tspc_x0p6_1_1_2 clk d q vdd gnd
+M1000 qb b vdd vdd CMOSP w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.648p ps=2.79u
+M1001 a_32_10# b gnd Gnd CMOSN w=1.8u l=0.18u
++  ad=1.296p pd=3.24u as=0.567p ps=2.43u
+M1002 q qb vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=2.106p ps=5.04u
+M1003 gnd qb q Gnd CMOSN w=1.8u l=0.18u
++  ad=0.9558p pd=3.24u as=0.972p ps=4.68u
+M1004 a_16_89# clk a vdd CMOSP w=2.16u l=0.18u
++  ad=0.486p pd=2.61u as=1.1664p ps=5.4u
+M1005 a_16_10# a b Gnd CMOSN w=1.8u l=0.18u
++  ad=0.405p pd=2.25u as=0.972p ps=4.68u
+M1006 vdd d a_16_89# vdd CMOSP w=2.16u l=0.18u
++  ad=0.648p pd=2.79u as=0.486p ps=2.61u
+M1007 gnd clk a_16_10# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.405p ps=2.25u
+M1008 a d gnd Gnd CMOSN w=0.54u l=0.18u
++  ad=0.243p pd=1.98u as=0.9558p ps=3.24u
+M1009 vdd clk b vdd CMOSP w=1.8u l=0.18u
++  ad=2.106p pd=5.04u as=0.972p ps=4.68u
+M1010 qb clk a_32_10# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=1.296p ps=3.24u
+C0 d gnd 0
+C1 a_32_10# gnd 0
+C2 vdd q 0.05583f
+C3 clk d 0.51091f
+C4 qb q 0.29255f
+C5 a d 0.01177f
+C6 b vdd 0.03336f
+C7 qb vdd 0.20145f
+C8 a a_16_89# 0
+C9 qb b 0.44884f
+C10 q gnd 0.04174f
+C11 vdd clk 0.03955f
+C12 b gnd 0.04467f
+C13 a q 0.15499f
+C14 qb gnd 0.0444f
+C15 b clk 0.1505f
+C16 a vdd 0.01247f
+C17 qb clk 0.01527f
+C18 b a_16_10# 0
+C19 a b 0.44586f
+C20 qb a 0.01957f
+C21 clk gnd 0.00444f
+C22 d q 0.01049f
+C23 vdd d 0.02097f
+C24 a_16_10# gnd 0
+C25 b d 0.09564f
+C26 a gnd 0.00122f
+C27 qb d 0.40134f
+C28 a clk 0.57238f
+C29 a_16_89# vdd 0
+C30 qb a_32_10# 0
+.ends
+
+
+.subckt dffx_post d clk q vdd gnd
+X0 clk d q vdd gnd dff_tspc_x0p6_1_1_2
+.ends
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x4 a y vdd gnd
+mp y a vdd vdd CMOSP W=7.2e-06 L=1.8e-07 AS=3.888e-12 PS=1.548e-05 AD=3.888e-12 PD=1.548e-05
+mn y a gnd gnd CMOSN W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+.ends
+Vd sd gnd PWL(0.00000e+00 0.000 3.00000e-09 0.000 3.02000e-09 1.800 4.04625e-09 1.800 4.06625e-09 0.000 5.00000e-09 0.000)
+Xd sd d vdd gnd tb_x1
+Vc sc gnd PWL(0 1.8 1.0e-9 1.8 1.02e-9 0 1.99000e-09 0 2.01000e-09 1.8 3.0e-9 1.8 3.02e-9 0 3.99000e-09 0 4.01000e-09 1.8 5.00000e-09 1.8)
+Xci sc clkn vdd gnd tb_x4
+Xc clkn clk vdd gnd tb_x4
+X0 d clk q vdd gnd dffx_post
+Xl q ql vdd gnd tb_x1
+Cload q gnd 47.76f
+.tran 1p 5.00000e-09
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata h0_p562.txt v(clk) v(d) v(q)
+quit
+.endc
+.end

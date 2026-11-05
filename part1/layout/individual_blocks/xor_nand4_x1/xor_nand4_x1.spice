@@ -1,0 +1,70 @@
+* NGSPICE file created from xor_nand4_x1.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt xor_nand4_x1 c p s vdd gnd
+M1000 vdd p a_34_80# vdd pfet w=1.8u l=0.18u
++  ad=1.296p pd=3.24u as=0.567p ps=2.43u
+M1001 a_61_10# c a_53_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1002 vdd a_8_10# a_53_10# vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1003 a_34_80# p a_34_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1004 gnd a_8_10# a_61_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1005 s a_53_10# vdd vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1006 a_8_10# p vdd vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1007 a_79_10# a_53_10# gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1008 a_16_10# p a_8_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1009 vdd a_34_80# s vdd pfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1010 vdd c a_8_10# vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1011 s a_34_80# a_79_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.81p pd=4.5u as=0.567p ps=2.43u
+M1012 gnd c a_16_10# Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1013 a_34_80# a_8_10# vdd vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1014 a_53_10# c vdd vdd pfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=1.296p ps=3.24u
+M1015 a_34_10# a_8_10# gnd Gnd nfet w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+C0 c gnd 0.00444f
+C1 vdd s 0.38355f
+C2 a_79_10# gnd 0
+C3 p c 0.46731f
+C4 a_16_10# gnd 0
+C5 a_34_80# c 0.30874f
+C6 a_8_10# gnd 0.04806f
+C7 a_53_10# s 0.0182f
+C8 a_8_10# p 0.57399f
+C9 a_53_10# vdd 0.24109f
+C10 a_8_10# a_34_80# 0.09264f
+C11 s gnd 0.04126f
+C12 a_34_10# gnd 0
+C13 vdd p 0.04418f
+C14 a_53_10# gnd 0.04467f
+C15 a_34_80# s 0.0942f
+C16 a_8_10# c 0.41839f
+C17 a_34_80# vdd 0.24229f
+C18 a_53_10# a_61_10# 0
+C19 a_34_80# a_34_10# 0
+C20 a_53_10# a_34_80# 0.55777f
+C21 a_8_10# a_16_10# 0
+C22 p gnd 0.0021f
+C23 a_79_10# s 0
+C24 a_61_10# gnd 0
+C25 vdd c 0.04399f
+C26 a_34_80# gnd 0.04231f
+C27 a_53_10# c 0.12179f
+C28 a_34_80# p 0.01851f
+C29 a_8_10# vdd 0.4276f
+C30 a_8_10# a_53_10# 0.47413f
+.ends
+

@@ -1,0 +1,19 @@
+iteration,round,soft_ps,worst_working_ps,total_width_lambda,transistors,changes,critical_arc,elapsed_s
+1,0,888.39,685.24,4342,186,c3 flip=0; nor1 size=1.25; ig10 size=0.8; it10 size=0.8,"a1 rise to s2 fall, A=0001 B=1101 C0=0",239
+2,0,850.5,653.09,4308,186,c2 flip=0; nor1 size=1.56; aoi1 size=0.8; c1 size=0.8,"a1 rise to s3 fall, A=0001 B=1101 C0=0",349
+3,0,833.48,648.52,4314,186,g20 flip=1; g30 size=0.8; g10 flip=1; nor1 size=1.95,"a0 rise to s2 fall, A=1010 B=0100 C0=1",455
+4,0,819.96,649.12,4264,186,aoi0 size=0.8; c2 flip=1; c3 flip=1; t30 size=0.8,"b0 fall to s3 rise, A=0001 B=1111 C0=0",572
+5,0,810.02,632.25,4186,186,oai0 size=0.8; oai1 size=0.8; g20 size=0.8; nand0 size=1.25,"b0 fall to s3 rise, A=0001 B=1111 C0=0",702
+6,0,801.4,611.71,4120,186,aoi0 size=0.64; g20 flip=0; oai0 size=0.64; nand1 size=0.8,"a1 rise to s3 fall, A=0001 B=1101 C0=0",821
+7,0,794.88,607.98,4123,186,aoi0 size=0.51; c4g size=1.25; nand1 size=0.64; g30 flip=0,"a1 rise to s3 fall, A=0001 B=1101 C0=0",941
+8,0,786.3,598.98,4160,186,g10 size=1.25; aoi0 size=0.41; aoi1 size=0.64; oai3 size=1.25,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1057
+9,0,774.74,595.53,4071,186,aoi1 size=0.51; oai1 size=0.64; oai0 size=0.51; t20 size=0.8,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1182
+10,0,765.92,590.86,4060,186,aoi1 size=0.41; oai1 size=0.51; aoi3 size=1.25; nand1 size=0.51,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1296
+11,0,764.88,589.41,4108,186,oai3 size=1.56,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1405
+12,0,763.94,581.57,4132,186,nand0 size=1.56,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1515
+13,0,760.37,583.65,4232,186,nor0 size=1.25; c4g flip=0; aoi3 size=1.56; nor2 size=1.25,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1623
+14,0,758.14,587.32,4314,186,nor0 size=1.56; c2 size=0.8; oai2 size=1.25; aoi2 size=1.25,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1734
+15,0,755.82,584.01,4322,186,nor2 size=1.56; c1 size=0.64; g30 flip=1,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1871
+16,0,748.92,578.91,4253,186,g30 size=0.64; g20 size=0.64; ig10 size=0.64; t30 size=0.64,"b0 fall to s3 rise, A=0001 B=1111 C0=0",1988
+17,0,738.19,568.91,4198,186,g30 size=0.51; xtg3 size=0.8; xtg2 size=0.8; xinv3 size=0.8,"b0 fall to s3 rise, A=0001 B=1111 C0=0",2117
+18,0,737.77,568.92,4192,186,xinv2 size=0.8,"b0 fall to s3 rise, A=0001 B=1111 C0=0",2278

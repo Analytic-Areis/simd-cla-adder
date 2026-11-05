@@ -1,0 +1,43 @@
+* nor2_x1_schematic
+.include ../../part1/spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* nor2_x1: 2-input NOR
+* GENERATED from part1/cells/library.py. Do not edit by hand.
+.subckt nor2_x1 i0 i1 y vdd gnd
+Mp1 xp1 i0 vdd vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=1.9440e-12 PS=8.2800e-06 AD=9.7200e-13 PD=7.7400e-06
+Mp2 y i1 xp1 vdd CMOSP W=3.6000e-06 L=1.8000e-07 AS=9.7200e-13 PS=7.7400e-06 AD=1.9440e-12 PD=8.2800e-06
+Mn1 y i0 gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+Mn2 y i1 gnd gnd CMOSN W=9.0000e-07 L=1.8000e-07 AS=4.8600e-13 PS=2.8800e-06 AD=4.8600e-13 PD=2.8800e-06
+.ends nor2_x1
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+.subckt tb_x2 a y vdd gnd
+mp y a vdd vdd CMOSP W=3.6e-06 L=1.8e-07 AS=1.944e-12 PS=8.28e-06 AD=1.944e-12 PD=8.28e-06
+mn y a gnd gnd CMOSN W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+.ends
+Vi0 src_i0 gnd PWL(
++ 0.00000e+00 0.000 1.00000e-09 0.000 1.02000e-09 1.800 2.00000e-09 1.800 2.02000e-09 0.000 4.00000e-09 0.000
++ 4.02000e-09 1.800 7.00000e-09 1.800 7.02000e-09 0.000 9.00000e-09 0.000
++ )
+Xs_i0 src_i0 drv_i0 vdd gnd tb_x1
+Xd_i0 drv_i0 i0 vdd gnd tb_x2
+Vi1 src_i1 gnd PWL(
++ 0.00000e+00 0.000 3.00000e-09 0.000 3.02000e-09 1.800 5.00000e-09 1.800 5.02000e-09 0.000 6.00000e-09 0.000
++ 6.02000e-09 1.800 8.00000e-09 1.800 8.02000e-09 0.000 9.00000e-09 0.000
++ )
+Xs_i1 src_i1 drv_i1 vdd gnd tb_x1
+Xd_i1 drv_i1 i1 vdd gnd tb_x2
+Xl_y y lo_y vdd gnd tb_x1
+X0 i0 i1 y vdd gnd nor2_x1
+.tran 5p 9.00000e-09
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata nor2_x1_schematic.txt v(i0) v(i1) v(y)
+quit
+.endc
+.end

@@ -1,0 +1,95 @@
+* block timing sum1_post
+.include ../../../spice/models/TSMC_180nm.txt
+.options reltol=1e-4
+VDD vdd gnd 1.8
+* NGSPICE file created from sum1_b.ext - technology: scmos
+
+
+
+.subckt sum1_b c1 p1 p1b s1 vdd gnd
+M1000 x1_s1xp1 p1 vdd vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.0206p ps=4.23u
+M1001 gnd x1_cb a_34_10# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.4536p pd=2.43u as=0.567p ps=2.43u
+M1002 s1 p1b x1_s1xp1 vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1003 x1_cb c1 gnd Gnd CMOSN w=0.54u l=0.18u
++  ad=0.243p pd=1.98u as=0.4536p ps=2.43u
+M1004 x1_s1xp1 x1_cb s1 vdd CMOSP w=3.6u l=0.18u
++  ad=1.134p pd=4.23u as=1.134p ps=4.23u
+M1005 a_16_10# c1 gnd Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.972p ps=4.68u
+M1006 vdd c1 x1_s1xp1 vdd CMOSP w=3.6u l=0.18u
++  ad=1.62p pd=8.1u as=1.134p ps=4.23u
+M1007 s1 p1 a_16_10# Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+M1008 vdd c1 x1_cb vdd CMOSP w=1.17u l=0.18u
++  ad=1.0206p pd=4.23u as=0.6318p ps=3.42u
+M1009 a_34_10# p1b s1 Gnd CMOSN w=1.8u l=0.18u
++  ad=0.567p pd=2.43u as=0.567p ps=2.43u
+C0 x1_cb x1_s1xp1 0.01378f
+C1 s1 gnd 0.04131f
+C2 p1 gnd 0.00105f
+C3 p1b s1 0.0943f
+C4 a_34_10# s1 0
+C5 a_16_10# gnd 0
+C6 vdd c1 0.0445f
+C7 p1 p1b 0.2539f
+C8 x1_s1xp1 c1 0.00654f
+C9 x1_cb s1 0.08499f
+C10 x1_s1xp1 vdd 0.76812f
+C11 x1_cb p1 0.01812f
+C12 p1b gnd 0.00105f
+C13 c1 s1 0.0228f
+C14 a_34_10# gnd 0
+C15 vdd s1 0.05318f
+C16 p1 c1 0.584f
+C17 vdd p1 0.0237f
+C18 x1_s1xp1 s1 1.06211f
+C19 x1_cb gnd 0.05298f
+C20 x1_s1xp1 p1 0.00656f
+C21 x1_cb p1b 0.26268f
+C22 c1 gnd 0.0046f
+C23 p1 s1 0.1592f
+C24 p1b c1 0.01832f
+C25 a_16_10# s1 0
+C26 vdd p1b 0.02078f
+C27 x1_s1xp1 p1b 0.27828f
+C28 x1_cb c1 0.70483f
+C29 x1_cb vdd 0.13873f
+.ends
+
+
+.subckt sum1x_post c1 p1 p1b s1 vdd gnd
+X0 c1 p1 p1b s1 vdd gnd sum1_b
+.ends
+.subckt tb_x1 a y vdd gnd
+mp y a vdd vdd CMOSP W=1.8e-06 L=1.8e-07 AS=9.72e-13 PS=4.68e-06 AD=9.72e-13 PD=4.68e-06
+mn y a gnd gnd CMOSN W=9.0e-07 L=1.8e-07 AS=4.86e-13 PS=2.88e-06 AD=4.86e-13 PD=2.88e-06
+.ends
+Vc1 src_c1 gnd PWL(
++ 0.00000e+00 1.800 2.00000e-09 1.800 2.02000e-09 0.000 4.00000e-09 0.000 4.02000e-09 1.800 8.00000e-09 1.800
++ 8.02000e-09 0.000 1.40000e-08 0.000 1.40200e-08 1.800 1.80000e-08 1.800
++ )
+Xd_c1 src_c1 c1 vdd gnd tb_x1
+Vp1 src_p1 gnd PWL(
++ 0.00000e+00 1.800 6.00000e-09 1.800 6.02000e-09 0.000 1.00000e-08 0.000 1.00200e-08 1.800 1.20000e-08 1.800
++ 1.20200e-08 0.000 1.60000e-08 0.000 1.60200e-08 1.800 1.80000e-08 1.800
++ )
+Xd_p1 src_p1 p1 vdd gnd tb_x1
+Vp1b src_p1b gnd PWL(
++ 0.00000e+00 0.000 6.00000e-09 0.000 6.02000e-09 1.800 1.00000e-08 1.800 1.00200e-08 0.000 1.20000e-08 0.000
++ 1.20200e-08 1.800 1.60000e-08 1.800 1.60200e-08 0.000 1.80000e-08 0.000
++ )
+Xd_p1b src_p1b p1b vdd gnd tb_x1
+Xl_s1 s1 lo_s1 vdd gnd tb_x1
+X0 c1 p1 p1b s1 vdd gnd sum1x_post
+.tran 20p 1.80000e-08
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata sum1_post.txt v(c1) v(p1) v(p1b) v(s1)
+quit
+.endc
+.end

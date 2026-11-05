@@ -1,0 +1,89 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * carry_post-layout
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+src_c0                                       0
+drv_c0                                     1.8
+c0                                 7.78111e-09
+src_g0b                                      0
+drv_g0b                                    1.8
+g0b                                7.78111e-09
+src_g1b                                      0
+drv_g1b                                    1.8
+g1b                                7.78111e-09
+src_g2b                                      0
+drv_g2b                                    1.8
+g2b                                7.78111e-09
+src_g3b                                      0
+drv_g3b                                    1.8
+g3b                                7.78111e-09
+src_t0b                                      0
+drv_t0b                                    1.8
+t0b                                7.78111e-09
+src_t1b                                      0
+drv_t1b                                    1.8
+t1b                                7.78111e-09
+src_t2b                                      0
+drv_t2b                                    1.8
+t2b                                7.78111e-09
+src_t3b                                      0
+drv_t3b                                    1.8
+t3b                                7.78111e-09
+lo_c1                              8.24396e-09
+c1                                         1.8
+lo_c2                              8.24396e-09
+c2                                         1.8
+lo_c3                              8.24396e-09
+c3                                         1.8
+lo_c4                              8.24396e-09
+c4                                         1.8
+x0.x0.t1_0                                 1.8
+x0.x0.g32_xn1                        0.0518618
+x0.x0.g3_2                                 1.8
+x0.x0.c0b                                  1.8
+x0.x0.g30_xp1                          1.74708
+x0.x0.c2_xn1                       7.46422e-09
+x0.x0.g2_0b                        2.63865e-09
+x0.x0.g1_0                                 1.8
+x0.x0.t2                                   1.8
+x0.x0.t2_0b                        1.41356e-08
+x0.x0.g1_0b                        7.08709e-09
+x0.x0.g3_0b                        4.11245e-09
+x0.x0.c4g_xn1                      6.08028e-09
+x0.x0.g20_xp1                          1.74132
+x0.x0.g2                                   1.8
+x0.x0.t1_0b                        6.66998e-09
+x0.x0.t3_2                                 1.8
+x0.x0.t3_0b                        2.12545e-08
+x0.x0.g10_xn1                         0.023229
+x0.x0.c1_xn1                           1.40907
+x0.x0.c3_xn1                       6.53132e-09
+vt3b#branch                                  0
+vt2b#branch                                  0
+vt1b#branch                                  0
+vt0b#branch                                  0
+vg3b#branch                                  0
+vg2b#branch                                  0
+vg1b#branch                                  0
+vg0b#branch                                  0
+vc0#branch                                   0
+vdd#branch                        -6.52309e-10
+
+ Reference value :  9.78125e-09
+ Reference value :  1.93825e-08
+No. of Data Rows : 5152
+ngspice-46 done
+
+--- STDERR ---
