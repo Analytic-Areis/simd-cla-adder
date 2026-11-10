@@ -1,0 +1,22 @@
+version: '3.8'
+
+# Course toolchain container, from "VLSI Design (M26) Toolchain Setup Guide", Step 2.
+# Unchanged from the guide except one extra volume: this project folder is mounted at
+# /foss/designs/VLSI_CP, so the scripts run inside the container on these same files.
+# Start from this folder:  docker compose up -d   then open http://localhost:6080 (password abc123).
+
+services:
+  vlsi_tools:
+    image: hpretl/iic-osic-tools:latest
+    container_name: iiith_vlsid_env
+    ports:
+      - "6080:80"       # noVNC Web Browser Interface
+      - "5901:5901"     # Direct VNC Client
+      - "8888:8888"     # Jupyter Notebook Server
+    volumes:
+      - ~/designs:/foss/designs
+      - .:/foss/designs/VLSI_CP
+    environment:
+      - RESOLUTION=1920x1080
+      - VNC_PW=abc123
+    restart: unless-stopped

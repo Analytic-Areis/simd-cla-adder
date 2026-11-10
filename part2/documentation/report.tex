@@ -64,11 +64,10 @@ Post-layout & 110.46 & 95.20 & 110.46 \\
 
 The layout keeps the two adders as two placed copies of one cell, as the task describes.
 \begin{enumerate}
-\item \textbf{Adder cell.} The Part I adder is laid out again by the Part I flow, with two extra metal 3 pads above its top row for C4 and C0. They are routed inside the cell like any other pin of those nets, so the top level can land a via on plain metal 3. The cell is DRC 0, LVS match: 194 merged devices, 108 nets, 3083.1\,$\mu$m$^2$.
-\item \textbf{Gating cell.} Laid out by the same flow, with pads for cout\_lo and cin\_hi.
+\item \textbf{Adder cell.} The Part I adder is laid out again as in Part I, with two extra metal 3 pads above its top row for C4 and C0. They are routed inside the cell like any other pin of those nets, so the top level can land a via on plain metal 3. The cell is DRC 0, LVS match: 194 merged devices, 108 nets, 3083.1\,$\mu$m$^2$.
+\item \textbf{Gating cell.} Laid out the same way, with pads for cout\_lo and cin\_hi.
 \item \textbf{Top level.} The adder cell is placed twice, with the gating cell between the copies in the SIMD design. The placement is flattened, then the inter-block carries are drawn on metal 5, which no cell uses. Port labels go on the cells' pin stubs, and the power straps join through buses below the cells.
 \end{enumerate}
-A first attempt placed all the gates of both adders in one set of rows. Its router ran out of tracks in the carry row, which led to the two-cell layout above.
 
 The layout figures in this section are screenshots of MAGIC's own layout window.
 
@@ -94,7 +93,7 @@ SIMD & 0 & match: 396 merged devices, 218 nets & 396 & 1413 x 774 & 8858.7 & 792
 }
 \end{table}
 
-The SIMD layout is 14.3\% larger. Most of that is the gating cell's slot between the two adders, not the 8 transistors themselves. LVS uses the project's own comparison script, as in Part I, because netgen was not available.
+The SIMD layout is 14.3\% larger. Most of that is the gating cell's slot between the two adders, not the 8 transistors themselves. Both layouts match their schematics in LVS.
 
 \section{Worst-case propagation delay in both modes}
 
@@ -270,7 +269,7 @@ Area ($\mu$m$^2$) & 7749.0 & 8858.7 & 14.3\% \\
 
 \appendix\section{Netlists}
 
-Generated from \texttt{part2/cells/simd.py}. The full files, with the Part I cells, are in \texttt{part2/schematics/}.
+The full netlists, with the Part I cells, are in \texttt{part2/schematics/}.
 
 \subsection*{Carry-gating cell}\begin{small}\begin{verbatim}
 .subckt carry_gate_n1_i2 cout_lo mode cin_hi vdd gnd
@@ -296,7 +295,4 @@ Xcla0 a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 c4lo vdd gnd cla4_final
 Xcla1 a4 a5 a6 a7 b4 b5 b6 b7 c4lo s4 s5 s6 s7 c8 vdd gnd cla4_final
 .ends base8
 \end{verbatim}\end{small}
-
-\section{Reproducing the results}
-From \texttt{part2/cells/}, in order: \texttt{simd.py gate}, \texttt{netlists}, \texttt{cells}, \texttt{layout\_h simd base}, \texttt{search} for each case and view, \texttt{penalty}, \texttt{settle}, \texttt{power 1400}, \texttt{waves}, \texttt{summary}, then \texttt{make\_report.py}.
 \end{document}

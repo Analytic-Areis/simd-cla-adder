@@ -1,6 +1,6 @@
 # Part III explained: Verilog and FPGA
 
-Full details: [`../part3/README.md`](../part3/README.md).
+Full details: [`../fpga/README.md`](../fpga/README.md).
 
 ## The task
 
@@ -26,7 +26,7 @@ Full details: [`../part3/README.md`](../part3/README.md).
 | Registered circuits, one-clock latency | 2,609 | 0 errors |
 | Board tops: self-test, switch entry, a planted fault | 5 tests | All pass |
 
-Every check compares with a model written using `+`, separate from the look-ahead equations. Annotated waveforms are in `part3/results/`.
+Every check compares with a model written using `+`, separate from the look-ahead equations. Annotated waveforms are in `fpga/results/`.
 
 ## On the board: CLA4
 
@@ -43,5 +43,5 @@ Every check compares with a model written using `+`, separate from the look-ahea
 
 ## Still to do
 
-- Vivado synthesis and bitstream: Vivado is not installed on this Mac. Use `part3/scripts/build.tcl` on a lab machine.
+- Vivado synthesis and bitstream: Vivado is not installed on this Mac. Use `fpga/scripts/build.tcl` or `fpga/scripts/create_project.tcl` on a lab machine.
 - Hardware test and oscilloscope captures on the board.

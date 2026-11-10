@@ -61,7 +61,7 @@ E & 144 & 799.8 & 629.1 \\ \hline
 \end{tabular}
 \end{table}
 
-C1 is the textbook XOR and NAND-NAND design, C2 one complex gate per carry, R C2 with a mirror gate for $c_4$, C3 a design with stacks limited to 3, C4 the prefix tree, and E a static Manchester chain. C4 was fastest, and remained fastest after sizing and layout, so it was chosen. The six designs differ only in their carry logic.
+C1 is the textbook XOR and NAND-NAND design, C2 one complex gate per carry, R C2 with a mirror gate for $c_4$, C3 a design with stacks limited to 3, C4 the prefix tree, and E a static Manchester chain. C4 was fastest, so it was chosen. Only the chosen design is taken to the post-layout results below. The six designs differ only in their carry logic.
 
 \section{Design Details}
 
@@ -69,7 +69,7 @@ C1 is the textbook XOR and NAND-NAND design, C2 one complex gate per carry, R C2
 
 \textbf{Blocks.} Each bit has a P/G front end: NAND2 gives $\overline{g_i}$, NOR2 gives $\overline{t_i}$, and two compound gates reuse them to make $p_i$ (AOI21) and $\overline{p_i}$ (OAI21). The carry block is the prefix tree: OAI21 and NOR2 for pairs, AOI21 and NAND2 for groups down to bit 0, then one OAI21 per carry with $\overline{c_0}$. The sum is a dual-rail AOI22 XOR, $s_i = \overline{p_i c_i + \overline{p_i}\,\overline{c_i}}$, with an inverter for $\overline{c_i}$.
 
-\textbf{Sizing.} The reference inverter is $W_n = 10\lambda$, $W_p = 20\lambda$. A unit-size gate matches its worst-case pull-up and pull-down resistance to that inverter. The final sizes were found by an automated search that minimised the worst delay over all transitions, then repeated with wire capacitance taken from the extracted layout. Table~\ref{tab:gatesize} lists the unit cells used in Sections IV and VI; Table~\ref{tab:sizing} lists every instance of the final adder.
+\textbf{Sizing.} The reference inverter is $W_n = 10\lambda$, $W_p = 20\lambda$. A unit-size gate matches its worst-case pull-up and pull-down resistance to that inverter. The final sizes were found by a search that minimised the worst delay over all transitions, then repeated with wire capacitance taken from the extracted layout. Table~\ref{tab:gatesize} lists the unit cells used in Sections IV and VI; Table~\ref{tab:sizing} lists every instance of the final adder.
 
 \begin{table}[H]\centering\footnotesize
 \caption{Unit cell sizes (widths in $\lambda$; several values are different stack positions)}
@@ -132,13 +132,22 @@ x3 & xor\_aoi22 & s3 & 10 & 20 \\ \hline
 
 \textbf{D flip-flop.} A true single-phase clock (TSPC) flip-flop~\cite{yuan} needs one clock and 11 transistors. At a 15\,fF load it gave clock-to-Q plus setup of 212.9\,ps, against 316.8\,ps for a 22-transistor transmission-gate master-slave flip-flop, so TSPC was chosen.
 
-\begin{figure*}[!t]\centering\includegraphics[width=0.85\textwidth]{figures/final_dff_final.png}\caption{TSPC flip-flop, stage drives x0.6, x1, x1, x2, sized at the largest adder input load of 47.76 fF.}\end{figure*}
+\begin{figure*}[!t]\centering\includegraphics[width=0.85\textwidth]{figures/final_dff_final.png}\caption{TSPC flip-flop, stage drives x0.6, x1, x1, x2, sized at the largest adder input load of 47.76 fF.}\label{fig:dffsch}\end{figure*}
 
 \begin{figure}[H]\centering\includegraphics[width=0.8\columnwidth]{figures/final_nand2_x1.png}\caption{Transistor schematic: NAND2.}\end{figure}
 
 \begin{figure}[H]\centering\includegraphics[width=0.8\columnwidth]{figures/final_aoi21_x1.png}\caption{Transistor schematic: AOI21, used for $p_i$ and the group generates.}\end{figure}
 
 \begin{figure}[H]\centering\includegraphics[width=0.8\columnwidth]{figures/final_oai21_x1.png}\caption{Transistor schematic: OAI21, used for $\overline{p_i}$ and the final carries.}\end{figure}
+
+\subsection{Full Transistor-Level Schematic}
+Figs.~\ref{fig:tl1}--\ref{fig:tl3} draw the whole adder transistor by transistor, all 194 devices with their final W/L. They are drawn from the final SPICE netlist, and every netlist transistor appears exactly once. The circuit is split by signal flow: the P/G front end, the prefix tree, then the final carries and sums. Gates connect by net name, so a net such as $\overline{\mathrm{G}}_{3:0}$ can be followed from the gate that drives it to every gate it feeds. The flip-flop used on all 14 inputs and outputs is in Fig.~\ref{fig:dffsch}. The figures are vector graphics and can be zoomed in the PDF.
+
+\begin{figure*}[p]\centering\includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{figures/full_tl_1_pg.pdf}\caption{Full adder, transistor level, part 1 of 3: P/G front end, bits 0 to 3 (80 transistors).}\label{fig:tl1}\end{figure*}
+
+\begin{figure*}[p]\centering\includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{figures/full_tl_2_tree.pdf}\caption{Full adder, transistor level, part 2 of 3: prefix carry tree (50 transistors).}\label{fig:tl2}\end{figure*}
+
+\begin{figure*}[p]\centering\includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{figures/full_tl_3_carry_sum.pdf}\caption{Full adder, transistor level, part 3 of 3: final carries $c_1$ to $c_4$ and the four sum cells (64 transistors).}\label{fig:tl3}\end{figure*}
 
 \section{NGSPICE Simulation (Pre-Layout)}
 Each gate is driven through two inverters, so its inputs have realistic edges, and its output drives the $20\lambda/10\lambda$ inverter. Inputs follow an Eulerian walk, which applies every single-input change from every state. Delay is measured from the 50\% point of the changing input to the last 50\% crossing of the output.
@@ -240,8 +249,43 @@ $t_{hold}$ (worst) & 55.1 \\ \hline
 
 \begin{figure}[H]\centering\includegraphics[width=\columnwidth]{figures/figures_dff_sweep.png}\caption{Clock-to-Q and D-to-Q delay against D-to-clock time, schematic.}\end{figure}
 
-\section{MAGIC Layouts}
-Every layout below is a screenshot of MAGIC's own layout window. Each cell passes MAGIC's DRC with zero errors, and each extracted netlist matches the schematic in LVS, using a comparison script written for this project because netgen was not available. Post-layout plots use the netlist MAGIC extracted, with all parasitic capacitance.
+\section{Euler Paths and Stick Diagrams}
+Each gate is laid out as one PMOS row and one NMOS row of diffusion, crossed by vertical poly gates. Two neighbouring transistors in a row can share a diffusion node, with no gap and no extra contact, only if they connect to the same net there. A row with no breaks is therefore an Euler path through the network's graph: the nodes are the diffusion nets, and each edge is one transistor, labelled by its gate input. Using the same gate order in the PMOS and NMOS rows lets one straight poly line serve both transistors on the same input.
+
+Each cell's layout follows the ordering shown in its figure. In the Euler graphs, the number on each edge is its position along the row. The stick diagrams are the MAGIC layouts with every rectangle reduced to its centre line: diffusion, poly and metal as coloured sticks, contacts as crosses. Each matches the layout in Section~\ref{sec:magic}, not a separate sketch.
+
+\begin{table*}[!t]\centering\footnotesize
+\caption{Gate order along the diffusion rows (from the MAGIC layouts)}
+\begin{tabular}{|c|c|c|c|c|}\hline
+Cell & PMOS row & NMOS row & Breaks P/N & Same order \\ \hline
+Inverter & $\mathrm{a}$ & $\mathrm{a}$ & 0/0 & yes \\ \hline
+NAND2 & $\mathrm{i}_{0}$ $\to$ $\mathrm{i}_{1}$ & $\mathrm{i}_{0}$ $\to$ $\mathrm{i}_{1}$ & 0/0 & yes \\ \hline
+NOR2 & $\mathrm{i}_{0}$ $\to$ $\mathrm{i}_{1}$ & $\mathrm{i}_{0}$ $\to$ $\mathrm{i}_{1}$ & 0/0 & yes \\ \hline
+AOI21 & $\mathrm{a}$ $\to$ $\mathrm{b}$ $\to$ $\mathrm{c}$ & $\mathrm{a}$ $\to$ $\mathrm{b}$ $\to$ $\mathrm{c}$ & 0/0 & yes \\ \hline
+OAI21 & $\mathrm{a}$ $\to$ $\mathrm{b}$ $\to$ $\mathrm{c}$ & $\mathrm{a}$ $\to$ $\mathrm{b}$ $\to$ $\mathrm{c}$ & 0/0 & yes \\ \hline
+AOI22 XOR & $\mathrm{c}$ $\to$ $\mathrm{p}$ $\to$ $\overline{\mathrm{p}}$ $\to$ $\overline{\mathrm{c}}$ $\to$ $\mathrm{c}$ & $\mathrm{c}$ $\to$ $\mathrm{p}$ $\to$ $\overline{\mathrm{p}}$ $\to$ $\overline{\mathrm{c}}$ $\to$ $\mathrm{c}$ & 0/0 & yes \\ \hline
+TSPC flip-flop & $\mathrm{clk}$ $\to$ $\mathrm{d}$ $\to$ $\mathrm{b}$ $\to$ $\mathrm{clk}$ $\to$ $\overline{\mathrm{q}}$ & $\mathrm{a}$ $\to$ $\mathrm{clk}$ $\to$ $\mathrm{b}$ $\to$ $\mathrm{clk}$ $\to$ $\overline{\mathrm{q}}$ $\to$ $\mathrm{d}$ & 1/1 & no \\ \hline
+\end{tabular}
+\end{table*}
+
+Every logic gate gets an unbroken Euler path in both rows with a common gate order, so each input is one poly line and no row needs a diffusion break. The AOI22 XOR shares its rows with the carry inverter, so input $c$ appears twice. The TSPC flip-flop has four stages with different inputs, and needs one break in each row. Where the PMOS and NMOS gates in a column differ, the poly is split into separate top and bottom gates.
+
+\begin{figure*}[!t]\centering\includegraphics[width=\textwidth]{figures/stick_inv_x1.pdf}\caption{Euler graphs of the pull-up and pull-down networks, and stick diagram of the MAGIC layout: Inverter.}\end{figure*}
+
+\begin{figure*}[!t]\centering\includegraphics[width=\textwidth]{figures/stick_nand2_x1.pdf}\caption{Euler graphs of the pull-up and pull-down networks, and stick diagram of the MAGIC layout: NAND2.}\end{figure*}
+
+\begin{figure*}[!t]\centering\includegraphics[width=\textwidth]{figures/stick_nor2_x1.pdf}\caption{Euler graphs of the pull-up and pull-down networks, and stick diagram of the MAGIC layout: NOR2.}\end{figure*}
+
+\begin{figure*}[!t]\centering\includegraphics[width=\textwidth]{figures/stick_aoi21_x1.pdf}\caption{Euler graphs of the pull-up and pull-down networks, and stick diagram of the MAGIC layout: AOI21.}\end{figure*}
+
+\begin{figure*}[!t]\centering\includegraphics[width=\textwidth]{figures/stick_oai21_x1.pdf}\caption{Euler graphs of the pull-up and pull-down networks, and stick diagram of the MAGIC layout: OAI21.}\end{figure*}
+
+\begin{figure*}[!t]\centering\includegraphics[width=\textwidth]{figures/stick_xor_aoi22_x1.pdf}\caption{Euler graphs of the pull-up and pull-down networks, and stick diagram of the MAGIC layout: AOI22 XOR (sum, with its carry inverter).}\end{figure*}
+
+\begin{figure*}[!t]\centering\includegraphics[width=\textwidth]{figures/stick_dff_tspc_x0p6_1_1_2.pdf}\caption{Euler graphs of the pull-up and pull-down networks, and stick diagram of the MAGIC layout: TSPC flip-flop.}\end{figure*}
+
+\section{MAGIC Layouts}\label{sec:magic}
+Every layout below is a screenshot of MAGIC's own layout window. Each cell passes MAGIC's DRC with zero errors, and each extracted netlist matches the schematic in LVS. Post-layout plots use the netlist MAGIC extracted, with all parasitic capacitance.
 
 \subsection{Inverter}
 
@@ -437,20 +481,9 @@ $P_{avg}$ at the post-layout clock & 3.0883 mW & 3.3899 mW \\ \hline
 
 Post-layout delays are longer, by 12.3\% for the worst single-input delay, because the extracted netlist adds the capacitance of every wire and junction. Flip-flop clock-to-Q drops slightly after layout, because shared diffusion in the layout has less capacitance than the schematic's estimate.
 
-\subsection{Area-Delay Trade-off}
+\subsection{Layout Resistance}
 
-\begin{table}[H]\centering\footnotesize
-\caption{Uniform scaling of the final sizes, post-layout}
-\begin{tabular}{|c|c|c|c|}\hline
-Scale & Delay (ps) & Area ($\mu$m$^2$) & P (mW) \\ \hline
-0.7 & 602.38 & 2574.0 & 0.9832 \\ \hline
-0.85 & 601.39 & 2743.7 & 1.1156 \\ \hline
-1.0 & 579.88 & 2936.9 & 1.2704 \\ \hline
-1.2 & 590.99 & 3293.8 & 1.4821 \\ \hline
-\end{tabular}
-\end{table}
-
-Bigger is not always faster: scaling up by 1.2 makes the extra load outweigh the extra drive. MAGIC's resistance extraction crashed on this layout, so resistance was bounded instead: with the longest poly run's resistance in series with every gate, the worst delay rises by at most 3.61\%.
+MAGIC's resistance extraction crashed on this layout, so resistance was bounded instead: with the longest poly run's resistance in series with every gate, the worst delay rises by at most 3.61\%.
 
 \section{Part II: SIMD-Reconfigurable 8-bit Adder}
 GPUs often split one wide datapath into narrower sub-words~\cite{hp}. Here two copies of the Part I adder, CLA0 for bits 3..0 and CLA1 for bits 7..4, form an 8-bit adder with a control input SIMD\_MODE:
@@ -592,75 +625,6 @@ I thank Prof. Abhishek Srivastava for the course and this project, and the teach
 \bibitem{miao} J. Miao and S. Li, ``A novel implementation of 4-bit carry look-ahead adder,'' in \emph{Proc. IEEE EDSSC}, 2017.
 \bibitem{yuan} J. Yuan and C. Svensson, ``High-speed CMOS circuit technique,'' \emph{IEEE J. Solid-State Circuits}, vol. 24, no. 1, pp. 62--70, 1989.
 \bibitem{stoj} V. Stojanovi\'c and V. G. Oklobd\v{z}ija, ``Comparative analysis of master-slave latches and flip-flops for high-performance and low-power systems,'' \emph{IEEE J. Solid-State Circuits}, vol. 34, no. 4, pp. 536--548, 1999.
-\bibitem{zlat} R. Zlatanovici, S. Kao and B. Nikoli\'c, ``Energy-delay optimization of 64-bit carry-lookahead adders with a 240 ps 90 nm CMOS design example,'' \emph{IEEE J. Solid-State Circuits}, vol. 44, no. 2, pp. 569--583, 2009.
 \bibitem{hp} J. L. Hennessy and D. A. Patterson, \emph{Computer Architecture: A Quantitative Approach}.
-\bibitem{wh} N. Weste and D. Harris, \emph{CMOS VLSI Design}, 4th ed.
-\bibitem{mano} M. Morris Mano, \emph{Digital Logic and Computer Design}.
 \end{thebibliography}
-
-\section*{Appendix: Netlists}\addcontentsline{toc}{section}{Appendix: Netlists}
-
-Generated netlists; widths and lengths in metres. All files are in the project folders \texttt{part1/spice/} and \texttt{part2/schematics/}.
-
-\subsection*{4-bit CLA, top level}{\scriptsize\begin{verbatim}
-.subckt cla_final a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 c4
-+ vdd gnd
-Xnand0 a0 b0 g0b vdd gnd nand2_x1p25
-Xnor0 a0 b0 t0b vdd gnd nor2_x1p56
-Xaoi0 a0 b0 t0b p0 vdd gnd aoi21_x0p41
-Xoai0 a0 b0 g0b p0b vdd gnd oai21_x0p41
-Xnand1 a1 b1 g1b vdd gnd nand2_x1p25
-Xnor1 a1 b1 t1b vdd gnd nor2_x1p95
-Xaoi1 a1 b1 t1b p1 vdd gnd aoi21_x0p41
-Xoai1 a1 b1 g1b p1b vdd gnd oai21_x0p41
-Xnand2 a2 b2 g2b vdd gnd nand2_x1p25
-Xnor2 a2 b2 t2b vdd gnd nor2_x1p25
-Xaoi2 a2 b2 t2b p2 vdd gnd aoi21_x0p8
-Xoai2 a2 b2 g2b p2b vdd gnd oai21_x0p8
-Xnand3 a3 b3 g3b vdd gnd nand2_x1
-Xnor3 a3 b3 t3b vdd gnd nor2_x1p25
-Xaoi3 a3 b3 t3b p3 vdd gnd aoi21_x1
-Xoai3 a3 b3 g3b p3b vdd gnd oai21_x1
-Xinvc0 c0 c0b vdd gnd inv_x1
-Xg10 t1b g0b g1b g1_0 vdd gnd oai21_fn_x1p25
-Xt10 t1b t0b t1_0 vdd gnd nor2_x1p56
-Xg32 t3b g2b g3b g3_2 vdd gnd oai21_x0p8
-Xt32 t3b t2b t3_2 vdd gnd nor2_x0p8
-Xig2 g2b g2 vdd gnd inv_x1p25
-Xit2 t2b t2 vdd gnd inv_x1p95
-Xg30 t3_2 g1_0 g3_2 g3_0b vdd gnd aoi21_fnp_x0p41
-Xt30 t3_2 t1_0 t3_0b vdd gnd nand2_x0p41
-Xg20 t2 g1_0 g2 g2_0b vdd gnd aoi21_fnp_x1
-Xt20 t2 t1_0 t2_0b vdd gnd nand2_x1p25
-Xig10 g1_0 g1_0b vdd gnd inv_x1
-Xit10 t1_0 t1_0b vdd gnd inv_x1p56
-Xc1 t0b c0b g0b c1 vdd gnd oai21_x0p51
-Xc2 t1_0b c0b g1_0b c2 vdd gnd oai21_fn_x1p25
-Xc3 t2_0b c0b g2_0b c3 vdd gnd oai21_fn_x1p25
-Xc4g t3_0b c0b g3_0b c4 vdd gnd oai21_fnp_x0p8
-Xx0 p0 p0b c0 s0 vdd gnd xor_aoi22_x1p25_0p51
-Xx1 p1 p1b c1 s1 vdd gnd xor_aoi22_x1_0p64
-Xx2 p2 p2b c2 s2 vdd gnd xor_aoi22_x0p8_1p25
-Xx3 p3 p3b c3 s3 vdd gnd xor_aoi22_x0p51_1
-.ends cla_final
-\end{verbatim}}
-
-\subsection*{Carry-gating cell}{\scriptsize\begin{verbatim}
-.subckt carry_gate_n1_i2 cout_lo mode cin_hi vdd gnd
-Xinvm mode modeb vdd gnd inv_x1
-Xnandg cout_lo modeb gn vdd gnd nand2_x1
-Xinvg gn cin_hi vdd gnd inv_x2
-.ends carry_gate_n1_i2
-\end{verbatim}}
-
-\subsection*{SIMD 8-bit adder, top level}{\scriptsize\begin{verbatim}
-.subckt simd8 a0 a1 a2 a3 a4 a5 a6 a7 b0 b1 b2 b3 b4 b5 b6
-+ b7 c0 mode s0 s1 s2 s3 s4 s5 s6 s7 c8 c4lo vdd gnd
-Xcla0 a0 a1 a2 a3 b0 b1 b2 b3 c0 s0 s1 s2 s3 c4lo vdd gnd
-+ cla4_final
-Xgate c4lo mode cinh vdd gnd carry_gate_n1_i2
-Xcla1 a4 a5 a6 a7 b4 b5 b6 b7 cinh s4 s5 s6 s7 c8 vdd gnd
-+ cla4_final
-.ends simd8
-\end{verbatim}}
 \end{document}

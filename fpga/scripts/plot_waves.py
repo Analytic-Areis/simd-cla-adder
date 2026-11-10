@@ -2,7 +2,7 @@
 """Annotated waveform figures from the testbench VCD files, for the report.
 
 Run after scripts/run_sim.sh:  python3 scripts/plot_waves.py
-Writes PNG files to fpga/results/. Each directed vector is labelled with the description the
+Writes PNG files to results/. Each directed vector is labelled with the description the
 testbench printed for it, so the figure and the log say the same thing.
 """
 import json

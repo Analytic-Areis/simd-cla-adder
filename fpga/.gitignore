@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Simulation outputs that run_sim.sh regenerates (the .log results are kept)
+sim/*.vvp
+sim/*.vcd
+
+# Vivado outputs
+build/
+vivado/
+.Xil/
+*.jou
+vivado*.log
+vivado*.str
+webtalk*
+usage_statistics_webtalk.*
+xsim.dir/
+*.wdb
+*.pb
+
+# Python
+__pycache__/

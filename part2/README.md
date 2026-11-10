@@ -1,6 +1,6 @@
 # Part II: SIMD-reconfigurable 8-bit adder
 
-Report: [`documentation/Bhargav_2025102061_part2.pdf`](documentation/Bhargav_2025102061_part2.pdf), 10 pages, built by `cells/make_report.py` from the result files.
+Report: [`documentation/Bhargav_2025102061_part2.pdf`](documentation/Bhargav_2025102061_part2.pdf), 12 pages, built by `cells/make_report.py` from the result files.
 
 Two copies of the Part I 4-bit carry look-ahead adder with a carry-gating cell between them. All results are from ngspice with the provided TSMC 180 nm model, on layouts drawn and checked in MAGIC.
 

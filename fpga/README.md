@@ -1,4 +1,4 @@
-# FPGA, Part III
+# FPGA, Part III (folder `fpga/`)
 
 Verilog for the 4-bit CLA (Part I) and the SIMD-reconfigurable 8-bit adder (Part II), testbenches, Boolean Board tops and constraints.
 
@@ -20,22 +20,29 @@ Verilog for the 4-bit CLA (Part I) and the SIMD-reconfigurable 8-bit adder (Part
 | `board/` | Board tops `fpga_cla4_top.v` and `fpga_simd8_top.v`, plus shared helpers in `board_common.v`: reset, step clock, random generator, displays |
 | `tb/` | Testbenches |
 | `constraints/` | One constraint file per top, `fpga_cla4_top.xdc` and `fpga_simd8_top.xdc`. Every pin is commented with what it does in that design |
-| `scripts/` | `run_sim.sh` runs every testbench. `plot_waves.py` draws the figures. `build.tcl` builds a bitstream in Vivado |
-| `sim/` | Simulation logs and VCD waveforms, written by `run_sim.sh` |
+| `scripts/` | `create_project.tcl` makes a Vivado project of everything. `build.tcl` builds a bitstream in batch mode. `run_sim.sh` runs every testbench in Icarus Verilog. `plot_waves.py` draws the figures |
+| `sim/` | Simulation logs from `run_sim.sh`. Its VCD waveforms are not in the repo; `run_sim.sh` writes them again |
 | `results/` | Annotated waveform figures |
 | `reference/`, `reference_constraints/` | The reference code and constraints this was based on, unchanged |
 
-## Run
+This folder needs nothing from the rest of the project, so it can be copied or cloned on its own.
+
+## On a laptop with Vivado
+
+Get the folder, for example with `git clone`, then open a terminal in it.
+
+**Vivado GUI.** Make the project once:
 
 ```bash
-bash scripts/run_sim.sh
+vivado -mode batch -source scripts/create_project.tcl
 ```
 
-```bash
-python3 scripts/plot_waves.py
-```
+Then open `vivado/vlsi_fpga/vlsi_fpga.xpr` in Vivado. Without a terminal, use Tools > Run Tcl Script in Vivado and pick `scripts/create_project.tcl`.
+- **Simulation:** Run Simulation > Run Behavioral Simulation runs `tb_cla4`. For another testbench, right-click it under Simulation Sources and choose Set as Top. Each prints a `--- RESULT` line in the Tcl console.
+- **Board top:** the project starts with `fpga_cla4_top` and its constraint file. For the SIMD board, set `fpga_simd8_top` as top under Design Sources, then under Constraints disable `fpga_cla4_top.xdc` and enable `fpga_simd8_top.xdc`. Or make the project with `-tclargs fpga_simd8_top`.
+- **Program:** Generate Bitstream, then Open Hardware Manager > Open Target > Auto Connect > Program Device.
 
-On a machine with Vivado, from this folder:
+**Batch build**, without the GUI:
 
 ```bash
 vivado -mode batch -source scripts/build.tcl -tclargs fpga_cla4_top
@@ -46,6 +53,20 @@ vivado -mode batch -source scripts/build.tcl -tclargs fpga_simd8_top
 ```
 
 Outputs go to `build/<top>/`: the bitstream, synthesised netlist, and utilisation, timing and power reports.
+
+The Vivado scripts have not been run yet, because Vivado is not on the Mac this was written on. On Windows, run the `vivado` commands from the Vivado Tcl Shell, or add Vivado's `bin` folder to the path.
+
+## Simulation without Vivado
+
+With Icarus Verilog installed:
+
+```bash
+bash scripts/run_sim.sh
+```
+
+```bash
+python3 scripts/plot_waves.py
+```
 
 ## The designs
 

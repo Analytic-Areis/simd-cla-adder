@@ -290,3 +290,30 @@ At the user's request: `part1/`, `part2/` and `part3/` (was `fpga/`) at the top 
 ## 5 Nov 2026: submission report, draft 1
 
 `submission/Bhargav_2025102061.pdf`, 17 pages, IEEE two-column style after the reference report the user gave (a 5-bit CLA report): contents page, numbered sections, gate-by-gate pre- and post-layout plots, MAGIC screenshots of every gate and block, Part II as section XI, placeholders for Verilog and FPGA. New in this draft: per-gate waveforms and delays (`submission/figures.py sims`, 0 errors, for example NAND2 tpLH 66.02 ps pre-layout and 66.14 ps post-layout), full registered circuit plots pre- and post-layout on eight additions (0 wrong samples), and MAGIC screenshots of each gate and block.
+
+## 2026-11-05: full-circuit transistor-level schematic
+
+Added `submission/full_schematic.py`. It draws all 194 adder transistors with their final W/L from the same cell objects that write the netlist, split into three full-page figures by signal flow: P/G front end (80 T), prefix tree (50 T), final carries and sums (64 T), plus the TSPC flip-flop. Gates connect by net name; group nets print as G(i:j) and T(i:j) with bars for active-low. A check confirms the drawn devices equal the netlist devices, 194 of 194. The figures are vector PDF and sit at the end of Section III of the submission report (Figs. 6 to 8); the report is now 21 pages.
+
+## 2026-11-07: course container configuration
+
+Added `docker-compose.yml` from the course toolchain guide (iic-osic-tools, container iiith_vlsid_env, noVNC 6080, `~/designs` at `/foss/designs`), with one extra volume mounting this project at `/foss/designs/VLSI_CP`. `magic_shot.py` now finds `xwd` on PATH and takes the display from `$DISPLAY` when it is an X display name, so it works in the container; on the Mac it still uses XQuartz on :1. Docker is not installed on this Mac, so the container run is not yet tested. The project's results were all produced on the Mac.
+
+## 2026-11-07: unused designs moved out; Euler paths and stick diagrams
+
+Moved the layouts, post-layout simulations and result files of designs not used in the final adder into `test_dump/`, keeping their original paths. That covers C4 with TG sums, the R designs, the other layouts of C4/AOI22 (before sizing, the second sizing round, uniform scaling), router trials, and cells not in the final adder. `test_dump/README.md` lists them all.
+
+Both reports no longer include post-layout results of those designs. Part I lost its finalists table and its area-delay trade-off section; the submission report lost its trade-off subsection. The schematic unit-size comparison of the six architectures stays, because it explains why C4 was chosen.
+
+Added `submission/stick_euler.py`. For each gate it captures the row order the layout generator chose and checks that the regenerated layout matches the saved MAGIC layout script, which all 7 cells do. It then draws the PUN/PDN Euler graphs and a centre-line stick diagram of the layout. All five logic gates and the AOI22 XOR have unbroken Euler paths with a common P/N order; the TSPC flip-flop has one break per row. This is a new report section, before the MAGIC layouts; the MAGIC screenshots are kept.
+
+## 2026-11-10: reports trimmed to netlists, MAGIC and cited papers
+
+The evaluator asked that the reports show netlists, MAGIC layouts and only the papers actually used, with no mention of the scripts. Changes, in `submission/build_report.py`, `part1/cells/make_report.py` and `part2/cells/make_report.py`:
+- Removed every mention of scripts, the layout generator, the "automated" search, the LVS comparison script and netgen, the Part II "Reproducing the results" appendix and the `simd.py` source line, the Part II router remark, and the Part I limitation about the LVS tool. Results and numbers are unchanged.
+- References: only cited works remain. Submission: removed Zlatanovici et al., Weste and Harris, and Mano. Part I: removed Yuan and Svensson, Weste and Harris, and Mano (none cited), and added entries for Hasan et al. (2019), Efstathiou et al. (2013) and Nyathi and Mutumba (2017), which the text already named.
+- The submission still has no netlist appendix, as the user chose.
+
+## 2026-11-10: Part III folder renamed to fpga/
+
+At the user's request, `part3/` is now `fpga/`, so it can go into the user's own git repo on its own and be used from a laptop with Vivado. Added `fpga/scripts/create_project.tcl`, which makes a Vivado project with every source, both constraint files and the four testbenches (not run yet: no Vivado on this Mac), and `fpga/.gitignore`. Updated the README's Vivado steps. All four Icarus testbenches pass from `fpga/` and from a copy made outside the project. Earlier entries that say `part3/` refer to this folder.

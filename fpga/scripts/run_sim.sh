@@ -1,6 +1,6 @@
 #!/bin/bash
-# Compile and run every testbench with Icarus Verilog. Logs and VCD files go to fpga/sim/.
-# Usage, from anywhere: bash fpga/scripts/run_sim.sh
+# Compile and run every testbench with Icarus Verilog. Logs and VCD files go to sim/.
+# Usage, from anywhere: bash scripts/run_sim.sh (path relative to this folder)
 set -e
 FPGA="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$FPGA/sim"

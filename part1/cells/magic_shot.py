@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Screenshots of layouts in MAGIC's own window, for the reports.
 
-MAGIC is started on the XQuartz display, loads a cell, fits it in a window of a fixed size,
+MAGIC is started on an X display (XQuartz on the Mac, the noVNC desktop in the course container), loads a cell, fits it in a window of a fixed size,
 and dumps that window with xwd. The dump is converted to PNG here, unchanged: these are
 MAGIC's own rendering, not a redraw.
 
-Needs XQuartz running. Usage:  python3 magic_shot.py <layout folder> <cell> <out.png> [display]
+Needs an X display. The display is $DISPLAY if set, else :1 (XQuartz here).
+Usage:  python3 magic_shot.py <layout folder> <cell> <out.png> [display]
 """
 import os
+import shutil
 import struct
 import subprocess
 import sys
@@ -19,7 +21,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-XWD = "/opt/X11/bin/xwd"
+XWD = shutil.which("xwd") or "/opt/X11/bin/xwd"     # on PATH in the container; XQuartz's copy on the Mac
+# $DISPLAY in the container; on the Mac it is launchd's socket path, which XQuartz does not answer, so :1
+_env_display = os.environ.get("DISPLAY", "")
+DEFAULT_DISPLAY = _env_display if _env_display.startswith(":") else ":1"
 
 
 def read_xwd(path):
@@ -48,7 +53,7 @@ def read_xwd(path):
     return np.dstack([channel(red_mask), channel(green_mask), channel(blue_mask)])
 
 
-def shoot(folder, cell, png, display=":1", size=(1400, 1000), area=None, timeout=120):
+def shoot(folder, cell, png, display=DEFAULT_DISPLAY, size=(1400, 1000), area=None, timeout=120):
     """area: optional (x0, y0, x1, y1) in lambda to zoom on; the whole cell otherwise."""
     folder, png = Path(folder), Path(png)
     with tempfile.TemporaryDirectory() as tmp:
@@ -92,4 +97,4 @@ quit -noprompt
 
 
 if __name__ == "__main__":
-    print(shoot(sys.argv[1], sys.argv[2], sys.argv[3], *(sys.argv[4:5] or [":1"])))
+    print(shoot(sys.argv[1], sys.argv[2], sys.argv[3], *(sys.argv[4:5] or [DEFAULT_DISPLAY])))

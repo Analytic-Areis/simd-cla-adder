@@ -75,14 +75,10 @@ def main():
     ff = tspc(p["s1"], p["s2"], p["s3"], p["q"])
     unit = rows_of(RES / "phase3_unit_comparison.csv")
     blocks = rows_of(RES / "phase7_block_postlayout.csv")
-    tradeoff = rows_of(RES / "phase4_tradeoff.csv")
-    powers = {r["tag"]: r for r in rows_of(RES / "phase4_design_power.csv")}
     truth = rows_of(RES / "final_truth_table.csv")
     func = rows_of(RES / "phase1_block_functional.csv")
     hint = rows_of(FINAL / "hint_vector_postlayout.csv")
-    tg = rd("final_C4_tg_1_post.json")
     rerun = rd("worst_arc_rerun.json")["rerun_ps"]
-    rtg = rd("cmp_R_tg_refresh.json")
     sic = post["worst_pin_ps"]          # worst single-input transition, used to compare designs
     course = system["course"]
     tpd = course["tpd_max_ps"]          # worst transition found, single or multi-input
@@ -98,16 +94,6 @@ def main():
                     "The formula leaves out clock-to-Q delay.")
     hint_worst = max(float(r["delay_ps"]) for r in hint)
     hint_row = max(hint, key=lambda r: float(r["delay_ps"]))
-    finalists = [
-        ("C4 prefix, AOI22 sum (chosen)", 194, f"{rd('cmp_C4_aoi22.json')['worst_pin_ps']:.1f}", f"{sic:.1f}", f"{post['area_um2']:.0f}",
-         f"{post['area_um2'] * sic * 1e-3:.0f}", powers[tag]["power_mw_1ns"], f"{float(powers[tag]['power_mw_1ns']) * sic:.0f}"),
-        ("C4 prefix, TG sum", 186, f"{rd('cmp_C4_tg.json')['worst_pin_ps']:.1f}", f"{tg['worst_pin_ps']:.1f}", f"{tg['area_um2']:.0f}",
-         f"{tg['area_um2'] * tg['worst_pin_ps'] * 1e-3:.0f}", powers["final_C4_tg_1"]["power_mw_1ns"],
-         f"{float(powers['final_C4_tg_1']['power_mw_1ns']) * tg['worst_pin_ps']:.0f}"),
-        ("R flat carries, TG sum", 164, "-", f"{rtg['worst_pin_ps']:.1f}", f"{rtg['area_um2']:.0f}",
-         f"{rtg['area_um2'] * rtg['worst_pin_ps'] * 1e-3:.0f}", powers["cmp_R_tg_refresh"]["power_mw_1ns"],
-         f"{float(powers['cmp_R_tg_refresh']['power_mw_1ns']) * rtg['worst_pin_ps']:.0f}"),
-    ]
     per = []
     for o in ("s0", "s1", "s2", "s3", "c4"):
         for key, name in (("tplh", "tpLH"), ("tphl", "tpHL")):
@@ -143,16 +129,16 @@ All values below are from ngspice runs, and post-layout values use netlists extr
  ("DRC errors, adder and registered", "0 and 0"),
 ], spec="p{7.2cm}p{8.2cm}")}
 
-\noindent\textbf{{Points to note.}} (1) The course formula gives a higher frequency than the circuit achieves: {formula_text} (2) The hint vector is not the worst case. The slowest arcs start at operand bits, not at $C_0$. (3) MAGIC has no usable resistance extraction here, so resistance is bounded by simulation in Section~\ref{{sec:res}}, not extracted. (4) LVS was run with a script written for this project, because netgen was unavailable. (5) Figure 1(i) shows no register on $C_{{in}}$; a ninth input flip-flop was added. (6) The load sentence names sum bits only; $C_4$ also drives the inverter here.
+\noindent\textbf{{Points to note.}} (1) The course formula gives a higher frequency than the circuit achieves: {formula_text} (2) The hint vector is not the worst case. The slowest arcs start at operand bits, not at $C_0$. (3) MAGIC has no usable resistance extraction here, so resistance is bounded by simulation in Section~\ref{{sec:res}}, not extracted. (4) Figure 1(i) shows no register on $C_{{in}}$; a ninth input flip-flop was added. (5) The load sentence names sum bits only; $C_4$ also drives the inverter here.
 
 \section{{Literature review}}
 Twenty provided papers were read. Few state the output load, input driver or the transitions tested, so their delay figures are not comparable with this work or with each other.
 \begin{{itemize}}
 \item \textbf{{OR-type propagate:}} Miao and Li~\cite{{miao}} replace XOR with NOR in the carry path and name a path from B0 through C3 to S3 as the longest. Both ideas were tested here, and the worst paths here also start at operand bits.
-\item \textbf{{Mirror and flat carry gates:}} Hasan et al.\ (2019) build $C_4$ as one nested gate. Measured stacks here show why this is costly: a worst-position NOR5 is 4.6 FO4 at 180 nm.
+\item \textbf{{Mirror and flat carry gates:}} Hasan et al.~\cite{{hasan}} build $C_4$ as one nested gate. Measured stacks here show why this is costly: a worst-position NOR5 is 4.6 FO4 at 180 nm.
 \item \textbf{{Reduced-swing styles:}} GDI and pass-transistor papers (Dipto 2020, Hossain 2020, Joy 2023, Chezhiyan 2025) report gains against their own baselines at 90 nm. One of these (Chezhiyan and Bommi 2025) itself lists static CMOS as fastest. They were not adopted.
-\item \textbf{{Dynamic logic:}} Zlatanovici et al.~\cite{{zlat}} show dynamic logic winning at 64 bits, and static preferred at long cycle times. Efstathiou et al.\ (2013) report only 4.73\% gain at 8 bits from a Ling-style split. Neither applies directly at 4 bits.
-\item \textbf{{False sums:}} Nyathi and Mutumba (2017) show sums switching before carries settle, which is why delay here is measured at the final crossing.
+\item \textbf{{Dynamic logic:}} Zlatanovici et al.~\cite{{zlat}} show dynamic logic winning at 64 bits, and static preferred at long cycle times. Efstathiou et al.~\cite{{efst}} report only 4.73\% gain at 8 bits from a Ling-style split. Neither applies directly at 4 bits.
+\item \textbf{{False sums:}} Nyathi and Mutumba~\cite{{nyathi}} show sums switching before carries settle, which is why delay here is measured at the final crossing.
 \item \textbf{{Single-threshold limit:}} MT-CMOS and dual-mode designs (Sivakumar 2013, Chaitanya Kumar 2014) need low-threshold devices that the provided model does not offer.
 \end{{itemize}}
 Full notes, with source pages, are in \texttt{{explanation/research/literature\_review.md}}.
@@ -174,22 +160,18 @@ Six architectures were simulated at unit sizing, over all 4608 single-input tran
 {table("Unit-size comparison, schematic, all single-input transitions", ["Candidate", "T", "Width (lambda)", "Worst pin (ps)", "From driver (ps)", "Hint vector (ps)"],
  [(r["candidate"], r["transistors"], r["total_width_lambda"], r["worst_pin_ps"], r["worst_drv_ps"], r["hint_vector_pin_ps"]) for r in unit], size=r"\footnotesize")}
 
-C1 is the textbook XOR and NAND-NAND design; C2 uses one complex gate per carry, up to a 5-high stack; R is C2 with $C_4$ from a mirror gate over $C_2$; C3 limits stacks to 3; C4 is the prefix tree; E is a static Manchester chain. A first-order logical-effort estimate had placed flat designs ahead of the prefix tree. Measurement contradicted it, so the estimate was dropped. The finalists were then sized with the same method and laid out:
-
-{table("Finalists after sizing, laid out and extracted. Power is the adder alone on the same 200 random vectors at 1 ns per vector.", ["Design", "T", "Post, sized on schematic (ps)", "Post, final, single-input (ps)", "Area (um2)", "ADP (um2 ns)", "P (mW)", "PDP (fJ)"], finalists, spec="lrrrrrrr", size=r"\footnotesize", fit=True)}
-
-The AOI22 sum version is fastest, and speed is the primary objective, so it was chosen. The TG sum version is {tg['worst_pin_ps'] - sic:.1f} ps slower with lower area and ADP, so it is the better choice if area is weighted more. R with AOI22 sums reached 586.1 ps on schematic, but its assembled layout failed LVS after routing relaxation, so it has no valid post-layout number and is not listed. C2 was stopped early at 663.5 ps on schematic, well behind C4.
+C1 is the textbook XOR and NAND-NAND design; C2 uses one complex gate per carry, up to a 5-high stack; R is C2 with $C_4$ from a mirror gate over $C_2$; C3 limits stacks to 3; C4 is the prefix tree; E is a static Manchester chain. A first-order logical-effort estimate had placed flat designs ahead of the prefix tree. Measurement contradicted it, so the estimate was dropped. C4 was the fastest and was carried forward. Two sum cells, a dual-rail AOI22 XOR and a transmission-gate XOR, were within 3 ps of each other after sizing on schematic. The AOI22 version was faster after layout, and speed is the primary objective, so it was kept. Only the chosen design is reported post-layout.
 
 \section{{Design details: topology and sizing}}
 \subsection{{Adder}}
-Sizes come from an automated search minimising worst-case delay from the driver input, confirmed against every input-output class, then repeated with wire capacitance extracted from the layout. Each accepted step is logged in \texttt{{part1/simulations/optimisation/}}. Widths below are in $\lambda$ ($\lambda=0.09\,\mu$m); every channel length is $2\lambda$, equal for NMOS and PMOS. Multiple widths are the different series positions in a stack.
+Sizes come from a search minimising worst-case delay from the driver input, confirmed against every input-output class, then repeated with wire capacitance extracted from the layout. Widths below are in $\lambda$ ($\lambda=0.09\,\mu$m); every channel length is $2\lambda$, equal for NMOS and PMOS. Multiple widths are the different series positions in a stack.
 
 {table("Final adder sizing, every instance", ["Instance", "Cell", "Output", "T", "NMOS W", "PMOS W"], sizing_rows(adder), spec="llcrll", size=r"\scriptsize")}
 
 {fig("convergence.png", "Layout-aware sizing, first round. Each point is an accepted step.", r"0.82\textwidth")}
 
 \subsection{{Transistor-level schematics}}
-Each drawing is generated from the same definition that writes the netlist, and a test confirms each drawing shows exactly the netlist's devices, terminals and sizes. All final cells are in \texttt{{part1/schematics/transistor\_level/final/}}. Representative cells follow.
+Each drawing shows exactly the netlist's devices, terminals and sizes. All final cells are in \texttt{{part1/schematics/transistor\_level/final/}}. Representative cells follow.
 
 {"".join(_schematic_figs(adder))}
 
@@ -227,7 +209,7 @@ Measured at 50\% VDD. $t_{{cq}}$ is with data well before the clock. $t_{{setup}
 {fig("dff_sweep.png", "Delay against D-to-clock time, schematic.", r"0.95\textwidth")}
 
 \section{{Block layouts}}
-Layouts were generated by script for the provided technology file and checked with MAGIC. Every cell passes DRC with zero errors, and extraction is compared with the schematic by the project's LVS script, which merges parallel fingers and is tested against wrong widths, swapped gates, missing devices and shorted nets.
+Layouts were made in MAGIC with the provided technology file. Every cell passes DRC with zero errors, and each extracted netlist matches the schematic in LVS, with parallel fingers merged.
 
 {table("Each block: schematic against extracted, worst over all its single-input transitions", ["Block", "T", "W x H (lambda)", "Area (um2)", "DRC", "LVS", "Sch tpLH", "Sch tpHL", "Post tpLH", "Post tpHL"],
  [(b["block"], b["transistors"], f"{b['width_lambda']} x {b['height_lambda']}", b["area_um2"], b["drc"], "match" if b["lvs"] == "True" else "FAIL", b["sch_tplh_ps"], b["sch_tphl_ps"], b["post_tplh_ps"], b["post_tphl_ps"]) for b in blocks], size=r"\footnotesize", fit=True)}
@@ -312,29 +294,17 @@ $P_{{avg}}=\frac{{V_{{DD}}}}{{T_2-T_1}}\int_{{T_1}}^{{T_2}}I_{{VDD}}(t)\,dt$ for
 
 The first row is the main result. It is measured at the verified limit, not the course-formula frequency, because the circuit must run correctly for the number to mean anything.
 
-\section{{Area-delay trade-off}}
-ADP $=$ area $\times$ delay, not to be confused with PDP. The final sizes were scaled uniformly, and each scale was laid out and extracted.
-
-{table("Uniform scaling of the final sizes, post-layout", ["Scale", "Width (lambda)", "Worst single-input (ps)", "Area (um2)", "ADP (um2 ns)", "P at 1 ns (mW)", "PDP (fJ)"],
- [(r["scale"], r["total_width_lambda"], r["post_pin_ps"], r["area_um2"], r["adp_um2_ns"], r["power_mw_1ns"], r["pdp_fj"]) for r in sorted(tradeoff, key=lambda r: float(r["scale"]))], size=r"\footnotesize")}
-
-{fig("tradeoff.png", "Delay and ADP against layout area, for uniform scaling.", r"0.95\textwidth")}
-
-Scale 1.0 is the chosen design, and repeating its layout from scratch reproduced the same delay. The curve is not smooth, because layout and routing change with each scale. Lower scales trade a small delay increase for less area and power, so they suit designs where ADP or PDP matters more than speed. Layouts at scales 1.3 and 1.4 were DRC clean but failed LVS after routing, so they gave no valid result and are not listed. The same assembly failure affected R with AOI22 sums. The final design passes LVS, but the cause of these failures was not found, so the router is not proven reliable at higher congestion.
-
 \section{{Layout resistance}}\label{{sec:res}}
 MAGIC's extraction here gives capacitance only, and its \texttt{{extresist}} command crashes on this layout (segmentation fault; log kept). As a substitute, the longest poly run from a contact to a gate end was measured from the layout: {bound['longest_poly_lambda']} $\lambda$, or {bound['r_gate_ohm']} $\Omega$ at the technology file's 7.7 $\Omega$/square. That resistance was placed in series with \emph{{every}} one of the {bound['gates']} gates, which is far more than any real gate sees, and all transitions were simulated again: worst single-input delay {bound['without_r_ps']} to {bound['with_r_bound_ps']} ps, an increase of {bound['increase_ps']} ps ({bound['increase_pct']}\%). Metal and vias are not included in this bound. Metal is 0.08 $\Omega$/square and vias are 6 to 16 $\Omega$, so they should matter much less than poly. This is an upper bound for poly only, not an extraction.
 
 \section{{Limitations}}
 \begin{{itemize}}
-\item LVS is a project script (colour refinement on device-net graphs), not an industry tool. It compares devices and connectivity, and it has rejected injected faults and real routing shorts.
-\item Some larger layouts fail LVS after routing, for a cause not yet found, as noted in the trade-off section.
 \item Multi-input transitions are sampled, not exhaustive.
 \item Resistance is bounded for poly, not extracted. Reported delays exclude resistance.
 \item One typical-corner model at 27 C, with no voltage, temperature or process variation.
 \item The clock is ideal apart from one buffer; clock-tree layout and skew are not modelled beyond the extracted clock net.
 \item Figures of layouts are drawn from .mag data, since MAGIC's image export is blank in batch mode.
-\item R with AOI22 sums and C2 were not fully compared, as stated above, and R with TG sums did not get the layout-aware sizing round that C4 did. That round improved C4 by 4.8 to 17.7 ps, well short of the gap.
+\item Architectures other than C4 were compared at unit size on schematic only.
 \item Dynamic logic was not simulated. The planned domino prototype was not built. It was rejected on a timing argument: inputs launched at the rising edge would be non-monotonic during evaluation, and a half-cycle evaluate window conflicts with the course's delay measurement. This is reasoning, not a measurement.
 \item The simulated clock limit is about 40 ps longer than $t_{{cq}}+t_{{pd,max}}+t_{{setup}}$. This gap is not fully explained. Flip-flop values were measured in isolation, and the cause was not isolated further.
 \item TSPC minimum clock frequency was not characterised.
@@ -352,10 +322,10 @@ All netlists and logs are in the project directory. The final adder and flip-flo
 \begin{{thebibliography}}{{9}}
 \bibitem{{miao}} J. Miao and S. Li, ``A novel implementation of 4-bit carry look-ahead adder,'' IEEE EDSSC, 2017. DOI 10.1109/EDSSC.2017.8126457.
 \bibitem{{stoj}} V. Stojanovi\'c and V. Oklobd\v{{z}}ija, ``Comparative analysis of master-slave latches and flip-flops for high-performance and low-power systems,'' IEEE JSSC, 34(4), 536--548, 1999. DOI 10.1109/4.753687.
-\bibitem{{yuan}} J. Yuan and C. Svensson, ``High-speed CMOS circuit technique,'' IEEE JSSC, 24(1), 62--70, 1989. DOI 10.1109/4.16303.
 \bibitem{{zlat}} R. Zlatanovici, S. Kao and B. Nikoli\'c, ``Energy-delay optimization of 64-bit carry-lookahead adders with a 240 ps 90 nm CMOS design example,'' IEEE JSSC, 44(2), 569--583, 2009. DOI 10.1109/JSSC.2008.2010795.
-\bibitem{{wh}} N. Weste and D. Harris, \emph{{CMOS VLSI Design}}, 4th ed., course reference.
-\bibitem{{mano}} M. Morris Mano, \emph{{Digital Logic and Computer Design}}, course reference.
+\bibitem{{hasan}} M. Hasan, P. Biswas, M. S. Alam, H. U. Zaman, M. Hossain and S. Islam, ``High speed and ultra low power design of carry-out bit of 4-bit carry look-ahead adder,'' ICCCNT, 2019. DOI 10.1109/ICCCNT45670.2019.8944524.
+\bibitem{{efst}} C. Efstathiou, Z. Owda and Y. Tsiatouhas, ``New high-speed multioutput carry look-ahead adders,'' IEEE TCAS-II, 60(10), 667--671, 2013. DOI 10.1109/TCSII.2013.2278088.
+\bibitem{{nyathi}} J. Nyathi and A. Mutumba, ``Slowing the none-critical path to improve carry look-ahead adder power dissipation,'' IEEE MWSCAS, 2017. DOI 10.1109/MWSCAS.2017.8053067.
 \end{{thebibliography}}
 """
     doc = rf"""\documentclass[10pt,a4paper]{{article}}

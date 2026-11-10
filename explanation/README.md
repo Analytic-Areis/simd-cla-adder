@@ -1,6 +1,6 @@
 # Explanation: read this to understand the project
 
-Everything here is for reading. The working files of each part are in `../part1/`, `../part2/` and `../part3/`.
+Everything here is for reading. The working files of each part are in `../part1/`, `../part2/` and `../fpga/` (Part III).
 
 ## Reading order
 

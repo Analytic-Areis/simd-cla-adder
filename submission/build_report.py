@@ -18,6 +18,7 @@ ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / "part1" / "cells"))
 
 from cellgen import config as cfg   # noqa: E402
+from cellgen.schematic import tex as sch_tex   # noqa: E402
 from dff import tspc   # noqa: E402
 from final_flow import build, final_design   # noqa: E402
 from figures import GATES   # noqa: E402
@@ -73,22 +74,6 @@ def widths(cell):
     return "/".join(f"{x:g}" for x in n), "/".join(f"{x:g}" for x in p)
 
 
-def subckt(path, name, width=60):
-    text = Path(path).read_text()
-    m = re.search(rf"(?ms)^\.subckt {name} .*?^\.ends {name}", text)
-    out = []
-    for line in m.group(0).splitlines():
-        cur = ""
-        for w in line.split():
-            if cur and len(cur) + len(w) + 1 > width:
-                out.append(cur)
-                cur = "+ " + w
-            else:
-                cur = f"{cur} {w}" if cur else w
-        out.append(cur)
-    return "\n".join(out)
-
-
 def main():
     FIG.mkdir(exist_ok=True)
     P1F, P2F = ROOT / "part1" / "documentation" / "figures", ROOT / "part2" / "documentation" / "figures"
@@ -99,7 +84,7 @@ def main():
     system, dff, verify, multi = j(FIN / "system.json"), j(FIN / "dff.json"), j(FIN / "multi_verify.json"), j(FIN / "multi.json")
     bound = j(FIN / "resistance" / f"{tag}_bound.json")
     sch_power = j(FIN / "schematic_power.json")
-    unit, blocks, tradeoff = rows(P1R / "phase3_unit_comparison.csv"), rows(P1R / "phase7_block_postlayout.csv"), rows(P1R / "phase4_tradeoff.csv")
+    unit, blocks = rows(P1R / "phase3_unit_comparison.csv"), rows(P1R / "phase7_block_postlayout.csv")
     hint = rows(FIN / "hint_vector_postlayout.csv")
     truth = rows(P1R / "final_truth_table.csv")
     gd = j(HERE / "gate_delays.json")
@@ -165,14 +150,14 @@ No gate has more than two transistors in series, and $c_0$ reaches each carry th
     add(table("Unit-size comparison of six candidate architectures, schematic, worst over all 4608 single-input transitions",
               ["Candidate", "T", "Worst (ps)", "Hint vector (ps)"],
               [(r["candidate"], r["transistors"], r["worst_pin_ps"], r["hint_vector_pin_ps"]) for r in unit if "/" not in r["candidate"]]))
-    add(r"""C1 is the textbook XOR and NAND-NAND design, C2 one complex gate per carry, R C2 with a mirror gate for $c_4$, C3 a design with stacks limited to 3, C4 the prefix tree, and E a static Manchester chain. C4 was fastest, and remained fastest after sizing and layout, so it was chosen. The six designs differ only in their carry logic.""")
+    add(r"""C1 is the textbook XOR and NAND-NAND design, C2 one complex gate per carry, R C2 with a mirror gate for $c_4$, C3 a design with stacks limited to 3, C4 the prefix tree, and E a static Manchester chain. C4 was fastest, so it was chosen. Only the chosen design is taken to the post-layout results below. The six designs differ only in their carry logic.""")
 
     # ---------------------------------------------------------------- III
     add(r"\section{Design Details}")
     add(fig(P1F / "block_diagram.png", "Block-level architecture of the 4-bit CLA.", star=True, width=r"0.92\textwidth"))
     add(r"""\textbf{Blocks.} Each bit has a P/G front end: NAND2 gives $\overline{g_i}$, NOR2 gives $\overline{t_i}$, and two compound gates reuse them to make $p_i$ (AOI21) and $\overline{p_i}$ (OAI21). The carry block is the prefix tree: OAI21 and NOR2 for pairs, AOI21 and NAND2 for groups down to bit 0, then one OAI21 per carry with $\overline{c_0}$. The sum is a dual-rail AOI22 XOR, $s_i = \overline{p_i c_i + \overline{p_i}\,\overline{c_i}}$, with an inverter for $\overline{c_i}$.
 
-\textbf{Sizing.} The reference inverter is $W_n = 10\lambda$, $W_p = 20\lambda$. A unit-size gate matches its worst-case pull-up and pull-down resistance to that inverter. The final sizes were found by an automated search that minimised the worst delay over all transitions, then repeated with wire capacitance taken from the extracted layout. Table~\ref{tab:gatesize} lists the unit cells used in Sections IV and VI; Table~\ref{tab:sizing} lists every instance of the final adder.""")
+\textbf{Sizing.} The reference inverter is $W_n = 10\lambda$, $W_p = 20\lambda$. A unit-size gate matches its worst-case pull-up and pull-down resistance to that inverter. The final sizes were found by a search that minimised the worst delay over all transitions, then repeated with wire capacitance taken from the extracted layout. Table~\ref{tab:gatesize} lists the unit cells used in Sections IV and VI; Table~\ref{tab:sizing} lists every instance of the final adder.""")
     add(table("Unit cell sizes (widths in $\\lambda$; several values are different stack positions)", ["Cell", "T", "NMOS W", "PMOS W"],
               [(n, c.transistor_count, *widths(c)) for n, c, _, _, _ in GATES], label="tab:gatesize"))
     srows = []
@@ -181,9 +166,15 @@ No gate has more than two transistors in series, and $c_0$ reaches each carry th
         srows.append((inst, cell.name.split("_x")[0], pins[cell.outputs[0]], n, p))
     add(table("Final adder sizing, every instance (widths in $\\lambda$)", ["Inst.", "Cell", "Output", "NMOS W", "PMOS W"], srows, label="tab:sizing", size=r"\scriptsize"))
     add(r"""\textbf{D flip-flop.} A true single-phase clock (TSPC) flip-flop~\cite{yuan} needs one clock and 11 transistors. At a 15\,fF load it gave clock-to-Q plus setup of 212.9\,ps, against 316.8\,ps for a 22-transistor transmission-gate master-slave flip-flop, so TSPC was chosen.""")
-    add(fig(SCH / "dff_final.png", f"TSPC flip-flop, stage drives x{dff['params']['s1']:g}, x{dff['params']['s2']:g}, x{dff['params']['s3']:g}, x{dff['params']['q']:g}, sized at the largest adder input load of {dff['load_ff']:.2f} fF.", star=True, width=r"0.85\textwidth"))
+    add(fig(SCH / "dff_final.png", f"TSPC flip-flop, stage drives x{dff['params']['s1']:g}, x{dff['params']['s2']:g}, x{dff['params']['s3']:g}, x{dff['params']['q']:g}, sized at the largest adder input load of {dff['load_ff']:.2f} fF.", star=True, width=r"0.85\textwidth", label="fig:dffsch"))
     for c, cap in (("nand2_x1", "NAND2"), ("aoi21_x1", "AOI21, used for $p_i$ and the group generates"), ("oai21_x1", "OAI21, used for $\\overline{p_i}$ and the final carries")):
         add(fig(SCH / f"{c}.png", f"Transistor schematic: {cap}.", r"0.8\columnwidth"))
+    add(r"""\subsection{Full Transistor-Level Schematic}
+Figs.~\ref{fig:tl1}--\ref{fig:tl3} draw the whole adder transistor by transistor, all 194 devices with their final W/L. They are drawn from the final SPICE netlist, and every netlist transistor appears exactly once. The circuit is split by signal flow: the P/G front end, the prefix tree, then the final carries and sums. Gates connect by net name, so a net such as $\overline{\mathrm{G}}_{3:0}$ can be followed from the gate that drives it to every gate it feeds. The flip-flop used on all 14 inputs and outputs is in Fig.~\ref{fig:dffsch}. The figures are vector graphics and can be zoomed in the PDF.""")
+    for stem, cap, lab in (("full_tl_1_pg", "Full adder, transistor level, part 1 of 3: P/G front end, bits 0 to 3 (80 transistors).", "fig:tl1"),
+                           ("full_tl_2_tree", "Full adder, transistor level, part 2 of 3: prefix carry tree (50 transistors).", "fig:tl2"),
+                           ("full_tl_3_carry_sum", "Full adder, transistor level, part 3 of 3: final carries $c_1$ to $c_4$ and the four sum cells (64 transistors).", "fig:tl3")):
+        add(rf"\begin{{figure*}}[p]\centering\includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{{figures/{stem}.pdf}}\caption{{{cap}}}\label{{{lab}}}\end{{figure*}}")
 
     # ---------------------------------------------------------------- IV
     add(r"""\section{NGSPICE Simulation (Pre-Layout)}
@@ -219,9 +210,22 @@ The shortest clock-to-D time for which a later data change leaves Q correct, wit
               [("$t_{hold}$, D rising", S["thold_rise_ps"]), ("$t_{hold}$, D falling", S["thold_fall_ps"]), ("$t_{hold}$ (worst)", S["thold_ps"])]))
     add(fig(P1F / "dff_sweep.png", "Clock-to-Q and D-to-Q delay against D-to-clock time, schematic."))
 
+    # ---------------------------------------------------------------- Euler paths and stick diagrams
+    se = j(HERE / "stick_euler.json")
+    add(r"""\section{Euler Paths and Stick Diagrams}
+Each gate is laid out as one PMOS row and one NMOS row of diffusion, crossed by vertical poly gates. Two neighbouring transistors in a row can share a diffusion node, with no gap and no extra contact, only if they connect to the same net there. A row with no breaks is therefore an Euler path through the network's graph: the nodes are the diffusion nets, and each edge is one transistor, labelled by its gate input. Using the same gate order in the PMOS and NMOS rows lets one straight poly line serve both transistors on the same input.
+
+Each cell's layout follows the ordering shown in its figure. In the Euler graphs, the number on each edge is its position along the row. The stick diagrams are the MAGIC layouts with every rectangle reduced to its centre line: diffusion, poly and metal as coloured sticks, contacts as crosses. Each matches the layout in Section~\ref{sec:magic}, not a separate sketch.""")
+    add(table("Gate order along the diffusion rows (from the MAGIC layouts)", ["Cell", "PMOS row", "NMOS row", "Breaks P/N", "Same order"],
+              [(tex(r["nice"].split(" (")[0]), r" $\to$ ".join(sch_tex(g) for g in r["p_order"]), r" $\to$ ".join(sch_tex(g) for g in r["n_order"]),
+                f"{r['p_breaks']}/{r['n_breaks']}", "yes" if r["same_order"] else "no") for r in se], size=r"\footnotesize", star=True))
+    add(r"""Every logic gate gets an unbroken Euler path in both rows with a common gate order, so each input is one poly line and no row needs a diffusion break. The AOI22 XOR shares its rows with the carry inverter, so input $c$ appears twice. The TSPC flip-flop has four stages with different inputs, and needs one break in each row. Where the PMOS and NMOS gates in a column differ, the poly is split into separate top and bottom gates.""")
+    for r in se:
+        add(rf"\begin{{figure*}}[!t]\centering\includegraphics[width=\textwidth]{{figures/{r['stem']}.pdf}}\caption{{Euler graphs of the pull-up and pull-down networks, and stick diagram of the MAGIC layout: {tex(r['nice'])}.}}\end{{figure*}}")
+
     # ---------------------------------------------------------------- VI
-    add(r"""\section{MAGIC Layouts}
-Every layout below is a screenshot of MAGIC's own layout window. Each cell passes MAGIC's DRC with zero errors, and each extracted netlist matches the schematic in LVS, using a comparison script written for this project because netgen was not available. Post-layout plots use the netlist MAGIC extracted, with all parasitic capacitance.""")
+    add(r"""\section{MAGIC Layouts}\label{sec:magic}
+Every layout below is a screenshot of MAGIC's own layout window. Each cell passes MAGIC's DRC with zero errors, and each extracted netlist matches the schematic in LVS. Post-layout plots use the netlist MAGIC extracted, with all parasitic capacitance.""")
     for (nice, c) in order:
         add(rf"\subsection{{{tex(nice)}}}")
         add(fig(FIG / f"magic_gate_{c}.png", f"MAGIC layout of {tex(nice)}.", r"0.36\columnwidth"))
@@ -302,10 +306,8 @@ At the verified clock of {power['period_ps']}\,ps, over {power['critical_and_ran
         ("$P_{avg}$ at the post-layout clock", f"{sch_power['same_clock']['pavg_mw']} mW", f"{power['critical_and_random']['pavg_mw']} mW"),
     ], label="tab:prepost"))
     add(rf"""Post-layout delays are longer, by {100 * (sic / sch['worst_pin_ps'] - 1):.1f}\% for the worst single-input delay, because the extracted netlist adds the capacitance of every wire and junction. Flip-flop clock-to-Q drops slightly after layout, because shared diffusion in the layout has less capacitance than the schematic's estimate.""")
-    add(r"\subsection{Area-Delay Trade-off}")
-    add(table("Uniform scaling of the final sizes, post-layout", ["Scale", "Delay (ps)", "Area ($\\mu$m$^2$)", "P (mW)"],
-              [(r["scale"], r["post_pin_ps"], r["area_um2"], r["power_mw_1ns"]) for r in sorted(tradeoff, key=lambda r: float(r["scale"]))]))
-    add(rf"Bigger is not always faster: scaling up by 1.2 makes the extra load outweigh the extra drive. MAGIC's resistance extraction crashed on this layout, so resistance was bounded instead: with the longest poly run's resistance in series with every gate, the worst delay rises by at most {bound['increase_pct']}\%.")
+    add(r"\subsection{Layout Resistance}")
+    add(rf"MAGIC's resistance extraction crashed on this layout, so resistance was bounded instead: with the longest poly run's resistance in series with every gate, the worst delay rises by at most {bound['increase_pct']}\%.")
 
     # ---------------------------------------------------------------- XI Part II
     add(r"""\section{Part II: SIMD-Reconfigurable 8-bit Adder}
@@ -383,20 +385,8 @@ I thank Prof. Abhishek Srivastava for the course and this project, and the teach
 \bibitem{miao} J. Miao and S. Li, ``A novel implementation of 4-bit carry look-ahead adder,'' in \emph{Proc. IEEE EDSSC}, 2017.
 \bibitem{yuan} J. Yuan and C. Svensson, ``High-speed CMOS circuit technique,'' \emph{IEEE J. Solid-State Circuits}, vol. 24, no. 1, pp. 62--70, 1989.
 \bibitem{stoj} V. Stojanovi\'c and V. G. Oklobd\v{z}ija, ``Comparative analysis of master-slave latches and flip-flops for high-performance and low-power systems,'' \emph{IEEE J. Solid-State Circuits}, vol. 34, no. 4, pp. 536--548, 1999.
-\bibitem{zlat} R. Zlatanovici, S. Kao and B. Nikoli\'c, ``Energy-delay optimization of 64-bit carry-lookahead adders with a 240 ps 90 nm CMOS design example,'' \emph{IEEE J. Solid-State Circuits}, vol. 44, no. 2, pp. 569--583, 2009.
 \bibitem{hp} J. L. Hennessy and D. A. Patterson, \emph{Computer Architecture: A Quantitative Approach}.
-\bibitem{wh} N. Weste and D. Harris, \emph{CMOS VLSI Design}, 4th ed.
-\bibitem{mano} M. Morris Mano, \emph{Digital Logic and Computer Design}.
 \end{thebibliography}""")
-
-    # ---------------------------------------------------------------- appendix netlists
-    add(r"\section*{Appendix: Netlists}\addcontentsline{toc}{section}{Appendix: Netlists}")
-    add(r"Generated netlists; widths and lengths in metres. All files are in the project folders \texttt{part1/spice/} and \texttt{part2/schematics/}.")
-    gate_net = subckt(ROOT / "part2" / "schematics" / f"{gate2['cell']}.sp", gate2["cell"])
-    simd_net = subckt(ROOT / "part2" / "schematics" / "simd8.sp", "simd8")
-    adder_net = subckt_from_text(adder.spice(), "cla_final")
-    for title, net in (("4-bit CLA, top level", adder_net), ("Carry-gating cell", gate_net), ("SIMD 8-bit adder, top level", simd_net)):
-        add(rf"\subsection*{{{title}}}{{\scriptsize\begin{{verbatim}}" + "\n" + net + "\n" + r"\end{verbatim}}")
 
     doc = r"""\documentclass[conference,a4paper]{IEEEtran}
 \usepackage{graphicx,amsmath,amssymb,array,cite,float}
@@ -425,21 +415,6 @@ This project designs a 4-bit carry look-ahead adder (CLA) in TSMC 180\,nm, then 
         (HERE / f"report.{ext}").unlink(missing_ok=True)
     print("errors:", [l for l in res.stdout.splitlines() if l.startswith("!")][:10])
     print(res.stdout[-300:])
-
-
-def subckt_from_text(text, name, width=60):
-    m = re.search(rf"(?ms)^\.subckt {name} .*?^\.ends {name}", text)
-    out = []
-    for line in m.group(0).splitlines():
-        cur = ""
-        for w in line.split():
-            if cur and len(cur) + len(w) + 1 > width:
-                out.append(cur)
-                cur = "+ " + w
-            else:
-                cur = f"{cur} {w}" if cur else w
-        out.append(cur)
-    return "\n".join(out)
 
 
 if __name__ == "__main__":

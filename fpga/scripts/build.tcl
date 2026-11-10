@@ -1,5 +1,5 @@
 # Vivado batch build for one board top: synthesis, implementation, reports, bitstream.
-# Usage, from the fpga/ folder:
+# Usage, from this folder (the one holding rtl/, board/, tb/):
 #   vivado -mode batch -source scripts/build.tcl -tclargs fpga_cla4_top
 #   vivado -mode batch -source scripts/build.tcl -tclargs fpga_simd8_top
 # Outputs go to build/<top>/: the .bit file, utilisation, timing and power reports,

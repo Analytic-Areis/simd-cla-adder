@@ -1,0 +1,150 @@
+[
+ {
+  "cell": "inv_x1",
+  "nice": "Inverter",
+  "p_order": [
+   "a"
+  ],
+  "n_order": [
+   "a"
+  ],
+  "p_breaks": 0,
+  "n_breaks": 0,
+  "same_order": true,
+  "width": 39,
+  "height": 85,
+  "stem": "stick_inv_x1",
+  "matches_saved_layout": true
+ },
+ {
+  "cell": "nand2_x1",
+  "nice": "NAND2",
+  "p_order": [
+   "i0",
+   "i1"
+  ],
+  "n_order": [
+   "i0",
+   "i1"
+  ],
+  "p_breaks": 0,
+  "n_breaks": 0,
+  "same_order": true,
+  "width": 57,
+  "height": 104,
+  "stem": "stick_nand2_x1",
+  "matches_saved_layout": true
+ },
+ {
+  "cell": "nor2_x1",
+  "nice": "NOR2",
+  "p_order": [
+   "i0",
+   "i1"
+  ],
+  "n_order": [
+   "i0",
+   "i1"
+  ],
+  "p_breaks": 0,
+  "n_breaks": 0,
+  "same_order": true,
+  "width": 57,
+  "height": 114,
+  "stem": "stick_nor2_x1",
+  "matches_saved_layout": true
+ },
+ {
+  "cell": "aoi21_x1",
+  "nice": "AOI21",
+  "p_order": [
+   "a",
+   "b",
+   "c"
+  ],
+  "n_order": [
+   "a",
+   "b",
+   "c"
+  ],
+  "p_breaks": 0,
+  "n_breaks": 0,
+  "same_order": true,
+  "width": 75,
+  "height": 142,
+  "stem": "stick_aoi21_x1",
+  "matches_saved_layout": true
+ },
+ {
+  "cell": "oai21_x1",
+  "nice": "OAI21",
+  "p_order": [
+   "a",
+   "b",
+   "c"
+  ],
+  "n_order": [
+   "a",
+   "b",
+   "c"
+  ],
+  "p_breaks": 0,
+  "n_breaks": 0,
+  "same_order": true,
+  "width": 75,
+  "height": 142,
+  "stem": "stick_oai21_x1",
+  "matches_saved_layout": true
+ },
+ {
+  "cell": "xor_aoi22_x1",
+  "nice": "AOI22 XOR (sum, with its carry inverter)",
+  "p_order": [
+   "c",
+   "p",
+   "pb",
+   "cb",
+   "c"
+  ],
+  "n_order": [
+   "c",
+   "p",
+   "pb",
+   "cb",
+   "c"
+  ],
+  "p_breaks": 0,
+  "n_breaks": 0,
+  "same_order": true,
+  "width": 84,
+  "height": 151,
+  "stem": "stick_xor_aoi22_x1",
+  "matches_saved_layout": true
+ },
+ {
+  "cell": "dff_tspc_x0p6_1_1_2",
+  "nice": "TSPC flip-flop",
+  "p_order": [
+   "clk",
+   "d",
+   "b",
+   "clk",
+   "qb"
+  ],
+  "n_order": [
+   "a",
+   "clk",
+   "b",
+   "clk",
+   "qb",
+   "d"
+  ],
+  "p_breaks": 1,
+  "n_breaks": 1,
+  "same_order": false,
+  "width": 99,
+  "height": 142,
+  "stem": "stick_dff_tspc_x0p6_1_1_2",
+  "matches_saved_layout": true
+ }
+]

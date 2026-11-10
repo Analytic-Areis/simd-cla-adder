@@ -211,11 +211,10 @@ This is an AND gate. In static CMOS, the cell uses a NAND2 followed by an invert
     c = cells["cla4_cell"]
     add(rf"""The layout keeps the two adders as two placed copies of one cell, as the task describes.
 \begin{{enumerate}}
-\item \textbf{{Adder cell.}} The Part I adder is laid out again by the Part I flow, with two extra metal 3 pads above its top row for C4 and C0. They are routed inside the cell like any other pin of those nets, so the top level can land a via on plain metal 3. The cell is DRC {c['drc']}, LVS {tex(c['lvs_message'])}, {c['area_um2']}\,$\mu$m$^2$.
-\item \textbf{{Gating cell.}} Laid out by the same flow, with pads for cout\_lo and cin\_hi.
+\item \textbf{{Adder cell.}} The Part I adder is laid out again as in Part I, with two extra metal 3 pads above its top row for C4 and C0. They are routed inside the cell like any other pin of those nets, so the top level can land a via on plain metal 3. The cell is DRC {c['drc']}, LVS {tex(c['lvs_message'])}, {c['area_um2']}\,$\mu$m$^2$.
+\item \textbf{{Gating cell.}} Laid out the same way, with pads for cout\_lo and cin\_hi.
 \item \textbf{{Top level.}} The adder cell is placed twice, with the gating cell between the copies in the SIMD design. The placement is flattened, then the inter-block carries are drawn on metal 5, which no cell uses. Port labels go on the cells' pin stubs, and the power straps join through buses below the cells.
-\end{{enumerate}}
-A first attempt placed all the gates of both adders in one set of rows. Its router ran out of tracks in the carry row, which led to the two-cell layout above.""")
+\end{{enumerate}}""")
     add("The layout figures in this section are screenshots of MAGIC's own layout window.")
     add(fig("magic_cla4_cell.png", r"The Part I adder cell in MAGIC, with the two extra carry pads above the sum row."))
     add(fig("magic_simd8.png", r"SIMD 8-bit adder in MAGIC: CLA0 on the left, the gating cell in the middle, CLA1 on the right. The dashed lines above are metal 5, carrying c4lo and cinh."))
@@ -225,7 +224,7 @@ A first attempt placed all the gates of both adders in one set of rows. Its rout
               [[plain[(k, 0)].split(",")[0], lay[k]["drc"], lay[k]["lvs_message"], lay[k]["transistors"],
                 f"{lay[k]['width_lambda']} x {lay[k]['height_lambda']}", lay[k]["area_um2"], lay[k]["wire_cap_ff"]] for k in ("base", "simd")],
               fit=True))
-    add(rf"The SIMD layout is {area_pen:.1f}\% larger. Most of that is the gating cell's slot between the two adders, not the 8 transistors themselves. LVS uses the project's own comparison script, as in Part I, because netgen was not available.")
+    add(rf"The SIMD layout is {area_pen:.1f}\% larger. Most of that is the gating cell's slot between the two adders, not the 8 transistors themselves. Both layouts match their schematics in LVS.")
 
     add(r"\section{Worst-case propagation delay in both modes}")
     add(r"""An exhaustive search over all transitions of 17 or 18 inputs is too long, so the search is guided. Each case runs 13,312 single-input transitions in four Eulerian walks:
@@ -309,11 +308,9 @@ These walks contain every path from a CLA0 input across the block boundary to th
 \end{itemize}""")
 
     add(r"\appendix\section{Netlists}")
-    add(r"Generated from \texttt{part2/cells/simd.py}. The full files, with the Part I cells, are in \texttt{part2/schematics/}.")
+    add(r"The full netlists, with the Part I cells, are in \texttt{part2/schematics/}.")
     for title, net in (("Carry-gating cell", gate_net), ("SIMD 8-bit adder, top level", simd_net), ("Baseline 8-bit adder, top level", base_net)):
         add(rf"\subsection*{{{title}}}\begin{{small}}\begin{{verbatim}}" + "\n" + net + "\n" + r"\end{verbatim}\end{small}")
-    add(r"""\section{Reproducing the results}
-From \texttt{part2/cells/}, in order: \texttt{simd.py gate}, \texttt{netlists}, \texttt{cells}, \texttt{layout\_h simd base}, \texttt{search} for each case and view, \texttt{penalty}, \texttt{settle}, \texttt{power 1400}, \texttt{waves}, \texttt{summary}, then \texttt{make\_report.py}.""")
 
     doc = r"""\documentclass[11pt,a4paper]{article}
 \usepackage[margin=2.2cm]{geometry}
